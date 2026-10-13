@@ -121,14 +121,16 @@ window.quakeLayer = L.geoJSON(GEO, {
   }
 }).addTo(map);
 const layer = window.quakeLayer;
+/* halos live in their own group added BEFORE markers so rings sit underneath */
+const haloGroup = L.layerGroup().addTo(map);
 layer.eachLayer(l => {
   const p = l.feature.properties;
   const ll = l.getLatLng();
   p._halo = L.circleMarker(ll, {
     radius: p.radius + 5, color: '#a855f7', weight: 3, opacity: 0, fill: false
-  }).addTo(map);
+  }).addTo(haloGroup);
 });
-window.setTimeout(function(){ map.invalidateSize(); }, 500);
+window.setTimeout(function(){ try { map.invalidateSize(); } catch(e){} }, 500);
 
 /* magnitude band filtering */
 function bandOf(mag) { return mag >= 5 ? 'cbM5' : mag >= 4 ? 'cbM4' : mag >= 3 ? 'cbM3' : 'cbM2'; }
@@ -156,8 +158,7 @@ function updateHalos() {
     const p = l.feature.properties;
     const recent = (now - p.utc_ms) >= 0 && (now - p.utc_ms) < 3600000;
     p._halo.options._active = recent && document.getElementById(bandOf(p.mag)).checked;
-    p._halo.setStyle(p._halo.options._active ? {opacity: 0.9} : {opacity: 0});
-    p._halo.bringToBack();
+    p._halo.setStyle({opacity: p._halo.options._active ? 0.9 : 0});
   });
 }
 ['cbM5','cbM4','cbM3','cbM2'].forEach(id => document.getElementById(id).addEventListener('change', () => { applyMagFilter(); updateHalos(); }));
