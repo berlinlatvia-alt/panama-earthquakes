@@ -100,7 +100,7 @@ function popup(p, lat, lon) {
     + '<a href="' + gm + '" target="_blank">Open in Google Maps</a></div>';
 }
 
-const layer = L.geoJSON(GEO, {
+window.quakeLayer = L.geoJSON(GEO, {
   pointToLayer: (f, latlng) => L.circleMarker(latlng, {
     radius: f.properties.radius, color: f.properties.color, weight: 2,
     fillColor: f.properties.color, fillOpacity: 0.55
@@ -118,6 +118,7 @@ const layer = L.geoJSON(GEO, {
     }).addTo(map);
   }
 }).addTo(map);
+const layer = window.quakeLayer;
 
 /* magnitude band filtering */
 function bandOf(mag) { return mag >= 5 ? 'cbM5' : mag >= 4 ? 'cbM4' : mag >= 3 ? 'cbM3' : 'cbM2'; }
