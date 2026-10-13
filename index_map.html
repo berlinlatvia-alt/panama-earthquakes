@@ -66,6 +66,7 @@
   <label><input type="checkbox" id="cbPlates"> Tectonic plates</label>
   <label><input type="checkbox" id="cbLiveSat"> Live satellite</label>
   <label><input type="checkbox" id="cbLiveSens"> Live sensor feed</label>
+  <span id="livecount" style="color:#64748b;font-size:11px">feed idle</span>
 </div>
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script>
@@ -162,7 +163,7 @@ function loadLiveSensors() {
   const now = Date.now() - 12 * 3600 * 1000;
   const st = new Date(now).toISOString().slice(0, 19).replace('T', '');
   const url = 'https://earthquake.usgs.gov/fdsnws/event/1/query?format=geojson&starttime=' + st +
-    '&minlatitude=5&maxlatitude=12&minlongitude=-86&maxlongitude=-76&minmagnitude=2';
+    '&minlatitude=5&maxlatitude=12&minlongitude=-86&maxlongitude=-76&minmagnitude=1.5&orderby=time';
   fetch(url).then(r => r.json()).then(d => {
     liveGroup.clearLayers();
     (d.features || []).forEach(f => {
@@ -170,7 +171,7 @@ function loadLiveSensors() {
       const lat = c[1], lon = c[0], dep = c[2] || 0;
       const m = L.circleMarker([lat, lon], {
         radius: 5 + (p.mag - 2) * 3, color: '#00e5ff', weight: 1.5,
-        fillColor: '#00e5ff', fillOpacity: 0.5, className: 'live-pulse'
+        fillColor: '#00e5ff', fillOpacity: 0.5
       }).bindPopup(
         '<div class="popup"><div class="hdr">LIVE M' + p.mag + ' - ' + p.place + '</div>'
         + '<b>Depth:</b> ' + (dep ? dep.toFixed(0) : 'n/a') + ' km<br>'
@@ -179,9 +180,10 @@ function loadLiveSensors() {
       ).bindTooltip('LIVE M' + p.mag + ' ' + p.place, {className: 'site-tip'});
       liveGroup.addLayer(m);
     });
-    document.getElementById('livecount').textContent = 'live feed: ' + ((d.features || []).length) + ' events';
+    if (document.getElementById('livecount')) document.getElementById('livecount').textContent =
+      'USGS live: ' + d.features.length + ' events (last 12h)';
   }).catch(() => {
-    document.getElementById('livecount').textContent = 'live feed unavailable';
+    if (document.getElementById('livecount')) document.getElementById('livecount').textContent = 'live feed unavailable';
   });
 }
 
