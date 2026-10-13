@@ -114,8 +114,7 @@ const layer = L.geoJSON(GEO, {
       direction: 'top', className: 'site-tip'
     });
     f.properties._halo = L.circleMarker(latlng, {
-      radius: p.radius + 4, color: '#a855f7', weight: 2.5, opacity: 0,
-      fillColor: '#a855f7', fillOpacity: 0
+      radius: p.radius + 5, color: '#a855f7', weight: 3, opacity: 0, fill: false
     }).addTo(map);
   }
 }).addTo(map);
@@ -130,7 +129,7 @@ function applyMagFilter() {
     l.setStyle({opacity: alpha, fillOpacity: on ? 0.55 : 0.03});
     if (l.getElement()) l.getElement().style.pointerEvents = on ? 'auto' : 'none';
     const halo = p._halo;
-    if (halo) halo.setStyle(halo.options._active ? {opacity: 0.9, fillOpacity: 0.18} : {opacity: 0, fillOpacity: 0});
+    if (halo) halo.setStyle(halo.options._active ? {opacity: 0.9} : {opacity: 0});
   });
   document.querySelectorAll('#evtbody tr').forEach(tr => {
     const f = GEO.features.find(x => x.properties._id === tr.dataset.id);
@@ -139,14 +138,14 @@ function applyMagFilter() {
 }
 GEO.features.forEach((f, i) => f.properties._id = i);
 
-/* purple halo: events in the last 60 minutes (live) */
+/* purple halo: events in the last 60 minutes (live) - OUTER ring, no fill */
 function updateHalos() {
   const now = Date.now();
   layer.eachLayer(l => {
     const p = l.feature.properties;
     const recent = (now - p.utc_ms) >= 0 && (now - p.utc_ms) < 3600000;
     p._halo.options._active = recent && document.getElementById(bandOf(p.mag)).checked;
-    p._halo.setStyle(p._halo.options._active ? {opacity: 0.9, fillOpacity: 0.18} : {opacity: 0, fillOpacity: 0});
+    p._halo.setStyle(p._halo.options._active ? {opacity: 0.9} : {opacity: 0});
     p._halo.bringToBack();
   });
 }
