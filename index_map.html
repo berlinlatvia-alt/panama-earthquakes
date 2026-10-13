@@ -144,8 +144,8 @@ function applyMagFilter() {
     const halo = p._halo;
     if (halo) halo.setStyle(halo.options._active ? {opacity: 0.9} : {opacity: 0});
   });
-  document.querySelectorAll('#evtbody tr').forEach(tr => {
-    const f = GEO.features.find(x => x.properties._id === tr.dataset.id);
+document.querySelectorAll('#evtbody tr').forEach(tr => {
+    const f = GEO.features.find(x => String(x.properties._id) === tr.dataset.id);
     if (f) tr.style.display = document.getElementById(bandOf(f.properties.mag)).checked ? '' : 'none';
   });
 }
