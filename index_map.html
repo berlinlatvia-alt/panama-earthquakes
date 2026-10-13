@@ -113,7 +113,7 @@ window.quakeLayer = L.geoJSON(GEO, {
     l.bindTooltip('M' + p.mag.toFixed(1) + ' · ' + dep + ' · ' + p.local + ' · ' + (p.place_name || p.catalog_place), {
       direction: 'top', className: 'site-tip'
     });
-    f.properties._halo = L.circleMarker(latlng, {
+    f.properties._halo = L.circleMarker([f.geometry.coordinates[1], f.geometry.coordinates[0]], {
       radius: p.radius + 5, color: '#a855f7', weight: 3, opacity: 0, fill: false
     }).addTo(map);
   }
