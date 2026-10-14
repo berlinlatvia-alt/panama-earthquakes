@@ -83,10 +83,14 @@
   <label><input type="checkbox" id="cbM2" checked> M2-3</label>
   <span style="color:#64748b;font-size:11px">purple halo = last 60 min</span>
 </div>
-<div class="ctl ctl3" style="top:116px; left:50%; margin-left:40px;">
+<div class="ctl ctl3" style="top:112px; left:50%; max-width:85vw;">
   <label style="color:#94A3B8">Time:</label>
-  <label><input type="checkbox" id="cbT60" checked> 60 min</label>
-  <label><input type="checkbox" id="cbT75"> 75 min (1h15m)</label>
+  <label><input type="checkbox" id="cbT60"> 60m</label>
+  <label><input type="checkbox" id="cbT75"> 75m</label>
+  <label><input type="checkbox" id="cbT3h"> 3h</label>
+  <label><input type="checkbox" id="cbT6h"> 6h</label>
+  <label><input type="checkbox" id="cbT12h"> 12h</label>
+  <label><input type="checkbox" id="cbT24h"> 24h</label>
   <label><input type="checkbox" id="cbTAll" checked> All</label>
   <span id="timecount" style="color:#64748b;font-size:11px">...</span>
 </div>
@@ -243,18 +247,48 @@ function updateHalos() {
 }
 
 /* Time window filter (pins + table rows) */
-const TIME_60 = 3600000;  // 60 min
-const TIME_75 = 4500000;  // 75 min (1h15m)
+const TIME_MAP = {
+  'cbT60': 3600000,
+  'cbT75': 4500000,
+  'cbT3h': 3 * 3600000,
+  'cbT6h': 6 * 3600000,
+  'cbT12h': 12 * 3600000,
+  'cbT24h': 24 * 3600000
+};
+const TIME_IDS = ['cbT60', 'cbT75', 'cbT3h', 'cbT6h', 'cbT12h', 'cbT24h'];
+
 function timeFilterActive() {
-  const t60 = document.getElementById('cbT60').checked;
-  const t75 = document.getElementById('cbT75').checked;
   const tall = document.getElementById('cbTAll').checked;
   if (tall) return null;  // show all
-  if (t60 && !t75) return TIME_60;
-  if (t75 && !t60) return TIME_75;
-  if (t60 && t75) return TIME_75;  // wider window if both
-  return TIME_60;  // default to 60 if none checked
+  let maxMs = null;
+  TIME_IDS.forEach(id => {
+    const el = document.getElementById(id);
+    if (el && el.checked) {
+      const ms = TIME_MAP[id];
+      if (maxMs === null || ms > maxMs) maxMs = ms;
+    }
+  });
+  return maxMs !== null ? maxMs : null;
 }
+
+// Exclusive click interaction: clicking a specific time unchecks 'All', clicking 'All' unchecks others
+TIME_IDS.forEach(id => {
+  const el = document.getElementById(id);
+  if (el) el.addEventListener('click', () => {
+    if (el.checked) {
+      document.getElementById('cbTAll').checked = false;
+      try { sessionStorage.setItem('quake_cfg_cbTAll', '0'); } catch(e){}
+    }
+  });
+});
+document.getElementById('cbTAll').addEventListener('click', () => {
+  if (document.getElementById('cbTAll').checked) {
+    TIME_IDS.forEach(id => {
+      const el = document.getElementById(id);
+      if (el) { el.checked = false; try { sessionStorage.setItem('quake_cfg_' + id, '0'); } catch(e){} }
+    });
+  }
+});
 function applyTimeFilter() {
   const windowMs = timeFilterActive();
   const now = Date.now();
@@ -295,7 +329,7 @@ function applyTimeFilter() {
   });
   syncLabels();
 }
-['cbT60','cbT75','cbTAll'].forEach(id => document.getElementById(id).addEventListener('change', () => { applyMagFilter(); applyTimeFilter(); updateHalos(); }));
+['cbT60','cbT75','cbT3h','cbT6h','cbT12h','cbT24h','cbTAll'].forEach(id => document.getElementById(id).addEventListener('change', () => { applyMagFilter(); applyTimeFilter(); updateHalos(); }));
 
 ['cbM5','cbM4','cbM3','cbM2'].forEach(id => document.getElementById(id).addEventListener('change', () => { applyMagFilter(); applyTimeFilter(); updateHalos(); }));
 applyMagFilter();
@@ -413,7 +447,7 @@ map.fitBounds(b, {maxZoom: 9});
 syncLabels();
 
 /* ---- state persistence & fast auto-pulse stream ---- */
-['cbM5','cbM4','cbM3','cbM2','cbT60','cbT75','cbTAll','cbPlates','cbLiveSat','cbLiveSens'].forEach(id => {
+['cbM5','cbM4','cbM3','cbM2','cbT60','cbT75','cbT3h','cbT6h','cbT12h','cbT24h','cbTAll','cbPlates','cbLiveSat','cbLiveSens'].forEach(id => {
   const el = document.getElementById(id);
   if (!el) return;
   try {
