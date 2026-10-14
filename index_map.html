@@ -85,6 +85,7 @@
   <label><input type="checkbox" id="cbT60" checked> 60 min</label>
   <label><input type="checkbox" id="cbT75"> 75 min (1h15m)</label>
   <label><input type="checkbox" id="cbTAll" checked> All</label>
+  <span id="timecount" style="color:#64748b;font-size:11px">...</span>
 </div>
 <script src="leaflet.js"></script>
 <script>
@@ -161,14 +162,30 @@ document.querySelectorAll('#evtbody tr').forEach(tr => {
 GEO.features.forEach((f, i) => f.properties._id = i);
 
 /* purple halo: events in the last 60 minutes (live) - OUTER ring, no fill */
+function dataMaxMs() {
+  let m = 0;
+  GEO.features.forEach(f => { if (f.properties.utc_ms > m) m = f.properties.utc_ms; });
+  return m;
+}
 function updateHalos() {
   const now = Date.now();
+  const wm = timeFilterActive();
   layer.eachLayer(l => {
     const p = l.feature.properties;
     const recent = (now - p.utc_ms) >= 0 && (now - p.utc_ms) < 3600000;
-    p._halo.options._active = recent && document.getElementById(bandOf(p.mag)).checked;
-    p._halo.setStyle({opacity: p._halo.options._active ? 0.9 : 0});
+    const inW = wm === null || ((now - p.utc_ms) >= 0 && (now - p.utc_ms) <= wm);
+    p._halo.options._active = recent && inW;
+    p._halo.setStyle({opacity: (recent && inW && document.getElementById(bandOf(p.mag)).checked) ? 0.9 : 0});
   });
+  const el = document.getElementById('timecount');
+  if (el) {
+    let inWin = 0;
+    layer.eachLayer(l => {
+      const p = l.feature.properties;
+      if (wm === null || ((now - p.utc_ms) >= 0 && (now - p.utc_ms) <= wm)) inWin++;
+    });
+    el.textContent = (wm === null ? 'all events' : 'in window: ' + inWin) + ' — data age: ' + ((now - dataMaxMs()) / 3600000).toFixed(1) + 'h';
+  }
 }
 
 /* Time window filter (pins + table rows) */
@@ -189,17 +206,26 @@ function applyTimeFilter() {
   const now = Date.now();
   layer.eachLayer(l => {
     const p = l.feature.properties;
+    const magOn = onFor(p.mag);
+    let opacity, fillOpacity, interactive;
     if (windowMs === null) {
-      l.setStyle({ opacity: onFor(p.mag) ? 1 : 0.08, fillOpacity: onFor(p.mag) ? 0.55 : 0.03 });
-      if (l.getElement()) l.getElement().style.pointerEvents = onFor(p.mag) ? 'auto' : 'none';
-      return;
+      opacity = magOn ? 1 : 0.08; fillOpacity = magOn ? 0.55 : 0.03; interactive = magOn;
+    } else {
+      const age = now - p.utc_ms;
+      const shown = magOn && age >= 0 && age <= windowMs;
+      opacity = shown ? 1 : 0; fillOpacity = shown ? 0.55 : 0; interactive = shown;
     }
-    const age = now - p.utc_ms;
-    const inWindow = age >= 0 && age <= windowMs;
-    const on = onFor(p.mag) && inWindow;
-    l.setStyle({ opacity: on ? 1 : 0.08, fillOpacity: on ? 0.55 : 0.03 });
-    if (l.getElement()) l.getElement().style.pointerEvents = on ? 'auto' : 'none';
+    l.setStyle({ opacity: opacity, fillOpacity: fillOpacity });
+    if (l.getElement()) l.getElement().style.pointerEvents = interactive ? 'auto' : 'none';
   });
+  if (window.liveGroup) {
+    window.liveGroup.eachLayer(l => {
+      const ms = l.options._utc || 0;
+      const shown = windowMs === null || (ms > 0 && (now - ms) >= 0 && (now - ms) <= windowMs);
+      l.setStyle({ opacity: shown ? 1 : 0, fillOpacity: shown ? 0.5 : 0 });
+      if (l.getElement()) l.getElement().style.pointerEvents = shown ? 'auto' : 'none';
+    });
+  }
   document.querySelectorAll('#evtbody tr').forEach(tr => {
     if (windowMs === null) {
       const f = GEO.features.find(x => String(x.properties._id) === tr.dataset.id);
@@ -284,14 +310,14 @@ const liveSatLayer = L.tileLayer(
   });
 
 /* ---- live sensor feed (USGS real-time FDSN, auto-refresh 60s) ---- */
-const liveGroup = L.layerGroup();
+window.liveGroup = L.layerGroup();
 function loadLiveSensors() {
   const now = Date.now() - 12 * 3600 * 1000;
   const st = new Date(now).toISOString().slice(0, 19).replace('T', '');
   const url = 'https://earthquake.usgs.gov/fdsnws/event/1/query?format=geojson&starttime=' + st +
     '&minlatitude=5&maxlatitude=12&minlongitude=-86&maxlongitude=-76&minmagnitude=1.5&orderby=time';
   fetch(url).then(r => r.json()).then(d => {
-    liveGroup.clearLayers();
+    window.liveGroup.clearLayers();
     (d.features || []).forEach(f => {
       const p = f.properties, c = f.geometry.coordinates;
       const lat = c[1], lon = c[0], dep = c[2] || 0;
@@ -304,8 +330,10 @@ function loadLiveSensors() {
         + '<b>Time (UTC):</b> ' + new Date(p.time).toISOString().slice(11, 19) + '<br>'
         + '<b>Coords:</b> ' + lat.toFixed(4) + ', ' + lon.toFixed(4) + '</div>'
       ).bindTooltip('LIVE M' + p.mag + ' ' + p.place, {className: 'site-tip'});
-      liveGroup.addLayer(m);
+      m.options._utc = new Date(p.time).getTime();
+      window.liveGroup.addLayer(m);
     });
+    applyTimeFilter();
     if (document.getElementById('livecount')) document.getElementById('livecount').textContent =
       'USGS live: ' + d.features.length + ' events (last 12h)';
   }).catch(() => {
@@ -321,8 +349,8 @@ document.getElementById('cbLiveSat').addEventListener('change', e => {
   if (e.target.checked) liveSatLayer.addTo(map); else map.removeLayer(liveSatLayer);
 });
 document.getElementById('cbLiveSens').addEventListener('change', e => {
-  if (e.target.checked) { liveGroup.addTo(map); loadLiveSensors(); window.__liveTimer = setInterval(loadLiveSensors, 60000); }
-  else { if (window.__liveTimer) clearInterval(window.__liveTimer); map.removeLayer(liveGroup); }
+  if (e.target.checked) { window.liveGroup.addTo(map); loadLiveSensors(); window.__liveTimer = setInterval(loadLiveSensors, 60000); }
+  else { if (window.__liveTimer) clearInterval(window.__liveTimer); map.removeLayer(window.liveGroup); }
 });
 
 const b = layer.getBounds().pad(0.15);
