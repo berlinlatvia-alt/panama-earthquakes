@@ -203,6 +203,16 @@ function dataMaxMs() {
   GEO.features.forEach(f => { if (f.properties.utc_ms > m) m = f.properties.utc_ms; });
   return m;
 }
+window.enableAllMagBands = function() {
+  ['cbM5','cbM4','cbM3','cbM2'].forEach(id => {
+    const el = document.getElementById(id);
+    if (el) { el.checked = true; try { sessionStorage.setItem('quake_cfg_' + id, '1'); } catch(e){} }
+  });
+  applyMagFilter();
+  applyTimeFilter();
+  updateHalos();
+};
+
 function updateHalos() {
   const now = Date.now();
   const wm = timeFilterActive();
@@ -215,12 +225,20 @@ function updateHalos() {
   });
   const el = document.getElementById('timecount');
   if (el) {
-    let inWin = 0;
+    let inWinVisible = 0;
+    let hiddenByMag = 0;
     layer.eachLayer(l => {
       const p = l.feature.properties;
-      if (wm === null || ((now - p.utc_ms) >= 0 && (now - p.utc_ms) <= wm)) inWin++;
+      const inTime = wm === null || ((now - p.utc_ms) >= 0 && (now - p.utc_ms) <= wm);
+      if (inTime) {
+        if (document.getElementById(bandOf(p.mag)).checked) inWinVisible++;
+        else hiddenByMag++;
+      }
     });
-    el.textContent = (wm === null ? 'all events' : 'in window: ' + inWin) + ' — data age: ' + ((now - dataMaxMs()) / 3600000).toFixed(1) + 'h';
+    let ageMin = Math.max(0, Math.round((now - dataMaxMs()) / 60000));
+    let ageStr = ageMin < 60 ? ageMin + 'm' : (ageMin / 60).toFixed(1) + 'h';
+    let hiddenNotice = hiddenByMag > 0 ? ' <span style="color:#fbbf24;cursor:pointer;text-decoration:underline;font-weight:600" onclick="enableAllMagBands()" title="Click to show hidden magnitude bands">(' + hiddenByMag + ' hidden by mag filter: click to show)</span>' : '';
+    el.innerHTML = (wm === null ? 'all events' : 'in window: ' + inWinVisible) + hiddenNotice + ' — data age: ' + ageStr;
   }
 }
 
@@ -393,6 +411,38 @@ document.getElementById('cbLiveSens').addEventListener('change', e => {
 const b = layer.getBounds().pad(0.15);
 map.fitBounds(b, {maxZoom: 9});
 syncLabels();
+
+/* ---- state persistence & fast auto-pulse stream ---- */
+['cbM5','cbM4','cbM3','cbM2','cbT60','cbT75','cbTAll','cbPlates','cbLiveSat','cbLiveSens'].forEach(id => {
+  const el = document.getElementById(id);
+  if (!el) return;
+  try {
+    const saved = sessionStorage.getItem('quake_cfg_' + id);
+    if (saved !== null) el.checked = (saved === '1');
+    el.addEventListener('change', () => {
+      sessionStorage.setItem('quake_cfg_' + id, el.checked ? '1' : '0');
+    });
+  } catch(e){}
+});
+applyMagFilter();
+applyTimeFilter();
+updateHalos();
+
+function livePulseCheck() {
+  fetch('panama_events.json?t=' + Date.now())
+    .then(r => r.json())
+    .then(d => {
+      if (d && d.features && d.features.length > 0) {
+        let remoteMax = 0;
+        d.features.forEach(f => { if (f.properties && f.properties.utc_ms > remoteMax) remoteMax = f.properties.utc_ms; });
+        if (remoteMax > dataMaxMs()) {
+          console.log('[FastPulse] New seismic event detected (' + remoteMax + ' > ' + dataMaxMs() + ') -> refreshing view');
+          location.reload();
+        }
+      }
+    }).catch(() => {});
+}
+setInterval(livePulseCheck, 30000);
 </script>
 </body>
 </html>
