@@ -1,25 +1,15 @@
 {
  "summary": {
-  "generated_utc": "2026-10-14T18:29:28Z",
-  "window": "24h closing 2026-10-14T18:29:28Z",
-  "raw_events": 182,
-  "pins": 93,
-  "cross_agency_merges": 89,
-  "max_mag": 6,
-  "m6plus": 1,
-  "m5plus": 4,
-  "m4plus": 30,
+  "generated_utc": "2026-10-14T18:59:47Z",
+  "window": "24h closing 2026-10-14T18:59:47Z",
+  "raw_events": 184,
+  "pins": 91,
+  "cross_agency_merges": 93,
+  "max_mag": 5.9,
+  "m6plus": 0,
+  "m5plus": 3,
+  "m4plus": 28,
   "top_events": [
-   {
-    "mag": 6,
-    "lat": -5.5,
-    "lon": 152.1,
-    "place": "126 km S of Kokopo, Papua New Guinea",
-    "t": "2026-10-13T18:45:03Z",
-    "cats": [
-     "USGS"
-    ]
-   },
    {
     "mag": 5.9,
     "lat": -21.0,
@@ -89,6 +79,16 @@
     "cats": [
      "USGS"
     ]
+   },
+   {
+    "mag": 4.8,
+    "lat": 6.8,
+    "lon": -73.0,
+    "place": "5 km NW of Cepitá, Colombia",
+    "t": "2026-10-13T21:24:21Z",
+    "cats": [
+     "USGS"
+    ]
    }
   ],
   "storms": [
@@ -117,35 +117,6 @@
   ]
  },
  "features": [
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     152.1364,
-     -5.4832
-    ]
-   },
-   "properties": {
-    "mag": 6,
-    "mag_alt": null,
-    "lat": -5.4832,
-    "lon": 152.1364,
-    "depth": 20.842,
-    "t_iso": "2026-10-13T18:45:03Z",
-    "utc_ms": 1791917103231,
-    "place": "126 km S of Kokopo, Papua New Guinea",
-    "tsunami": 0,
-    "catalogs": [
-     "USGS"
-    ],
-    "duplicate_note": null,
-    "band": "M5+",
-    "color": "#ff3b30",
-    "radius": 22.4,
-    "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u24c"
-   }
-  },
   {
    "type": "Feature",
    "geometry": {
@@ -608,35 +579,6 @@
     "color": "#ffd60a",
     "radius": 18.240000000000002,
     "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u265"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -76.3106,
-     1.6816
-    ]
-   },
-   "properties": {
-    "mag": 4.4,
-    "mag_alt": null,
-    "lat": 1.6816,
-    "lon": -76.3106,
-    "depth": 10,
-    "t_iso": "2026-10-13T18:36:38Z",
-    "utc_ms": 1791916598928,
-    "place": "20 km WSW of Palestina, Colombia",
-    "tsunami": 0,
-    "catalogs": [
-     "USGS"
-    ],
-    "duplicate_note": null,
-    "band": "M4-5",
-    "color": "#ffd60a",
-    "radius": 18.240000000000002,
-    "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u24a"
    }
   },
   {
@@ -1224,35 +1166,6 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -80.58,
-     -3.17
-    ]
-   },
-   "properties": {
-    "mag": 3.7,
-    "mag_alt": null,
-    "lat": -3.17,
-    "lon": -80.58,
-    "depth": -24.0,
-    "t_iso": "2026-10-14T05:53:51.1+00:00",
-    "utc_ms": 0,
-    "place": "PERU-ECUADOR BORDER REGION",
-    "tsunami": 0,
-    "catalogs": [
-     "EMSC"
-    ],
-    "duplicate_note": null,
-    "band": "M3-4",
-    "color": "#4dd2ff",
-    "radius": 16.42,
-    "url": ""
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
      -104.478,
      32.3762
     ]
@@ -1495,7 +1408,7 @@
     "lat": 40.067,
     "lon": 27.6465,
     "depth": -14.8,
-    "t_iso": "2026-10-14T17:38:05.19+00:00",
+    "t_iso": "2026-10-14T17:38:05.34+00:00",
     "utc_ms": 0,
     "place": "WESTERN TURKEY",
     "tsunami": 0,
@@ -1572,19 +1485,19 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     122.03,
-     41.19
+     113.68,
+     -8.97
     ]
    },
    "properties": {
-    "mag": 3.4,
+    "mag": 3.3,
     "mag_alt": null,
-    "lat": 41.19,
-    "lon": 122.03,
+    "lat": -8.97,
+    "lon": 113.68,
     "depth": -10.0,
-    "t_iso": "2026-10-14T06:06:25.0+00:00",
+    "t_iso": "2026-10-14T18:28:18.0+00:00",
     "utc_ms": 0,
-    "place": "LIAONING, CHINA",
+    "place": "JAVA, INDONESIA",
     "tsunami": 0,
     "catalogs": [
      "EMSC"
@@ -1592,7 +1505,7 @@
     "duplicate_note": null,
     "band": "M3-4",
     "color": "#4dd2ff",
-    "radius": 15.64,
+    "radius": 15.379999999999999,
     "url": ""
    }
   },
@@ -2152,6 +2065,64 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
+     -69.09,
+     -31.55
+    ]
+   },
+   "properties": {
+    "mag": 3.0,
+    "mag_alt": null,
+    "lat": -31.55,
+    "lon": -69.09,
+    "depth": -116.0,
+    "t_iso": "2026-10-14T18:38:44.0+00:00",
+    "utc_ms": 0,
+    "place": "SAN JUAN, ARGENTINA",
+    "tsunami": 0,
+    "catalogs": [
+     "EMSC"
+    ],
+    "duplicate_note": null,
+    "band": "M3-4",
+    "color": "#4dd2ff",
+    "radius": 14.6,
+    "url": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     116.85,
+     -8.35
+    ]
+   },
+   "properties": {
+    "mag": 3.0,
+    "mag_alt": null,
+    "lat": -8.35,
+    "lon": 116.85,
+    "depth": -10.0,
+    "t_iso": "2026-10-14T17:58:26.0+00:00",
+    "utc_ms": 0,
+    "place": "LOMBOK REGION, INDONESIA",
+    "tsunami": 0,
+    "catalogs": [
+     "EMSC"
+    ],
+    "duplicate_note": null,
+    "band": "M3-4",
+    "color": "#4dd2ff",
+    "radius": 14.6,
+    "url": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
      92.225,
      26.231
     ]
@@ -2268,6 +2239,35 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
+     -68.71,
+     -21.91
+    ]
+   },
+   "properties": {
+    "mag": 2.8,
+    "mag_alt": null,
+    "lat": -21.91,
+    "lon": -68.71,
+    "depth": -123.1,
+    "t_iso": "2026-10-14T18:31:49.0+00:00",
+    "utc_ms": 0,
+    "place": "ANTOFAGASTA, CHILE",
+    "tsunami": 0,
+    "catalogs": [
+     "EMSC"
+    ],
+    "duplicate_note": null,
+    "band": "M2-3",
+    "color": "#4dd2ff",
+    "radius": 14.08,
+    "url": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
      0.926,
      36.4657
     ]
@@ -2339,35 +2339,6 @@
     "t_iso": "2026-10-14T10:29:21.0+00:00",
     "utc_ms": 0,
     "place": "SOUTH AFRICA",
-    "tsunami": 0,
-    "catalogs": [
-     "EMSC"
-    ],
-    "duplicate_note": null,
-    "band": "M2-3",
-    "color": "#4dd2ff",
-    "radius": 14.08,
-    "url": ""
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -68.52,
-     -21.66
-    ]
-   },
-   "properties": {
-    "mag": 2.8,
-    "mag_alt": null,
-    "lat": -21.66,
-    "lon": -68.52,
-    "depth": -140.2,
-    "t_iso": "2026-10-14T06:41:45.0+00:00",
-    "utc_ms": 0,
-    "place": "ANTOFAGASTA, CHILE",
     "tsunami": 0,
     "catalogs": [
      "EMSC"
@@ -2732,19 +2703,19 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -69.51,
-     -31.9
+     100.3,
+     -0.14
     ]
    },
    "properties": {
     "mag": 2.5,
     "mag_alt": null,
-    "lat": -31.9,
-    "lon": -69.51,
-    "depth": -107.0,
-    "t_iso": "2026-10-14T14:22:54.0+00:00",
+    "lat": -0.14,
+    "lon": 100.3,
+    "depth": -10.0,
+    "t_iso": "2026-10-14T18:06:26.0+00:00",
     "utc_ms": 0,
-    "place": "SAN JUAN, ARGENTINA",
+    "place": "SOUTHERN SUMATRA, INDONESIA",
     "tsunami": 0,
     "catalogs": [
      "EMSC"
@@ -2774,35 +2745,6 @@
     "t_iso": "2026-10-14T13:20:11.65+00:00",
     "utc_ms": 0,
     "place": "GREECE",
-    "tsunami": 0,
-    "catalogs": [
-     "EMSC"
-    ],
-    "duplicate_note": null,
-    "band": "M2-3",
-    "color": "#4dd2ff",
-    "radius": 13.3,
-    "url": ""
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     44.0621,
-     41.3484
-    ]
-   },
-   "properties": {
-    "mag": 2.5,
-    "mag_alt": null,
-    "lat": 41.3484,
-    "lon": 44.0621,
-    "depth": -19.9,
-    "t_iso": "2026-10-14T05:48:54.75+00:00",
-    "utc_ms": 0,
-    "place": "GEORGIA (SAK'ART'VELO)",
     "tsunami": 0,
     "catalogs": [
      "EMSC"
