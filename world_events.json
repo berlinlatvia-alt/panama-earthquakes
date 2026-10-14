@@ -1,10 +1,10 @@
 {
  "summary": {
-  "generated_utc": "2026-10-14T03:43:50Z",
-  "window": "24h closing 2026-10-14T03:43:50Z",
-  "raw_events": 175,
-  "pins": 97,
-  "cross_agency_merges": 78,
+  "generated_utc": "2026-10-14T03:59:33Z",
+  "window": "24h closing 2026-10-14T03:59:33Z",
+  "raw_events": 178,
+  "pins": 99,
+  "cross_agency_merges": 79,
   "max_mag": 6.8,
   "m6plus": 4,
   "m5plus": 10,
@@ -1398,35 +1398,6 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     124.76,
-     -0.07
-    ]
-   },
-   "properties": {
-    "mag": 3.8,
-    "mag_alt": null,
-    "lat": -0.07,
-    "lon": 124.76,
-    "depth": -10.0,
-    "t_iso": "2026-10-13T14:32:54.0+00:00",
-    "utc_ms": 0,
-    "place": "MOLUCCA SEA",
-    "tsunami": 0,
-    "catalogs": [
-     "EMSC"
-    ],
-    "duplicate_note": null,
-    "band": "M3-4",
-    "color": "#4dd2ff",
-    "radius": 16.68,
-    "url": ""
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
      -67.17,
      -24.16
     ]
@@ -1507,6 +1478,35 @@
     "color": "#4dd2ff",
     "radius": 16.16,
     "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u25y"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     93.949,
+     24.595
+    ]
+   },
+   "properties": {
+    "mag": 3.6,
+    "mag_alt": null,
+    "lat": 24.595,
+    "lon": 93.949,
+    "depth": -35.0,
+    "t_iso": "2026-10-14T03:39:53.0+00:00",
+    "utc_ms": 0,
+    "place": "MANIPUR, INDIA REGION",
+    "tsunami": 0,
+    "catalogs": [
+     "EMSC"
+    ],
+    "duplicate_note": null,
+    "band": "M3-4",
+    "color": "#4dd2ff",
+    "radius": 16.16,
+    "url": ""
    }
   },
   {
@@ -1651,6 +1651,35 @@
     "band": "M3-4",
     "color": "#4dd2ff",
     "radius": 16.16,
+    "url": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -24.691,
+     37.457
+    ]
+   },
+   "properties": {
+    "mag": 3.5,
+    "mag_alt": null,
+    "lat": 37.457,
+    "lon": -24.691,
+    "depth": -15.0,
+    "t_iso": "2026-10-14T03:50:08.4+00:00",
+    "utc_ms": 0,
+    "place": "AZORES ISLANDS REGION",
+    "tsunami": 0,
+    "catalogs": [
+     "EMSC"
+    ],
+    "duplicate_note": null,
+    "band": "M3-4",
+    "color": "#4dd2ff",
+    "radius": 15.9,
     "url": ""
    }
   },
@@ -1999,6 +2028,64 @@
     "band": "M3-4",
     "color": "#4dd2ff",
     "radius": 15.379999999999999,
+    "url": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -151.072,
+     60.995
+    ]
+   },
+   "properties": {
+    "mag": 3.2,
+    "mag_alt": null,
+    "lat": 60.995,
+    "lon": -151.072,
+    "depth": 65.4,
+    "t_iso": "2026-10-14T03:53:48Z",
+    "utc_ms": 1791950028926,
+    "place": "8 km SSE of Tyonek, Alaska",
+    "tsunami": 0,
+    "catalogs": [
+     "USGS"
+    ],
+    "duplicate_note": null,
+    "band": "M3-4",
+    "color": "#4dd2ff",
+    "radius": 15.120000000000001,
+    "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026uioapb"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -151.072,
+     60.995
+    ]
+   },
+   "properties": {
+    "mag": 3.2,
+    "mag_alt": null,
+    "lat": 60.995,
+    "lon": -151.072,
+    "depth": -65.4,
+    "t_iso": "2026-10-14T03:53:48.926306+00:00",
+    "utc_ms": 0,
+    "place": "KENAI PENINSULA, ALASKA",
+    "tsunami": 0,
+    "catalogs": [
+     "EMSC"
+    ],
+    "duplicate_note": null,
+    "band": "M3-4",
+    "color": "#4dd2ff",
+    "radius": 15.120000000000001,
     "url": ""
    }
   },
@@ -2442,35 +2529,6 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -24.626,
-     37.472
-    ]
-   },
-   "properties": {
-    "mag": 2.9,
-    "mag_alt": null,
-    "lat": 37.472,
-    "lon": -24.626,
-    "depth": -15.0,
-    "t_iso": "2026-10-13T22:23:42.4+00:00",
-    "utc_ms": 0,
-    "place": "AZORES ISLANDS REGION",
-    "tsunami": 0,
-    "catalogs": [
-     "EMSC"
-    ],
-    "duplicate_note": null,
-    "band": "M2-3",
-    "color": "#4dd2ff",
-    "radius": 14.34,
-    "url": ""
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
      28.2243,
      39.2205
     ]
@@ -2761,35 +2819,6 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -84.3353,
-     10.076
-    ]
-   },
-   "properties": {
-    "mag": 2.7,
-    "mag_alt": null,
-    "lat": 10.076,
-    "lon": -84.3353,
-    "depth": -10.0,
-    "t_iso": "2026-10-13T14:33:27.0+00:00",
-    "utc_ms": 0,
-    "place": "COSTA RICA",
-    "tsunami": 0,
-    "catalogs": [
-     "EMSC"
-    ],
-    "duplicate_note": null,
-    "band": "M2-3",
-    "color": "#4dd2ff",
-    "radius": 13.82,
-    "url": ""
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
      -68.45,
      -24.97
     ]
@@ -2803,6 +2832,35 @@
     "t_iso": "2026-10-14T01:54:26.0+00:00",
     "utc_ms": 0,
     "place": "SALTA, ARGENTINA",
+    "tsunami": 0,
+    "catalogs": [
+     "EMSC"
+    ],
+    "duplicate_note": null,
+    "band": "M2-3",
+    "color": "#4dd2ff",
+    "radius": 13.56,
+    "url": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -84.9662,
+     9.5846
+    ]
+   },
+   "properties": {
+    "mag": 2.6,
+    "mag_alt": null,
+    "lat": 9.5846,
+    "lon": -84.9662,
+    "depth": -15.0,
+    "t_iso": "2026-10-13T22:51:09.0+00:00",
+    "utc_ms": 0,
+    "place": "COSTA RICA",
     "tsunami": 0,
     "catalogs": [
      "EMSC"
