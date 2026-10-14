@@ -217,6 +217,32 @@ window.enableAllMagBands = function() {
   updateHalos();
 };
 
+window.switchToTime = function(target) {
+  if (target === 'All') {
+    document.getElementById('cbTAll').checked = true;
+    TIME_IDS.forEach(id => {
+      const el = document.getElementById(id);
+      if (el) { el.checked = false; try { sessionStorage.setItem('quake_cfg_' + id, '0'); } catch(e){} }
+    });
+    try { sessionStorage.setItem('quake_cfg_cbTAll', '1'); } catch(e){}
+  } else {
+    document.getElementById('cbTAll').checked = false;
+    try { sessionStorage.setItem('quake_cfg_cbTAll', '0'); } catch(e){}
+    const targetId = 'cbT' + target;
+    TIME_IDS.forEach(id => {
+      const el = document.getElementById(id);
+      if (el) {
+        const on = (id === targetId);
+        el.checked = on;
+        try { sessionStorage.setItem('quake_cfg_' + id, on ? '1' : '0'); } catch(e){}
+      }
+    });
+  }
+  applyTimeFilter();
+  syncLabels();
+  updateHalos();
+};
+
 function updateHalos() {
   const now = Date.now();
   const wm = timeFilterActive();
@@ -242,7 +268,11 @@ function updateHalos() {
     let ageMin = Math.max(0, Math.round((now - dataMaxMs()) / 60000));
     let ageStr = ageMin < 60 ? ageMin + 'm' : (ageMin / 60).toFixed(1) + 'h';
     let hiddenNotice = hiddenByMag > 0 ? ' <span style="color:#fbbf24;cursor:pointer;text-decoration:underline;font-weight:600" onclick="enableAllMagBands()" title="Click to show hidden magnitude bands">(' + hiddenByMag + ' hidden by mag filter: click to show)</span>' : '';
-    el.innerHTML = (wm === null ? 'all events' : 'in window: ' + inWinVisible) + hiddenNotice + ' — data age: ' + ageStr;
+    let zeroHelp = '';
+    if (wm !== null && inWinVisible === 0 && hiddenByMag === 0) {
+      zeroHelp = ' <span style="color:#38bdf8;cursor:pointer;text-decoration:underline;font-weight:600" onclick="window.switchToTime('3h')" title="Latest event was ' + ageStr + ' ago; click to expand window to 3h">[Lull: click to show 3h]</span>';
+    }
+    el.innerHTML = (wm === null ? 'all events' : 'in window: ' + inWinVisible) + hiddenNotice + zeroHelp + ' — data age: ' + ageStr;
   }
 }
 
@@ -314,19 +344,39 @@ function applyTimeFilter() {
       if (l.getElement()) l.getElement().style.pointerEvents = shown ? 'auto' : 'none';
     });
   }
-  document.querySelectorAll('#evtbody tr').forEach(tr => {
+  let visibleRows = 0;
+  document.querySelectorAll('#evtbody tr:not(#empty-state-row)').forEach(tr => {
+    let show = false;
     if (windowMs === null) {
       const f = GEO.features.find(x => String(x.properties._id) === tr.dataset.id);
-      tr.style.display = (f && document.getElementById(bandOf(f.properties.mag)).checked) ? '' : 'none';
-      return;
+      show = (f && document.getElementById(bandOf(f.properties.mag)).checked);
+    } else {
+      const rowMs = parseInt(tr.dataset.utc_ms || '0');
+      if (rowMs) {
+        const age = now - rowMs;
+        const inWindow = age >= 0 && age <= windowMs;
+        const f = GEO.features.find(x => String(x.properties._id) === tr.dataset.id);
+        show = (f && document.getElementById(bandOf(f.properties.mag)).checked && inWindow);
+      }
     }
-    const rowMs = parseInt(tr.dataset.utc_ms || '0');
-    if (!rowMs) { tr.style.display = 'none'; return; }
-    const age = now - rowMs;
-    const inWindow = age >= 0 && age <= windowMs;
-    const f = GEO.features.find(x => String(x.properties._id) === tr.dataset.id);
-    tr.style.display = (f && document.getElementById(bandOf(f.properties.mag)).checked && inWindow) ? '' : 'none';
+    tr.style.display = show ? '' : 'none';
+    if (show) visibleRows++;
   });
+  let emptyRow = document.getElementById('empty-state-row');
+  if (visibleRows === 0) {
+    if (!emptyRow) {
+      emptyRow = document.createElement('tr');
+      emptyRow.id = 'empty-state-row';
+      document.getElementById('evtbody').appendChild(emptyRow);
+    }
+    emptyRow.style.display = '';
+    let ageMin = Math.max(0, Math.round((now - dataMaxMs()) / 60000));
+    let ageStr = ageMin < 60 ? ageMin + 'm' : (ageMin / 60).toFixed(1) + 'h';
+    let winLabel = windowMs ? (windowMs/60000 < 60 ? windowMs/60000 + 'm' : (windowMs/3600000) + 'h') : 'selected';
+    emptyRow.innerHTML = '<td colspan="5" style="text-align:center;padding:26px 14px;color:#94a3b8;font-size:12px;line-height:1.7"><span style="color:#e2e8f0;font-weight:600">No earthquakes recorded in Panama in the last ' + winLabel + '.</span><br>Seismic lull in progress (latest event was ' + ageStr + ' ago).<br><span style="color:#38bdf8;cursor:pointer;text-decoration:underline;font-weight:600" onclick="window.switchToTime('3h')">Click to show last 3h (10 events)</span> &middot; <span style="color:#a855f7;cursor:pointer;text-decoration:underline;font-weight:600" onclick="window.switchToTime('All')">Show All 88 events</span></td>';
+  } else if (emptyRow) {
+    emptyRow.style.display = 'none';
+  }
   syncLabels();
 }
 ['cbT60','cbT75','cbT3h','cbT6h','cbT12h','cbT24h','cbTAll'].forEach(id => document.getElementById(id).addEventListener('change', () => { applyMagFilter(); applyTimeFilter(); updateHalos(); }));
