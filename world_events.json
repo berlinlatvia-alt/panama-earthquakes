@@ -1,9 +1,9 @@
 {
  "summary": {
-  "generated_utc": "2026-10-14T16:59:38Z",
-  "window": "24h closing 2026-10-14T16:59:38Z",
-  "raw_events": 182,
-  "pins": 94,
+  "generated_utc": "2026-10-14T17:59:50Z",
+  "window": "24h closing 2026-10-14T17:59:50Z",
+  "raw_events": 180,
+  "pins": 92,
   "cross_agency_merges": 88,
   "max_mag": 6,
   "m6plus": 1,
@@ -441,35 +441,6 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -80.6172,
-     7.5442
-    ]
-   },
-   "properties": {
-    "mag": 4.7,
-    "mag_alt": null,
-    "lat": 7.5442,
-    "lon": -80.6172,
-    "depth": -12.0,
-    "t_iso": "2026-10-14T05:09:36.44+00:00",
-    "utc_ms": 0,
-    "place": "PANAMA",
-    "tsunami": 0,
-    "catalogs": [
-     "EMSC"
-    ],
-    "duplicate_note": null,
-    "band": "M4-5",
-    "color": "#ffd60a",
-    "radius": 19.02,
-    "url": ""
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
      35.0428,
      -5.4767
     ]
@@ -753,6 +724,35 @@
     "color": "#ffd60a",
     "radius": 17.98,
     "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u2ab"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -80.2705,
+     7.4503
+    ]
+   },
+   "properties": {
+    "mag": 4.3,
+    "mag_alt": null,
+    "lat": 7.4503,
+    "lon": -80.2705,
+    "depth": -3.0,
+    "t_iso": "2026-10-14T17:33:40.0+00:00",
+    "utc_ms": 0,
+    "place": "PANAMA",
+    "tsunami": 0,
+    "catalogs": [
+     "EMSC"
+    ],
+    "duplicate_note": null,
+    "band": "M4-5",
+    "color": "#ffd60a",
+    "radius": 17.98,
+    "url": ""
    }
   },
   {
@@ -1427,35 +1427,6 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     91.2784,
-     44.9479
-    ]
-   },
-   "properties": {
-    "mag": 3.5,
-    "mag_alt": null,
-    "lat": 44.9479,
-    "lon": 91.2784,
-    "depth": -10.0,
-    "t_iso": "2026-10-14T05:21:21.05+00:00",
-    "utc_ms": 0,
-    "place": "NORTHERN XINJIANG, CHINA",
-    "tsunami": 0,
-    "catalogs": [
-     "EMSC"
-    ],
-    "duplicate_note": null,
-    "band": "M3-4",
-    "color": "#4dd2ff",
-    "radius": 15.9,
-    "url": ""
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
      -160.4145,
      54.9935
     ]
@@ -1478,6 +1449,35 @@
     "color": "#4dd2ff",
     "radius": 15.64,
     "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u27i"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     27.6465,
+     40.067
+    ]
+   },
+   "properties": {
+    "mag": 3.4,
+    "mag_alt": null,
+    "lat": 40.067,
+    "lon": 27.6465,
+    "depth": -14.8,
+    "t_iso": "2026-10-14T17:38:05.19+00:00",
+    "utc_ms": 0,
+    "place": "WESTERN TURKEY",
+    "tsunami": 0,
+    "catalogs": [
+     "EMSC"
+    ],
+    "duplicate_note": null,
+    "band": "M3-4",
+    "color": "#4dd2ff",
+    "radius": 15.64,
+    "url": ""
    }
   },
   {
@@ -1556,35 +1556,6 @@
     "t_iso": "2026-10-14T06:06:25.0+00:00",
     "utc_ms": 0,
     "place": "LIAONING, CHINA",
-    "tsunami": 0,
-    "catalogs": [
-     "EMSC"
-    ],
-    "duplicate_note": null,
-    "band": "M3-4",
-    "color": "#4dd2ff",
-    "radius": 15.64,
-    "url": ""
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -160.4145,
-     54.9935
-    ]
-   },
-   "properties": {
-    "mag": 3.4,
-    "mag_alt": null,
-    "lat": 54.9935,
-    "lon": -160.4145,
-    "depth": -49.2,
-    "t_iso": "2026-10-14T04:50:59.72+00:00",
-    "utc_ms": 0,
-    "place": "ALASKA PENINSULA",
     "tsunami": 0,
     "catalogs": [
      "EMSC"
@@ -2123,19 +2094,19 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -68.069,
-     -18.364
+     92.225,
+     26.231
     ]
    },
    "properties": {
-    "mag": 3.1,
+    "mag": 3.0,
     "mag_alt": null,
-    "lat": -18.364,
-    "lon": -68.069,
-    "depth": -200.1,
-    "t_iso": "2026-10-14T05:23:44.0+00:00",
+    "lat": 26.231,
+    "lon": 92.225,
+    "depth": -14.0,
+    "t_iso": "2026-10-14T15:27:07.0+00:00",
     "utc_ms": 0,
-    "place": "ORURO, BOLIVIA",
+    "place": "ASSAM, INDIA",
     "tsunami": 0,
     "catalogs": [
      "EMSC"
@@ -2143,7 +2114,7 @@
     "duplicate_note": null,
     "band": "M3-4",
     "color": "#4dd2ff",
-    "radius": 14.86,
+    "radius": 14.6,
     "url": ""
    }
   },
@@ -2239,19 +2210,19 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -155.2445,
-     19.3987
+     0.926,
+     36.4657
     ]
    },
    "properties": {
     "mag": 2.8,
     "mag_alt": null,
-    "lat": 19.3987,
-    "lon": -155.2445,
-    "depth": -37.6,
-    "t_iso": "2026-10-14T10:56:22.08+00:00",
+    "lat": 36.4657,
+    "lon": 0.926,
+    "depth": -7.3,
+    "t_iso": "2026-10-14T16:51:20.41+00:00",
     "utc_ms": 0,
-    "place": "ISLAND OF HAWAII, HAWAII",
+    "place": "NORTHERN ALGERIA",
     "tsunami": 0,
     "catalogs": [
      "EMSC"
@@ -2803,35 +2774,6 @@
     "t_iso": "2026-10-14T05:48:54.75+00:00",
     "utc_ms": 0,
     "place": "GEORGIA (SAK'ART'VELO)",
-    "tsunami": 0,
-    "catalogs": [
-     "EMSC"
-    ],
-    "duplicate_note": null,
-    "band": "M2-3",
-    "color": "#4dd2ff",
-    "radius": 13.3,
-    "url": ""
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     28.9747,
-     39.2352
-    ]
-   },
-   "properties": {
-    "mag": 2.5,
-    "mag_alt": null,
-    "lat": 39.2352,
-    "lon": 28.9747,
-    "depth": -12.4,
-    "t_iso": "2026-10-14T04:53:15.67+00:00",
-    "utc_ms": 0,
-    "place": "WESTERN TURKEY",
     "tsunami": 0,
     "catalogs": [
      "EMSC"
