@@ -1,10 +1,10 @@
 {
  "summary": {
-  "generated_utc": "2026-10-14T17:59:50Z",
-  "window": "24h closing 2026-10-14T17:59:50Z",
-  "raw_events": 180,
-  "pins": 92,
-  "cross_agency_merges": 88,
+  "generated_utc": "2026-10-14T18:29:28Z",
+  "window": "24h closing 2026-10-14T18:29:28Z",
+  "raw_events": 182,
+  "pins": 93,
+  "cross_agency_merges": 89,
   "max_mag": 6,
   "m6plus": 1,
   "m5plus": 4,
@@ -934,19 +934,19 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -94.886,
-     17.489
+     120.5,
+     -8.11
     ]
    },
    "properties": {
     "mag": 4.0,
     "mag_alt": null,
-    "lat": 17.489,
-    "lon": -94.886,
-    "depth": -135.5,
-    "t_iso": "2026-10-14T11:39:02.0+00:00",
+    "lat": -8.11,
+    "lon": 120.5,
+    "depth": -10.0,
+    "t_iso": "2026-10-14T18:14:13.0+00:00",
     "utc_ms": 0,
-    "place": "VERACRUZ, MEXICO",
+    "place": "FLORES REGION, INDONESIA",
     "tsunami": 0,
     "catalogs": [
      "EMSC"
@@ -963,19 +963,19 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     120.89,
-     -7.92
+     -94.886,
+     17.489
     ]
    },
    "properties": {
     "mag": 4.0,
     "mag_alt": null,
-    "lat": -7.92,
-    "lon": 120.89,
-    "depth": -19.0,
-    "t_iso": "2026-10-14T06:33:44.0+00:00",
+    "lat": 17.489,
+    "lon": -94.886,
+    "depth": -135.5,
+    "t_iso": "2026-10-14T11:39:02.0+00:00",
     "utc_ms": 0,
-    "place": "FLORES SEA",
+    "place": "VERACRUZ, MEXICO",
     "tsunami": 0,
     "catalogs": [
      "EMSC"
@@ -1456,6 +1456,35 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
+     -70.79,
+     -25.06
+    ]
+   },
+   "properties": {
+    "mag": 3.4,
+    "mag_alt": null,
+    "lat": -25.06,
+    "lon": -70.79,
+    "depth": -42.1,
+    "t_iso": "2026-10-14T17:56:38.0+00:00",
+    "utc_ms": 0,
+    "place": "OFFSHORE ANTOFAGASTA, CHILE",
+    "tsunami": 0,
+    "catalogs": [
+     "EMSC"
+    ],
+    "duplicate_note": null,
+    "band": "M3-4",
+    "color": "#4dd2ff",
+    "radius": 15.64,
+    "url": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
      27.6465,
      40.067
     ]
@@ -1920,28 +1949,28 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     22.8708,
-     36.6348
+     -66.8081666666667,
+     18.9271666666667
     ]
    },
    "properties": {
-    "mag": 3.2,
+    "mag": 3.1,
     "mag_alt": null,
-    "lat": 36.6348,
-    "lon": 22.8708,
-    "depth": -61.4,
-    "t_iso": "2026-10-14T05:25:34.56+00:00",
-    "utc_ms": 0,
-    "place": "SOUTHERN GREECE",
+    "lat": 18.9271666666667,
+    "lon": -66.8081666666667,
+    "depth": 35.61,
+    "t_iso": "2026-10-14T18:02:18Z",
+    "utc_ms": 1792000938980,
+    "place": "48 km N of Hatillo, Puerto Rico",
     "tsunami": 0,
     "catalogs": [
-     "EMSC"
+     "USGS"
     ],
     "duplicate_note": null,
     "band": "M3-4",
     "color": "#4dd2ff",
-    "radius": 15.120000000000001,
-    "url": ""
+    "radius": 14.86,
+    "url": "https://earthquake.usgs.gov/earthquakes/eventpage/pr71536693"
    }
   },
   {
@@ -1971,6 +2000,35 @@
     "color": "#4dd2ff",
     "radius": 14.86,
     "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u28d"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -66.8082,
+     18.9272
+    ]
+   },
+   "properties": {
+    "mag": 3.1,
+    "mag_alt": null,
+    "lat": 18.9272,
+    "lon": -66.8082,
+    "depth": -35.6,
+    "t_iso": "2026-10-14T18:02:18.98+00:00",
+    "utc_ms": 0,
+    "place": "PUERTO RICO REGION",
+    "tsunami": 0,
+    "catalogs": [
+     "EMSC"
+    ],
+    "duplicate_note": null,
+    "band": "M3-4",
+    "color": "#4dd2ff",
+    "radius": 14.86,
+    "url": ""
    }
   },
   {
@@ -2281,35 +2339,6 @@
     "t_iso": "2026-10-14T10:29:21.0+00:00",
     "utc_ms": 0,
     "place": "SOUTH AFRICA",
-    "tsunami": 0,
-    "catalogs": [
-     "EMSC"
-    ],
-    "duplicate_note": null,
-    "band": "M2-3",
-    "color": "#4dd2ff",
-    "radius": 14.08,
-    "url": ""
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -67.2477,
-     18.1812
-    ]
-   },
-   "properties": {
-    "mag": 2.8,
-    "mag_alt": null,
-    "lat": 18.1812,
-    "lon": -67.2477,
-    "depth": -19.2,
-    "t_iso": "2026-10-14T08:10:16.3+00:00",
-    "utc_ms": 0,
-    "place": "MONA PASSAGE, PUERTO RICO",
     "tsunami": 0,
     "catalogs": [
      "EMSC"

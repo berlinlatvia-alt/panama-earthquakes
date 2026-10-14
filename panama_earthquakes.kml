@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <kml xmlns="http://www.opengis.net/kml/2.2">
 <Document>
-  <name>Panama Earthquakes - Last 24h (2026-10-13 18:16-17:33 UTC)</name>
-  <description>88 deduped events | M6+:0 M5+:0 M4+:16 M3+:75 M2+:88 | sources: EMSC, IGC, INET, UCR, UNA</description>
+  <name>Panama Earthquakes - Last 24h (2026-10-13 18:41-17:33 UTC)</name>
+  <description>85 deduped events | M6+:0 M5+:0 M4+:15 M3+:72 M2+:85 | sources: EMSC, IGC, INET, UCR, UNA, USGS/NEIC</description>
   <Style id="m4">
     <IconStyle><color>ff0000ff</color><scale>1.1</scale>
       <Icon><href>http://maps.google.com/mapfiles/kml/paddle/red-circle.png</href></Icon></IconStyle>
@@ -302,10 +302,10 @@
     <Point><coordinates>-80.30300,7.47900,0</coordinates></Point>
   </Placemark>
   <Placemark>
-    <name>M4.7 12:09 AM - Bajos de Güera</name>
-    <description><![CDATA[<b>M4.7 - PANAMA</b><br/><b>Nearest place:</b> Bajos de Güera<br/><b>Place source:</b> gazetteer<br/><b>Local (UTC-5):</b> 12:09 AM | <b>UTC:</b> 2026-10-14 05:09<br/><b>Coordinates:</b> 7.5442, -80.6172<br/><b>Depth:</b> 12 km<br/><b>Setting:</b> ONSHORE<br/><b>Distance:</b> Playa Blanca: 104 km | Altos del Maria: 140 km<br/><b>Source:</b> EMSC<br/><b>Cause:</b> Azuero M7.7 sequence aftershock<br/><b>Tsunami flag:</b> 0]]></description>
+    <name>M4.7 12:09 AM - Alto Montilla</name>
+    <description><![CDATA[<b>M4.7 - 10 km S of La Mesa, Panama</b><br/><b>Nearest place:</b> Alto Montilla<br/><b>Place source:</b> gazetteer<br/><b>Local (UTC-5):</b> 12:09 AM | <b>UTC:</b> 2026-10-14 05:09<br/><b>Coordinates:</b> 7.5657, -80.6021<br/><b>Depth:</b> 10 km<br/><b>Setting:</b> ONSHORE<br/><b>Distance:</b> Playa Blanca: 101 km | Altos del Maria: 137 km<br/><b>Source:</b> USGS/NEIC<br/><b>Cause:</b> Azuero M7.7 sequence aftershock<br/><b>Tsunami flag:</b> 0]]></description>
     <styleUrl>#m4</styleUrl>
-    <Point><coordinates>-80.61720,7.54420,0</coordinates></Point>
+    <Point><coordinates>-80.60210,7.56570,0</coordinates></Point>
   </Placemark>
   <Placemark>
     <name>M4.4 11:59 PM - La Máquina</name>
@@ -528,24 +528,6 @@
     <description><![CDATA[<b>M2.8 - PANAMA-COSTA RICA BORDER REGION</b><br/><b>Nearest place:</b> El Aguacate<br/><b>Place source:</b> gazetteer<br/><b>Local (UTC-5):</b> 01:41 PM | <b>UTC:</b> 2026-10-13 18:41<br/><b>Coordinates:</b> 8.9765, -82.0822<br/><b>Depth:</b> 22 km<br/><b>Setting:</b> ONSHORE<br/><b>Distance:</b> Playa Blanca: 225 km | Altos del Maria: 231 km<br/><b>Source:</b> UNA<br/><b>Cause:</b> regional/other<br/><b>Tsunami flag:</b> 0]]></description>
     <styleUrl>#m2</styleUrl>
     <Point><coordinates>-82.08220,8.97650,0</coordinates></Point>
-  </Placemark>
-  <Placemark>
-    <name>M3.7 01:23 PM - Puerto Escondido</name>
-    <description><![CDATA[<b>M3.7 - PANAMA</b><br/><b>Nearest place:</b> Puerto Escondido<br/><b>Place source:</b> gazetteer<br/><b>Local (UTC-5):</b> 01:23 PM | <b>UTC:</b> 2026-10-13 18:23<br/><b>Coordinates:</b> 7.6945, -81.4740<br/><b>Depth:</b> 7 km<br/><b>Setting:</b> ONSHORE<br/><b>Distance:</b> Playa Blanca: 165 km | Altos del Maria: 193 km<br/><b>Source:</b> IGC<br/><b>Cause:</b> Azuero M7.7 sequence aftershock<br/><b>Tsunami flag:</b> 0]]></description>
-    <styleUrl>#m3</styleUrl>
-    <Point><coordinates>-81.47400,7.69450,0</coordinates></Point>
-  </Placemark>
-  <Placemark>
-    <name>M3.9 01:19 PM - Florida</name>
-    <description><![CDATA[<b>M3.9 - PANAMA</b><br/><b>Nearest place:</b> Florida<br/><b>Place source:</b> gazetteer<br/><b>Local (UTC-5):</b> 01:19 PM | <b>UTC:</b> 2026-10-13 18:19<br/><b>Coordinates:</b> 7.6021, -80.8028<br/><b>Depth:</b> 10 km<br/><b>Setting:</b> ONSHORE<br/><b>Distance:</b> Playa Blanca: 111 km | Altos del Maria: 145 km<br/><b>Source:</b> IGC<br/><b>Cause:</b> Azuero M7.7 sequence aftershock<br/><b>Tsunami flag:</b> 0]]></description>
-    <styleUrl>#m3</styleUrl>
-    <Point><coordinates>-80.80280,7.60210,0</coordinates></Point>
-  </Placemark>
-  <Placemark>
-    <name>M4.4 01:16 PM - Veraguas</name>
-    <description><![CDATA[<b>M4.4 - PANAMA</b><br/><b>Nearest place:</b> Veraguas<br/><b>Place source:</b> nominatim<br/><b>Local (UTC-5):</b> 01:16 PM | <b>UTC:</b> 2026-10-13 18:16<br/><b>Coordinates:</b> 7.0500, -81.3478<br/><b>Depth:</b> 26 km<br/><b>Setting:</b> OFFSHORE<br/><b>Distance:</b> Playa Blanca: 197 km | Altos del Maria: 231 km<br/><b>Source:</b> IGC<br/><b>Cause:</b> Azuero M7.7 sequence aftershock<br/><b>Tsunami flag:</b> 0]]></description>
-    <styleUrl>#m4</styleUrl>
-    <Point><coordinates>-81.34780,7.05000,0</coordinates></Point>
   </Placemark>
 </Document>
 </kml>
