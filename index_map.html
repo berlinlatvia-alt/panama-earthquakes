@@ -270,7 +270,7 @@ function updateHalos() {
     let hiddenNotice = hiddenByMag > 0 ? ' <span style="color:#fbbf24;cursor:pointer;text-decoration:underline;font-weight:600" onclick="enableAllMagBands()" title="Click to show hidden magnitude bands">(' + hiddenByMag + ' hidden by mag filter: click to show)</span>' : '';
     let zeroHelp = '';
     if (wm !== null && inWinVisible === 0 && hiddenByMag === 0) {
-      zeroHelp = ' <span style="color:#38bdf8;cursor:pointer;text-decoration:underline;font-weight:600" onclick="window.switchToTime('3h')" title="Latest event was ' + ageStr + ' ago; click to expand window to 3h">[Lull: click to show 3h]</span>';
+      zeroHelp = ' <span style="color:#38bdf8;cursor:pointer;text-decoration:underline;font-weight:600" onclick="window.switchToTime(&#39;3h&#39;)" title="Latest event was ' + ageStr + ' ago; click to expand window to 3h">[Lull: click to show 3h]</span>';
     }
     el.innerHTML = (wm === null ? 'all events' : 'in window: ' + inWinVisible) + hiddenNotice + zeroHelp + ' — data age: ' + ageStr;
   }
@@ -373,7 +373,8 @@ function applyTimeFilter() {
     let ageMin = Math.max(0, Math.round((now - dataMaxMs()) / 60000));
     let ageStr = ageMin < 60 ? ageMin + 'm' : (ageMin / 60).toFixed(1) + 'h';
     let winLabel = windowMs ? (windowMs/60000 < 60 ? windowMs/60000 + 'm' : (windowMs/3600000) + 'h') : 'selected';
-    emptyRow.innerHTML = '<td colspan="5" style="text-align:center;padding:26px 14px;color:#94a3b8;font-size:12px;line-height:1.7"><span style="color:#e2e8f0;font-weight:600">No earthquakes recorded in Panama in the last ' + winLabel + '.</span><br>Seismic lull in progress (latest event was ' + ageStr + ' ago).<br><span style="color:#38bdf8;cursor:pointer;text-decoration:underline;font-weight:600" onclick="window.switchToTime('3h')">Click to show last 3h (10 events)</span> &middot; <span style="color:#a855f7;cursor:pointer;text-decoration:underline;font-weight:600" onclick="window.switchToTime('All')">Show All 88 events</span></td>';
+    const in3hCount = GEO.features.filter(f => { const a = now - f.properties.utc_ms; return a >= 0 && a <= 3 * 3600000; }).length;
+    emptyRow.innerHTML = '<td colspan="5" style="text-align:center;padding:26px 14px;color:#94a3b8;font-size:12px;line-height:1.7"><span style="color:#e2e8f0;font-weight:600">No earthquakes recorded in Panama in the last ' + winLabel + '.</span><br>Seismic lull in progress (latest event was ' + ageStr + ' ago).<br><span style="color:#38bdf8;cursor:pointer;text-decoration:underline;font-weight:600" onclick="window.switchToTime(&#39;3h&#39;)">Click to show last 3h (' + in3hCount + ' events)</span> &middot; <span style="color:#a855f7;cursor:pointer;text-decoration:underline;font-weight:600" onclick="window.switchToTime(&#39;All&#39;)">Show All ' + GEO.features.length + ' events</span></td>';
   } else if (emptyRow) {
     emptyRow.style.display = 'none';
   }
