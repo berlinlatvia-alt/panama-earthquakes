@@ -1,14 +1,14 @@
 {
  "summary": {
-  "generated_utc": "2026-10-14T06:59:35Z",
-  "window": "24h closing 2026-10-14T06:59:35Z",
-  "raw_events": 178,
-  "pins": 91,
-  "cross_agency_merges": 87,
+  "generated_utc": "2026-10-14T07:59:32Z",
+  "window": "24h closing 2026-10-14T07:59:32Z",
+  "raw_events": 179,
+  "pins": 90,
+  "cross_agency_merges": 89,
   "max_mag": 6.8,
-  "m6plus": 3,
-  "m5plus": 8,
-  "m4plus": 33,
+  "m6plus": 2,
+  "m5plus": 7,
+  "m4plus": 34,
   "top_events": [
    {
     "mag": 6.8,
@@ -28,16 +28,6 @@
     "t": "2026-10-13T18:45:03Z",
     "cats": [
      "USGS"
-    ]
-   },
-   {
-    "mag": 6.0,
-    "lat": -5.4,
-    "lon": 152.0,
-    "place": "NEW BRITAIN REGION, P.N.G.",
-    "t": "2026-10-13T18:45:04.16+00:00",
-    "cats": [
-     "EMSC"
     ]
    },
    {
@@ -88,6 +78,16 @@
     "t": "2026-10-14T00:30:48.35+00:00",
     "cats": [
      "EMSC"
+    ]
+   },
+   {
+    "mag": 4.9,
+    "lat": -5.4,
+    "lon": 152.3,
+    "place": "121 km S of Kokopo, Papua New Guinea",
+    "t": "2026-10-14T06:27:06Z",
+    "cats": [
+     "USGS"
     ]
    }
   ],
@@ -173,35 +173,6 @@
     "color": "#ff3b30",
     "radius": 22.4,
     "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u24c"
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     152.0336,
-     -5.4166
-    ]
-   },
-   "properties": {
-    "mag": 6.0,
-    "mag_alt": null,
-    "lat": -5.4166,
-    "lon": 152.0336,
-    "depth": -25.0,
-    "t_iso": "2026-10-13T18:45:04.16+00:00",
-    "utc_ms": 0,
-    "place": "NEW BRITAIN REGION, P.N.G.",
-    "tsunami": 0,
-    "catalogs": [
-     "EMSC"
-    ],
-    "duplicate_note": null,
-    "band": "M5+",
-    "color": "#ff3b30",
-    "radius": 22.4,
-    "url": ""
    }
   },
   {
@@ -354,6 +325,35 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
+     152.2617,
+     -5.443
+    ]
+   },
+   "properties": {
+    "mag": 4.9,
+    "mag_alt": null,
+    "lat": -5.443,
+    "lon": 152.2617,
+    "depth": 35,
+    "t_iso": "2026-10-14T06:27:06Z",
+    "utc_ms": 1791959226453,
+    "place": "121 km S of Kokopo, Papua New Guinea",
+    "tsunami": 0,
+    "catalogs": [
+     "USGS"
+    ],
+    "duplicate_note": null,
+    "band": "M4-5",
+    "color": "#ffd60a",
+    "radius": 19.54,
+    "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u27u"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
      -70.2699,
      -20.3552
     ]
@@ -405,6 +405,35 @@
     "color": "#ffd60a",
     "radius": 19.54,
     "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u20z"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     152.2617,
+     -5.443
+    ]
+   },
+   "properties": {
+    "mag": 4.9,
+    "mag_alt": null,
+    "lat": -5.443,
+    "lon": 152.2617,
+    "depth": -35.0,
+    "t_iso": "2026-10-14T06:27:06.453+00:00",
+    "utc_ms": 0,
+    "place": "NEW BRITAIN REGION, P.N.G.",
+    "tsunami": 0,
+    "catalogs": [
+     "EMSC"
+    ],
+    "duplicate_note": null,
+    "band": "M4-5",
+    "color": "#ffd60a",
+    "radius": 19.54,
+    "url": ""
    }
   },
   {
@@ -905,35 +934,6 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -76.3106,
-     1.6816
-    ]
-   },
-   "properties": {
-    "mag": 4.4,
-    "mag_alt": null,
-    "lat": 1.6816,
-    "lon": -76.3106,
-    "depth": -10.0,
-    "t_iso": "2026-10-13T18:36:38.928+00:00",
-    "utc_ms": 0,
-    "place": "COLOMBIA",
-    "tsunami": 0,
-    "catalogs": [
-     "EMSC"
-    ],
-    "duplicate_note": null,
-    "band": "M4-5",
-    "color": "#ffd60a",
-    "radius": 18.240000000000002,
-    "url": ""
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
      70.8791,
      36.5385
     ]
@@ -1021,6 +1021,35 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
+     -93.752,
+     14.3
+    ]
+   },
+   "properties": {
+    "mag": 4.1,
+    "mag_alt": null,
+    "lat": 14.3,
+    "lon": -93.752,
+    "depth": -9.3,
+    "t_iso": "2026-10-14T07:30:42.0+00:00",
+    "utc_ms": 0,
+    "place": "OFF COAST OF CHIAPAS, MEXICO",
+    "tsunami": 0,
+    "catalogs": [
+     "EMSC"
+    ],
+    "duplicate_note": null,
+    "band": "M4-5",
+    "color": "#ffd60a",
+    "radius": 17.46,
+    "url": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
      120.89,
      -7.92
     ]
@@ -1071,6 +1100,35 @@
     "band": "M4-5",
     "color": "#ffd60a",
     "radius": 17.2,
+    "url": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     125.22,
+     5.03
+    ]
+   },
+   "properties": {
+    "mag": 3.9,
+    "mag_alt": null,
+    "lat": 5.03,
+    "lon": 125.22,
+    "depth": -30.0,
+    "t_iso": "2026-10-14T07:02:46.0+00:00",
+    "utc_ms": 0,
+    "place": "MINDANAO, PHILIPPINES",
+    "tsunami": 0,
+    "catalogs": [
+     "EMSC"
+    ],
+    "duplicate_note": null,
+    "band": "M3-4",
+    "color": "#4dd2ff",
+    "radius": 16.939999999999998,
     "url": ""
    }
   },
@@ -1266,35 +1324,6 @@
     "t_iso": "2026-10-13T22:56:36.0+00:00",
     "utc_ms": 0,
     "place": "SALTA, ARGENTINA",
-    "tsunami": 0,
-    "catalogs": [
-     "EMSC"
-    ],
-    "duplicate_note": null,
-    "band": "M3-4",
-    "color": "#4dd2ff",
-    "radius": 16.42,
-    "url": ""
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -93.751,
-     16.471
-    ]
-   },
-   "properties": {
-    "mag": 3.7,
-    "mag_alt": null,
-    "lat": 16.471,
-    "lon": -93.751,
-    "depth": -132.3,
-    "t_iso": "2026-10-13T19:09:48.0+00:00",
-    "utc_ms": 0,
-    "place": "CHIAPAS, MEXICO",
     "tsunami": 0,
     "catalogs": [
      "EMSC"
@@ -1775,46 +1804,17 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     118.91,
-     -9.73
+     -85.3584,
+     9.2945
     ]
    },
    "properties": {
     "mag": 3.3,
     "mag_alt": null,
-    "lat": -9.73,
-    "lon": 118.91,
-    "depth": -10.0,
-    "t_iso": "2026-10-13T23:53:19.0+00:00",
-    "utc_ms": 0,
-    "place": "SUMBAWA REGION, INDONESIA",
-    "tsunami": 0,
-    "catalogs": [
-     "EMSC"
-    ],
-    "duplicate_note": null,
-    "band": "M3-4",
-    "color": "#4dd2ff",
-    "radius": 15.379999999999999,
-    "url": ""
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -84.8934,
-     8.0864
-    ]
-   },
-   "properties": {
-    "mag": 3.3,
-    "mag_alt": null,
-    "lat": 8.0864,
-    "lon": -84.8934,
-    "depth": -89.0,
-    "t_iso": "2026-10-13T20:27:50.0+00:00",
+    "lat": 9.2945,
+    "lon": -85.3584,
+    "depth": -13.0,
+    "t_iso": "2026-10-14T07:26:02.0+00:00",
     "utc_ms": 0,
     "place": "OFF COAST OF COSTA RICA",
     "tsunami": 0,
@@ -1833,19 +1833,19 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     102.08,
-     -3.22
+     118.91,
+     -9.73
     ]
    },
    "properties": {
     "mag": 3.3,
     "mag_alt": null,
-    "lat": -3.22,
-    "lon": 102.08,
-    "depth": -96.0,
-    "t_iso": "2026-10-13T19:05:50.0+00:00",
+    "lat": -9.73,
+    "lon": 118.91,
+    "depth": -10.0,
+    "t_iso": "2026-10-13T23:53:19.0+00:00",
     "utc_ms": 0,
-    "place": "SOUTHERN SUMATRA, INDONESIA",
+    "place": "SUMBAWA REGION, INDONESIA",
     "tsunami": 0,
     "catalogs": [
      "EMSC"
@@ -1989,6 +1989,35 @@
     "lon": -97.113,
     "depth": -32.9,
     "t_iso": "2026-10-13T22:47:15.0+00:00",
+    "utc_ms": 0,
+    "place": "OAXACA, MEXICO",
+    "tsunami": 0,
+    "catalogs": [
+     "EMSC"
+    ],
+    "duplicate_note": null,
+    "band": "M3-4",
+    "color": "#4dd2ff",
+    "radius": 15.120000000000001,
+    "url": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -94.416,
+     16.329
+    ]
+   },
+   "properties": {
+    "mag": 3.2,
+    "mag_alt": null,
+    "lat": 16.329,
+    "lon": -94.416,
+    "depth": -87.2,
+    "t_iso": "2026-10-13T22:43:50.0+00:00",
     "utc_ms": 0,
     "place": "OAXACA, MEXICO",
     "tsunami": 0,
@@ -2297,35 +2326,6 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -86.6951,
-     10.4853
-    ]
-   },
-   "properties": {
-    "mag": 3.0,
-    "mag_alt": null,
-    "lat": 10.4853,
-    "lon": -86.6951,
-    "depth": -21.0,
-    "t_iso": "2026-10-13T19:02:56.0+00:00",
-    "utc_ms": 0,
-    "place": "OFF COAST OF COSTA RICA",
-    "tsunami": 0,
-    "catalogs": [
-     "EMSC"
-    ],
-    "duplicate_note": null,
-    "band": "M3-4",
-    "color": "#4dd2ff",
-    "radius": 14.6,
-    "url": ""
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
      -23.246,
      63.704
     ]
@@ -2355,19 +2355,19 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     26.9485,
-     36.0379
+     -86.61,
+     11.539
     ]
    },
    "properties": {
     "mag": 2.9,
     "mag_alt": null,
-    "lat": 36.0379,
-    "lon": 26.9485,
-    "depth": -22.5,
-    "t_iso": "2026-10-14T03:51:30.88+00:00",
+    "lat": 11.539,
+    "lon": -86.61,
+    "depth": -40.0,
+    "t_iso": "2026-10-14T03:22:52.0+00:00",
     "utc_ms": 0,
-    "place": "DODECANESE ISLANDS, GREECE",
+    "place": "NEAR COAST OF NICARAGUA",
     "tsunami": 0,
     "catalogs": [
      "EMSC"
@@ -2397,6 +2397,35 @@
     "t_iso": "2026-10-14T02:35:49.68+00:00",
     "utc_ms": 0,
     "place": "CRETE, GREECE",
+    "tsunami": 0,
+    "catalogs": [
+     "EMSC"
+    ],
+    "duplicate_note": null,
+    "band": "M2-3",
+    "color": "#4dd2ff",
+    "radius": 14.34,
+    "url": ""
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     28.0995,
+     35.8982
+    ]
+   },
+   "properties": {
+    "mag": 2.9,
+    "mag_alt": null,
+    "lat": 35.8982,
+    "lon": 28.0995,
+    "depth": -11.0,
+    "t_iso": "2026-10-14T01:49:06.41+00:00",
+    "utc_ms": 0,
+    "place": "EASTERN MEDITERRANEAN SEA",
     "tsunami": 0,
     "catalogs": [
      "EMSC"
@@ -2500,35 +2529,6 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -69.07,
-     -32.47
-    ]
-   },
-   "properties": {
-    "mag": 2.8,
-    "mag_alt": null,
-    "lat": -32.47,
-    "lon": -69.07,
-    "depth": -10.0,
-    "t_iso": "2026-10-13T18:34:27.0+00:00",
-    "utc_ms": 0,
-    "place": "MENDOZA, ARGENTINA",
-    "tsunami": 0,
-    "catalogs": [
-     "EMSC"
-    ],
-    "duplicate_note": null,
-    "band": "M2-3",
-    "color": "#4dd2ff",
-    "radius": 14.08,
-    "url": ""
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
      -70.51,
      -21.85
     ]
@@ -2558,19 +2558,19 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -84.9662,
-     9.5846
+     -71.71,
+     -33.67
     ]
    },
    "properties": {
     "mag": 2.6,
     "mag_alt": null,
-    "lat": 9.5846,
-    "lon": -84.9662,
-    "depth": -15.0,
-    "t_iso": "2026-10-13T22:51:09.0+00:00",
+    "lat": -33.67,
+    "lon": -71.71,
+    "depth": -36.7,
+    "t_iso": "2026-10-14T07:34:14.0+00:00",
     "utc_ms": 0,
-    "place": "COSTA RICA",
+    "place": "OFFSHORE VALPARAISO, CHILE",
     "tsunami": 0,
     "catalogs": [
      "EMSC"
@@ -2600,35 +2600,6 @@
     "t_iso": "2026-10-13T20:38:53.0+00:00",
     "utc_ms": 0,
     "place": "OFFSHORE VALPARAISO, CHILE",
-    "tsunami": 0,
-    "catalogs": [
-     "EMSC"
-    ],
-    "duplicate_note": null,
-    "band": "M2-3",
-    "color": "#4dd2ff",
-    "radius": 13.56,
-    "url": ""
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
-     -121.4618,
-     35.7797
-    ]
-   },
-   "properties": {
-    "mag": 2.6,
-    "mag_alt": null,
-    "lat": 35.7797,
-    "lon": -121.4618,
-    "depth": 0.3,
-    "t_iso": "2026-10-13T18:28:09.45+00:00",
-    "utc_ms": 0,
-    "place": "OFFSHORE CENTRAL CALIFORNIA",
     "tsunami": 0,
     "catalogs": [
      "EMSC"
@@ -2684,7 +2655,7 @@
     "lat": 39.1653,
     "lon": 23.7277,
     "depth": -14.1,
-    "t_iso": "2026-10-14T05:02:55.892261+00:00",
+    "t_iso": "2026-10-14T05:02:55.18+00:00",
     "utc_ms": 0,
     "place": "AEGEAN SEA",
     "tsunami": 0,
