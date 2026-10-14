@@ -1,10 +1,10 @@
 {
  "summary": {
-  "generated_utc": "2026-10-14T18:59:47Z",
-  "window": "24h closing 2026-10-14T18:59:47Z",
-  "raw_events": 184,
-  "pins": 91,
-  "cross_agency_merges": 93,
+  "generated_utc": "2026-10-14T19:19:23Z",
+  "window": "24h closing 2026-10-14T19:19:23Z",
+  "raw_events": 183,
+  "pins": 92,
+  "cross_agency_merges": 91,
   "max_mag": 5.9,
   "m6plus": 0,
   "m5plus": 3,
@@ -1768,6 +1768,35 @@
     "color": "#4dd2ff",
     "radius": 15.120000000000001,
     "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026uioapb"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -83.5267,
+     13.4433
+    ]
+   },
+   "properties": {
+    "mag": 3.2,
+    "mag_alt": null,
+    "lat": 13.4433,
+    "lon": -83.5267,
+    "depth": -218.0,
+    "t_iso": "2026-10-14T19:11:15.0+00:00",
+    "utc_ms": 0,
+    "place": "NICARAGUA",
+    "tsunami": 0,
+    "catalogs": [
+     "EMSC"
+    ],
+    "duplicate_note": null,
+    "band": "M3-4",
+    "color": "#4dd2ff",
+    "radius": 15.120000000000001,
+    "url": ""
    }
   },
   {
