@@ -3,6 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="data:,">
 <title>Panama Earthquakes - Interactive Pin Map</title>
 <link rel="stylesheet" href="leaflet.css">
 <style>
@@ -26,13 +27,14 @@
   .site-tip { background:#2a323c; color:#E2E8F0; border:1px solid #4da3ff; font-size:11px; border-radius:6px; }
   .leaflet-control-attribution { background:rgba(30,35,42,.7) !important; color:#94A3B8 !important; }
   .leaflet-control-attribution a { color:#7FB3FF !important; }
-  .table { position:absolute; z-index:1000; top:16px; right:16px; width:340px; max-height:66vh; overflow:auto;
+  .table { position:absolute; z-index:1000; top:16px; right:16px; width:390px; max-height:66vh; overflow:auto;
            background:rgba(30,35,42,.94); border-radius:16px; padding:10px 0;
            box-shadow:8px 8px 16px rgba(0,0,0,.5); }
   .table h2 { margin:0 14px 8px; font-size:13px; color:#E2E8F0; }
-  .table table { width:100%; border-collapse:collapse; font-size:11.5px; }
+  .table table { width:100%; border-collapse:collapse; font-size:11.5px; table-layout:fixed; }
   .table th { text-align:left; color:#94A3B8; padding:4px 8px; font-weight:600; position:sticky; top:0; background:#232a33; }
-  .table td { padding:5px 8px; border-top:1px solid #2a323c; color:#CBD5E1; }
+  .table td { padding:5px 8px; border-top:1px solid #2a323c; color:#CBD5E1; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+  .table td:nth-child(3) { white-space:normal; }
   .table tr.row { cursor:pointer; }
   .table tr.row:hover { background:#2a323c; }
   .table .mag { font-weight:700; }
@@ -61,7 +63,7 @@
 </div>
 <div class="table">
   <h2>All events &middot; magnitude · depth · location · time</h2>
-  <table><thead><tr><th>Mag</th><th>Depth</th><th>Location</th><th>Local time</th></tr></thead>
+  <table><thead><tr><th style="width:42px">Mag</th><th style="width:44px">Depth</th><th>Location</th><th style="width:66px">Local</th></tr></thead>
   <tbody id="evtbody"></tbody></table>
 </div>
 <div class="ctl">
@@ -140,6 +142,7 @@ window.setTimeout(function(){ try { map.invalidateSize(); } catch(e){} }, 500);
 
 /* magnitude band filtering */
 function bandOf(mag) { return mag >= 5 ? 'cbM5' : mag >= 4 ? 'cbM4' : mag >= 3 ? 'cbM3' : 'cbM2'; }
+function onFor(mag) { return document.getElementById(bandOf(mag)).checked; }
 function applyMagFilter() {
   layer.eachLayer(l => {
     const p = l.feature.properties;
@@ -228,6 +231,7 @@ const rows = GEO.features
     const tr = document.createElement('tr');
     tr.className = 'row';
     tr.dataset.id = p._id;
+    tr.dataset.mag = p.mag;
     tr.dataset.utc_ms = p.utc_ms;
     tr.innerHTML = '<td class="mag" style="color:' + p.color + '">M' + p.mag.toFixed(1) + '</td>'
       + '<td>' + dep + '</td>'
@@ -244,9 +248,17 @@ const rows = GEO.features
 const tbody = document.createElement('tbody');
 rows.forEach(r => tbody.appendChild(r));
 document.getElementById('evtbody').appendChild(tbody);
+applyMagFilter();
+applyTimeFilter();
+updateHalos();
 
+const siteIcon = L.divIcon({
+  className: 'site-pin-icon',
+  html: '<div style="width:14px;height:14px;border-radius:50%;background:#4da3ff;border:2px solid #fff;box-shadow:0 0 8px #4da3ff"></div>',
+  iconSize: [14, 14], iconAnchor: [7, 7]
+});
 const siteLayer = L.layerGroup(SITES.map(s =>
-  L.marker([s.lat, s.lon], {title: s.name}).bindPopup(
+  L.marker([s.lat, s.lon], {icon: siteIcon, title: s.name}).bindPopup(
     '<div class="popup site-pin">' + s.name + '<br><span style="font-weight:400">Your tracked location</span></div>')
     .bindTooltip(s.name, {permanent: true, direction: 'top', className: 'site-tip'})
 )).addTo(map);
