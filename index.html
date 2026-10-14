@@ -78,6 +78,12 @@
   <label><input type="checkbox" id="cbM2" checked> M2-3</label>
   <span style="color:#64748b;font-size:11px">purple halo = last 60 min</span>
 </div>
+<div class="ctl ctl3" style="top:116px; left:50%; margin-left:40px;">
+  <label style="color:#94A3B8">Time:</label>
+  <label><input type="checkbox" id="cbT60" checked> 60 min</label>
+  <label><input type="checkbox" id="cbT75"> 75 min (1h15m)</label>
+  <label><input type="checkbox" id="cbTAll" checked> All</label>
+</div>
 <script src="leaflet.js"></script>
 <script>
 (function(){ window.addEventListener('error', function(e){
@@ -161,9 +167,57 @@ function updateHalos() {
     p._halo.setStyle({opacity: p._halo.options._active ? 0.9 : 0});
   });
 }
-['cbM5','cbM4','cbM3','cbM2'].forEach(id => document.getElementById(id).addEventListener('change', () => { applyMagFilter(); updateHalos(); }));
+
+/* Time window filter (pins + table rows) */
+const TIME_60 = 3600000;  // 60 min
+const TIME_75 = 4500000;  // 75 min (1h15m)
+function timeFilterActive() {
+  const t60 = document.getElementById('cbT60').checked;
+  const t75 = document.getElementById('cbT75').checked;
+  const tall = document.getElementById('cbTAll').checked;
+  if (tall) return null;  // show all
+  if (t60 && !t75) return TIME_60;
+  if (t75 && !t60) return TIME_75;
+  if (t60 && t75) return TIME_75;  // wider window if both
+  return TIME_60;  // default to 60 if none checked
+}
+function applyTimeFilter() {
+  const windowMs = timeFilterActive();
+  const now = Date.now();
+  layer.eachLayer(l => {
+    const p = l.feature.properties;
+    if (windowMs === null) {
+      l.setStyle({ opacity: onFor(p.mag) ? 1 : 0.08, fillOpacity: onFor(p.mag) ? 0.55 : 0.03 });
+      if (l.getElement()) l.getElement().style.pointerEvents = onFor(p.mag) ? 'auto' : 'none';
+      return;
+    }
+    const age = now - p.utc_ms;
+    const inWindow = age >= 0 && age <= windowMs;
+    const on = onFor(p.mag) && inWindow;
+    l.setStyle({ opacity: on ? 1 : 0.08, fillOpacity: on ? 0.55 : 0.03 });
+    if (l.getElement()) l.getElement().style.pointerEvents = on ? 'auto' : 'none';
+  });
+  document.querySelectorAll('#evtbody tr').forEach(tr => {
+    if (windowMs === null) {
+      const f = GEO.features.find(x => String(x.properties._id) === tr.dataset.id);
+      tr.style.display = (f && document.getElementById(bandOf(f.properties.mag)).checked) ? '' : 'none';
+      return;
+    }
+    const rowMs = parseInt(tr.dataset.utc_ms || '0');
+    if (!rowMs) { tr.style.display = 'none'; return; }
+    const age = now - rowMs;
+    const inWindow = age >= 0 && age <= windowMs;
+    const f = GEO.features.find(x => String(x.properties._id) === tr.dataset.id);
+    tr.style.display = (f && document.getElementById(bandOf(f.properties.mag)).checked && inWindow) ? '' : 'none';
+  });
+}
+['cbT60','cbT75','cbTAll'].forEach(id => document.getElementById(id).addEventListener('change', () => { applyMagFilter(); applyTimeFilter(); updateHalos(); }));
+
+['cbM5','cbM4','cbM3','cbM2'].forEach(id => document.getElementById(id).addEventListener('change', () => { applyMagFilter(); applyTimeFilter(); updateHalos(); }));
+applyMagFilter();
+applyTimeFilter();
 updateHalos();
-setInterval(updateHalos, 60000);
+setInterval(() => { updateHalos(); applyTimeFilter(); }, 60000);
 
 const rows = GEO.features
   .slice().sort((a, b) => new Date('1970-01-01T' + a.properties.utc) - new Date('1970-01-01T' + b.properties.utc)).reverse()
@@ -174,6 +228,7 @@ const rows = GEO.features
     const tr = document.createElement('tr');
     tr.className = 'row';
     tr.dataset.id = p._id;
+    tr.dataset.utc_ms = p.utc_ms;
     tr.innerHTML = '<td class="mag" style="color:' + p.color + '">M' + p.mag.toFixed(1) + '</td>'
       + '<td>' + dep + '</td>'
       + '<td>' + (p.place_name || p.catalog_place) + '</td>'
