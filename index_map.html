@@ -25,6 +25,9 @@
   .popup .hdr { font-size:14px; color:#fff; margin-bottom:6px; }
   .popup a { color:#7FB3FF; }
   .site-tip { background:#2a323c; color:#E2E8F0; border:1px solid #4da3ff; font-size:11px; border-radius:6px; }
+  .mag-num { background:transparent; border:none; pointer-events:none; }
+  .mag-num span { display:block; width:100%; text-align:center; color:#fff; font-weight:700;
+                  line-height:14px; text-shadow:0 1px 2px rgba(0,0,0,.95), 0 0 3px rgba(0,0,0,.65); }
   .leaflet-control-attribution { background:rgba(30,35,42,.7) !important; color:#94A3B8 !important; }
   .leaflet-control-attribution a { color:#7FB3FF !important; }
   .table { position:absolute; z-index:1000; top:16px; right:16px; width:390px; max-height:66vh; overflow:auto;
@@ -59,7 +62,7 @@
     <span><span class="dot" style="background:#34c759"></span>M2+</span>
     <span><span class="dot" style="background:#4da3ff; border-radius:4px"></span>Your sites</span>
   </div>
-  <div style="margin-top:8px;font-size:11px;color:#64748b">Hover a pin for depth + time. Click a row below to jump.</div>
+  <div style="margin-top:8px;font-size:11px;color:#64748b">Number in circle = magnitude. Hover a pin for depth + time. Click a row below to jump.</div>
 </div>
 <div class="table">
   <h2>All events &middot; magnitude · depth · location · time</h2>
@@ -139,6 +142,38 @@ layer.eachLayer(l => {
     radius: p.radius + 5, color: '#a855f7', weight: 3, opacity: 0, fill: false
   }).addTo(haloGroup);
 });
+/* white magnitude numbers centered inside each pin */
+const labelGroup = L.layerGroup().addTo(map);
+layer.eachLayer(l => {
+  const p = l.feature.properties;
+  const ll = l.getLatLng();
+  const fs = p.radius >= 14 ? 10 : (p.radius >= 10 ? 9 : 8);
+  p._label = L.marker(ll, {
+    interactive: false, keyboard: false,
+    icon: L.divIcon({
+      className: 'mag-num',
+      html: '<span style="font-size:' + fs + 'px">' + p.mag.toFixed(1) + '</span>',
+      iconSize: [26, 14], iconAnchor: [13, 7]
+    })
+  }).addTo(labelGroup);
+});
+function syncLabels() {
+  const windowMs = timeFilterActive();
+  const now = Date.now();
+  layer.eachLayer(l => {
+    const p = l.feature.properties;
+    const el = p._label && p._label.getElement();
+    if (!el) return;
+    const magOn = onFor(p.mag);
+    let alpha;
+    if (windowMs === null) { alpha = magOn ? 1 : 0.12; }
+    else {
+      const age = now - p.utc_ms;
+      alpha = (magOn && age >= 0 && age <= windowMs) ? 1 : 0;
+    }
+    el.style.opacity = alpha;
+  });
+}
 window.setTimeout(function(){ try { map.invalidateSize(); } catch(e){} }, 500);
 
 /* magnitude band filtering */
@@ -158,6 +193,7 @@ document.querySelectorAll('#evtbody tr').forEach(tr => {
     const f = GEO.features.find(x => String(x.properties._id) === tr.dataset.id);
     if (f) tr.style.display = document.getElementById(bandOf(f.properties.mag)).checked ? '' : 'none';
   });
+  syncLabels();
 }
 GEO.features.forEach((f, i) => f.properties._id = i);
 
@@ -239,6 +275,7 @@ function applyTimeFilter() {
     const f = GEO.features.find(x => String(x.properties._id) === tr.dataset.id);
     tr.style.display = (f && document.getElementById(bandOf(f.properties.mag)).checked && inWindow) ? '' : 'none';
   });
+  syncLabels();
 }
 ['cbT60','cbT75','cbTAll'].forEach(id => document.getElementById(id).addEventListener('change', () => { applyMagFilter(); applyTimeFilter(); updateHalos(); }));
 
@@ -355,6 +392,7 @@ document.getElementById('cbLiveSens').addEventListener('change', e => {
 
 const b = layer.getBounds().pad(0.15);
 map.fitBounds(b, {maxZoom: 9});
+syncLabels();
 </script>
 </body>
 </html>
