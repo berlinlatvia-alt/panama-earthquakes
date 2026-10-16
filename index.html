@@ -41,18 +41,29 @@
   .table tr.row { cursor:pointer; }
   .table tr.row:hover { background:#2a323c; }
   .table .mag { font-weight:700; }
-  .ctl { position:absolute; z-index:1001; top:16px; left:50%; transform:translateX(-50%); display:flex; gap:10px;
+  .nav-tabs { position:absolute; z-index:1002; top:12px; left:50%; transform:translateX(-50%); display:flex; gap:6px;
+              background:rgba(20,25,32,.95); border-radius:24px; padding:4px 6px;
+              box-shadow:0 8px 24px rgba(0,0,0,.6); border:1px solid rgba(255,255,255,.08); }
+  .nav-btn { padding:7px 16px; border-radius:18px; font-size:12.5px; font-weight:600; text-decoration:none;
+             color:#94A3B8; transition:all .2s ease; cursor:pointer; display:inline-flex; align-items:center; gap:6px; }
+  .nav-btn:hover { color:#E2E8F0; background:rgba(255,255,255,.06); }
+  .nav-btn.active { color:#fff; background:#2563EB; box-shadow:0 2px 8px rgba(37,99,235,.4); }
+  .ctl { position:absolute; z-index:1001; top:62px; left:50%; transform:translateX(-50%); display:flex; gap:10px;
          background:rgba(30,35,42,.92); border-radius:14px; padding:8px 12px;
          box-shadow:0 8px 20px rgba(0,0,0,.5); font-size:12.5px; color:#CBD5E1; align-items:center; flex-wrap:wrap; }
   .ctl label { display:inline-flex; align-items:center; gap:5px; cursor:pointer; }
   .ctl input[type=checkbox] { accent-color:#4da3ff; width:14px; height:14px; }
-  .ctl2 { top:64px; left:50%; }
+  .ctl2 { top:110px; left:50%; }
   .plate-line { color:#ffcc66; fill:rgba(255,204,102,.15); weight:2.5; }
 </style>
 </head>
 <body>
 <div id="pageerr" style="position:absolute;z-index:2000;bottom:4px;left:50%;transform:translateX(-50%);background:#3b1015;color:#fda4af;font:11px monospace;padding:4px 10px;border-radius:8px;display:none"></div>
 <div id="map"></div>
+<div class="nav-tabs">
+  <a href="index_map.html" class="nav-btn active">🇵🇦 Panama Focus</a>
+  <a href="world_map.html" class="nav-btn">🌐 Worldwide 24h Global</a>
+</div>
 <div class="panel">
   <h1>Panama Earthquakes - Full Day Map</h1>
   <div class="sub">56 events &middot; window 2026-10-15 01:31 UTC - 2026-10-15 23:23 UTC<br>M6+: 0 &middot; M5+: 0 &middot; M4+: 13 &middot; M3+: 52 &middot; M2+: 56<br>Sources: GFZ, IGC, UNA, USGS/NEIC</div>
@@ -83,7 +94,7 @@
   <label><input type="checkbox" id="cbM2" checked> M2-3</label>
   <span style="color:#64748b;font-size:11px">purple halo = last 60 min</span>
 </div>
-<div class="ctl ctl3" style="top:112px; left:50%; max-width:85vw;">
+<div class="ctl ctl3" style="top:158px; left:50%; max-width:85vw;">
   <label style="color:#94A3B8">Time:</label>
   <label><input type="checkbox" id="cbT60"> 60m</label>
   <label><input type="checkbox" id="cbT75"> 75m</label>
