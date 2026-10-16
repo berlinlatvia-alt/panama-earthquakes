@@ -27,6 +27,11 @@
   .dot { display:inline-block; width:11px; height:11px; border-radius:50%; margin-right:4px; vertical-align:-1px; }
   .storm { display:inline-block; width:16px; height:16px; line-height:15px; text-align:center;
            border-radius:50%; background:#7c2d12; color:#fdba74; font-size:10px; font-weight:700; margin-right:4px; vertical-align:-1px; }
+  .mag-num { background:transparent !important; border:none !important; pointer-events:none !important;
+             display:flex !important; align-items:center !important; justify-content:center !important; text-align:center !important; }
+  .mag-num span { display:block !important; width:100% !important; text-align:center !important; color:#ffffff !important;
+                  font-weight:700 !important; letter-spacing:-0.2px !important;
+                  text-shadow:0 1px 3px rgba(0,0,0,.95), 0 0 4px rgba(0,0,0,.85) !important; user-select:none !important; }
 
   .leaflet-popup-content-wrapper { background:#1e232a; color:#CBD5E1; border-radius:14px; box-shadow:0 10px 30px rgba(0,0,0,.5); }
   .leaflet-popup-tip { background:#1e232a; }
@@ -160,6 +165,87 @@ layer.eachLayer(function(l){
   p._halo = L.circleMarker(ll, { radius: p.radius + 6, color: '#a855f7', weight: 3, opacity: 0, fill: false }).addTo(haloGroup);
 });
 
+const BASE_ZOOM = 3;
+function getScale(z) {
+  return Math.max(0.55, Math.min(2.5, 1 + ((z || BASE_ZOOM) - BASE_ZOOM) * 0.16));
+}
+
+function getLabelIcon(mag, radius, fontSize) {
+  const d = Math.round(radius * 2);
+  return L.divIcon({
+    className: 'mag-num',
+    html: '<span style="font-size:' + fontSize + 'px;line-height:' + d + 'px">' + Number(mag).toFixed(1) + '</span>',
+    iconSize: [d, d],
+    iconAnchor: [radius, radius]
+  });
+}
+
+/* white magnitude numbers centered inside each pin */
+const labelGroup = L.layerGroup().addTo(map);
+layer.eachLayer(function(l){
+  const p = l.feature.properties;
+  const ll = l.getLatLng();
+  const initScale = getScale(map.getZoom() || BASE_ZOOM);
+  const r = Math.round(p.radius * initScale);
+  const baseFs = p.mag >= 5 ? 10 : (p.mag >= 4 ? 9 : 8);
+  const fs = Math.round(Math.max(7, Math.min(16, baseFs * initScale)));
+  p._label = L.marker(ll, {
+    interactive: false, keyboard: false,
+    icon: getLabelIcon(p.mag, r, fs)
+  }).addTo(labelGroup);
+});
+
+function updateZoomScaling() {
+  const z = map.getZoom();
+  const scale = getScale(z);
+  layer.eachLayer(function(l){
+    const p = l.feature.properties;
+    const r = Math.round(p.radius * scale);
+    l.setRadius(r);
+    if (p._halo) {
+      p._halo.setRadius(Math.round((p.radius + 6) * scale));
+    }
+    if (p._label) {
+      const baseFs = p.mag >= 5 ? 10 : (p.mag >= 4 ? 9 : 8);
+      const fs = Math.round(Math.max(7, Math.min(16, baseFs * scale)));
+      const d = Math.round(r * 2);
+      const el = p._label.getElement();
+      if (el) {
+        el.style.width = d + 'px';
+        el.style.height = d + 'px';
+        el.style.marginLeft = (-r) + 'px';
+        el.style.marginTop = (-r) + 'px';
+        const span = el.querySelector('span');
+        if (span) {
+          span.style.fontSize = fs + 'px';
+          span.style.lineHeight = d + 'px';
+        }
+      }
+      p._label.setIcon(getLabelIcon(p.mag, r, fs));
+    }
+  });
+}
+map.on('zoomend', updateZoomScaling);
+
+function syncLabels(timeLimit) {
+  const now = Date.now();
+  layer.eachLayer(function(l){
+    const p = l.feature.properties;
+    if (!p._label) return;
+    const magOn = onFor(p.mag);
+    const age = now - p.utc_ms;
+    const timeOn = (timeLimit === null) || (age >= 0 && age <= timeLimit);
+    const show = magOn && timeOn;
+    const alpha = show ? 1 : 0;
+    p._label.setOpacity(alpha);
+    const el = p._label.getElement();
+    if (el) {
+      el.style.display = show ? '' : 'none';
+      el.style.opacity = alpha;
+    }
+  });
+}
+
 // NHC Storms layer
 const stormLayer = L.layerGroup().addTo(map);
 STORMS.forEach(function(s){
@@ -214,6 +300,7 @@ function applyFilters() {
     tr.style.display = (magOn && timeOn) ? '' : 'none';
   });
 
+  syncLabels(timeLimit);
   document.getElementById('timecount').textContent = 'visible: ' + visibleCount + ' / ' + GEO.features.length;
 }
 
@@ -255,6 +342,7 @@ GEO.features.forEach(function(f){
   tbody.appendChild(tr);
 });
 
+updateZoomScaling();
 applyFilters();
 setInterval(applyFilters, 60000);
 </script>

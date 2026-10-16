@@ -25,9 +25,11 @@
   .popup .hdr { font-size:14px; color:#fff; margin-bottom:6px; }
   .popup a { color:#7FB3FF; }
   .site-tip { background:#2a323c; color:#E2E8F0; border:1px solid #4da3ff; font-size:11px; border-radius:6px; }
-  .mag-num { background:transparent; border:none; pointer-events:none; }
-  .mag-num span { display:block; width:100%; text-align:center; color:#fff; font-weight:700;
-                  line-height:14px; text-shadow:0 1px 2px rgba(0,0,0,.95), 0 0 3px rgba(0,0,0,.65); }
+  .mag-num { background:transparent !important; border:none !important; pointer-events:none !important;
+             display:flex !important; align-items:center !important; justify-content:center !important; text-align:center !important; }
+  .mag-num span { display:block !important; width:100% !important; text-align:center !important; color:#ffffff !important;
+                  font-weight:700 !important; letter-spacing:-0.2px !important;
+                  text-shadow:0 1px 3px rgba(0,0,0,.95), 0 0 4px rgba(0,0,0,.85) !important; user-select:none !important; }
   .leaflet-control-attribution { background:rgba(30,35,42,.7) !important; color:#94A3B8 !important; }
   .leaflet-control-attribution a { color:#7FB3FF !important; }
   .table { position:absolute; z-index:1000; top:16px; right:16px; width:390px; max-height:66vh; overflow:auto;
@@ -157,28 +159,74 @@ layer.eachLayer(l => {
     radius: p.radius + 5, color: '#a855f7', weight: 3, opacity: 0, fill: false
   }).addTo(haloGroup);
 });
+const BASE_ZOOM = 8;
+function getScale(z) {
+  return Math.max(0.55, Math.min(2.5, 1 + ((z || BASE_ZOOM) - BASE_ZOOM) * 0.16));
+}
+
+function getLabelIcon(mag, radius, fontSize) {
+  const d = Math.round(radius * 2);
+  return L.divIcon({
+    className: 'mag-num',
+    html: '<span style="font-size:' + fontSize + 'px;line-height:' + d + 'px">' + Number(mag).toFixed(1) + '</span>',
+    iconSize: [d, d],
+    iconAnchor: [radius, radius]
+  });
+}
+
 /* white magnitude numbers centered inside each pin */
 const labelGroup = L.layerGroup().addTo(map);
 layer.eachLayer(l => {
   const p = l.feature.properties;
   const ll = l.getLatLng();
-  const fs = p.radius >= 14 ? 10 : (p.radius >= 10 ? 9 : 8);
+  const initScale = getScale(map.getZoom() || BASE_ZOOM);
+  const r = Math.round(p.radius * initScale);
+  const baseFs = p.mag >= 4 ? 10 : (p.mag >= 3 ? 9 : 8);
+  const fs = Math.round(Math.max(7, Math.min(16, baseFs * initScale)));
   p._label = L.marker(ll, {
     interactive: false, keyboard: false,
-    icon: L.divIcon({
-      className: 'mag-num',
-      html: '<span style="font-size:' + fs + 'px">' + p.mag.toFixed(1) + '</span>',
-      iconSize: [26, 14], iconAnchor: [13, 7]
-    })
+    icon: getLabelIcon(p.mag, r, fs)
   }).addTo(labelGroup);
 });
+
+function updateZoomScaling() {
+  const z = map.getZoom();
+  const scale = getScale(z);
+  layer.eachLayer(l => {
+    const p = l.feature.properties;
+    const r = Math.round(p.radius * scale);
+    l.setRadius(r);
+    if (p._halo) {
+      p._halo.setRadius(Math.round((p.radius + 5) * scale));
+    }
+    if (p._label) {
+      const baseFs = p.mag >= 4 ? 10 : (p.mag >= 3 ? 9 : 8);
+      const fs = Math.round(Math.max(7, Math.min(16, baseFs * scale)));
+      const d = Math.round(r * 2);
+      const el = p._label.getElement();
+      if (el) {
+        el.style.width = d + 'px';
+        el.style.height = d + 'px';
+        el.style.marginLeft = (-r) + 'px';
+        el.style.marginTop = (-r) + 'px';
+        const span = el.querySelector('span');
+        if (span) {
+          span.style.fontSize = fs + 'px';
+          span.style.lineHeight = d + 'px';
+        }
+      }
+      p._label.setIcon(getLabelIcon(p.mag, r, fs));
+    }
+  });
+}
+map.on('zoomend', updateZoomScaling);
+
 function syncLabels() {
   const windowMs = timeFilterActive();
   const now = Date.now();
   layer.eachLayer(l => {
     const p = l.feature.properties;
-    const el = p._label && p._label.getElement();
-    if (!el) return;
+    if (!p._label) return;
     const magOn = onFor(p.mag);
     let alpha;
     if (windowMs === null) { alpha = magOn ? 1 : 0; }
@@ -186,10 +234,15 @@ function syncLabels() {
       const age = now - p.utc_ms;
       alpha = (magOn && age >= 0 && age <= windowMs) ? 1 : 0;
     }
-    el.style.opacity = alpha;
+    p._label.setOpacity(alpha);
+    const el = p._label.getElement();
+    if (el) {
+      el.style.display = alpha > 0 ? '' : 'none';
+      el.style.opacity = alpha;
+    }
   });
 }
-window.setTimeout(function(){ try { map.invalidateSize(); } catch(e){} }, 500);
+window.setTimeout(function(){ try { map.invalidateSize(); updateZoomScaling(); syncLabels(); } catch(e){} }, 500);
 
 /* magnitude band filtering */
 function bandOf(mag) { return mag >= 5 ? 'cbM5' : mag >= 4 ? 'cbM4' : mag >= 3 ? 'cbM3' : 'cbM2'; }
@@ -507,6 +560,7 @@ document.getElementById('cbLiveSens').addEventListener('change', e => {
 
 const b = layer.getBounds().pad(0.15);
 map.fitBounds(b, {maxZoom: 9});
+updateZoomScaling();
 syncLabels();
 
 /* ---- state persistence & fast auto-pulse stream ---- */
