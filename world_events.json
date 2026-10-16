@@ -1,35 +1,22 @@
 {
   "summary": {
-    "generated_utc": "2026-10-16T01:04:55Z",
-    "window": "24h closing 2026-10-16 01:04 UTC",
-    "raw_events": 285,
-    "pins": 217,
-    "cross_agency_merges": 68,
-    "max_mag": 5.6,
+    "generated_utc": "2026-10-16T01:58:12Z",
+    "window": "24h closing 2026-10-16 01:58 UTC",
+    "raw_events": 239,
+    "pins": 207,
+    "cross_agency_merges": 32,
+    "max_mag": 5.3,
     "counts": {
       "M6+": 0,
       "M5+": 5,
-      "M4+": 39,
-      "M3+": 138,
-      "M2+": 217
+      "M4+": 41,
+      "M3+": 137,
+      "M2+": 207
     },
     "m6plus": 0,
     "m5plus": 5,
-    "m4plus": 39,
+    "m4plus": 41,
     "top_events": [
-      {
-        "mag": 5.6,
-        "lat": 64.22,
-        "lon": -152.75,
-        "place": "43 km NNW of Lake Minchumina, Alaska",
-        "t": "2026-10-15T11:07:01Z",
-        "local": "06:07 AM",
-        "date": "2026-10-15",
-        "cats": [
-          "USGS",
-          "EMSC"
-        ]
-      },
       {
         "mag": 5.3,
         "lat": -15.23,
@@ -39,59 +26,66 @@
         "local": "08:29 AM",
         "date": "2026-10-15",
         "cats": [
-          "EMSC",
-          "USGS"
-        ]
-      },
-      {
-        "mag": 5.3,
-        "lat": -38.55,
-        "lon": 175.38,
-        "place": "43 km SSE of Otorohanga, New Zealand",
-        "t": "2026-10-15T05:25:31Z",
-        "local": "12:25 AM",
-        "date": "2026-10-15",
-        "cats": [
-          "USGS",
           "EMSC"
         ]
       },
       {
         "mag": 5.2,
-        "lat": -13.89,
+        "lat": -13.92,
         "lon": 166.09,
-        "place": "157 km W of Sola, Vanuatu",
-        "t": "2026-10-15T13:06:51Z",
+        "place": "VANUATU",
+        "t": "2026-10-15T13:06:55Z",
         "local": "08:06 AM",
         "date": "2026-10-15",
         "cats": [
-          "USGS",
           "EMSC"
         ]
       },
       {
         "mag": 5.1,
-        "lat": -13.41,
-        "lon": -172.07,
-        "place": "36 km E of Safotu, Samoa",
+        "lat": -38.63,
+        "lon": 175.37,
+        "place": "NORTH ISLAND OF NEW ZEALAND",
+        "t": "2026-10-15T05:25:31Z",
+        "local": "12:25 AM",
+        "date": "2026-10-15",
+        "cats": [
+          "EMSC"
+        ]
+      },
+      {
+        "mag": 5.1,
+        "lat": -13.43,
+        "lon": -171.94,
+        "place": "SAMOA ISLANDS",
         "t": "2026-10-15T03:36:29Z",
         "local": "10:36 PM",
         "date": "2026-10-14",
         "cats": [
-          "USGS",
+          "EMSC"
+        ]
+      },
+      {
+        "mag": 5.0,
+        "lat": 64.2,
+        "lon": -152.72,
+        "place": "CENTRAL ALASKA",
+        "t": "2026-10-15T11:07:02Z",
+        "local": "06:07 AM",
+        "date": "2026-10-15",
+        "cats": [
           "EMSC"
         ]
       },
       {
         "mag": 4.9,
-        "lat": 51.38,
-        "lon": 159.85,
-        "place": "198 km SSE of Vilyuchinsk, Russia",
-        "t": "2026-10-15T14:59:52Z",
+        "lat": 51.52,
+        "lon": 159.78,
+        "place": "OFF EAST COAST OF KAMCHATKA",
+        "t": "2026-10-15T14:59:53Z",
         "local": "09:59 AM",
         "date": "2026-10-15",
         "cats": [
-          "USGS",
           "EMSC"
         ]
       },
@@ -104,20 +98,18 @@
         "local": "08:16 AM",
         "date": "2026-10-15",
         "cats": [
-          "EMSC",
-          "USGS"
+          "EMSC"
         ]
       },
       {
         "mag": 4.8,
-        "lat": 0.75,
-        "lon": -85.43,
-        "place": "off the coast of Ecuador",
-        "t": "2026-10-15T11:16:43Z",
+        "lat": 0.99,
+        "lon": -85.26,
+        "place": "OFF COAST OF ECUADOR",
+        "t": "2026-10-15T11:16:46Z",
         "local": "06:16 AM",
         "date": "2026-10-15",
         "cats": [
-          "USGS",
           "EMSC"
         ]
       },
@@ -146,9 +138,158 @@
         ]
       }
     ],
-    "storms": []
+    "storms": [
+      {
+        "name": "Trudy",
+        "cls": "HU",
+        "lat": 14.0,
+        "lon": -101.8,
+        "wind": null,
+        "mov": "345@6kt"
+      },
+      {
+        "name": "Simon",
+        "cls": "TS",
+        "lat": 19.3,
+        "lon": -108.2,
+        "wind": null,
+        "mov": "325@1kt"
+      }
+    ]
   },
   "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.4595,
+          8.5792
+        ]
+      },
+      "properties": {
+        "_id": 0,
+        "mag": 4.6,
+        "mag_alt": null,
+        "lat": 8.5792,
+        "lon": -82.4595,
+        "depth": 3.0,
+        "t_iso": "2026-10-16T01:51:09Z",
+        "utc_ms": 1792115469000,
+        "place": "PANAMA-COSTA RICA BORDER REGION",
+        "local": "08:51 PM",
+        "date": "2026-10-15",
+        "utc": "01:51",
+        "tsunami": 0,
+        "catalogs": [
+          "EMSC"
+        ],
+        "duplicate_note": null,
+        "band": "M4-5",
+        "color": "#ffd60a",
+        "radius": 16.1,
+        "url": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.1582,
+          7.5183
+        ]
+      },
+      "properties": {
+        "_id": 1,
+        "mag": 4.4,
+        "mag_alt": null,
+        "lat": 7.5183,
+        "lon": -80.1582,
+        "depth": 5.0,
+        "t_iso": "2026-10-16T01:36:21Z",
+        "utc_ms": 1792114581000,
+        "place": "PANAMA",
+        "local": "08:36 PM",
+        "date": "2026-10-15",
+        "utc": "01:36",
+        "tsunami": 0,
+        "catalogs": [
+          "EMSC"
+        ],
+        "duplicate_note": null,
+        "band": "M4-5",
+        "color": "#ffd60a",
+        "radius": 15.4,
+        "url": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.6706,
+          7.5313
+        ]
+      },
+      "properties": {
+        "_id": 2,
+        "mag": 3.5,
+        "mag_alt": null,
+        "lat": 7.5313,
+        "lon": -80.6706,
+        "depth": 10.0,
+        "t_iso": "2026-10-16T01:21:21Z",
+        "utc_ms": 1792113681000,
+        "place": "PANAMA",
+        "local": "08:21 PM",
+        "date": "2026-10-15",
+        "utc": "01:21",
+        "tsunami": 0,
+        "catalogs": [
+          "EMSC"
+        ],
+        "duplicate_note": null,
+        "band": "M3-4",
+        "color": "#4dd2ff",
+        "radius": 12.2,
+        "url": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -109.7,
+          23.061
+        ]
+      },
+      "properties": {
+        "_id": 3,
+        "mag": 3.3,
+        "mag_alt": null,
+        "lat": 23.061,
+        "lon": -109.7,
+        "depth": 18.4,
+        "t_iso": "2026-10-16T00:52:47Z",
+        "utc_ms": 1792111967000,
+        "place": "BAJA CALIFORNIA SUR, MEXICO",
+        "local": "07:52 PM",
+        "date": "2026-10-15",
+        "utc": "00:52",
+        "tsunami": 0,
+        "catalogs": [
+          "EMSC"
+        ],
+        "duplicate_note": null,
+        "band": "M3-4",
+        "color": "#4dd2ff",
+        "radius": 11.5,
+        "url": ""
+      }
+    },
     {
       "type": "Feature",
       "geometry": {
@@ -159,7 +300,7 @@
         ]
       },
       "properties": {
-        "_id": 0,
+        "_id": 4,
         "mag": 3.7,
         "mag_alt": null,
         "lat": 7.4692,
@@ -192,7 +333,7 @@
         ]
       },
       "properties": {
-        "_id": 1,
+        "_id": 5,
         "mag": 3.1,
         "mag_alt": null,
         "lat": 35.38,
@@ -225,7 +366,7 @@
         ]
       },
       "properties": {
-        "_id": 2,
+        "_id": 6,
         "mag": 2.7,
         "mag_alt": null,
         "lat": 39.2388,
@@ -258,7 +399,7 @@
         ]
       },
       "properties": {
-        "_id": 3,
+        "_id": 7,
         "mag": 3.6,
         "mag_alt": null,
         "lat": -21.51,
@@ -286,45 +427,12 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -154.343,
-          57.863
-        ]
-      },
-      "properties": {
-        "_id": 4,
-        "mag": 2.6,
-        "mag_alt": null,
-        "lat": 57.863,
-        "lon": -154.343,
-        "depth": 59.0,
-        "t_iso": "2026-10-16T00:18:28Z",
-        "utc_ms": 1792109908188,
-        "place": "33 km NNE of Karluk, Alaska",
-        "local": "07:18 PM",
-        "date": "2026-10-15",
-        "utc": "00:18",
-        "tsunami": 0,
-        "catalogs": [
-          "USGS"
-        ],
-        "duplicate_note": null,
-        "band": "M2-3",
-        "color": "#4dd2ff",
-        "radius": 9.1,
-        "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026ulyxqn"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           -71.8,
           -29.24
         ]
       },
       "properties": {
-        "_id": 5,
+        "_id": 8,
         "mag": 2.5,
         "mag_alt": null,
         "lat": -29.24,
@@ -357,7 +465,7 @@
         ]
       },
       "properties": {
-        "_id": 6,
+        "_id": 9,
         "mag": 3.8,
         "mag_alt": null,
         "lat": 7.6081,
@@ -390,28 +498,27 @@
         ]
       },
       "properties": {
-        "_id": 7,
+        "_id": 10,
         "mag": 3.1,
         "mag_alt": null,
         "lat": 60.745,
         "lon": -151.267,
         "depth": 65.5,
         "t_iso": "2026-10-16T00:04:22Z",
-        "utc_ms": 1792109062449,
-        "place": "6 km N of Nikiski, Alaska",
+        "utc_ms": 1792109062000,
+        "place": "KENAI PENINSULA, ALASKA",
         "local": "07:04 PM",
         "date": "2026-10-15",
         "utc": "00:04",
         "tsunami": 0,
         "catalogs": [
-          "USGS",
           "EMSC"
         ],
-        "duplicate_note": "Same physical event reported by USGS + EMSC",
+        "duplicate_note": null,
         "band": "M3-4",
         "color": "#4dd2ff",
         "radius": 10.9,
-        "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026ulylmf"
+        "url": ""
       }
     },
     {
@@ -424,7 +531,7 @@
         ]
       },
       "properties": {
-        "_id": 8,
+        "_id": 11,
         "mag": 2.7,
         "mag_alt": null,
         "lat": -20.67,
@@ -457,7 +564,7 @@
         ]
       },
       "properties": {
-        "_id": 9,
+        "_id": 12,
         "mag": 3.8,
         "mag_alt": null,
         "lat": -35.14,
@@ -485,45 +592,12 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -148.391,
-          62.79
-        ]
-      },
-      "properties": {
-        "_id": 10,
-        "mag": 2.9,
-        "mag_alt": null,
-        "lat": 62.79,
-        "lon": -148.391,
-        "depth": 51.9,
-        "t_iso": "2026-10-15T23:30:20Z",
-        "utc_ms": 1792107020010,
-        "place": "72 km SSE of Cantwell, Alaska",
-        "local": "06:30 PM",
-        "date": "2026-10-15",
-        "utc": "23:30",
-        "tsunami": 0,
-        "catalogs": [
-          "USGS"
-        ],
-        "duplicate_note": null,
-        "band": "M2-3",
-        "color": "#4dd2ff",
-        "radius": 10.1,
-        "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026ulxhxz"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           -87.4623,
           11.9811
         ]
       },
       "properties": {
-        "_id": 11,
+        "_id": 13,
         "mag": 3.1,
         "mag_alt": null,
         "lat": 11.9811,
@@ -556,7 +630,7 @@
         ]
       },
       "properties": {
-        "_id": 12,
+        "_id": 14,
         "mag": 3.7,
         "mag_alt": null,
         "lat": 7.4804,
@@ -589,28 +663,27 @@
         ]
       },
       "properties": {
-        "_id": 13,
-        "mag": 3.41,
+        "_id": 15,
+        "mag": 3.4,
         "mag_alt": null,
         "lat": 38.9351,
         "lon": -115.2815,
-        "depth": 5.4126,
+        "depth": 5.4,
         "t_iso": "2026-10-15T22:55:34Z",
-        "utc_ms": 1792104934180,
-        "place": "19 km W of Preston, Nevada",
+        "utc_ms": 1792104934000,
+        "place": "NEVADA",
         "local": "05:55 PM",
         "date": "2026-10-15",
         "utc": "22:55",
         "tsunami": 0,
         "catalogs": [
-          "USGS",
           "EMSC"
         ],
-        "duplicate_note": "Same physical event reported by USGS + EMSC",
+        "duplicate_note": null,
         "band": "M3-4",
         "color": "#4dd2ff",
         "radius": 11.9,
-        "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nn00925810"
+        "url": ""
       }
     },
     {
@@ -623,7 +696,7 @@
         ]
       },
       "properties": {
-        "_id": 14,
+        "_id": 16,
         "mag": 2.8,
         "mag_alt": null,
         "lat": -22.0,
@@ -656,7 +729,7 @@
         ]
       },
       "properties": {
-        "_id": 15,
+        "_id": 17,
         "mag": 3.8,
         "mag_alt": null,
         "lat": 7.7031,
@@ -689,7 +762,7 @@
         ]
       },
       "properties": {
-        "_id": 16,
+        "_id": 18,
         "mag": 3.0,
         "mag_alt": null,
         "lat": 13.128,
@@ -722,7 +795,7 @@
         ]
       },
       "properties": {
-        "_id": 17,
+        "_id": 19,
         "mag": 2.6,
         "mag_alt": null,
         "lat": -25.904,
@@ -755,7 +828,7 @@
         ]
       },
       "properties": {
-        "_id": 18,
+        "_id": 20,
         "mag": 2.7,
         "mag_alt": null,
         "lat": 12.948,
@@ -788,7 +861,7 @@
         ]
       },
       "properties": {
-        "_id": 19,
+        "_id": 21,
         "mag": 3.5,
         "mag_alt": null,
         "lat": -11.44,
@@ -821,7 +894,7 @@
         ]
       },
       "properties": {
-        "_id": 20,
+        "_id": 22,
         "mag": 3.5,
         "mag_alt": null,
         "lat": 7.6575,
@@ -854,7 +927,7 @@
         ]
       },
       "properties": {
-        "_id": 21,
+        "_id": 23,
         "mag": 2.5,
         "mag_alt": null,
         "lat": -7.74,
@@ -887,7 +960,7 @@
         ]
       },
       "properties": {
-        "_id": 22,
+        "_id": 24,
         "mag": 3.5,
         "mag_alt": null,
         "lat": -21.38,
@@ -920,7 +993,7 @@
         ]
       },
       "properties": {
-        "_id": 23,
+        "_id": 25,
         "mag": 4.1,
         "mag_alt": null,
         "lat": 17.094,
@@ -953,7 +1026,7 @@
         ]
       },
       "properties": {
-        "_id": 24,
+        "_id": 26,
         "mag": 2.7,
         "mag_alt": null,
         "lat": -0.18,
@@ -986,7 +1059,7 @@
         ]
       },
       "properties": {
-        "_id": 25,
+        "_id": 27,
         "mag": 3.2,
         "mag_alt": null,
         "lat": -20.52,
@@ -1014,19 +1087,19 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -92.125,
-          13.821
+          -91.9535,
+          13.8226
         ]
       },
       "properties": {
-        "_id": 26,
+        "_id": 28,
         "mag": 4.6,
         "mag_alt": null,
-        "lat": 13.821,
-        "lon": -92.125,
-        "depth": 10.2,
-        "t_iso": "2026-10-15T21:29:05Z",
-        "utc_ms": 1792099745000,
+        "lat": 13.8226,
+        "lon": -91.9535,
+        "depth": 35.8,
+        "t_iso": "2026-10-15T21:29:07Z",
+        "utc_ms": 1792099747000,
         "place": "OFFSHORE GUATEMALA",
         "local": "04:29 PM",
         "date": "2026-10-15",
@@ -1052,7 +1125,7 @@
         ]
       },
       "properties": {
-        "_id": 27,
+        "_id": 29,
         "mag": 4.4,
         "mag_alt": null,
         "lat": 7.5119,
@@ -1085,28 +1158,27 @@
         ]
       },
       "properties": {
-        "_id": 28,
-        "mag": 3.44,
+        "_id": 30,
+        "mag": 3.4,
         "mag_alt": null,
-        "lat": 18.9758333333333,
-        "lon": -67.9448333333333,
-        "depth": 10.42,
+        "lat": 18.9758,
+        "lon": -67.9448,
+        "depth": 10.4,
         "t_iso": "2026-10-15T21:12:28Z",
-        "utc_ms": 1792098748970,
-        "place": "65 km NE of Punta Cana, Dominican Republic",
+        "utc_ms": 1792098748000,
+        "place": "DOMINICAN REPUBLIC REGION",
         "local": "04:12 PM",
         "date": "2026-10-15",
         "utc": "21:12",
         "tsunami": 0,
         "catalogs": [
-          "USGS",
           "EMSC"
         ],
-        "duplicate_note": "Same physical event reported by USGS + EMSC",
+        "duplicate_note": null,
         "band": "M3-4",
         "color": "#4dd2ff",
-        "radius": 12.0,
-        "url": "https://earthquake.usgs.gov/earthquakes/eventpage/pr71536828"
+        "radius": 11.9,
+        "url": ""
       }
     },
     {
@@ -1119,7 +1191,7 @@
         ]
       },
       "properties": {
-        "_id": 29,
+        "_id": 31,
         "mag": 3.1,
         "mag_alt": null,
         "lat": 5.98,
@@ -1152,7 +1224,7 @@
         ]
       },
       "properties": {
-        "_id": 30,
+        "_id": 32,
         "mag": 2.6,
         "mag_alt": null,
         "lat": -8.44,
@@ -1185,7 +1257,7 @@
         ]
       },
       "properties": {
-        "_id": 31,
+        "_id": 33,
         "mag": 2.9,
         "mag_alt": null,
         "lat": 1.3,
@@ -1218,7 +1290,7 @@
         ]
       },
       "properties": {
-        "_id": 32,
+        "_id": 34,
         "mag": 3.0,
         "mag_alt": null,
         "lat": 24.176,
@@ -1251,7 +1323,7 @@
         ]
       },
       "properties": {
-        "_id": 33,
+        "_id": 35,
         "mag": 3.3,
         "mag_alt": null,
         "lat": -22.1,
@@ -1284,7 +1356,7 @@
         ]
       },
       "properties": {
-        "_id": 34,
+        "_id": 36,
         "mag": 3.6,
         "mag_alt": null,
         "lat": 7.4557,
@@ -1317,28 +1389,27 @@
         ]
       },
       "properties": {
-        "_id": 35,
+        "_id": 37,
         "mag": 4.5,
         "mag_alt": null,
         "lat": 13.9013,
         "lon": -91.8178,
-        "depth": 59.487,
+        "depth": 59.5,
         "t_iso": "2026-10-15T20:39:25Z",
-        "utc_ms": 1792096765755,
-        "place": "44 km SSE of Champerico, Guatemala",
+        "utc_ms": 1792096765000,
+        "place": "OFFSHORE GUATEMALA",
         "local": "03:39 PM",
         "date": "2026-10-15",
         "utc": "20:39",
         "tsunami": 0,
         "catalogs": [
-          "USGS",
           "EMSC"
         ],
-        "duplicate_note": "Same physical event reported by USGS + EMSC",
+        "duplicate_note": null,
         "band": "M4-5",
         "color": "#ffd60a",
         "radius": 15.8,
-        "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u2kz"
+        "url": ""
       }
     },
     {
@@ -1351,7 +1422,7 @@
         ]
       },
       "properties": {
-        "_id": 36,
+        "_id": 38,
         "mag": 2.8,
         "mag_alt": null,
         "lat": 45.7001,
@@ -1384,7 +1455,7 @@
         ]
       },
       "properties": {
-        "_id": 37,
+        "_id": 39,
         "mag": 4.0,
         "mag_alt": null,
         "lat": 42.4736,
@@ -1417,7 +1488,7 @@
         ]
       },
       "properties": {
-        "_id": 38,
+        "_id": 40,
         "mag": 4.4,
         "mag_alt": null,
         "lat": -20.0399,
@@ -1431,10 +1502,9 @@
         "utc": "20:25",
         "tsunami": 0,
         "catalogs": [
-          "EMSC",
-          "USGS"
+          "EMSC"
         ],
-        "duplicate_note": "Same physical event reported by EMSC + USGS",
+        "duplicate_note": null,
         "band": "M4-5",
         "color": "#ffd60a",
         "radius": 15.4,
@@ -1451,7 +1521,7 @@
         ]
       },
       "properties": {
-        "_id": 39,
+        "_id": 41,
         "mag": 4.0,
         "mag_alt": null,
         "lat": 7.6008,
@@ -1484,7 +1554,7 @@
         ]
       },
       "properties": {
-        "_id": 40,
+        "_id": 42,
         "mag": 3.8,
         "mag_alt": null,
         "lat": -11.26,
@@ -1512,33 +1582,32 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -156.198,
-          57.083
+          -156.3338,
+          57.0858
         ]
       },
       "properties": {
-        "_id": 41,
+        "_id": 43,
         "mag": 2.9,
         "mag_alt": null,
-        "lat": 57.083,
-        "lon": -156.198,
-        "depth": 0.1,
-        "t_iso": "2026-10-15T19:58:37Z",
-        "utc_ms": 1792094317884,
-        "place": "86 km SE of Ugashik, Alaska",
+        "lat": 57.0858,
+        "lon": -156.3338,
+        "depth": 10.0,
+        "t_iso": "2026-10-15T19:58:38Z",
+        "utc_ms": 1792094318000,
+        "place": "ALASKA PENINSULA",
         "local": "02:58 PM",
         "date": "2026-10-15",
         "utc": "19:58",
         "tsunami": 0,
         "catalogs": [
-          "USGS",
           "EMSC"
         ],
-        "duplicate_note": "Same physical event reported by USGS + EMSC",
+        "duplicate_note": null,
         "band": "M2-3",
         "color": "#4dd2ff",
         "radius": 10.1,
-        "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026ulqgjv"
+        "url": ""
       }
     },
     {
@@ -1551,7 +1620,7 @@
         ]
       },
       "properties": {
-        "_id": 42,
+        "_id": 44,
         "mag": 2.9,
         "mag_alt": null,
         "lat": -21.25,
@@ -1584,7 +1653,7 @@
         ]
       },
       "properties": {
-        "_id": 43,
+        "_id": 45,
         "mag": 2.7,
         "mag_alt": null,
         "lat": 41.7482,
@@ -1617,7 +1686,7 @@
         ]
       },
       "properties": {
-        "_id": 44,
+        "_id": 46,
         "mag": 4.7,
         "mag_alt": null,
         "lat": 7.6522,
@@ -1645,33 +1714,32 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -146.894,
-          66.673
+          -146.8344,
+          66.6036
         ]
       },
       "properties": {
-        "_id": 45,
+        "_id": 47,
         "mag": 3.6,
         "mag_alt": null,
-        "lat": 66.673,
-        "lon": -146.894,
-        "depth": 5.0,
+        "lat": 66.6036,
+        "lon": -146.8344,
+        "depth": 14.3,
         "t_iso": "2026-10-15T19:46:42Z",
-        "utc_ms": 1792093602353,
-        "place": "41 km NNE of Beaver, Alaska",
+        "utc_ms": 1792093602000,
+        "place": "NORTHERN ALASKA",
         "local": "02:46 PM",
         "date": "2026-10-15",
         "utc": "19:46",
         "tsunami": 0,
         "catalogs": [
-          "USGS",
           "EMSC"
         ],
-        "duplicate_note": "Same physical event reported by USGS + EMSC",
+        "duplicate_note": null,
         "band": "M3-4",
         "color": "#4dd2ff",
         "radius": 12.6,
-        "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026ulpwbm"
+        "url": ""
       }
     },
     {
@@ -1684,7 +1752,7 @@
         ]
       },
       "properties": {
-        "_id": 46,
+        "_id": 48,
         "mag": 3.2,
         "mag_alt": null,
         "lat": 12.728,
@@ -1717,7 +1785,7 @@
         ]
       },
       "properties": {
-        "_id": 47,
+        "_id": 49,
         "mag": 2.5,
         "mag_alt": null,
         "lat": -8.63,
@@ -1750,7 +1818,7 @@
         ]
       },
       "properties": {
-        "_id": 48,
+        "_id": 50,
         "mag": 3.6,
         "mag_alt": null,
         "lat": -11.11,
@@ -1778,33 +1846,32 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -152.84,
-          60.018
+          -152.7951,
+          59.9533
         ]
       },
       "properties": {
-        "_id": 49,
+        "_id": 51,
         "mag": 2.7,
         "mag_alt": null,
-        "lat": 60.018,
-        "lon": -152.84,
-        "depth": 111.7,
-        "t_iso": "2026-10-15T19:35:47Z",
-        "utc_ms": 1792092947176,
-        "place": "62 km W of Happy Valley, Alaska",
+        "lat": 59.9533,
+        "lon": -152.7951,
+        "depth": 115.5,
+        "t_iso": "2026-10-15T19:35:46Z",
+        "utc_ms": 1792092946000,
+        "place": "SOUTHERN ALASKA",
         "local": "02:35 PM",
         "date": "2026-10-15",
         "utc": "19:35",
         "tsunami": 0,
         "catalogs": [
-          "USGS",
           "EMSC"
         ],
-        "duplicate_note": "Same physical event reported by USGS + EMSC",
+        "duplicate_note": null,
         "band": "M2-3",
         "color": "#4dd2ff",
         "radius": 9.5,
-        "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026ulpmpu"
+        "url": ""
       }
     },
     {
@@ -1817,7 +1884,7 @@
         ]
       },
       "properties": {
-        "_id": 50,
+        "_id": 52,
         "mag": 3.5,
         "mag_alt": null,
         "lat": -23.94,
@@ -1850,7 +1917,7 @@
         ]
       },
       "properties": {
-        "_id": 51,
+        "_id": 53,
         "mag": 3.0,
         "mag_alt": null,
         "lat": -36.8162,
@@ -1883,7 +1950,7 @@
         ]
       },
       "properties": {
-        "_id": 52,
+        "_id": 54,
         "mag": 4.2,
         "mag_alt": null,
         "lat": 7.5005,
@@ -1916,7 +1983,7 @@
         ]
       },
       "properties": {
-        "_id": 53,
+        "_id": 55,
         "mag": 4.2,
         "mag_alt": null,
         "lat": -6.48,
@@ -1949,7 +2016,7 @@
         ]
       },
       "properties": {
-        "_id": 54,
+        "_id": 56,
         "mag": 3.4,
         "mag_alt": null,
         "lat": -22.85,
@@ -1982,7 +2049,7 @@
         ]
       },
       "properties": {
-        "_id": 55,
+        "_id": 57,
         "mag": 2.8,
         "mag_alt": null,
         "lat": -7.65,
@@ -2015,7 +2082,7 @@
         ]
       },
       "properties": {
-        "_id": 56,
+        "_id": 58,
         "mag": 2.7,
         "mag_alt": null,
         "lat": -28.454,
@@ -2048,7 +2115,7 @@
         ]
       },
       "properties": {
-        "_id": 57,
+        "_id": 59,
         "mag": 2.7,
         "mag_alt": null,
         "lat": -23.9,
@@ -2081,7 +2148,7 @@
         ]
       },
       "properties": {
-        "_id": 58,
+        "_id": 60,
         "mag": 4.4,
         "mag_alt": null,
         "lat": 7.6507,
@@ -2114,61 +2181,27 @@
         ]
       },
       "properties": {
-        "_id": 59,
-        "mag": 2.54,
+        "_id": 61,
+        "mag": 2.5,
         "mag_alt": null,
-        "lat": 36.988166809082,
-        "lon": -121.460502624512,
-        "depth": 5.13000011444092,
+        "lat": 36.9882,
+        "lon": -121.4605,
+        "depth": 5.1,
         "t_iso": "2026-10-15T17:57:32Z",
-        "utc_ms": 1792087052790,
-        "place": "10 km ESE of Gilroy, CA",
+        "utc_ms": 1792087052000,
+        "place": "NORTHERN CALIFORNIA",
         "local": "12:57 PM",
         "date": "2026-10-15",
         "utc": "17:57",
         "tsunami": 0,
         "catalogs": [
-          "USGS",
           "EMSC"
-        ],
-        "duplicate_note": "Same physical event reported by USGS + EMSC",
-        "band": "M2-3",
-        "color": "#4dd2ff",
-        "radius": 8.9,
-        "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75449961"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -151.023,
-          60.273
-        ]
-      },
-      "properties": {
-        "_id": 60,
-        "mag": 2.5,
-        "mag_alt": null,
-        "lat": 60.273,
-        "lon": -151.023,
-        "depth": 54.5,
-        "t_iso": "2026-10-15T17:56:32Z",
-        "utc_ms": 1792086992715,
-        "place": "15 km ESE of Kasilof, Alaska",
-        "local": "12:56 PM",
-        "date": "2026-10-15",
-        "utc": "17:56",
-        "tsunami": 0,
-        "catalogs": [
-          "USGS"
         ],
         "duplicate_note": null,
         "band": "M2-3",
         "color": "#4dd2ff",
         "radius": 8.8,
-        "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026ulmeki"
+        "url": ""
       }
     },
     {
@@ -2181,7 +2214,7 @@
         ]
       },
       "properties": {
-        "_id": 61,
+        "_id": 62,
         "mag": 3.7,
         "mag_alt": null,
         "lat": -9.55,
@@ -2214,7 +2247,7 @@
         ]
       },
       "properties": {
-        "_id": 62,
+        "_id": 63,
         "mag": 2.8,
         "mag_alt": null,
         "lat": 27.222,
@@ -2247,7 +2280,7 @@
         ]
       },
       "properties": {
-        "_id": 63,
+        "_id": 64,
         "mag": 3.0,
         "mag_alt": null,
         "lat": -20.4,
@@ -2280,7 +2313,7 @@
         ]
       },
       "properties": {
-        "_id": 64,
+        "_id": 65,
         "mag": 3.6,
         "mag_alt": null,
         "lat": 7.5108,
@@ -2313,7 +2346,7 @@
         ]
       },
       "properties": {
-        "_id": 65,
+        "_id": 66,
         "mag": 2.6,
         "mag_alt": null,
         "lat": 8.2044,
@@ -2341,66 +2374,32 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -124.435,
-          40.337
-        ]
-      },
-      "properties": {
-        "_id": 66,
-        "mag": 2.95,
-        "mag_alt": null,
-        "lat": 40.3370018005371,
-        "lon": -124.434997558594,
-        "depth": 19.6200008392334,
-        "t_iso": "2026-10-15T17:25:32Z",
-        "utc_ms": 1792085132550,
-        "place": "13 km W of Petrolia, CA",
-        "local": "12:25 PM",
-        "date": "2026-10-15",
-        "utc": "17:25",
-        "tsunami": 0,
-        "catalogs": [
-          "USGS"
-        ],
-        "duplicate_note": null,
-        "band": "M2-3",
-        "color": "#4dd2ff",
-        "radius": 10.3,
-        "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75449946"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -151.284,
-          64.174
+          -151.2555,
+          64.1997
         ]
       },
       "properties": {
         "_id": 67,
         "mag": 2.8,
         "mag_alt": null,
-        "lat": 64.174,
-        "lon": -151.284,
-        "depth": 14.0,
+        "lat": 64.1997,
+        "lon": -151.2555,
+        "depth": 17.5,
         "t_iso": "2026-10-15T17:20:31Z",
-        "utc_ms": 1792084831535,
-        "place": "59 km ENE of Lake Minchumina, Alaska",
+        "utc_ms": 1792084831000,
+        "place": "CENTRAL ALASKA",
         "local": "12:20 PM",
         "date": "2026-10-15",
         "utc": "17:20",
         "tsunami": 0,
         "catalogs": [
-          "USGS",
           "EMSC"
         ],
-        "duplicate_note": "Same physical event reported by USGS + EMSC",
+        "duplicate_note": null,
         "band": "M2-3",
         "color": "#4dd2ff",
         "radius": 9.8,
-        "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026ulkzip"
+        "url": ""
       }
     },
     {
@@ -2451,23 +2450,22 @@
         "mag_alt": null,
         "lat": 39.053,
         "lon": -98.7352,
-        "depth": 8.647,
+        "depth": 8.6,
         "t_iso": "2026-10-15T17:18:54Z",
-        "utc_ms": 1792084734565,
-        "place": "7 km SSW of Luray, Kansas",
+        "utc_ms": 1792084734000,
+        "place": "KANSAS",
         "local": "12:18 PM",
         "date": "2026-10-15",
         "utc": "17:18",
         "tsunami": 0,
         "catalogs": [
-          "USGS",
           "EMSC"
         ],
-        "duplicate_note": "Same physical event reported by USGS + EMSC",
+        "duplicate_note": null,
         "band": "M2-3",
         "color": "#4dd2ff",
         "radius": 9.5,
-        "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u2k0"
+        "url": ""
       }
     },
     {
@@ -2716,23 +2714,22 @@
         "mag_alt": null,
         "lat": -25.1841,
         "lon": -179.7319,
-        "depth": 522.752,
+        "depth": 522.8,
         "t_iso": "2026-10-15T16:32:51Z",
-        "utc_ms": 1792081971608,
-        "place": "south of the Fiji Islands",
+        "utc_ms": 1792081971000,
+        "place": "SOUTH OF FIJI ISLANDS",
         "local": "11:32 AM",
         "date": "2026-10-15",
         "utc": "16:32",
         "tsunami": 0,
         "catalogs": [
-          "USGS",
           "EMSC"
         ],
-        "duplicate_note": "Same physical event reported by USGS + EMSC",
+        "duplicate_note": null,
         "band": "M4-5",
         "color": "#ffd60a",
         "radius": 15.4,
-        "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u2im"
+        "url": ""
       }
     },
     {
@@ -2872,33 +2869,32 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -86.049,
-          10.3031
+          -86.179,
+          9.961
         ]
       },
       "properties": {
         "_id": 82,
-        "mag": 4.5,
+        "mag": 4.2,
         "mag_alt": null,
-        "lat": 10.3031,
-        "lon": -86.049,
-        "depth": 22.782,
-        "t_iso": "2026-10-15T15:40:38Z",
-        "utc_ms": 1792078838840,
-        "place": "22 km W of Tamarindo, Costa Rica",
+        "lat": 9.961,
+        "lon": -86.179,
+        "depth": 18.0,
+        "t_iso": "2026-10-15T15:40:35Z",
+        "utc_ms": 1792078835000,
+        "place": "OFF COAST OF COSTA RICA",
         "local": "10:40 AM",
         "date": "2026-10-15",
         "utc": "15:40",
         "tsunami": 0,
         "catalogs": [
-          "USGS",
           "EMSC"
         ],
-        "duplicate_note": "Same physical event reported by USGS + EMSC",
+        "duplicate_note": null,
         "band": "M4-5",
         "color": "#ffd60a",
-        "radius": 15.8,
-        "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u2i9"
+        "radius": 14.7,
+        "url": ""
       }
     },
     {
@@ -3170,33 +3166,32 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          159.8474,
-          51.3801
+          159.78,
+          51.52
         ]
       },
       "properties": {
         "_id": 91,
         "mag": 4.9,
         "mag_alt": null,
-        "lat": 51.3801,
-        "lon": 159.8474,
+        "lat": 51.52,
+        "lon": 159.78,
         "depth": 10.0,
-        "t_iso": "2026-10-15T14:59:52Z",
-        "utc_ms": 1792076392905,
-        "place": "198 km SSE of Vilyuchinsk, Russia",
+        "t_iso": "2026-10-15T14:59:53Z",
+        "utc_ms": 1792076393000,
+        "place": "OFF EAST COAST OF KAMCHATKA",
         "local": "09:59 AM",
         "date": "2026-10-15",
         "utc": "14:59",
         "tsunami": 0,
         "catalogs": [
-          "USGS",
           "EMSC"
         ],
-        "duplicate_note": "Same physical event reported by USGS + EMSC",
+        "duplicate_note": null,
         "band": "M4-5",
         "color": "#ffd60a",
         "radius": 17.2,
-        "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u2i2"
+        "url": ""
       }
     },
     {
@@ -3402,33 +3397,32 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -115.4077,
-          32.3677
+          -115.4558,
+          32.3593
         ]
       },
       "properties": {
         "_id": 98,
-        "mag": 2.72,
+        "mag": 2.5,
         "mag_alt": null,
-        "lat": 32.3676666666667,
-        "lon": -115.407666666667,
-        "depth": 15.34,
+        "lat": 32.3593,
+        "lon": -115.4558,
+        "depth": 10.0,
         "t_iso": "2026-10-15T14:09:56Z",
-        "utc_ms": 1792073396550,
-        "place": "20 km W of Delta, B.C., MX",
+        "utc_ms": 1792073396000,
+        "place": "BAJA CALIFORNIA, MEXICO",
         "local": "09:09 AM",
         "date": "2026-10-15",
         "utc": "14:09",
         "tsunami": 0,
         "catalogs": [
-          "USGS",
           "EMSC"
         ],
-        "duplicate_note": "Same physical event reported by USGS + EMSC",
+        "duplicate_note": null,
         "band": "M2-3",
         "color": "#4dd2ff",
-        "radius": 9.5,
-        "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41347847"
+        "radius": 8.8,
+        "url": ""
       }
     },
     {
@@ -3436,33 +3430,32 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -148.0,
-          64.16
+          -148.0086,
+          64.1344
         ]
       },
       "properties": {
         "_id": 99,
         "mag": 3.0,
         "mag_alt": null,
-        "lat": 64.16,
-        "lon": -148.0,
-        "depth": 107.8,
-        "t_iso": "2026-10-15T14:02:45Z",
-        "utc_ms": 1792072965435,
-        "place": "56 km ENE of Ferry, Alaska",
+        "lat": 64.1344,
+        "lon": -148.0086,
+        "depth": 115.3,
+        "t_iso": "2026-10-15T14:02:44Z",
+        "utc_ms": 1792072964000,
+        "place": "CENTRAL ALASKA",
         "local": "09:02 AM",
         "date": "2026-10-15",
         "utc": "14:02",
         "tsunami": 0,
         "catalogs": [
-          "USGS",
           "EMSC"
         ],
-        "duplicate_note": "Same physical event reported by USGS + EMSC",
+        "duplicate_note": null,
         "band": "M3-4",
         "color": "#4dd2ff",
         "radius": 10.5,
-        "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026ulejvq"
+        "url": ""
       }
     },
     {
@@ -3581,21 +3574,20 @@
         "lon": -80.0893,
         "depth": 10.0,
         "t_iso": "2026-10-15T13:31:37Z",
-        "utc_ms": 1792071097166,
-        "place": "9 km SSE of Los Asientos, Panama",
+        "utc_ms": 1792071097000,
+        "place": "PANAMA",
         "local": "08:31 AM",
         "date": "2026-10-15",
         "utc": "13:31",
         "tsunami": 0,
         "catalogs": [
-          "USGS",
           "EMSC"
         ],
-        "duplicate_note": "Same physical event reported by USGS + EMSC",
+        "duplicate_note": null,
         "band": "M4-5",
         "color": "#ffd60a",
         "radius": 15.8,
-        "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u2ht"
+        "url": ""
       }
     },
     {
@@ -3655,10 +3647,9 @@
         "utc": "13:29",
         "tsunami": 0,
         "catalogs": [
-          "EMSC",
-          "USGS"
+          "EMSC"
         ],
-        "duplicate_note": "Same physical event reported by EMSC + USGS",
+        "duplicate_note": null,
         "band": "M5+",
         "color": "#ff9500",
         "radius": 18.5,
@@ -3755,10 +3746,9 @@
         "utc": "13:16",
         "tsunami": 0,
         "catalogs": [
-          "EMSC",
-          "USGS"
+          "EMSC"
         ],
-        "duplicate_note": "Same physical event reported by EMSC + USGS",
+        "duplicate_note": null,
         "band": "M4-5",
         "color": "#ffd60a",
         "radius": 16.8,
@@ -3770,33 +3760,32 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          166.0921,
-          -13.8878
+          166.0866,
+          -13.9158
         ]
       },
       "properties": {
         "_id": 109,
         "mag": 5.2,
         "mag_alt": null,
-        "lat": -13.8878,
-        "lon": 166.0921,
-        "depth": 10.0,
-        "t_iso": "2026-10-15T13:06:51Z",
-        "utc_ms": 1792069611678,
-        "place": "157 km W of Sola, Vanuatu",
+        "lat": -13.9158,
+        "lon": 166.0866,
+        "depth": 37.0,
+        "t_iso": "2026-10-15T13:06:55Z",
+        "utc_ms": 1792069615000,
+        "place": "VANUATU",
         "local": "08:06 AM",
         "date": "2026-10-15",
         "utc": "13:06",
         "tsunami": 0,
         "catalogs": [
-          "USGS",
           "EMSC"
         ],
-        "duplicate_note": "Same physical event reported by USGS + EMSC",
+        "duplicate_note": null,
         "band": "M5+",
         "color": "#ff9500",
         "radius": 18.2,
-        "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u2hp"
+        "url": ""
       }
     },
     {
@@ -3804,33 +3793,32 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -152.746,
-          64.194
+          -152.6817,
+          64.2125
         ]
       },
       "properties": {
         "_id": 110,
         "mag": 3.0,
         "mag_alt": null,
-        "lat": 64.194,
-        "lon": -152.746,
-        "depth": 8.2,
-        "t_iso": "2026-10-15T13:05:45Z",
-        "utc_ms": 1792069545094,
-        "place": "40 km NNW of Lake Minchumina, Alaska",
+        "lat": 64.2125,
+        "lon": -152.6817,
+        "depth": 10.0,
+        "t_iso": "2026-10-15T13:05:44Z",
+        "utc_ms": 1792069544000,
+        "place": "CENTRAL ALASKA",
         "local": "08:05 AM",
         "date": "2026-10-15",
         "utc": "13:05",
         "tsunami": 0,
         "catalogs": [
-          "USGS",
           "EMSC"
         ],
-        "duplicate_note": "Same physical event reported by USGS + EMSC",
+        "duplicate_note": null,
         "band": "M3-4",
         "color": "#4dd2ff",
         "radius": 10.5,
-        "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026ulcmta"
+        "url": ""
       }
     },
     {
@@ -3970,45 +3958,12 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -153.199,
-          58.84
-        ]
-      },
-      "properties": {
-        "_id": 115,
-        "mag": 2.6,
-        "mag_alt": null,
-        "lat": 58.84,
-        "lon": -153.199,
-        "depth": 58.9,
-        "t_iso": "2026-10-15T12:18:08Z",
-        "utc_ms": 1792066688149,
-        "place": "88 km N of Aleneva, Alaska",
-        "local": "07:18 AM",
-        "date": "2026-10-15",
-        "utc": "12:18",
-        "tsunami": 0,
-        "catalogs": [
-          "USGS"
-        ],
-        "duplicate_note": null,
-        "band": "M2-3",
-        "color": "#4dd2ff",
-        "radius": 9.1,
-        "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026ulaxcs"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           -70.68,
           -24.03
         ]
       },
       "properties": {
-        "_id": 116,
+        "_id": 115,
         "mag": 2.7,
         "mag_alt": null,
         "lat": -24.03,
@@ -4041,7 +3996,7 @@
         ]
       },
       "properties": {
-        "_id": 117,
+        "_id": 116,
         "mag": 3.6,
         "mag_alt": null,
         "lat": 7.7283,
@@ -4074,7 +4029,7 @@
         ]
       },
       "properties": {
-        "_id": 118,
+        "_id": 117,
         "mag": 2.5,
         "mag_alt": null,
         "lat": 39.5954,
@@ -4088,10 +4043,9 @@
         "utc": "11:48",
         "tsunami": 0,
         "catalogs": [
-          "EMSC",
-          "USGS"
+          "EMSC"
         ],
-        "duplicate_note": "Same physical event reported by EMSC + USGS",
+        "duplicate_note": null,
         "band": "M2-3",
         "color": "#4dd2ff",
         "radius": 8.8,
@@ -4108,7 +4062,7 @@
         ]
       },
       "properties": {
-        "_id": 119,
+        "_id": 118,
         "mag": 2.5,
         "mag_alt": null,
         "lat": -31.817,
@@ -4141,7 +4095,7 @@
         ]
       },
       "properties": {
-        "_id": 120,
+        "_id": 119,
         "mag": 4.2,
         "mag_alt": null,
         "lat": 13.112,
@@ -4174,7 +4128,7 @@
         ]
       },
       "properties": {
-        "_id": 121,
+        "_id": 120,
         "mag": 3.1,
         "mag_alt": null,
         "lat": -36.6056,
@@ -4207,7 +4161,7 @@
         ]
       },
       "properties": {
-        "_id": 122,
+        "_id": 121,
         "mag": 4.0,
         "mag_alt": null,
         "lat": 17.411,
@@ -4240,7 +4194,7 @@
         ]
       },
       "properties": {
-        "_id": 123,
+        "_id": 122,
         "mag": 2.8,
         "mag_alt": null,
         "lat": 12.795,
@@ -4268,33 +4222,32 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -85.429,
-          0.7509
+          -85.2618,
+          0.9903
         ]
       },
       "properties": {
-        "_id": 124,
+        "_id": 123,
         "mag": 4.8,
         "mag_alt": null,
-        "lat": 0.7509,
-        "lon": -85.429,
-        "depth": 10.0,
-        "t_iso": "2026-10-15T11:16:43Z",
-        "utc_ms": 1792063003490,
-        "place": "off the coast of Ecuador",
+        "lat": 0.9903,
+        "lon": -85.2618,
+        "depth": 18.0,
+        "t_iso": "2026-10-15T11:16:46Z",
+        "utc_ms": 1792063006000,
+        "place": "OFF COAST OF ECUADOR",
         "local": "06:16 AM",
         "date": "2026-10-15",
         "utc": "11:16",
         "tsunami": 0,
         "catalogs": [
-          "USGS",
           "EMSC"
         ],
-        "duplicate_note": "Same physical event reported by USGS + EMSC",
+        "duplicate_note": null,
         "band": "M4-5",
         "color": "#ffd60a",
         "radius": 16.8,
-        "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u2gd"
+        "url": ""
       }
     },
     {
@@ -4302,33 +4255,32 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -152.746,
-          64.22
+          -152.7238,
+          64.1958
         ]
       },
       "properties": {
-        "_id": 125,
-        "mag": 5.6,
+        "_id": 124,
+        "mag": 5.0,
         "mag_alt": null,
-        "lat": 64.22,
-        "lon": -152.746,
-        "depth": 4.5,
-        "t_iso": "2026-10-15T11:07:01Z",
-        "utc_ms": 1792062421800,
-        "place": "43 km NNW of Lake Minchumina, Alaska",
+        "lat": 64.1958,
+        "lon": -152.7238,
+        "depth": 10.0,
+        "t_iso": "2026-10-15T11:07:02Z",
+        "utc_ms": 1792062422000,
+        "place": "CENTRAL ALASKA",
         "local": "06:07 AM",
         "date": "2026-10-15",
         "utc": "11:07",
         "tsunami": 0,
         "catalogs": [
-          "USGS",
           "EMSC"
         ],
-        "duplicate_note": "Same physical event reported by USGS + EMSC",
+        "duplicate_note": null,
         "band": "M5+",
         "color": "#ff9500",
-        "radius": 19.6,
-        "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026ukynnb"
+        "radius": 17.5,
+        "url": ""
       }
     },
     {
@@ -4341,7 +4293,7 @@
         ]
       },
       "properties": {
-        "_id": 126,
+        "_id": 125,
         "mag": 3.7,
         "mag_alt": null,
         "lat": 7.7467,
@@ -4374,7 +4326,7 @@
         ]
       },
       "properties": {
-        "_id": 127,
+        "_id": 126,
         "mag": 2.8,
         "mag_alt": null,
         "lat": 33.373,
@@ -4407,7 +4359,7 @@
         ]
       },
       "properties": {
-        "_id": 128,
+        "_id": 127,
         "mag": 4.1,
         "mag_alt": null,
         "lat": -6.76,
@@ -4440,7 +4392,7 @@
         ]
       },
       "properties": {
-        "_id": 129,
+        "_id": 128,
         "mag": 3.0,
         "mag_alt": null,
         "lat": 27.406,
@@ -4473,7 +4425,7 @@
         ]
       },
       "properties": {
-        "_id": 130,
+        "_id": 129,
         "mag": 2.6,
         "mag_alt": null,
         "lat": -22.61,
@@ -4506,7 +4458,7 @@
         ]
       },
       "properties": {
-        "_id": 131,
+        "_id": 130,
         "mag": 3.7,
         "mag_alt": null,
         "lat": 15.928,
@@ -4539,7 +4491,7 @@
         ]
       },
       "properties": {
-        "_id": 132,
+        "_id": 131,
         "mag": 3.2,
         "mag_alt": null,
         "lat": 40.4165,
@@ -4553,10 +4505,9 @@
         "utc": "10:37",
         "tsunami": 0,
         "catalogs": [
-          "EMSC",
-          "USGS"
+          "EMSC"
         ],
-        "duplicate_note": "Same physical event reported by EMSC + USGS",
+        "duplicate_note": null,
         "band": "M3-4",
         "color": "#4dd2ff",
         "radius": 11.2,
@@ -4573,7 +4524,7 @@
         ]
       },
       "properties": {
-        "_id": 133,
+        "_id": 132,
         "mag": 3.5,
         "mag_alt": null,
         "lat": 7.6168,
@@ -4606,7 +4557,7 @@
         ]
       },
       "properties": {
-        "_id": 134,
+        "_id": 133,
         "mag": 2.7,
         "mag_alt": null,
         "lat": 11.478,
@@ -4639,7 +4590,7 @@
         ]
       },
       "properties": {
-        "_id": 135,
+        "_id": 134,
         "mag": 4.0,
         "mag_alt": null,
         "lat": 13.9631,
@@ -4672,7 +4623,7 @@
         ]
       },
       "properties": {
-        "_id": 136,
+        "_id": 135,
         "mag": 2.9,
         "mag_alt": null,
         "lat": -20.06,
@@ -4705,7 +4656,7 @@
         ]
       },
       "properties": {
-        "_id": 137,
+        "_id": 136,
         "mag": 3.6,
         "mag_alt": null,
         "lat": 17.052,
@@ -4738,7 +4689,7 @@
         ]
       },
       "properties": {
-        "_id": 138,
+        "_id": 137,
         "mag": 3.0,
         "mag_alt": null,
         "lat": 16.709,
@@ -4771,7 +4722,7 @@
         ]
       },
       "properties": {
-        "_id": 139,
+        "_id": 138,
         "mag": 3.5,
         "mag_alt": null,
         "lat": 7.6485,
@@ -4804,7 +4755,7 @@
         ]
       },
       "properties": {
-        "_id": 140,
+        "_id": 139,
         "mag": 2.9,
         "mag_alt": null,
         "lat": -17.82,
@@ -4837,7 +4788,7 @@
         ]
       },
       "properties": {
-        "_id": 141,
+        "_id": 140,
         "mag": 4.4,
         "mag_alt": null,
         "lat": 37.274,
@@ -4870,7 +4821,7 @@
         ]
       },
       "properties": {
-        "_id": 142,
+        "_id": 141,
         "mag": 3.3,
         "mag_alt": null,
         "lat": 19.151,
@@ -4903,7 +4854,7 @@
         ]
       },
       "properties": {
-        "_id": 143,
+        "_id": 142,
         "mag": 3.2,
         "mag_alt": null,
         "lat": 7.799,
@@ -4936,7 +4887,7 @@
         ]
       },
       "properties": {
-        "_id": 144,
+        "_id": 143,
         "mag": 2.8,
         "mag_alt": null,
         "lat": 39.3368,
@@ -4950,10 +4901,9 @@
         "utc": "09:34",
         "tsunami": 0,
         "catalogs": [
-          "EMSC",
-          "USGS"
+          "EMSC"
         ],
-        "duplicate_note": "Same physical event reported by EMSC + USGS",
+        "duplicate_note": null,
         "band": "M2-3",
         "color": "#4dd2ff",
         "radius": 9.8,
@@ -4970,7 +4920,7 @@
         ]
       },
       "properties": {
-        "_id": 145,
+        "_id": 144,
         "mag": 3.8,
         "mag_alt": null,
         "lat": 15.303,
@@ -5003,7 +4953,7 @@
         ]
       },
       "properties": {
-        "_id": 146,
+        "_id": 145,
         "mag": 3.5,
         "mag_alt": null,
         "lat": 7.6673,
@@ -5036,7 +4986,7 @@
         ]
       },
       "properties": {
-        "_id": 147,
+        "_id": 146,
         "mag": 3.1,
         "mag_alt": null,
         "lat": -20.41,
@@ -5069,7 +5019,7 @@
         ]
       },
       "properties": {
-        "_id": 148,
+        "_id": 147,
         "mag": 3.2,
         "mag_alt": null,
         "lat": 11.5,
@@ -5102,7 +5052,7 @@
         ]
       },
       "properties": {
-        "_id": 149,
+        "_id": 148,
         "mag": 2.5,
         "mag_alt": null,
         "lat": 36.0692,
@@ -5135,7 +5085,7 @@
         ]
       },
       "properties": {
-        "_id": 150,
+        "_id": 149,
         "mag": 3.5,
         "mag_alt": null,
         "lat": 17.314,
@@ -5168,7 +5118,7 @@
         ]
       },
       "properties": {
-        "_id": 151,
+        "_id": 150,
         "mag": 3.6,
         "mag_alt": null,
         "lat": 16.407,
@@ -5201,7 +5151,7 @@
         ]
       },
       "properties": {
-        "_id": 152,
+        "_id": 151,
         "mag": 3.1,
         "mag_alt": null,
         "lat": -36.11,
@@ -5234,7 +5184,7 @@
         ]
       },
       "properties": {
-        "_id": 153,
+        "_id": 152,
         "mag": 3.4,
         "mag_alt": null,
         "lat": 7.6845,
@@ -5267,7 +5217,7 @@
         ]
       },
       "properties": {
-        "_id": 154,
+        "_id": 153,
         "mag": 3.2,
         "mag_alt": null,
         "lat": 15.342,
@@ -5300,7 +5250,7 @@
         ]
       },
       "properties": {
-        "_id": 155,
+        "_id": 154,
         "mag": 3.1,
         "mag_alt": null,
         "lat": 31.14,
@@ -5333,7 +5283,7 @@
         ]
       },
       "properties": {
-        "_id": 156,
+        "_id": 155,
         "mag": 2.6,
         "mag_alt": null,
         "lat": -39.22,
@@ -5361,45 +5311,12 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -153.098,
-          59.707
-        ]
-      },
-      "properties": {
-        "_id": 157,
-        "mag": 2.8,
-        "mag_alt": null,
-        "lat": 59.707,
-        "lon": -153.098,
-        "depth": 109.8,
-        "t_iso": "2026-10-15T08:44:32Z",
-        "utc_ms": 1792053872859,
-        "place": "57 km E of Pedro Bay, Alaska",
-        "local": "03:44 AM",
-        "date": "2026-10-15",
-        "utc": "08:44",
-        "tsunami": 0,
-        "catalogs": [
-          "USGS"
-        ],
-        "duplicate_note": null,
-        "band": "M2-3",
-        "color": "#4dd2ff",
-        "radius": 9.8,
-        "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026ukttxq"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           -81.1412,
           7.7542
         ]
       },
       "properties": {
-        "_id": 158,
+        "_id": 156,
         "mag": 3.3,
         "mag_alt": null,
         "lat": 7.7542,
@@ -5432,7 +5349,7 @@
         ]
       },
       "properties": {
-        "_id": 159,
+        "_id": 157,
         "mag": 3.5,
         "mag_alt": null,
         "lat": 7.6442,
@@ -5465,7 +5382,7 @@
         ]
       },
       "properties": {
-        "_id": 160,
+        "_id": 158,
         "mag": 2.9,
         "mag_alt": null,
         "lat": 0.73,
@@ -5498,7 +5415,7 @@
         ]
       },
       "properties": {
-        "_id": 161,
+        "_id": 159,
         "mag": 2.6,
         "mag_alt": null,
         "lat": -21.36,
@@ -5531,7 +5448,7 @@
         ]
       },
       "properties": {
-        "_id": 162,
+        "_id": 160,
         "mag": 3.0,
         "mag_alt": null,
         "lat": 9.2976,
@@ -5564,7 +5481,7 @@
         ]
       },
       "properties": {
-        "_id": 163,
+        "_id": 161,
         "mag": 3.3,
         "mag_alt": null,
         "lat": 7.595,
@@ -5597,7 +5514,7 @@
         ]
       },
       "properties": {
-        "_id": 164,
+        "_id": 162,
         "mag": 3.1,
         "mag_alt": null,
         "lat": 16.807,
@@ -5630,7 +5547,7 @@
         ]
       },
       "properties": {
-        "_id": 165,
+        "_id": 163,
         "mag": 3.2,
         "mag_alt": null,
         "lat": -4.27,
@@ -5663,7 +5580,7 @@
         ]
       },
       "properties": {
-        "_id": 166,
+        "_id": 164,
         "mag": 2.9,
         "mag_alt": null,
         "lat": 8.4068,
@@ -5696,7 +5613,7 @@
         ]
       },
       "properties": {
-        "_id": 167,
+        "_id": 165,
         "mag": 3.9,
         "mag_alt": null,
         "lat": 14.366,
@@ -5729,7 +5646,7 @@
         ]
       },
       "properties": {
-        "_id": 168,
+        "_id": 166,
         "mag": 3.7,
         "mag_alt": null,
         "lat": -8.25,
@@ -5762,7 +5679,7 @@
         ]
       },
       "properties": {
-        "_id": 169,
+        "_id": 167,
         "mag": 3.6,
         "mag_alt": null,
         "lat": 16.021,
@@ -5795,7 +5712,7 @@
         ]
       },
       "properties": {
-        "_id": 170,
+        "_id": 168,
         "mag": 3.5,
         "mag_alt": null,
         "lat": -2.38,
@@ -5828,7 +5745,7 @@
         ]
       },
       "properties": {
-        "_id": 171,
+        "_id": 169,
         "mag": 2.6,
         "mag_alt": null,
         "lat": 13.955,
@@ -5861,7 +5778,7 @@
         ]
       },
       "properties": {
-        "_id": 172,
+        "_id": 170,
         "mag": 3.5,
         "mag_alt": null,
         "lat": 7.6757,
@@ -5894,7 +5811,7 @@
         ]
       },
       "properties": {
-        "_id": 173,
+        "_id": 171,
         "mag": 2.7,
         "mag_alt": null,
         "lat": 17.9622,
@@ -5908,47 +5825,13 @@
         "utc": "06:53",
         "tsunami": 0,
         "catalogs": [
-          "EMSC",
-          "USGS"
-        ],
-        "duplicate_note": "Same physical event reported by EMSC + USGS",
-        "band": "M2-3",
-        "color": "#4dd2ff",
-        "radius": 9.5,
-        "url": ""
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -151.218,
-          64.195
-        ]
-      },
-      "properties": {
-        "_id": 174,
-        "mag": 2.9,
-        "mag_alt": null,
-        "lat": 64.195,
-        "lon": -151.218,
-        "depth": 1.0,
-        "t_iso": "2026-10-15T06:42:40Z",
-        "utc_ms": 1792046560871,
-        "place": "63 km ENE of Lake Minchumina, Alaska",
-        "local": "01:42 AM",
-        "date": "2026-10-15",
-        "utc": "06:42",
-        "tsunami": 0,
-        "catalogs": [
-          "USGS"
+          "EMSC"
         ],
         "duplicate_note": null,
         "band": "M2-3",
         "color": "#4dd2ff",
-        "radius": 10.1,
-        "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026ukpsgx"
+        "radius": 9.5,
+        "url": ""
       }
     },
     {
@@ -5961,7 +5844,7 @@
         ]
       },
       "properties": {
-        "_id": 175,
+        "_id": 172,
         "mag": 2.5,
         "mag_alt": null,
         "lat": 19.1647,
@@ -5994,7 +5877,7 @@
         ]
       },
       "properties": {
-        "_id": 176,
+        "_id": 173,
         "mag": 2.6,
         "mag_alt": null,
         "lat": 27.88,
@@ -6022,45 +5905,12 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -159.17,
-          55.263
-        ]
-      },
-      "properties": {
-        "_id": 177,
-        "mag": 2.8,
-        "mag_alt": null,
-        "lat": 55.263,
-        "lon": -159.17,
-        "depth": 20.0,
-        "t_iso": "2026-10-15T06:30:26Z",
-        "utc_ms": 1792045826017,
-        "place": "72 km S of Perryville, Alaska",
-        "local": "01:30 AM",
-        "date": "2026-10-15",
-        "utc": "06:30",
-        "tsunami": 0,
-        "catalogs": [
-          "USGS"
-        ],
-        "duplicate_note": null,
-        "band": "M2-3",
-        "color": "#4dd2ff",
-        "radius": 9.8,
-        "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026ukphfq"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           -80.62,
           7.717
         ]
       },
       "properties": {
-        "_id": 178,
+        "_id": 174,
         "mag": 3.5,
         "mag_alt": null,
         "lat": 7.717,
@@ -6088,33 +5938,32 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -122.8175,
-          38.8147
+          -122.8274,
+          38.8085
         ]
       },
       "properties": {
-        "_id": 179,
-        "mag": 3.05,
+        "_id": 175,
+        "mag": 2.9,
         "mag_alt": null,
-        "lat": 38.8146667480469,
-        "lon": -122.817497253418,
-        "depth": 2.50999999046326,
+        "lat": 38.8085,
+        "lon": -122.8274,
+        "depth": 5.0,
         "t_iso": "2026-10-15T06:06:33Z",
-        "utc_ms": 1792044393510,
-        "place": "7 km NW of The Geysers, CA",
+        "utc_ms": 1792044393000,
+        "place": "NORTHERN CALIFORNIA",
         "local": "01:06 AM",
         "date": "2026-10-15",
         "utc": "06:06",
         "tsunami": 0,
         "catalogs": [
-          "USGS",
           "EMSC"
         ],
-        "duplicate_note": "Same physical event reported by USGS + EMSC",
-        "band": "M3-4",
+        "duplicate_note": null,
+        "band": "M2-3",
         "color": "#4dd2ff",
-        "radius": 10.7,
-        "url": "https://earthquake.usgs.gov/earthquakes/eventpage/nc75449686"
+        "radius": 10.1,
+        "url": ""
       }
     },
     {
@@ -6122,33 +5971,32 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          175.3814,
-          -38.5478
+          175.3695,
+          -38.6348
         ]
       },
       "properties": {
-        "_id": 180,
-        "mag": 5.3,
+        "_id": 176,
+        "mag": 5.1,
         "mag_alt": null,
-        "lat": -38.5478,
-        "lon": 175.3814,
-        "depth": 286.008,
+        "lat": -38.6348,
+        "lon": 175.3695,
+        "depth": 280.2,
         "t_iso": "2026-10-15T05:25:31Z",
-        "utc_ms": 1792041931942,
-        "place": "43 km SSE of Otorohanga, New Zealand",
+        "utc_ms": 1792041931000,
+        "place": "NORTH ISLAND OF NEW ZEALAND",
         "local": "12:25 AM",
         "date": "2026-10-15",
         "utc": "05:25",
         "tsunami": 0,
         "catalogs": [
-          "USGS",
           "EMSC"
         ],
-        "duplicate_note": "Same physical event reported by USGS + EMSC",
+        "duplicate_note": null,
         "band": "M5+",
         "color": "#ff9500",
-        "radius": 18.5,
-        "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u2ev"
+        "radius": 17.8,
+        "url": ""
       }
     },
     {
@@ -6161,7 +6009,7 @@
         ]
       },
       "properties": {
-        "_id": 181,
+        "_id": 177,
         "mag": 3.7,
         "mag_alt": null,
         "lat": 7.4123,
@@ -6194,7 +6042,7 @@
         ]
       },
       "properties": {
-        "_id": 182,
+        "_id": 178,
         "mag": 3.3,
         "mag_alt": null,
         "lat": -31.316,
@@ -6227,7 +6075,7 @@
         ]
       },
       "properties": {
-        "_id": 183,
+        "_id": 179,
         "mag": 3.2,
         "mag_alt": null,
         "lat": 35.6,
@@ -6260,7 +6108,7 @@
         ]
       },
       "properties": {
-        "_id": 184,
+        "_id": 180,
         "mag": 3.2,
         "mag_alt": null,
         "lat": -24.02,
@@ -6293,7 +6141,7 @@
         ]
       },
       "properties": {
-        "_id": 185,
+        "_id": 181,
         "mag": 4.6,
         "mag_alt": null,
         "lat": 9.1109,
@@ -6326,7 +6174,7 @@
         ]
       },
       "properties": {
-        "_id": 186,
+        "_id": 182,
         "mag": 4.6,
         "mag_alt": null,
         "lat": 19.1,
@@ -6359,7 +6207,7 @@
         ]
       },
       "properties": {
-        "_id": 187,
+        "_id": 183,
         "mag": 3.0,
         "mag_alt": null,
         "lat": 17.8225,
@@ -6373,10 +6221,9 @@
         "utc": "04:33",
         "tsunami": 0,
         "catalogs": [
-          "EMSC",
-          "USGS"
+          "EMSC"
         ],
-        "duplicate_note": "Same physical event reported by EMSC + USGS",
+        "duplicate_note": null,
         "band": "M3-4",
         "color": "#4dd2ff",
         "radius": 10.5,
@@ -6393,7 +6240,7 @@
         ]
       },
       "properties": {
-        "_id": 188,
+        "_id": 184,
         "mag": 3.0,
         "mag_alt": null,
         "lat": -3.45,
@@ -6426,7 +6273,7 @@
         ]
       },
       "properties": {
-        "_id": 189,
+        "_id": 185,
         "mag": 3.4,
         "mag_alt": null,
         "lat": -29.3,
@@ -6459,7 +6306,7 @@
         ]
       },
       "properties": {
-        "_id": 190,
+        "_id": 186,
         "mag": 4.1,
         "mag_alt": null,
         "lat": 7.6317,
@@ -6492,7 +6339,7 @@
         ]
       },
       "properties": {
-        "_id": 191,
+        "_id": 187,
         "mag": 3.3,
         "mag_alt": null,
         "lat": 1.43,
@@ -6520,33 +6367,32 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -151.036,
-          63.017
+          -151.0405,
+          63.0494
         ]
       },
       "properties": {
-        "_id": 192,
+        "_id": 188,
         "mag": 2.5,
         "mag_alt": null,
-        "lat": 63.017,
-        "lon": -151.036,
-        "depth": 126.0,
+        "lat": 63.0494,
+        "lon": -151.0405,
+        "depth": 124.6,
         "t_iso": "2026-10-15T03:57:25Z",
-        "utc_ms": 1792036645574,
-        "place": "59 km NNW of Petersville, Alaska",
+        "utc_ms": 1792036645000,
+        "place": "CENTRAL ALASKA",
         "local": "10:57 PM",
         "date": "2026-10-14",
         "utc": "03:57",
         "tsunami": 0,
         "catalogs": [
-          "USGS",
           "EMSC"
         ],
-        "duplicate_note": "Same physical event reported by USGS + EMSC",
+        "duplicate_note": null,
         "band": "M2-3",
         "color": "#4dd2ff",
         "radius": 8.8,
-        "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026ukkezk"
+        "url": ""
       }
     },
     {
@@ -6559,7 +6405,7 @@
         ]
       },
       "properties": {
-        "_id": 193,
+        "_id": 189,
         "mag": 2.6,
         "mag_alt": null,
         "lat": -19.11,
@@ -6592,7 +6438,7 @@
         ]
       },
       "properties": {
-        "_id": 194,
+        "_id": 190,
         "mag": 2.5,
         "mag_alt": null,
         "lat": 37.7962,
@@ -6625,7 +6471,7 @@
         ]
       },
       "properties": {
-        "_id": 195,
+        "_id": 191,
         "mag": 2.9,
         "mag_alt": null,
         "lat": -24.26,
@@ -6653,33 +6499,32 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -172.0686,
-          -13.409
+          -171.9426,
+          -13.4293
         ]
       },
       "properties": {
-        "_id": 196,
+        "_id": 192,
         "mag": 5.1,
         "mag_alt": null,
-        "lat": -13.409,
-        "lon": -172.0686,
-        "depth": 13.211,
+        "lat": -13.4293,
+        "lon": -171.9426,
+        "depth": 13.0,
         "t_iso": "2026-10-15T03:36:29Z",
-        "utc_ms": 1792035389038,
-        "place": "36 km E of Safotu, Samoa",
+        "utc_ms": 1792035389000,
+        "place": "SAMOA ISLANDS",
         "local": "10:36 PM",
         "date": "2026-10-14",
         "utc": "03:36",
         "tsunami": 0,
         "catalogs": [
-          "USGS",
           "EMSC"
         ],
-        "duplicate_note": "Same physical event reported by USGS + EMSC",
+        "duplicate_note": null,
         "band": "M5+",
         "color": "#ff9500",
         "radius": 17.8,
-        "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u2ec"
+        "url": ""
       }
     },
     {
@@ -6692,7 +6537,7 @@
         ]
       },
       "properties": {
-        "_id": 197,
+        "_id": 193,
         "mag": 3.0,
         "mag_alt": null,
         "lat": -4.0,
@@ -6725,7 +6570,7 @@
         ]
       },
       "properties": {
-        "_id": 198,
+        "_id": 194,
         "mag": 2.8,
         "mag_alt": null,
         "lat": 33.8078,
@@ -6739,10 +6584,9 @@
         "utc": "03:30",
         "tsunami": 0,
         "catalogs": [
-          "EMSC",
-          "USGS"
+          "EMSC"
         ],
-        "duplicate_note": "Same physical event reported by EMSC + USGS",
+        "duplicate_note": null,
         "band": "M2-3",
         "color": "#4dd2ff",
         "radius": 9.8,
@@ -6759,7 +6603,7 @@
         ]
       },
       "properties": {
-        "_id": 199,
+        "_id": 195,
         "mag": 4.1,
         "mag_alt": null,
         "lat": 7.4349,
@@ -6792,7 +6636,7 @@
         ]
       },
       "properties": {
-        "_id": 200,
+        "_id": 196,
         "mag": 2.8,
         "mag_alt": null,
         "lat": -19.46,
@@ -6825,7 +6669,7 @@
         ]
       },
       "properties": {
-        "_id": 201,
+        "_id": 197,
         "mag": 4.3,
         "mag_alt": null,
         "lat": 7.4965,
@@ -6858,7 +6702,7 @@
         ]
       },
       "properties": {
-        "_id": 202,
+        "_id": 198,
         "mag": 2.6,
         "mag_alt": null,
         "lat": -21.15,
@@ -6891,7 +6735,7 @@
         ]
       },
       "properties": {
-        "_id": 203,
+        "_id": 199,
         "mag": 2.8,
         "mag_alt": null,
         "lat": -35.88,
@@ -6924,7 +6768,7 @@
         ]
       },
       "properties": {
-        "_id": 204,
+        "_id": 200,
         "mag": 3.9,
         "mag_alt": null,
         "lat": 9.8581,
@@ -6957,7 +6801,7 @@
         ]
       },
       "properties": {
-        "_id": 205,
+        "_id": 201,
         "mag": 3.9,
         "mag_alt": null,
         "lat": 7.4282,
@@ -6990,7 +6834,7 @@
         ]
       },
       "properties": {
-        "_id": 206,
+        "_id": 202,
         "mag": 2.7,
         "mag_alt": null,
         "lat": -22.24,
@@ -7023,7 +6867,7 @@
         ]
       },
       "properties": {
-        "_id": 207,
+        "_id": 203,
         "mag": 3.5,
         "mag_alt": null,
         "lat": -24.26,
@@ -7056,7 +6900,7 @@
         ]
       },
       "properties": {
-        "_id": 208,
+        "_id": 204,
         "mag": 4.1,
         "mag_alt": null,
         "lat": 7.734,
@@ -7089,28 +6933,27 @@
         ]
       },
       "properties": {
-        "_id": 209,
+        "_id": 205,
         "mag": 4.4,
         "mag_alt": null,
         "lat": 36.4152,
         "lon": 141.7775,
-        "depth": 36.062,
+        "depth": 36.1,
         "t_iso": "2026-10-15T02:05:28Z",
-        "utc_ms": 1792029928202,
-        "place": "100 km ESE of Takahagi, Japan",
+        "utc_ms": 1792029928000,
+        "place": "NEAR EAST COAST OF HONSHU, JAPAN",
         "local": "09:05 PM",
         "date": "2026-10-14",
         "utc": "02:05",
         "tsunami": 0,
         "catalogs": [
-          "USGS",
           "EMSC"
         ],
-        "duplicate_note": "Same physical event reported by USGS + EMSC",
+        "duplicate_note": null,
         "band": "M4-5",
         "color": "#ffd60a",
         "radius": 15.4,
-        "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u2dw"
+        "url": ""
       }
     },
     {
@@ -7123,7 +6966,7 @@
         ]
       },
       "properties": {
-        "_id": 210,
+        "_id": 206,
         "mag": 2.6,
         "mag_alt": null,
         "lat": -20.69,
@@ -7145,206 +6988,24 @@
         "radius": 9.1,
         "url": ""
       }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -80.5972,
-          7.4788
-        ]
-      },
-      "properties": {
-        "_id": 211,
-        "mag": 3.5,
-        "mag_alt": null,
-        "lat": 7.4788,
-        "lon": -80.5972,
-        "depth": 5.0,
-        "t_iso": "2026-10-15T01:40:07Z",
-        "utc_ms": 1792028407000,
-        "place": "PANAMA",
-        "local": "08:40 PM",
-        "date": "2026-10-14",
-        "utc": "01:40",
-        "tsunami": 0,
-        "catalogs": [
-          "EMSC"
-        ],
-        "duplicate_note": null,
-        "band": "M3-4",
-        "color": "#4dd2ff",
-        "radius": 12.2,
-        "url": ""
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          40.6727,
-          36.9692
-        ]
-      },
-      "properties": {
-        "_id": 212,
-        "mag": 3.3,
-        "mag_alt": null,
-        "lat": 36.9692,
-        "lon": 40.6727,
-        "depth": 35.0,
-        "t_iso": "2026-10-15T01:38:21Z",
-        "utc_ms": 1792028301000,
-        "place": "SYRIA",
-        "local": "08:38 PM",
-        "date": "2026-10-14",
-        "utc": "01:38",
-        "tsunami": 0,
-        "catalogs": [
-          "EMSC"
-        ],
-        "duplicate_note": null,
-        "band": "M3-4",
-        "color": "#4dd2ff",
-        "radius": 11.5,
-        "url": ""
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          29.4335,
-          37.7745
-        ]
-      },
-      "properties": {
-        "_id": 213,
-        "mag": 2.8,
-        "mag_alt": null,
-        "lat": 37.7745,
-        "lon": 29.4335,
-        "depth": 14.8,
-        "t_iso": "2026-10-15T01:21:53Z",
-        "utc_ms": 1792027313000,
-        "place": "WESTERN TURKEY",
-        "local": "08:21 PM",
-        "date": "2026-10-14",
-        "utc": "01:21",
-        "tsunami": 0,
-        "catalogs": [
-          "EMSC"
-        ],
-        "duplicate_note": null,
-        "band": "M2-3",
-        "color": "#4dd2ff",
-        "radius": 9.8,
-        "url": ""
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -76.71,
-          -11.9
-        ]
-      },
-      "properties": {
-        "_id": 214,
-        "mag": 3.6,
-        "mag_alt": null,
-        "lat": -11.9,
-        "lon": -76.71,
-        "depth": 84.0,
-        "t_iso": "2026-10-15T01:16:04Z",
-        "utc_ms": 1792026964000,
-        "place": "CENTRAL PERU",
-        "local": "08:16 PM",
-        "date": "2026-10-14",
-        "utc": "01:16",
-        "tsunami": 0,
-        "catalogs": [
-          "EMSC"
-        ],
-        "duplicate_note": null,
-        "band": "M3-4",
-        "color": "#4dd2ff",
-        "radius": 12.6,
-        "url": ""
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          125.12,
-          5.61
-        ]
-      },
-      "properties": {
-        "_id": 215,
-        "mag": 3.1,
-        "mag_alt": null,
-        "lat": 5.61,
-        "lon": 125.12,
-        "depth": 28.0,
-        "t_iso": "2026-10-15T01:14:03Z",
-        "utc_ms": 1792026843000,
-        "place": "MINDANAO, PHILIPPINES",
-        "local": "08:14 PM",
-        "date": "2026-10-14",
-        "utc": "01:14",
-        "tsunami": 0,
-        "catalogs": [
-          "EMSC"
-        ],
-        "duplicate_note": null,
-        "band": "M3-4",
-        "color": "#4dd2ff",
-        "radius": 10.9,
-        "url": ""
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -121.8268,
-          47.4165
-        ]
-      },
-      "properties": {
-        "_id": 216,
-        "mag": 2.64,
-        "mag_alt": null,
-        "lat": 47.4165,
-        "lon": -121.826833333333,
-        "depth": 19.43,
-        "t_iso": "2026-10-15T01:09:22Z",
-        "utc_ms": 1792026562690,
-        "place": "5 km SW of Wilderness Rim, Washington",
-        "local": "08:09 PM",
-        "date": "2026-10-14",
-        "utc": "01:09",
-        "tsunami": 0,
-        "catalogs": [
-          "USGS",
-          "EMSC"
-        ],
-        "duplicate_note": "Same physical event reported by USGS + EMSC",
-        "band": "M2-3",
-        "color": "#4dd2ff",
-        "radius": 9.2,
-        "url": "https://earthquake.usgs.gov/earthquakes/eventpage/uw714120202"
-      }
     }
   ],
-  "storms": []
+  "storms": [
+    {
+      "name": "Trudy",
+      "cls": "HU",
+      "lat": 14.0,
+      "lon": -101.8,
+      "wind": null,
+      "mov": "345@6kt"
+    },
+    {
+      "name": "Simon",
+      "cls": "TS",
+      "lat": 19.3,
+      "lon": -108.2,
+      "wind": null,
+      "mov": "325@1kt"
+    }
+  ]
 }
