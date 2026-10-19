@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <kml xmlns="http://www.opengis.net/kml/2.2">
 <Document>
-  <name>Panama Earthquakes - Last 24h (2026-10-18 08:04-07:33 UTC)</name>
-  <description>42 deduped events | M6+:0 M5+:0 M4+:3 M3+:36 M2+:42 | sources: IGC, UNA, USGS/NEIC</description>
+  <name>Panama Earthquakes - Last 24h (2026-10-18 08:04-07:40 UTC)</name>
+  <description>43 deduped events | M6+:0 M5+:0 M4+:3 M3+:37 M2+:43 | sources: IGC, UNA, USGS/NEIC</description>
   <Style id="m4">
     <IconStyle><color>ff0000ff</color><scale>1.1</scale>
       <Icon><href>http://maps.google.com/mapfiles/kml/paddle/red-circle.png</href></Icon></IconStyle>
@@ -19,6 +19,12 @@
     <LabelStyle><scale>0.9</scale></LabelStyle>
   </Style>
 
+  <Placemark>
+    <name>M3.7 02:40 AM - La Bajía</name>
+    <description><![CDATA[<b>M3.7 - PANAMA</b><br/><b>Nearest place:</b> La Bajía<br/><b>Place source:</b> gazetteer<br/><b>Local (UTC-5):</b> 02:40 AM | <b>UTC:</b> 2026-10-19 07:40<br/><b>Coordinates:</b> 7.2945, -80.6691<br/><b>Depth:</b> 10 km<br/><b>Setting:</b> OFFSHORE<br/><b>Distance:</b> Playa Blanca: 131 km | Altos del Maria: 167 km<br/><b>Source:</b> IGC<br/><b>Cause:</b> Azuero M7.7 sequence aftershock<br/><b>Tsunami flag:</b> 0]]></description>
+    <styleUrl>#m3</styleUrl>
+    <Point><coordinates>-80.66910,7.29450,0</coordinates></Point>
+  </Placemark>
   <Placemark>
     <name>M3.7 02:33 AM - La Pedregosa</name>
     <description><![CDATA[<b>M3.7 - PANAMA</b><br/><b>Nearest place:</b> La Pedregosa<br/><b>Place source:</b> gazetteer<br/><b>Local (UTC-5):</b> 02:33 AM | <b>UTC:</b> 2026-10-19 07:33<br/><b>Coordinates:</b> 7.6092, -80.9428<br/><b>Depth:</b> 13 km<br/><b>Setting:</b> ONSHORE<br/><b>Distance:</b> Playa Blanca: 121 km | Altos del Maria: 155 km<br/><b>Source:</b> IGC<br/><b>Cause:</b> Azuero M7.7 sequence aftershock<br/><b>Tsunami flag:</b> 0]]></description>
