@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <kml xmlns="http://www.opengis.net/kml/2.2">
 <Document>
-  <name>Panama Earthquakes - Last 24h (2026-10-18 03:05-02:53 UTC)</name>
+  <name>Panama Earthquakes - Last 24h (2026-10-18 03:20-03:11 UTC)</name>
   <description>41 deduped events | M6+:0 M5+:0 M4+:5 M3+:36 M2+:41 | sources: IGC, UNA, USGS/NEIC</description>
   <Style id="m4">
     <IconStyle><color>ff0000ff</color><scale>1.1</scale>
@@ -19,6 +19,12 @@
     <LabelStyle><scale>0.9</scale></LabelStyle>
   </Style>
 
+  <Placemark>
+    <name>M3.6 10:11 PM - Horcones</name>
+    <description><![CDATA[<b>M3.6 - PANAMA</b><br/><b>Nearest place:</b> Horcones<br/><b>Place source:</b> gazetteer<br/><b>Local (UTC-5):</b> 10:11 PM | <b>UTC:</b> 2026-10-19 03:11<br/><b>Coordinates:</b> 7.1807, -80.5332<br/><b>Depth:</b> 10 km<br/><b>Setting:</b> OFFSHORE<br/><b>Distance:</b> Playa Blanca: 137 km | Altos del Maria: 173 km<br/><b>Source:</b> IGC<br/><b>Cause:</b> Azuero M7.7 sequence aftershock<br/><b>Tsunami flag:</b> 0]]></description>
+    <styleUrl>#m3</styleUrl>
+    <Point><coordinates>-80.53320,7.18070,0</coordinates></Point>
+  </Placemark>
   <Placemark>
     <name>M3.7 09:53 PM - El Uvito</name>
     <description><![CDATA[<b>M3.7 - PANAMA</b><br/><b>Nearest place:</b> El Uvito<br/><b>Place source:</b> gazetteer<br/><b>Local (UTC-5):</b> 09:53 PM | <b>UTC:</b> 2026-10-19 02:53<br/><b>Coordinates:</b> 7.4702, -80.1324<br/><b>Depth:</b> 5 km<br/><b>Setting:</b> OFFSHORE<br/><b>Distance:</b> Playa Blanca: 98 km | Altos del Maria: 132 km<br/><b>Source:</b> IGC<br/><b>Cause:</b> Azuero M7.7 sequence aftershock<br/><b>Tsunami flag:</b> 0]]></description>
@@ -258,12 +264,6 @@
     <description><![CDATA[<b>M3.5 - PANAMA-COSTA RICA BORDER REGION</b><br/><b>Nearest place:</b> Valle de Centinela<br/><b>Place source:</b> gazetteer<br/><b>Local (UTC-5):</b> 10:20 PM | <b>UTC:</b> 2026-10-18 03:20<br/><b>Coordinates:</b> 8.8270, -82.7647<br/><b>Depth:</b> 21 km<br/><b>Setting:</b> ONSHORE<br/><b>Distance:</b> Playa Blanca: 294 km | Altos del Maria: 303 km<br/><b>Source:</b> UNA<br/><b>Cause:</b> regional/other<br/><b>Tsunami flag:</b> 0]]></description>
     <styleUrl>#m3</styleUrl>
     <Point><coordinates>-82.76470,8.82700,0</coordinates></Point>
-  </Placemark>
-  <Placemark>
-    <name>M3.5 10:05 PM - Bella Vista</name>
-    <description><![CDATA[<b>M3.5 - PANAMA</b><br/><b>Nearest place:</b> Bella Vista<br/><b>Place source:</b> gazetteer<br/><b>Local (UTC-5):</b> 10:05 PM | <b>UTC:</b> 2026-10-18 03:05<br/><b>Coordinates:</b> 7.5761, -80.7394<br/><b>Depth:</b> 10 km<br/><b>Setting:</b> ONSHORE<br/><b>Distance:</b> Playa Blanca: 109 km | Altos del Maria: 144 km<br/><b>Source:</b> IGC<br/><b>Cause:</b> Azuero M7.7 sequence aftershock<br/><b>Tsunami flag:</b> 0]]></description>
-    <styleUrl>#m3</styleUrl>
-    <Point><coordinates>-80.73940,7.57610,0</coordinates></Point>
   </Placemark>
 </Document>
 </kml>
