@@ -20,10 +20,10 @@
   </Style>
 
   <Placemark>
-    <name>M4.1 07:11 PM - El Viejo</name>
-    <description><![CDATA[<b>M4.1 - PANAMA</b><br/><b>Nearest place:</b> El Viejo<br/><b>Place source:</b> gazetteer<br/><b>Local (UTC-5):</b> 07:11 PM | <b>UTC:</b> 2026-10-19 00:11<br/><b>Coordinates:</b> 7.6125, -80.7565<br/><b>Depth:</b> 10 km<br/><b>Setting:</b> ONSHORE<br/><b>Distance:</b> Playa Blanca: 107 km | Altos del Maria: 141 km<br/><b>Source:</b> IGC<br/><b>Cause:</b> Azuero M7.7 sequence aftershock<br/><b>Tsunami flag:</b> 0]]></description>
+    <name>M4.2 07:11 PM - Matapalo</name>
+    <description><![CDATA[<b>M4.2 - SOUTH OF PANAMA</b><br/><b>Nearest place:</b> Matapalo<br/><b>Place source:</b> gazetteer<br/><b>Local (UTC-5):</b> 07:11 PM | <b>UTC:</b> 2026-10-19 00:11<br/><b>Coordinates:</b> 6.9735, -80.9869<br/><b>Depth:</b> 149 km<br/><b>Setting:</b> OFFSHORE<br/><b>Distance:</b> Playa Blanca: 180 km | Altos del Maria: 215 km<br/><b>Source:</b> UNA<br/><b>Cause:</b> regional/other<br/><b>Tsunami flag:</b> 0]]></description>
     <styleUrl>#m4</styleUrl>
-    <Point><coordinates>-80.75650,7.61250,0</coordinates></Point>
+    <Point><coordinates>-80.98690,6.97350,0</coordinates></Point>
   </Placemark>
   <Placemark>
     <name>M3.8 07:02 PM - Río Negro Número Uno</name>
