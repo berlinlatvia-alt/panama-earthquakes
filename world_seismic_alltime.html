@@ -56,6 +56,11 @@
   <h2>Magnitude filter</h2>
   <div id="magFilters"></div>
 
+  <h2>Big-event layers (separate)</h2>
+  <div class="row"><input type="checkbox" id="bandM7"/> <label for="bandM7"><span class="dot" style="background:#e63946"></span> M7.0-7.9 (<span id="cntM7">-</span>)</label></div>
+  <div class="row"><input type="checkbox" id="bandM8"/> <label for="bandM8"><span class="dot" style="background:#b5179e"></span> M8.0-8.9 (<span id="cntM8">-</span>)</label></div>
+  <div class="row"><input type="checkbox" id="bandM9"/> <label for="bandM9"><span class="dot" style="background:#ffd700"></span> M9.0+ (<span id="cntM9">-</span>)</label></div>
+
   <h2>Overlays</h2>
   <div class="row"><input type="checkbox" id="neverGrid"/> <label for="neverGrid">Never-affected zones (5&deg; grid, <span id="neverCount"></span> cells)</label></div>
   <div class="row"><input type="checkbox" id="pauseRender" checked/> <label for="pauseRender">Render points</label></div>
@@ -92,6 +97,9 @@ const loaded = {};      // decade -> array of [lat,lon,mag,year]
 const layerGroups = {}; // decade -> L.layerGroup
 let allPoints = [];
 const state = {yearMin:1900,yearMax:2026,magMin:4.5,activeDecades:new Set(DECADES),neverOn:false,render:true};
+const BANDS = [[7.0,8.0,'M7','#e63946',5],[8.0,9.0,'M8','#b5179e',7],[9.0,99,'M9+','#ffd700',10]];
+const bandLayer = L.layerGroup().addTo(map);
+state.bands = new Set();
 
 // controls build
 const dbox = document.getElementById('decadeBoxes');
@@ -167,6 +175,27 @@ function drawPoints(){
   document.getElementById('maxPlace').textContent=maxM?maxPlace:'';
 }
 
+// big-event band layers (independent of threshold filter)
+function drawBands(){
+  bandLayer.clearLayers();
+  if(state.bands.size===0)return;
+  for(const d of state.activeDecades){
+    const arr=loaded[d];if(!arr)continue;
+    for(const p of arr){
+      if(p[3]<state.yearMin||p[3]>state.yearMax)continue;
+      for(const[lo,hi,label,col,r]of BANDS){
+        if(!state.bands.has(label))continue;
+        if(p[2]>=lo&&p[2]<hi){
+          L.circleMarker([p[0],p[1]],{renderer:canvasRenderer,radius:r,color:'#0b0d10',weight:label==='M9+'?3:1.5,fillColor:col,fillOpacity:0.95}).addTo(bandLayer);
+        }
+      }
+    }
+  }
+}
+document.getElementById('bandM7').onchange=e=>{e.target.checked?state.bands.add('M7'):state.bands.delete('M7');drawBands();};
+document.getElementById('bandM8').onchange=e=>{e.target.checked?state.bands.add('M8'):state.bands.delete('M8');drawBands();};
+document.getElementById('bandM9').onchange=e=>{e.target.checked?state.bands.add('M9+'):state.bands.delete('M9+');drawBands();};
+
 // never-affected grid overlay
 let neverLayer=L.layerGroup();
 function drawNever(){
@@ -188,13 +217,29 @@ function refresh(){
     const need=DECADES.filter(d=>state.activeDecades.has(d));
     await Promise.all(need.map(d=>ensureDecade(d)));
     drawPoints();
+    drawBands();
+    updateBandCounts();
   },120);
 }
 
 // initial: load 2000s+2010s+2020s (the richest) so first paint is fast
+function updateBandCounts(){
+  let c7=0,c8=0,c9=0;
+  for(const d of DECADES){
+    const arr=loaded[d];if(!arr)continue;
+    for(const p of arr){
+      if(p[3]<state.yearMin||p[3]>state.yearMax)continue;
+      if(p[2]>=7&&p[2]<8)c7++;else if(p[2]>=8&&p[2]<9)c8++;else if(p[2]>=9)c9++;
+    }
+  }
+  document.getElementById('cntM7').textContent=c7.toLocaleString();
+  document.getElementById('cntM8').textContent=c8.toLocaleString();
+  document.getElementById('cntM9').textContent=c9.toLocaleString();
+}
 (async()=>{
   await Promise.all([ensureDecade(2000),ensureDecade(2010),ensureDecade(2020)]);
   drawPoints();
+  updateBandCounts();
 })();
 </script>
 </body>
