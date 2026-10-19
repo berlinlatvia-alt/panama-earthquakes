@@ -60,6 +60,11 @@
   <div class="row"><input type="checkbox" id="bandM7"/> <label for="bandM7"><span class="dot" style="background:#e63946"></span> M7.0-7.9 (<span id="cntM7">-</span>)</label></div>
   <div class="row"><input type="checkbox" id="bandM8"/> <label for="bandM8"><span class="dot" style="background:#b5179e"></span> M8.0-8.9 (<span id="cntM8">-</span>)</label></div>
   <div class="row"><input type="checkbox" id="bandM9"/> <label for="bandM9"><span class="dot" style="background:#ffd700"></span> M9.0+ (<span id="cntM9">-</span>)</label></div>
+  <div class="row" style="justify-content:space-between;">
+    <button id="bandsAll">All bands</button>
+    <button id="bandsNone">None</button>
+    <span style="font-size:10px;color:var(--txt2);">sizes grow M7&lt;M8&lt;M9</span>
+  </div>
 
   <h2>Overlays</h2>
   <div class="row"><input type="checkbox" id="neverGrid"/> <label for="neverGrid">Never-affected zones (5&deg; grid, <span id="neverCount"></span> cells)</label></div>
@@ -179,12 +184,12 @@ function drawPoints(){
 function drawBands(){
   bandLayer.clearLayers();
   if(state.bands.size===0)return;
-  for(const d of state.activeDecades){
-    const arr=loaded[d];if(!arr)continue;
-    for(const p of arr){
-      if(p[3]<state.yearMin||p[3]>state.yearMax)continue;
-      for(const[lo,hi,label,col,r]of BANDS){
-        if(!state.bands.has(label))continue;
+  for(const[lo,hi,label,col,r]of BANDS){        // bands outer: M7 first, M9+ last => M9 on top
+    if(!state.bands.has(label))continue;
+    for(const d of state.activeDecades){
+      const arr=loaded[d];if(!arr)continue;
+      for(const p of arr){
+        if(p[3]<state.yearMin||p[3]>state.yearMax)continue;
         if(p[2]>=lo&&p[2]<hi){
           L.circleMarker([p[0],p[1]],{renderer:canvasRenderer,radius:r,color:'#0b0d10',weight:label==='M9+'?3:1.5,fillColor:col,fillOpacity:0.95}).addTo(bandLayer);
         }
@@ -195,6 +200,15 @@ function drawBands(){
 document.getElementById('bandM7').onchange=e=>{e.target.checked?state.bands.add('M7'):state.bands.delete('M7');drawBands();};
 document.getElementById('bandM8').onchange=e=>{e.target.checked?state.bands.add('M8'):state.bands.delete('M8');drawBands();};
 document.getElementById('bandM9').onchange=e=>{e.target.checked?state.bands.add('M9+'):state.bands.delete('M9+');drawBands();};
+function setBands(all){
+  ['M7','M8','M9+'].forEach((b,i)=>{
+    const cb=document.getElementById(['bandM7','bandM8','bandM9'][i]);
+    cb.checked=all;all?state.bands.add(b):state.bands.delete(b);
+  });
+  drawBands();
+}
+document.getElementById('bandsAll').onclick=()=>setBands(true);
+document.getElementById('bandsNone').onclick=()=>setBands(false);
 
 // never-affected grid overlay
 let neverLayer=L.layerGroup();
