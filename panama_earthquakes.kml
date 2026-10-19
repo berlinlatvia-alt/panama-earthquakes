@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <kml xmlns="http://www.opengis.net/kml/2.2">
 <Document>
-  <name>Panama Earthquakes - Last 24h (2026-10-18 05:46-05:18 UTC)</name>
-  <description>42 deduped events | M6+:0 M5+:1 M4+:5 M3+:37 M2+:42 | sources: IGC, UNA, USGS/NEIC</description>
+  <name>Panama Earthquakes - Last 24h (2026-10-18 06:15-05:53 UTC)</name>
+  <description>42 deduped events | M6+:0 M5+:1 M4+:5 M3+:37 M2+:42 | sources: EMSC, IGC, UNA, USGS/NEIC</description>
   <Style id="m4">
     <IconStyle><color>ff0000ff</color><scale>1.1</scale>
       <Icon><href>http://maps.google.com/mapfiles/kml/paddle/red-circle.png</href></Icon></IconStyle>
@@ -19,6 +19,12 @@
     <LabelStyle><scale>0.9</scale></LabelStyle>
   </Style>
 
+  <Placemark>
+    <name>M3.5 12:53 AM - Cativito</name>
+    <description><![CDATA[<b>M3.5 - PANAMA</b><br/><b>Nearest place:</b> Cativito<br/><b>Place source:</b> gazetteer<br/><b>Local (UTC-5):</b> 12:53 AM | <b>UTC:</b> 2026-10-19 05:53<br/><b>Coordinates:</b> 7.7012, -81.4562<br/><b>Depth:</b> 6 km<br/><b>Setting:</b> ONSHORE<br/><b>Distance:</b> Playa Blanca: 162 km | Altos del Maria: 191 km<br/><b>Source:</b> IGC<br/><b>Cause:</b> Azuero M7.7 sequence aftershock<br/><b>Tsunami flag:</b> 0]]></description>
+    <styleUrl>#m3</styleUrl>
+    <Point><coordinates>-81.45620,7.70120,0</coordinates></Point>
+  </Placemark>
   <Placemark>
     <name>M5.0 12:18 AM - Guanacaste</name>
     <description><![CDATA[<b>M5.0 - COSTA RICA</b><br/><b>Nearest place:</b> Guanacaste<br/><b>Place source:</b> nominatim<br/><b>Local (UTC-5):</b> 12:18 AM | <b>UTC:</b> 2026-10-19 05:18<br/><b>Coordinates:</b> 10.5056, -85.9357<br/><b>Depth:</b> 10 km<br/><b>Setting:</b> ONSHORE<br/><b>Distance:</b> Playa Blanca: 680 km | Altos del Maria: 682 km<br/><b>Source:</b> UNA<br/><b>Cause:</b> regional/other<br/><b>Tsunami flag:</b> 0]]></description>
@@ -260,16 +266,10 @@
     <Point><coordinates>-80.90600,7.56970,0</coordinates></Point>
   </Placemark>
   <Placemark>
-    <name>M4.1 01:15 AM - La Corocita</name>
-    <description><![CDATA[<b>M4.1 - 2 km S of Leones Arriba, Panama</b><br/><b>Nearest place:</b> La Corocita<br/><b>Place source:</b> gazetteer<br/><b>Local (UTC-5):</b> 01:15 AM | <b>UTC:</b> 2026-10-18 06:15<br/><b>Coordinates:</b> 7.7298, -81.1202<br/><b>Depth:</b> 10 km<br/><b>Setting:</b> ONSHORE<br/><b>Distance:</b> Playa Blanca: 129 km | Altos del Maria: 159 km<br/><b>Source:</b> USGS/NEIC<br/><b>Cause:</b> Azuero M7.7 sequence aftershock<br/><b>Tsunami flag:</b> 0]]></description>
+    <name>M4.1 01:15 AM - Manzanillo</name>
+    <description><![CDATA[<b>M4.1 - PANAMA</b><br/><b>Nearest place:</b> Manzanillo<br/><b>Place source:</b> gazetteer<br/><b>Local (UTC-5):</b> 01:15 AM | <b>UTC:</b> 2026-10-18 06:15<br/><b>Coordinates:</b> 7.7322, -81.1497<br/><b>Depth:</b> 10 km<br/><b>Setting:</b> ONSHORE<br/><b>Distance:</b> Playa Blanca: 131 km | Altos del Maria: 162 km<br/><b>Source:</b> EMSC<br/><b>Cause:</b> Azuero M7.7 sequence aftershock<br/><b>Tsunami flag:</b> 0]]></description>
     <styleUrl>#m4</styleUrl>
-    <Point><coordinates>-81.12020,7.72980,0</coordinates></Point>
-  </Placemark>
-  <Placemark>
-    <name>M3.7 12:46 AM - Malena</name>
-    <description><![CDATA[<b>M3.7 - PANAMA</b><br/><b>Nearest place:</b> Malena<br/><b>Place source:</b> gazetteer<br/><b>Local (UTC-5):</b> 12:46 AM | <b>UTC:</b> 2026-10-18 05:46<br/><b>Coordinates:</b> 7.5556, -80.9720<br/><b>Depth:</b> 10 km<br/><b>Setting:</b> ONSHORE<br/><b>Distance:</b> Playa Blanca: 128 km | Altos del Maria: 161 km<br/><b>Source:</b> IGC<br/><b>Cause:</b> Azuero M7.7 sequence aftershock<br/><b>Tsunami flag:</b> 0]]></description>
-    <styleUrl>#m3</styleUrl>
-    <Point><coordinates>-80.97200,7.55560,0</coordinates></Point>
+    <Point><coordinates>-81.14970,7.73220,0</coordinates></Point>
   </Placemark>
 </Document>
 </kml>
