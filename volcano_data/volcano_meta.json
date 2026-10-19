@@ -1,0 +1,9 @@
+{
+ "gvp_total": 2666,
+ "active": 438,
+ "dormant": 776,
+ "extinct": 1452,
+ "bg_total": 12506,
+ "generated_utc": "2026-10-19",
+ "source": "Smithsonian GVP WFS (webservices.volcano.si.edu) + OSM Overpass + WikiData"
+}

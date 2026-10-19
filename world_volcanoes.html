@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>World Volcano Map - GVP + OSM</title>
+<link rel="stylesheet" href="leaflet.css"/>
+<style>
+  :root{--bg:#1a1d23;--panel:#252a33;--panel2:#2e3440;--txt:#cbd5e1;--txt2:#94a3b8;--accent:#7aa2f7;}
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{background:var(--bg);color:var(--txt);font-family:'Segoe UI',system-ui,sans-serif;}
+  #map{position:absolute;top:0;left:0;right:0;bottom:0;background:#14161a;}
+  .panel{position:absolute;background:rgba(37,42,51,0.95);border:1px solid #3b4252;border-radius:10px;
+         padding:12px 14px;z-index:1000;backdrop-filter:blur(6px);box-shadow:0 4px 18px rgba(0,0,0,0.5);}
+  #controls{top:12px;left:12px;width:300px;max-height:calc(100vh - 24px);overflow-y:auto;}
+  #stats{top:12px;right:12px;width:240px;font-size:12px;line-height:1.6;}
+  h1{font-size:15px;font-weight:600;color:#e2e8f0;margin-bottom:6px;}
+  h2{font-size:12px;font-weight:600;color:var(--txt2);text-transform:uppercase;letter-spacing:.5px;margin:10px 0 6px;}
+  .row{display:flex;align-items:center;gap:6px;margin:3px 0;font-size:12px;}
+  input[type=range]{width:100%;accent-color:var(--accent);}
+  button{background:var(--panel2);color:var(--txt);border:1px solid #3b4252;border-radius:6px;
+         padding:5px 10px;font-size:11px;cursor:pointer;}
+  button:hover{border-color:var(--accent);}
+  .stat-line{display:flex;justify-content:space-between;}
+  .stat-val{color:#e2e8f0;font-weight:600;}
+  .veigrid{display:grid;grid-template-columns:repeat(4,1fr);gap:3px;}
+  .veigrid label{background:var(--panel2);border:1px solid #3b4252;border-radius:5px;padding:3px 5px;
+                 font-size:11px;cursor:pointer;text-align:center;user-select:none;}
+  .veigrid label.on{background:#3d5a80;border-color:#7aa2f7;color:#fff;}
+  .veigrid input{display:none;}
+  .ico{width:12px;height:12px;display:inline-block;vertical-align:middle;margin-right:2px;}
+  .hint{font-size:10px;color:#64748b;margin-top:8px;line-height:1.4;}
+  .vpop{font-size:12px;line-height:1.5;color:#1e293b;}
+  .vpop b{color:#0f172a;}
+</style>
+</head>
+<body>
+<div id="map"></div>
+
+<div class="panel" id="controls">
+  <h1>World Volcano Map</h1>
+  <div style="font-size:11px;color:var(--txt2);">Smithsonian GVP + OSM + WikiData &middot; <span id="totalCount"></span> volcanoes</div>
+
+  <h2>Status (icons)</h2>
+  <div class="row"><label><input type="checkbox" id="stActive" checked/> <svg class="ico" viewBox="0 0 12 12"><polygon points="6,1 11,11 1,11" fill="#ef4444" stroke="#7f1d1d" stroke-width="0.8"/></svg> Active (erupted since 1900) <span id="cntA"></span></label></div>
+  <div class="row"><label><input type="checkbox" id="stDormant" checked/> <svg class="ico" viewBox="0 0 12 12"><polygon points="6,1 11,11 1,11" fill="#f59e0b" stroke="#78350f" stroke-width="0.8"/></svg> Dormant (Holocene) <span id="cntD"></span></label></div>
+  <div class="row"><label><input type="checkbox" id="stExtinct" checked/> <svg class="ico" viewBox="0 0 12 12"><circle cx="6" cy="6" r="5" fill="#6b7280" stroke="#374151" stroke-width="0.8"/></svg> Old / not active (Pleistocene) <span id="cntE"></span></label></div>
+
+  <h2>Height (elevation m) <span id="elevLabel">all</span></h2>
+  <input type="range" id="elevMin" min="0" max="6000" value="0" step="100"/>
+
+  <h2>Last eruption year <span id="yrLabel">any</span></h2>
+  <input type="range" id="yrMin" min="1500" max="2026" value="1500" step="1"/>
+
+  <h2>Eruption count (quantity) <span id="cntLabel">0+</span></h2>
+  <input type="range" id="cntMin" min="0" max="200" value="0" step="1"/>
+
+  <h2>Eruption mass (max VEI)</h2>
+  <div class="veigrid" id="veiBoxes"></div>
+
+  <h2>Eruption events (all years)</h2>
+  <div class="row"><input type="checkbox" id="eruptionsOn"/> <label for="eruptionsOn">Show eruption events (<span id="cntEr"></span> records, colored by VEI)</label></div>
+  <div class="row" style="justify-content:space-between;">
+    <span style="font-size:11px;">Year <span id="erYrLabel">all</span></span>
+    <span style="font-size:10px;color:var(--txt2);" id="erYrCount"></span>
+  </div>
+  <input type="range" id="erYr" min="1800" max="2026" value="2026" step="1"/>
+  <div class="row" style="justify-content:space-between;">
+    <button id="erAll">All years</button>
+    <button id="er1800">1800+</button>
+    <button id="er1900">1900+</button>
+  </div>
+  <div class="legend" style="font-size:10px;color:var(--txt2);">VEI colors: <span style="color:#4ade80">V0-1</span> <span style="color:#facc15">V2-3</span> <span style="color:#fb923c">V4</span> <span style="color:#ef4444">V5</span> <span style="color:#c084fc">V6+</span></div>
+
+  <h2>Overlays</h2>
+  <div class="row"><input type="checkbox" id="bgOn"/> <label for="bgOn">OSM/WikiData background (<span id="cntBg"></span> named)</label></div>
+
+  <div class="hint">Icons: triangle = Holocene volcano (active/dormant), circle = Pleistocene (old). VEI = Volcanic Explosivity Index (0-8; 7 = Tambora-class mass). Data: Smithsonian GVP official API.</div>
+</div>
+
+<div class="panel" id="stats">
+  <h2 style="margin-top:0;">Current view</h2>
+  <div class="stat-line"><span>Volcanoes shown</span><span class="stat-val" id="shownCount">0</span></div>
+  <div class="stat-line"><span>Highest</span><span class="stat-val" id="maxElev">&mdash;</span></div>
+  <div class="stat-line"><span>Most eruptions</span><span class="stat-val" id="maxCnt">&mdash;</span></div>
+  <div class="stat-line"><span>Largest VEI</span><span class="stat-val" id="maxVei">&mdash;</span></div>
+  <div class="hint" style="margin-top:8px;">Click any icon for full detail: height, last eruption, eruption count, VEI mass class, type, evidence.</div>
+</div>
+
+<script src="leaflet.js"></script>
+<script>
+const META = {"gvp_total":2666,"active":438,"dormant":776,"extinct":1452,"bg_total":12506,"generated_utc":"2026-10-19","source":"Smithsonian GVP WFS (webservices.volcano.si.edu) + OSM Overpass + WikiData"};
+const map = L.map('map',{worldCopyJump:true,preferCanvas:true,minZoom:2}).setView([15,0],2);
+L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Dark_Gray_Base/MapServer/tile/{z}/{y}/{x}',{maxZoom:9,attribution:'Esri Dark Gray'}).addTo(map);
+const canvasRenderer = L.canvas({padding:0.3});
+
+const ICONS = {
+  0: L.divIcon({className:'',html:'<svg width="16" height="16" viewBox="0 0 12 12"><polygon points="6,1 11,11 1,11" fill="#ef4444" stroke="#7f1d1d" stroke-width="0.8"/></svg>',iconSize:[16,16],iconAnchor:[8,14]}),
+  1: L.divIcon({className:'',html:'<svg width="14" height="14" viewBox="0 0 12 12"><polygon points="6,1 11,11 1,11" fill="#f59e0b" stroke="#78350f" stroke-width="0.8"/></svg>',iconSize:[14,14],iconAnchor:[7,12]}),
+  2: L.divIcon({className:'',html:'<svg width="10" height="10" viewBox="0 0 12 12"><circle cx="6" cy="6" r="5" fill="#6b7280" stroke="#374151" stroke-width="0.8"/></svg>',iconSize:[10,10],iconAnchor:[5,5]})
+};
+const STNAME = {0:'Active',1:'Dormant',2:'Old (Pleistocene)'};
+
+let GVP = [], BG = [], ER = [], ERY = {};
+let erYrMin = 1800, erYrMax = 2026;
+const eruptionLayer = L.layerGroup();
+function veiColor(v){
+  if(v==null)return '#64748b';
+  if(v<=1)return '#4ade80';
+  if(v<=3)return '#facc15';
+  if(v==4)return '#fb923c';
+  if(v==5)return '#ef4444';
+  return '#c084fc';
+}
+function drawEruptions(){
+  eruptionLayer.clearLayers();
+  if(!document.getElementById('eruptionsOn').checked){map.removeLayer(eruptionLayer);return;}
+  let shown=0;
+  for(const e of ER){
+    const [lat,lon,year,vei,vname]=e;
+    if(year<erYrMin||year>erYrMax)continue;
+    shown++;
+    L.circleMarker([lat,lon],{renderer:canvasRenderer,radius:vei!=null?(3+vei):3,
+      color:'#0b0d10',weight:0.5,fillColor:veiColor(vei),fillOpacity:0.85})
+      .bindTooltip(`${vname} · ${year}${vei!=null?' · VEI '+vei:''}`).addTo(eruptionLayer);
+  }
+  eruptionLayer.addTo(map);
+  document.getElementById('erYrCount').textContent=shown.toLocaleString()+' events';
+}
+const state = {status:new Set([0,1,2]), elevMin:0, yrMin:1500, cntMin:0, vei:new Set([0,1,2,3,4,5,6,7,8]), bg:false};
+const markerLayer = L.layerGroup().addTo(map);
+let bgLayer = L.layerGroup();
+
+// VEI checkboxes 0-8
+const vg = document.getElementById('veiBoxes');
+[0,1,2,3,4,5,6,7,8].forEach(v=>{
+  const lbl=document.createElement('label');lbl.className='on';lbl.textContent='V'+v;
+  const cb=document.createElement('input');cb.type='checkbox';cb.checked=true;
+  cb.onchange=()=>{cb.checked?state.vei.add(v):state.vei.delete(v);lbl.classList.toggle('on',cb.checked);draw();};
+  lbl.appendChild(cb);vg.appendChild(lbl);
+});
+
+['stActive','stDormant','stExtinct'].forEach((id,i)=>{
+  document.getElementById(id).onchange=e=>{e.target.checked?state.status.add(i):state.status.delete(i);draw();};
+});
+document.getElementById('elevMin').oninput=e=>{state.elevMin=+e.target.value;document.getElementById('elevLabel').textContent=(state.elevMin?state.elevMin+'m+':'all');draw();};
+document.getElementById('yrMin').oninput=e=>{state.yrMin=+e.target.value;document.getElementById('yrLabel').textContent=(state.yrMin>1500?state.yrMin+'+':'any');draw();};
+document.getElementById('cntMin').oninput=e=>{state.cntMin=+e.target.value;document.getElementById('cntLabel').textContent=state.cntMin+'+';draw();};
+document.getElementById('bgOn').onchange=e=>{state.bg=e.target.checked;drawBg();};
+document.getElementById('eruptionsOn').onchange=()=>drawEruptions();
+document.getElementById('erYr').oninput=e=>{erYrMin=erYrMax=+e.target.value;
+  document.getElementById('erYrLabel').textContent=e.target.value;
+  const c=ERY[e.target.value]||0;document.getElementById('erYrCount').textContent=c+' events';
+  drawEruptions();};
+document.getElementById('erAll').onclick=()=>{erYrMin=1800;erYrMax=2026;
+  document.getElementById('erYrLabel').textContent='all';drawEruptions();};
+document.getElementById('er1800').onclick=()=>{erYrMin=1800;erYrMax=2026;
+  document.getElementById('erYrLabel').textContent='1800+';drawEruptions();};
+document.getElementById('er1900').onclick=()=>{erYrMin=1900;erYrMax=2026;
+  document.getElementById('erYrLabel').textContent='1900+';drawEruptions();};
+
+function pass(v){
+  const [lat,lon,elev,ly,cnt,vei,st,name,country,vtype,sub]=v;
+  if(!state.status.has(st))return false;
+  if(elev!=null && elev<state.elevMin)return false;
+  if(state.yrMin>1500 && (ly==null || ly<state.yrMin))return false;
+  if(state.cntMin>0 && (cnt==null || cnt<state.cntMin))return false;
+  if(st!==2){ // VEI filter applies to volcanoes with eruption data
+    const vv=(vei==null?0:vei);
+    if(!state.vei.has(vv))return false;
+  }
+  return true;
+}
+
+function draw(){
+  markerLayer.clearLayers();
+  let shown=0,maxE=0,maxC=0,maxV=0,maxEN='',maxCN='';
+  for(const v of GVP){
+    if(!pass(v))continue;
+    shown++;
+    const m=L.marker([v[0],v[1]],{icon:ICONS[v[6]]});
+    const [lat,lon,elev,ly,cnt,vei,st,name,country,vtype,sub]=v;
+    m.bindPopup(`<div class="vpop"><b>${name}</b><br>${country}${sub?' · submarine':''}<br>
+      Status: <b>${STNAME[st]}</b> · Type: ${vtype||'?'}<br>
+      Height: <b>${elev!=null?elev+' m':'unknown'}</b><br>
+      Last eruption: <b>${ly!=null?ly:'unknown'}</b><br>
+      Eruption count: <b>${cnt!=null?cnt:'no record'}</b> · Max VEI: <b>${vei!=null?vei:'?'}</b></div>`);
+    markerLayer.addLayer(m);
+    if(elev!=null&&elev>maxE){maxE=elev;maxEN=name;}
+    if(cnt!=null&&cnt>maxC){maxC=cnt;maxCN=name;}
+    if(vei!=null&&vei>maxV)maxV=vei;
+  }
+  document.getElementById('shownCount').textContent=shown.toLocaleString();
+  document.getElementById('maxElev').textContent=maxE?maxE+' m':'—';
+  document.getElementById('maxCnt').textContent=maxC?maxC:'—';
+  document.getElementById('maxVei').textContent=maxV?'V'+maxV:'—';
+}
+
+function drawBg(){
+  map.removeLayer(bgLayer);bgLayer=L.layerGroup();
+  if(!state.bg)return;
+  for(const b of BG){
+    L.circleMarker([b[0],b[1]],{renderer:canvasRenderer,radius:1.5,color:'#475569',weight:0,fillColor:'#94a3b8',fillOpacity:0.5})
+      .bindTooltip(b[2]||'unnamed').addTo(bgLayer);
+  }
+  bgLayer.addTo(map);
+}
+
+(async()=>{
+  GVP = await (await fetch('volcano_data/volcanoes_gvp.json')).json();
+  BG = await (await fetch('volcano_data/volcanoes_bg.json')).json();
+  ER = await (await fetch('volcano_data/eruptions_by_year.json')).json();
+  ERY = await (await fetch('volcano_data/eruption_year_counts.json')).json();
+  document.getElementById('cntEr').textContent = ER.length.toLocaleString();
+  document.getElementById('totalCount').textContent = (GVP.length+BG.length).toLocaleString();
+  document.getElementById('cntA').textContent = META.active;
+  document.getElementById('cntD').textContent = META.dormant;
+  document.getElementById('cntE').textContent = META.extinct;
+  document.getElementById('cntBg').textContent = BG.length.toLocaleString();
+  draw();
+})();
+</script>
+</body>
+</html>
