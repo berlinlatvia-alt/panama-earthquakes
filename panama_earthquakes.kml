@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <kml xmlns="http://www.opengis.net/kml/2.2">
 <Document>
-  <name>Panama Earthquakes - Last 24h (2026-10-18 15:30-15:13 UTC)</name>
+  <name>Panama Earthquakes - Last 24h (2026-10-18 15:47-15:21 UTC)</name>
   <description>45 deduped events | M6+:0 M5+:0 M4+:4 M3+:38 M2+:45 | sources: IGC, UNA, USGS/NEIC</description>
   <Style id="m4">
     <IconStyle><color>ff0000ff</color><scale>1.1</scale>
@@ -19,6 +19,12 @@
     <LabelStyle><scale>0.9</scale></LabelStyle>
   </Style>
 
+  <Placemark>
+    <name>M3.7 10:21 AM - Los Muñoces</name>
+    <description><![CDATA[<b>M3.7 - PANAMA</b><br/><b>Nearest place:</b> Los Muñoces<br/><b>Place source:</b> gazetteer<br/><b>Local (UTC-5):</b> 10:21 AM | <b>UTC:</b> 2026-10-19 15:21<br/><b>Coordinates:</b> 7.5448, -80.4102<br/><b>Depth:</b> 10 km<br/><b>Setting:</b> ONSHORE<br/><b>Distance:</b> Playa Blanca: 95 km | Altos del Maria: 130 km<br/><b>Source:</b> IGC<br/><b>Cause:</b> Azuero M7.7 sequence aftershock<br/><b>Tsunami flag:</b> 0]]></description>
+    <styleUrl>#m3</styleUrl>
+    <Point><coordinates>-80.41020,7.54480,0</coordinates></Point>
+  </Placemark>
   <Placemark>
     <name>M4.0 10:13 AM - La Loma</name>
     <description><![CDATA[<b>M4.0 - PANAMA</b><br/><b>Nearest place:</b> La Loma<br/><b>Place source:</b> gazetteer<br/><b>Local (UTC-5):</b> 10:13 AM | <b>UTC:</b> 2026-10-19 15:13<br/><b>Coordinates:</b> 7.5453, -80.3359<br/><b>Depth:</b> 5 km<br/><b>Setting:</b> ONSHORE<br/><b>Distance:</b> Playa Blanca: 92 km | Altos del Maria: 128 km<br/><b>Source:</b> IGC<br/><b>Cause:</b> Azuero M7.7 sequence aftershock<br/><b>Tsunami flag:</b> 0]]></description>
@@ -62,10 +68,10 @@
     <Point><coordinates>-80.73800,7.63410,0</coordinates></Point>
   </Placemark>
   <Placemark>
-    <name>M3.5 05:05 AM - Alto del Espino Prieto</name>
-    <description><![CDATA[<b>M3.5 - PANAMA</b><br/><b>Nearest place:</b> Alto del Espino Prieto<br/><b>Place source:</b> gazetteer<br/><b>Local (UTC-5):</b> 05:05 AM | <b>UTC:</b> 2026-10-19 10:05<br/><b>Coordinates:</b> 7.4479, -80.1790<br/><b>Depth:</b> 9 km<br/><b>Setting:</b> OFFSHORE<br/><b>Distance:</b> Playa Blanca: 101 km | Altos del Maria: 135 km<br/><b>Source:</b> IGC<br/><b>Cause:</b> Azuero M7.7 sequence aftershock<br/><b>Tsunami flag:</b> 0]]></description>
+    <name>M3.5 05:05 AM - Calabacito</name>
+    <description><![CDATA[<b>M3.5 - PANAMA</b><br/><b>Nearest place:</b> Calabacito<br/><b>Place source:</b> gazetteer<br/><b>Local (UTC-5):</b> 05:05 AM | <b>UTC:</b> 2026-10-19 10:05<br/><b>Coordinates:</b> 7.4331, -80.1585<br/><b>Depth:</b> 8 km<br/><b>Setting:</b> OFFSHORE<br/><b>Distance:</b> Playa Blanca: 102 km | Altos del Maria: 136 km<br/><b>Source:</b> IGC<br/><b>Cause:</b> Azuero M7.7 sequence aftershock<br/><b>Tsunami flag:</b> 0]]></description>
     <styleUrl>#m3</styleUrl>
-    <Point><coordinates>-80.17900,7.44790,0</coordinates></Point>
+    <Point><coordinates>-80.15850,7.43310,0</coordinates></Point>
   </Placemark>
   <Placemark>
     <name>M2.5 04:39 AM - OFF COAST OF COSTA RICA</name>
@@ -282,12 +288,6 @@
     <description><![CDATA[<b>M3.5 - PANAMA</b><br/><b>Nearest place:</b> Los Caracuchos<br/><b>Place source:</b> gazetteer<br/><b>Local (UTC-5):</b> 10:47 AM | <b>UTC:</b> 2026-10-18 15:47<br/><b>Coordinates:</b> 7.5221, -80.6192<br/><b>Depth:</b> 5 km<br/><b>Setting:</b> ONSHORE<br/><b>Distance:</b> Playa Blanca: 107 km | Altos del Maria: 142 km<br/><b>Source:</b> IGC<br/><b>Cause:</b> Azuero M7.7 sequence aftershock<br/><b>Tsunami flag:</b> 0]]></description>
     <styleUrl>#m3</styleUrl>
     <Point><coordinates>-80.61920,7.52210,0</coordinates></Point>
-  </Placemark>
-  <Placemark>
-    <name>M3.5 10:30 AM - Guaniquito</name>
-    <description><![CDATA[<b>M3.5 - PANAMA</b><br/><b>Nearest place:</b> Guaniquito<br/><b>Place source:</b> gazetteer<br/><b>Local (UTC-5):</b> 10:30 AM | <b>UTC:</b> 2026-10-18 15:30<br/><b>Coordinates:</b> 7.4810, -80.5967<br/><b>Depth:</b> 10 km<br/><b>Setting:</b> ONSHORE<br/><b>Distance:</b> Playa Blanca: 109 km | Altos del Maria: 145 km<br/><b>Source:</b> IGC<br/><b>Cause:</b> Azuero M7.7 sequence aftershock<br/><b>Tsunami flag:</b> 0]]></description>
-    <styleUrl>#m3</styleUrl>
-    <Point><coordinates>-80.59670,7.48100,0</coordinates></Point>
   </Placemark>
 </Document>
 </kml>
