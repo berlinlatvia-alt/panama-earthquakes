@@ -218,7 +218,7 @@ function drawNever(){
   fetch('seismic_data/grid_5deg.json').then(r=>r.json()).then(g=>{
     for(const c of g.cells){
       if(c[2]!==0)continue;
-      L.rectangle([[c[0],c[1]],[c[0]+5,c[1]+5]],{color:'#475569',weight:0.4,fillColor:'#334155',fillOpacity:0.28,dashArray:'3 3'}).addTo(neverLayer);
+      L.rectangle([[c[0],c[1]],[c[0]+5,c[1]+5]],{color:'#facc15',weight:0.7,fillColor:'#facc15',fillOpacity:0.22,dashArray:'4 3'}).addTo(neverLayer);
     }
     neverLayer.addTo(map);
   });
