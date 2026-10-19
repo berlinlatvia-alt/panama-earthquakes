@@ -1,22 +1,61 @@
 {
   "summary": {
-    "generated_utc": "2026-10-19T04:49:31Z",
-    "window": "24h closing 2026-10-19 04:49 UTC",
-    "raw_events": 253,
-    "pins": 201,
-    "cross_agency_merges": 52,
-    "max_mag": 5.3,
+    "generated_utc": "2026-10-19T13:39:03Z",
+    "window": "24h closing 2026-10-19 13:39 UTC",
+    "raw_events": 278,
+    "pins": 213,
+    "cross_agency_merges": 65,
+    "max_mag": 6.0,
     "counts": {
-      "M6+": 0,
-      "M5+": 3,
-      "M4+": 29,
-      "M3+": 140,
-      "M2+": 201
+      "M6+": 1,
+      "M5+": 6,
+      "M4+": 45,
+      "M3+": 150,
+      "M2+": 213
     },
-    "m6plus": 0,
-    "m5plus": 3,
-    "m4plus": 29,
+    "m6plus": 1,
+    "m5plus": 6,
+    "m4plus": 45,
     "top_events": [
+      {
+        "mag": 6.0,
+        "lat": -14.05,
+        "lon": 165.68,
+        "place": "186 km NW of Port-Olry, Vanuatu",
+        "t": "2026-10-19T07:49:04Z",
+        "local": "02:49 AM",
+        "date": "2026-10-19",
+        "cats": [
+          "USGS",
+          "EMSC"
+        ]
+      },
+      {
+        "mag": 5.4,
+        "lat": -14.04,
+        "lon": 165.57,
+        "place": "196 km NW of Port-Olry, Vanuatu",
+        "t": "2026-10-19T10:40:21Z",
+        "local": "05:40 AM",
+        "date": "2026-10-19",
+        "cats": [
+          "USGS",
+          "EMSC"
+        ]
+      },
+      {
+        "mag": 5.4,
+        "lat": -14.14,
+        "lon": 165.64,
+        "place": "184 km WNW of Port-Olry, Vanuatu",
+        "t": "2026-10-19T08:12:38Z",
+        "local": "03:12 AM",
+        "date": "2026-10-19",
+        "cats": [
+          "USGS",
+          "EMSC"
+        ]
+      },
       {
         "mag": 5.3,
         "lat": -21.52,
@@ -28,19 +67,6 @@
         "cats": [
           "EMSC",
           "USGS"
-        ]
-      },
-      {
-        "mag": 5.2,
-        "lat": -8.14,
-        "lon": 120.27,
-        "place": "55 km NNW of Ruteng, Indonesia",
-        "t": "2026-10-18T08:00:06Z",
-        "local": "03:00 AM",
-        "date": "2026-10-18",
-        "cats": [
-          "USGS",
-          "EMSC"
         ]
       },
       {
@@ -57,100 +83,2712 @@
         ]
       },
       {
-        "mag": 4.7,
-        "lat": -5.6,
-        "lon": 151.84,
-        "place": "147 km SSW of Kokopo, Papua New Guinea",
-        "t": "2026-10-18T22:06:13Z",
-        "local": "05:06 PM",
-        "date": "2026-10-18",
+        "mag": 5.0,
+        "lat": 31.95,
+        "lon": 104.46,
+        "place": "31 km NW of Jiangyou, China",
+        "t": "2026-10-19T10:57:08Z",
+        "local": "05:57 AM",
+        "date": "2026-10-19",
         "cats": [
           "USGS",
           "EMSC"
         ]
       },
       {
-        "mag": 4.7,
-        "lat": 17.25,
-        "lon": -63.01,
-        "place": "20 km SW of Sandy Point Town, Saint Kitts and Nevis",
-        "t": "2026-10-18T15:35:47Z",
-        "local": "10:35 AM",
-        "date": "2026-10-18",
+        "mag": 4.9,
+        "lat": -8.11,
+        "lon": 120.19,
+        "place": "54 km NE of Labuan Bajo, Indonesia",
+        "t": "2026-10-19T09:45:56Z",
+        "local": "04:45 AM",
+        "date": "2026-10-19",
         "cats": [
           "USGS",
           "EMSC"
         ]
       },
       {
-        "mag": 4.6,
-        "lat": 1.45,
-        "lon": 66.99,
-        "place": "Carlsberg Ridge",
-        "t": "2026-10-18T14:30:07Z",
-        "local": "09:30 AM",
-        "date": "2026-10-18",
+        "mag": 4.9,
+        "lat": -12.95,
+        "lon": 167.05,
+        "place": "115 km NNW of Sola, Vanuatu",
+        "t": "2026-10-19T09:25:14Z",
+        "local": "04:25 AM",
+        "date": "2026-10-19",
         "cats": [
           "USGS",
           "EMSC"
         ]
       },
       {
-        "mag": 4.5,
-        "lat": -20.93,
-        "lon": -178.66,
-        "place": "Fiji region",
-        "t": "2026-10-18T22:34:22Z",
-        "local": "05:34 PM",
-        "date": "2026-10-18",
+        "mag": 4.9,
+        "lat": -13.96,
+        "lon": 165.56,
+        "place": "202 km NW of Port-Olry, Vanuatu",
+        "t": "2026-10-19T08:54:18Z",
+        "local": "03:54 AM",
+        "date": "2026-10-19",
         "cats": [
           "USGS",
           "EMSC"
         ]
       },
       {
-        "mag": 4.5,
-        "lat": 7.72,
-        "lon": -81.33,
-        "place": "0 km NE of Río Grande, Panama",
-        "t": "2026-10-18T16:12:55Z",
-        "local": "11:12 AM",
-        "date": "2026-10-18",
-        "cats": [
-          "USGS",
-          "EMSC"
-        ]
-      },
-      {
-        "mag": 4.5,
-        "lat": -30.13,
-        "lon": -177.38,
-        "place": "Kermadec Islands, New Zealand",
-        "t": "2026-10-18T12:42:22Z",
-        "local": "07:42 AM",
-        "date": "2026-10-18",
-        "cats": [
-          "USGS",
-          "EMSC"
-        ]
-      },
-      {
-        "mag": 4.5,
-        "lat": 53.0,
-        "lon": 159.74,
-        "place": "NEAR EAST COAST OF KAMCHATKA",
-        "t": "2026-10-18T07:20:25Z",
+        "mag": 4.9,
+        "lat": -14.04,
+        "lon": 165.49,
+        "place": "203 km WNW of Port-Olry, Vanuatu",
+        "t": "2026-10-19T07:20:52Z",
         "local": "02:20 AM",
-        "date": "2026-10-18",
+        "date": "2026-10-19",
         "cats": [
-          "EMSC",
-          "USGS"
+          "USGS",
+          "EMSC"
         ]
       }
     ],
-    "storms": []
+    "storms": [
+      {
+        "name": "Trudy",
+        "cls": "TS",
+        "lat": 19.7,
+        "lon": -108.0,
+        "wind": null,
+        "mov": "280@6kt"
+      }
+    ]
   },
   "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.1321,
+          9.0693
+        ]
+      },
+      "properties": {
+        "_id": 0,
+        "mag": 3.4,
+        "mag_alt": null,
+        "lat": 9.0693,
+        "lon": -82.1321,
+        "depth": 10.0,
+        "t_iso": "2026-10-19T13:32:00Z",
+        "utc_ms": 1792416720000,
+        "place": "PANAMA-COSTA RICA BORDER REGION",
+        "local": "08:32 AM",
+        "date": "2026-10-19",
+        "utc": "13:32",
+        "tsunami": 0,
+        "catalogs": [
+          "EMSC"
+        ],
+        "duplicate_note": null,
+        "band": "M3-4",
+        "color": "#4dd2ff",
+        "radius": 11.9,
+        "url": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.6616,
+          7.5283
+        ]
+      },
+      "properties": {
+        "_id": 1,
+        "mag": 3.7,
+        "mag_alt": null,
+        "lat": 7.5283,
+        "lon": -80.6616,
+        "depth": 15.0,
+        "t_iso": "2026-10-19T13:29:32Z",
+        "utc_ms": 1792416572000,
+        "place": "PANAMA",
+        "local": "08:29 AM",
+        "date": "2026-10-19",
+        "utc": "13:29",
+        "tsunami": 0,
+        "catalogs": [
+          "EMSC"
+        ],
+        "duplicate_note": null,
+        "band": "M3-4",
+        "color": "#4dd2ff",
+        "radius": 13.0,
+        "url": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          93.802,
+          22.788
+        ]
+      },
+      "properties": {
+        "_id": 2,
+        "mag": 3.3,
+        "mag_alt": null,
+        "lat": 22.788,
+        "lon": 93.802,
+        "depth": 75.0,
+        "t_iso": "2026-10-19T13:21:31Z",
+        "utc_ms": 1792416091000,
+        "place": "MYANMAR-INDIA BORDER REGION",
+        "local": "08:21 AM",
+        "date": "2026-10-19",
+        "utc": "13:21",
+        "tsunami": 0,
+        "catalogs": [
+          "EMSC"
+        ],
+        "duplicate_note": null,
+        "band": "M3-4",
+        "color": "#4dd2ff",
+        "radius": 11.5,
+        "url": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.06,
+          -8.1
+        ]
+      },
+      "properties": {
+        "_id": 3,
+        "mag": 3.2,
+        "mag_alt": null,
+        "lat": -8.1,
+        "lon": 120.06,
+        "depth": 10.0,
+        "t_iso": "2026-10-19T13:07:58Z",
+        "utc_ms": 1792415278000,
+        "place": "FLORES REGION, INDONESIA",
+        "local": "08:07 AM",
+        "date": "2026-10-19",
+        "utc": "13:07",
+        "tsunami": 0,
+        "catalogs": [
+          "EMSC"
+        ],
+        "duplicate_note": null,
+        "band": "M3-4",
+        "color": "#4dd2ff",
+        "radius": 11.2,
+        "url": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.95,
+          -0.8
+        ]
+      },
+      "properties": {
+        "_id": 4,
+        "mag": 3.1,
+        "mag_alt": null,
+        "lat": -0.8,
+        "lon": 121.95,
+        "depth": 10.0,
+        "t_iso": "2026-10-19T12:51:11Z",
+        "utc_ms": 1792414271000,
+        "place": "SULAWESI, INDONESIA",
+        "local": "07:51 AM",
+        "date": "2026-10-19",
+        "utc": "12:51",
+        "tsunami": 0,
+        "catalogs": [
+          "EMSC"
+        ],
+        "duplicate_note": null,
+        "band": "M3-4",
+        "color": "#4dd2ff",
+        "radius": 10.9,
+        "url": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -17.46,
+          64.616
+        ]
+      },
+      "properties": {
+        "_id": 5,
+        "mag": 3.4,
+        "mag_alt": null,
+        "lat": 64.616,
+        "lon": -17.46,
+        "depth": 1.1,
+        "t_iso": "2026-10-19T12:51:09Z",
+        "utc_ms": 1792414269000,
+        "place": "ICELAND",
+        "local": "07:51 AM",
+        "date": "2026-10-19",
+        "utc": "12:51",
+        "tsunami": 0,
+        "catalogs": [
+          "EMSC"
+        ],
+        "duplicate_note": null,
+        "band": "M3-4",
+        "color": "#4dd2ff",
+        "radius": 11.9,
+        "url": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -67.14,
+          -24.25
+        ]
+      },
+      "properties": {
+        "_id": 6,
+        "mag": 3.1,
+        "mag_alt": null,
+        "lat": -24.25,
+        "lon": -67.14,
+        "depth": 194.9,
+        "t_iso": "2026-10-19T12:42:52Z",
+        "utc_ms": 1792413772000,
+        "place": "SALTA, ARGENTINA",
+        "local": "07:42 AM",
+        "date": "2026-10-19",
+        "utc": "12:42",
+        "tsunami": 0,
+        "catalogs": [
+          "EMSC"
+        ],
+        "duplicate_note": null,
+        "band": "M3-4",
+        "color": "#4dd2ff",
+        "radius": 10.9,
+        "url": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.6147,
+          7.5193
+        ]
+      },
+      "properties": {
+        "_id": 7,
+        "mag": 3.5,
+        "mag_alt": null,
+        "lat": 7.5193,
+        "lon": -80.6147,
+        "depth": 20.0,
+        "t_iso": "2026-10-19T12:16:58Z",
+        "utc_ms": 1792412218000,
+        "place": "PANAMA",
+        "local": "07:16 AM",
+        "date": "2026-10-19",
+        "utc": "12:16",
+        "tsunami": 0,
+        "catalogs": [
+          "EMSC"
+        ],
+        "duplicate_note": null,
+        "band": "M3-4",
+        "color": "#4dd2ff",
+        "radius": 12.2,
+        "url": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.26,
+          -11.7
+        ]
+      },
+      "properties": {
+        "_id": 8,
+        "mag": 3.5,
+        "mag_alt": null,
+        "lat": -11.7,
+        "lon": -76.26,
+        "depth": 15.0,
+        "t_iso": "2026-10-19T12:08:10Z",
+        "utc_ms": 1792411690000,
+        "place": "CENTRAL PERU",
+        "local": "07:08 AM",
+        "date": "2026-10-19",
+        "utc": "12:08",
+        "tsunami": 0,
+        "catalogs": [
+          "EMSC"
+        ],
+        "duplicate_note": null,
+        "band": "M3-4",
+        "color": "#4dd2ff",
+        "radius": 12.2,
+        "url": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.378,
+          -8.1042
+        ]
+      },
+      "properties": {
+        "_id": 9,
+        "mag": 4.8,
+        "mag_alt": null,
+        "lat": -8.1042,
+        "lon": 120.378,
+        "depth": 10.0,
+        "t_iso": "2026-10-19T12:06:01Z",
+        "utc_ms": 1792411561884,
+        "place": "56 km N of Ruteng, Indonesia",
+        "local": "07:06 AM",
+        "date": "2026-10-19",
+        "utc": "12:06",
+        "tsunami": 0,
+        "catalogs": [
+          "USGS",
+          "EMSC"
+        ],
+        "duplicate_note": "Same physical event reported by USGS + EMSC",
+        "band": "M4-5",
+        "color": "#ffd60a",
+        "radius": 16.8,
+        "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u3ch"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          165.419,
+          -13.9927
+        ]
+      },
+      "properties": {
+        "_id": 10,
+        "mag": 4.8,
+        "mag_alt": null,
+        "lat": -13.9927,
+        "lon": 165.419,
+        "depth": 10.0,
+        "t_iso": "2026-10-19T11:52:37Z",
+        "utc_ms": 1792410757111,
+        "place": "212 km WNW of Port-Olry, Vanuatu",
+        "local": "06:52 AM",
+        "date": "2026-10-19",
+        "utc": "11:52",
+        "tsunami": 0,
+        "catalogs": [
+          "USGS",
+          "EMSC"
+        ],
+        "duplicate_note": "Same physical event reported by USGS + EMSC",
+        "band": "M4-5",
+        "color": "#ffd60a",
+        "radius": 16.8,
+        "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u3ce"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.76,
+          16.17
+        ]
+      },
+      "properties": {
+        "_id": 11,
+        "mag": 4.0,
+        "mag_alt": null,
+        "lat": 16.17,
+        "lon": 121.76,
+        "depth": 7.0,
+        "t_iso": "2026-10-19T11:51:25Z",
+        "utc_ms": 1792410685000,
+        "place": "LUZON, PHILIPPINES",
+        "local": "06:51 AM",
+        "date": "2026-10-19",
+        "utc": "11:51",
+        "tsunami": 0,
+        "catalogs": [
+          "EMSC"
+        ],
+        "duplicate_note": null,
+        "band": "M4-5",
+        "color": "#ffd60a",
+        "radius": 14.0,
+        "url": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          178.1337,
+          -36.1226
+        ]
+      },
+      "properties": {
+        "_id": 12,
+        "mag": 3.1,
+        "mag_alt": null,
+        "lat": -36.1226,
+        "lon": 178.1337,
+        "depth": 174.9,
+        "t_iso": "2026-10-19T11:29:38Z",
+        "utc_ms": 1792409378000,
+        "place": "OFF E. COAST OF N. ISLAND, N.Z.",
+        "local": "06:29 AM",
+        "date": "2026-10-19",
+        "utc": "11:29",
+        "tsunami": 0,
+        "catalogs": [
+          "EMSC"
+        ],
+        "duplicate_note": null,
+        "band": "M3-4",
+        "color": "#4dd2ff",
+        "radius": 10.9,
+        "url": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -68.41,
+          -22.63
+        ]
+      },
+      "properties": {
+        "_id": 13,
+        "mag": 2.9,
+        "mag_alt": null,
+        "lat": -22.63,
+        "lon": -68.41,
+        "depth": 106.2,
+        "t_iso": "2026-10-19T11:26:28Z",
+        "utc_ms": 1792409188000,
+        "place": "ANTOFAGASTA, CHILE",
+        "local": "06:26 AM",
+        "date": "2026-10-19",
+        "utc": "11:26",
+        "tsunami": 0,
+        "catalogs": [
+          "EMSC"
+        ],
+        "duplicate_note": null,
+        "band": "M2-3",
+        "color": "#4dd2ff",
+        "radius": 10.1,
+        "url": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.58,
+          -7.56
+        ]
+      },
+      "properties": {
+        "_id": 14,
+        "mag": 4.2,
+        "mag_alt": null,
+        "lat": -7.56,
+        "lon": 128.58,
+        "depth": 173.0,
+        "t_iso": "2026-10-19T11:10:26Z",
+        "utc_ms": 1792408226000,
+        "place": "KEPULAUAN BARAT DAYA, INDONESIA",
+        "local": "06:10 AM",
+        "date": "2026-10-19",
+        "utc": "11:10",
+        "tsunami": 0,
+        "catalogs": [
+          "EMSC",
+          "USGS"
+        ],
+        "duplicate_note": "Same physical event reported by EMSC + USGS",
+        "band": "M4-5",
+        "color": "#ffd60a",
+        "radius": 14.7,
+        "url": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.05,
+          -8.04
+        ]
+      },
+      "properties": {
+        "_id": 15,
+        "mag": 3.5,
+        "mag_alt": null,
+        "lat": -8.04,
+        "lon": 120.05,
+        "depth": 10.0,
+        "t_iso": "2026-10-19T11:06:26Z",
+        "utc_ms": 1792407986000,
+        "place": "FLORES REGION, INDONESIA",
+        "local": "06:06 AM",
+        "date": "2026-10-19",
+        "utc": "11:06",
+        "tsunami": 0,
+        "catalogs": [
+          "EMSC"
+        ],
+        "duplicate_note": null,
+        "band": "M3-4",
+        "color": "#4dd2ff",
+        "radius": 12.2,
+        "url": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          104.4577,
+          31.948
+        ]
+      },
+      "properties": {
+        "_id": 16,
+        "mag": 5.0,
+        "mag_alt": null,
+        "lat": 31.948,
+        "lon": 104.4577,
+        "depth": 10.0,
+        "t_iso": "2026-10-19T10:57:08Z",
+        "utc_ms": 1792407428127,
+        "place": "31 km NW of Jiangyou, China",
+        "local": "05:57 AM",
+        "date": "2026-10-19",
+        "utc": "10:57",
+        "tsunami": 0,
+        "catalogs": [
+          "USGS",
+          "EMSC"
+        ],
+        "duplicate_note": "Same physical event reported by USGS + EMSC",
+        "band": "M5+",
+        "color": "#ff9500",
+        "radius": 17.5,
+        "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u3c7"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          165.5687,
+          -14.0378
+        ]
+      },
+      "properties": {
+        "_id": 17,
+        "mag": 5.4,
+        "mag_alt": null,
+        "lat": -14.0378,
+        "lon": 165.5687,
+        "depth": 10.0,
+        "t_iso": "2026-10-19T10:40:21Z",
+        "utc_ms": 1792406421108,
+        "place": "196 km NW of Port-Olry, Vanuatu",
+        "local": "05:40 AM",
+        "date": "2026-10-19",
+        "utc": "10:40",
+        "tsunami": 0,
+        "catalogs": [
+          "USGS",
+          "EMSC"
+        ],
+        "duplicate_note": "Same physical event reported by USGS + EMSC",
+        "band": "M5+",
+        "color": "#ff9500",
+        "radius": 18.9,
+        "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u3c6"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.57,
+          -7.9
+        ]
+      },
+      "properties": {
+        "_id": 18,
+        "mag": 2.7,
+        "mag_alt": null,
+        "lat": -7.9,
+        "lon": 120.57,
+        "depth": 11.0,
+        "t_iso": "2026-10-19T10:25:09Z",
+        "utc_ms": 1792405509000,
+        "place": "FLORES SEA",
+        "local": "05:25 AM",
+        "date": "2026-10-19",
+        "utc": "10:25",
+        "tsunami": 0,
+        "catalogs": [
+          "EMSC"
+        ],
+        "duplicate_note": null,
+        "band": "M2-3",
+        "color": "#4dd2ff",
+        "radius": 9.5,
+        "url": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -100.046,
+          16.922
+        ]
+      },
+      "properties": {
+        "_id": 19,
+        "mag": 4.2,
+        "mag_alt": null,
+        "lat": 16.922,
+        "lon": -100.046,
+        "depth": 7.2,
+        "t_iso": "2026-10-19T10:22:30Z",
+        "utc_ms": 1792405350000,
+        "place": "OFFSHORE GUERRERO, MEXICO",
+        "local": "05:22 AM",
+        "date": "2026-10-19",
+        "utc": "10:22",
+        "tsunami": 0,
+        "catalogs": [
+          "EMSC"
+        ],
+        "duplicate_note": null,
+        "band": "M4-5",
+        "color": "#ffd60a",
+        "radius": 14.7,
+        "url": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.1454,
+          -8.0866
+        ]
+      },
+      "properties": {
+        "_id": 20,
+        "mag": 4.7,
+        "mag_alt": null,
+        "lat": -8.0866,
+        "lon": 120.1454,
+        "depth": 10.0,
+        "t_iso": "2026-10-19T10:10:56Z",
+        "utc_ms": 1792404656335,
+        "place": "53 km NNE of Labuan Bajo, Indonesia",
+        "local": "05:10 AM",
+        "date": "2026-10-19",
+        "utc": "10:10",
+        "tsunami": 0,
+        "catalogs": [
+          "USGS",
+          "EMSC"
+        ],
+        "duplicate_note": "Same physical event reported by USGS + EMSC",
+        "band": "M4-5",
+        "color": "#ffd60a",
+        "radius": 16.5,
+        "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u3c5"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.179,
+          7.4479
+        ]
+      },
+      "properties": {
+        "_id": 21,
+        "mag": 3.5,
+        "mag_alt": null,
+        "lat": 7.4479,
+        "lon": -80.179,
+        "depth": 9.0,
+        "t_iso": "2026-10-19T10:05:46Z",
+        "utc_ms": 1792404346000,
+        "place": "PANAMA",
+        "local": "05:05 AM",
+        "date": "2026-10-19",
+        "utc": "10:05",
+        "tsunami": 0,
+        "catalogs": [
+          "EMSC"
+        ],
+        "duplicate_note": null,
+        "band": "M3-4",
+        "color": "#4dd2ff",
+        "radius": 12.2,
+        "url": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.05,
+          -8.08
+        ]
+      },
+      "properties": {
+        "_id": 22,
+        "mag": 3.0,
+        "mag_alt": null,
+        "lat": -8.08,
+        "lon": 120.05,
+        "depth": 10.0,
+        "t_iso": "2026-10-19T09:58:11Z",
+        "utc_ms": 1792403891000,
+        "place": "FLORES REGION, INDONESIA",
+        "local": "04:58 AM",
+        "date": "2026-10-19",
+        "utc": "09:58",
+        "tsunami": 0,
+        "catalogs": [
+          "EMSC"
+        ],
+        "duplicate_note": null,
+        "band": "M3-4",
+        "color": "#4dd2ff",
+        "radius": 10.5,
+        "url": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.1872,
+          -8.1064
+        ]
+      },
+      "properties": {
+        "_id": 23,
+        "mag": 4.9,
+        "mag_alt": null,
+        "lat": -8.1064,
+        "lon": 120.1872,
+        "depth": 10.0,
+        "t_iso": "2026-10-19T09:45:56Z",
+        "utc_ms": 1792403156107,
+        "place": "54 km NE of Labuan Bajo, Indonesia",
+        "local": "04:45 AM",
+        "date": "2026-10-19",
+        "utc": "09:45",
+        "tsunami": 0,
+        "catalogs": [
+          "USGS",
+          "EMSC"
+        ],
+        "duplicate_note": "Same physical event reported by USGS + EMSC",
+        "band": "M4-5",
+        "color": "#ffd60a",
+        "radius": 17.2,
+        "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u3c1"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -68.57,
+          -21.53
+        ]
+      },
+      "properties": {
+        "_id": 24,
+        "mag": 2.8,
+        "mag_alt": null,
+        "lat": -21.53,
+        "lon": -68.57,
+        "depth": 145.4,
+        "t_iso": "2026-10-19T09:45:26Z",
+        "utc_ms": 1792403126000,
+        "place": "ANTOFAGASTA, CHILE",
+        "local": "04:45 AM",
+        "date": "2026-10-19",
+        "utc": "09:45",
+        "tsunami": 0,
+        "catalogs": [
+          "EMSC"
+        ],
+        "duplicate_note": null,
+        "band": "M2-3",
+        "color": "#4dd2ff",
+        "radius": 9.8,
+        "url": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          107.695,
+          15.22
+        ]
+      },
+      "properties": {
+        "_id": 25,
+        "mag": 3.3,
+        "mag_alt": null,
+        "lat": 15.22,
+        "lon": 107.695,
+        "depth": 10.0,
+        "t_iso": "2026-10-19T09:39:02Z",
+        "utc_ms": 1792402742000,
+        "place": "LAOS-VIETNAM BORDER REGION",
+        "local": "04:39 AM",
+        "date": "2026-10-19",
+        "utc": "09:39",
+        "tsunami": 0,
+        "catalogs": [
+          "EMSC"
+        ],
+        "duplicate_note": null,
+        "band": "M3-4",
+        "color": "#4dd2ff",
+        "radius": 11.5,
+        "url": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -84.3258,
+          8.6062
+        ]
+      },
+      "properties": {
+        "_id": 26,
+        "mag": 2.5,
+        "mag_alt": null,
+        "lat": 8.6062,
+        "lon": -84.3258,
+        "depth": 31.0,
+        "t_iso": "2026-10-19T09:39:02Z",
+        "utc_ms": 1792402742000,
+        "place": "OFF COAST OF COSTA RICA",
+        "local": "04:39 AM",
+        "date": "2026-10-19",
+        "utc": "09:39",
+        "tsunami": 0,
+        "catalogs": [
+          "EMSC"
+        ],
+        "duplicate_note": null,
+        "band": "M2-3",
+        "color": "#4dd2ff",
+        "radius": 8.8,
+        "url": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          149.77,
+          44.6
+        ]
+      },
+      "properties": {
+        "_id": 27,
+        "mag": 4.3,
+        "mag_alt": null,
+        "lat": 44.6,
+        "lon": 149.77,
+        "depth": 60.0,
+        "t_iso": "2026-10-19T09:30:34Z",
+        "utc_ms": 1792402234000,
+        "place": "KURIL ISLANDS",
+        "local": "04:30 AM",
+        "date": "2026-10-19",
+        "utc": "09:30",
+        "tsunami": 0,
+        "catalogs": [
+          "EMSC"
+        ],
+        "duplicate_note": null,
+        "band": "M4-5",
+        "color": "#ffd60a",
+        "radius": 15.0,
+        "url": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -68.94,
+          -21.19
+        ]
+      },
+      "properties": {
+        "_id": 28,
+        "mag": 2.5,
+        "mag_alt": null,
+        "lat": -21.19,
+        "lon": -68.94,
+        "depth": 108.2,
+        "t_iso": "2026-10-19T09:26:26Z",
+        "utc_ms": 1792401986000,
+        "place": "TARAPACA, CHILE",
+        "local": "04:26 AM",
+        "date": "2026-10-19",
+        "utc": "09:26",
+        "tsunami": 0,
+        "catalogs": [
+          "EMSC"
+        ],
+        "duplicate_note": null,
+        "band": "M2-3",
+        "color": "#4dd2ff",
+        "radius": 8.8,
+        "url": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          167.046,
+          -12.9533
+        ]
+      },
+      "properties": {
+        "_id": 29,
+        "mag": 4.9,
+        "mag_alt": null,
+        "lat": -12.9533,
+        "lon": 167.046,
+        "depth": 10.0,
+        "t_iso": "2026-10-19T09:25:14Z",
+        "utc_ms": 1792401914552,
+        "place": "115 km NNW of Sola, Vanuatu",
+        "local": "04:25 AM",
+        "date": "2026-10-19",
+        "utc": "09:25",
+        "tsunami": 0,
+        "catalogs": [
+          "USGS",
+          "EMSC"
+        ],
+        "duplicate_note": "Same physical event reported by USGS + EMSC",
+        "band": "M4-5",
+        "color": "#ffd60a",
+        "radius": 17.2,
+        "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u3bz"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -67.32,
+          -23.88
+        ]
+      },
+      "properties": {
+        "_id": 30,
+        "mag": 3.4,
+        "mag_alt": null,
+        "lat": -23.88,
+        "lon": -67.32,
+        "depth": 232.7,
+        "t_iso": "2026-10-19T09:20:49Z",
+        "utc_ms": 1792401649000,
+        "place": "ANTOFAGASTA, CHILE",
+        "local": "04:20 AM",
+        "date": "2026-10-19",
+        "utc": "09:20",
+        "tsunami": 0,
+        "catalogs": [
+          "EMSC"
+        ],
+        "duplicate_note": null,
+        "band": "M3-4",
+        "color": "#4dd2ff",
+        "radius": 11.9,
+        "url": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          176.4962,
+          -40.6271
+        ]
+      },
+      "properties": {
+        "_id": 31,
+        "mag": 3.2,
+        "mag_alt": null,
+        "lat": -40.6271,
+        "lon": 176.4962,
+        "depth": 17.8,
+        "t_iso": "2026-10-19T09:20:13Z",
+        "utc_ms": 1792401613000,
+        "place": "NORTH ISLAND OF NEW ZEALAND",
+        "local": "04:20 AM",
+        "date": "2026-10-19",
+        "utc": "09:20",
+        "tsunami": 0,
+        "catalogs": [
+          "EMSC"
+        ],
+        "duplicate_note": null,
+        "band": "M3-4",
+        "color": "#4dd2ff",
+        "radius": 11.2,
+        "url": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.51,
+          -29.42
+        ]
+      },
+      "properties": {
+        "_id": 32,
+        "mag": 2.8,
+        "mag_alt": null,
+        "lat": -29.42,
+        "lon": -69.51,
+        "depth": 117.0,
+        "t_iso": "2026-10-19T09:14:18Z",
+        "utc_ms": 1792401258000,
+        "place": "SAN JUAN, ARGENTINA",
+        "local": "04:14 AM",
+        "date": "2026-10-19",
+        "utc": "09:14",
+        "tsunami": 0,
+        "catalogs": [
+          "EMSC"
+        ],
+        "duplicate_note": null,
+        "band": "M2-3",
+        "color": "#4dd2ff",
+        "radius": 9.8,
+        "url": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.7168,
+          2.4339
+        ]
+      },
+      "properties": {
+        "_id": 33,
+        "mag": 4.7,
+        "mag_alt": null,
+        "lat": 2.4339,
+        "lon": 126.7168,
+        "depth": 49.006,
+        "t_iso": "2026-10-19T09:00:39Z",
+        "utc_ms": 1792400439067,
+        "place": "163 km WNW of Tobelo, Indonesia",
+        "local": "04:00 AM",
+        "date": "2026-10-19",
+        "utc": "09:00",
+        "tsunami": 0,
+        "catalogs": [
+          "USGS",
+          "EMSC"
+        ],
+        "duplicate_note": "Same physical event reported by USGS + EMSC",
+        "band": "M4-5",
+        "color": "#ffd60a",
+        "radius": 16.5,
+        "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u3bv"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          176.413,
+          -40.5409
+        ]
+      },
+      "properties": {
+        "_id": 34,
+        "mag": 3.6,
+        "mag_alt": null,
+        "lat": -40.5409,
+        "lon": 176.413,
+        "depth": 14.9,
+        "t_iso": "2026-10-19T08:56:51Z",
+        "utc_ms": 1792400211000,
+        "place": "NORTH ISLAND OF NEW ZEALAND",
+        "local": "03:56 AM",
+        "date": "2026-10-19",
+        "utc": "08:56",
+        "tsunami": 0,
+        "catalogs": [
+          "EMSC"
+        ],
+        "duplicate_note": null,
+        "band": "M3-4",
+        "color": "#4dd2ff",
+        "radius": 12.6,
+        "url": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -84.5873,
+          8.1592
+        ]
+      },
+      "properties": {
+        "_id": 35,
+        "mag": 2.5,
+        "mag_alt": null,
+        "lat": 8.1592,
+        "lon": -84.5873,
+        "depth": 36.0,
+        "t_iso": "2026-10-19T08:55:57Z",
+        "utc_ms": 1792400157000,
+        "place": "OFF COAST OF COSTA RICA",
+        "local": "03:55 AM",
+        "date": "2026-10-19",
+        "utc": "08:55",
+        "tsunami": 0,
+        "catalogs": [
+          "EMSC"
+        ],
+        "duplicate_note": null,
+        "band": "M2-3",
+        "color": "#4dd2ff",
+        "radius": 8.8,
+        "url": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          165.5558,
+          -13.9561
+        ]
+      },
+      "properties": {
+        "_id": 36,
+        "mag": 4.9,
+        "mag_alt": null,
+        "lat": -13.9561,
+        "lon": 165.5558,
+        "depth": 10.0,
+        "t_iso": "2026-10-19T08:54:18Z",
+        "utc_ms": 1792400058185,
+        "place": "202 km NW of Port-Olry, Vanuatu",
+        "local": "03:54 AM",
+        "date": "2026-10-19",
+        "utc": "08:54",
+        "tsunami": 0,
+        "catalogs": [
+          "USGS",
+          "EMSC"
+        ],
+        "duplicate_note": "Same physical event reported by USGS + EMSC",
+        "band": "M4-5",
+        "color": "#ffd60a",
+        "radius": 17.2,
+        "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u3bu"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.3424,
+          45.4969
+        ]
+      },
+      "properties": {
+        "_id": 37,
+        "mag": 4.8,
+        "mag_alt": null,
+        "lat": 45.4969,
+        "lon": 26.3424,
+        "depth": 130.0,
+        "t_iso": "2026-10-19T08:51:57Z",
+        "utc_ms": 1792399917000,
+        "place": "ROMANIA",
+        "local": "03:51 AM",
+        "date": "2026-10-19",
+        "utc": "08:51",
+        "tsunami": 0,
+        "catalogs": [
+          "EMSC",
+          "USGS"
+        ],
+        "duplicate_note": "Same physical event reported by EMSC + USGS",
+        "band": "M4-5",
+        "color": "#ffd60a",
+        "radius": 16.8,
+        "url": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.7263,
+          7.4682
+        ]
+      },
+      "properties": {
+        "_id": 38,
+        "mag": 3.6,
+        "mag_alt": null,
+        "lat": 7.4682,
+        "lon": -80.7263,
+        "depth": 11.0,
+        "t_iso": "2026-10-19T08:49:47Z",
+        "utc_ms": 1792399787000,
+        "place": "PANAMA",
+        "local": "03:49 AM",
+        "date": "2026-10-19",
+        "utc": "08:49",
+        "tsunami": 0,
+        "catalogs": [
+          "EMSC"
+        ],
+        "duplicate_note": null,
+        "band": "M3-4",
+        "color": "#4dd2ff",
+        "radius": 12.6,
+        "url": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          129.59,
+          -6.94
+        ]
+      },
+      "properties": {
+        "_id": 39,
+        "mag": 4.4,
+        "mag_alt": null,
+        "lat": -6.94,
+        "lon": 129.59,
+        "depth": 150.0,
+        "t_iso": "2026-10-19T08:38:27Z",
+        "utc_ms": 1792399107000,
+        "place": "BANDA SEA",
+        "local": "03:38 AM",
+        "date": "2026-10-19",
+        "utc": "08:38",
+        "tsunami": 0,
+        "catalogs": [
+          "EMSC"
+        ],
+        "duplicate_note": null,
+        "band": "M4-5",
+        "color": "#ffd60a",
+        "radius": 15.4,
+        "url": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          165.6383,
+          -14.1387
+        ]
+      },
+      "properties": {
+        "_id": 40,
+        "mag": 5.4,
+        "mag_alt": null,
+        "lat": -14.1387,
+        "lon": 165.6383,
+        "depth": 10.0,
+        "t_iso": "2026-10-19T08:12:38Z",
+        "utc_ms": 1792397558235,
+        "place": "184 km WNW of Port-Olry, Vanuatu",
+        "local": "03:12 AM",
+        "date": "2026-10-19",
+        "utc": "08:12",
+        "tsunami": 0,
+        "catalogs": [
+          "USGS",
+          "EMSC"
+        ],
+        "duplicate_note": "Same physical event reported by USGS + EMSC",
+        "band": "M5+",
+        "color": "#ff9500",
+        "radius": 18.9,
+        "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u3bi"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.27,
+          7.07
+        ]
+      },
+      "properties": {
+        "_id": 41,
+        "mag": 3.1,
+        "mag_alt": null,
+        "lat": 7.07,
+        "lon": 127.27,
+        "depth": 8.0,
+        "t_iso": "2026-10-19T08:11:19Z",
+        "utc_ms": 1792397479000,
+        "place": "PHILIPPINE ISLANDS REGION",
+        "local": "03:11 AM",
+        "date": "2026-10-19",
+        "utc": "08:11",
+        "tsunami": 0,
+        "catalogs": [
+          "EMSC"
+        ],
+        "duplicate_note": null,
+        "band": "M3-4",
+        "color": "#4dd2ff",
+        "radius": 10.9,
+        "url": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          75.57,
+          17.089
+        ]
+      },
+      "properties": {
+        "_id": 42,
+        "mag": 3.3,
+        "mag_alt": null,
+        "lat": 17.089,
+        "lon": 75.57,
+        "depth": 5.0,
+        "t_iso": "2026-10-19T08:06:56Z",
+        "utc_ms": 1792397216000,
+        "place": "MAHARASHTRA, INDIA",
+        "local": "03:06 AM",
+        "date": "2026-10-19",
+        "utc": "08:06",
+        "tsunami": 0,
+        "catalogs": [
+          "EMSC"
+        ],
+        "duplicate_note": null,
+        "band": "M3-4",
+        "color": "#4dd2ff",
+        "radius": 11.5,
+        "url": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -153.177,
+          59.821
+        ]
+      },
+      "properties": {
+        "_id": 43,
+        "mag": 3.5,
+        "mag_alt": null,
+        "lat": 59.821,
+        "lon": -153.177,
+        "depth": 125.8,
+        "t_iso": "2026-10-19T08:03:46Z",
+        "utc_ms": 1792397026713,
+        "place": "52 km E of Pedro Bay, Alaska",
+        "local": "03:03 AM",
+        "date": "2026-10-19",
+        "utc": "08:03",
+        "tsunami": 0,
+        "catalogs": [
+          "USGS",
+          "EMSC"
+        ],
+        "duplicate_note": "Same physical event reported by USGS + EMSC",
+        "band": "M3-4",
+        "color": "#4dd2ff",
+        "radius": 12.2,
+        "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026uscmes"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          175.6986,
+          -35.3041
+        ]
+      },
+      "properties": {
+        "_id": 44,
+        "mag": 3.5,
+        "mag_alt": null,
+        "lat": -35.3041,
+        "lon": 175.6986,
+        "depth": 182.9,
+        "t_iso": "2026-10-19T07:53:51Z",
+        "utc_ms": 1792396431000,
+        "place": "OFF E. COAST OF N. ISLAND, N.Z.",
+        "local": "02:53 AM",
+        "date": "2026-10-19",
+        "utc": "07:53",
+        "tsunami": 0,
+        "catalogs": [
+          "EMSC"
+        ],
+        "duplicate_note": null,
+        "band": "M3-4",
+        "color": "#4dd2ff",
+        "radius": 12.2,
+        "url": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -84.2325,
+          8.2925
+        ]
+      },
+      "properties": {
+        "_id": 45,
+        "mag": 2.7,
+        "mag_alt": null,
+        "lat": 8.2925,
+        "lon": -84.2325,
+        "depth": 18.0,
+        "t_iso": "2026-10-19T07:50:56Z",
+        "utc_ms": 1792396256000,
+        "place": "OFF COAST OF COSTA RICA",
+        "local": "02:50 AM",
+        "date": "2026-10-19",
+        "utc": "07:50",
+        "tsunami": 0,
+        "catalogs": [
+          "EMSC"
+        ],
+        "duplicate_note": null,
+        "band": "M2-3",
+        "color": "#4dd2ff",
+        "radius": 9.5,
+        "url": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          165.6761,
+          -14.0533
+        ]
+      },
+      "properties": {
+        "_id": 46,
+        "mag": 6.0,
+        "mag_alt": null,
+        "lat": -14.0533,
+        "lon": 165.6761,
+        "depth": 10.0,
+        "t_iso": "2026-10-19T07:49:04Z",
+        "utc_ms": 1792396144900,
+        "place": "186 km NW of Port-Olry, Vanuatu",
+        "local": "02:49 AM",
+        "date": "2026-10-19",
+        "utc": "07:49",
+        "tsunami": 0,
+        "catalogs": [
+          "USGS",
+          "EMSC"
+        ],
+        "duplicate_note": "Same physical event reported by USGS + EMSC",
+        "band": "M5+",
+        "color": "#ff3b30",
+        "radius": 21.0,
+        "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u3bc"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          21.75,
+          36.92
+        ]
+      },
+      "properties": {
+        "_id": 47,
+        "mag": 3.9,
+        "mag_alt": null,
+        "lat": 36.92,
+        "lon": 21.75,
+        "depth": 5.0,
+        "t_iso": "2026-10-19T07:41:32Z",
+        "utc_ms": 1792395692000,
+        "place": "SOUTHERN GREECE",
+        "local": "02:41 AM",
+        "date": "2026-10-19",
+        "utc": "07:41",
+        "tsunami": 0,
+        "catalogs": [
+          "EMSC"
+        ],
+        "duplicate_note": null,
+        "band": "M3-4",
+        "color": "#4dd2ff",
+        "radius": 13.6,
+        "url": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.6691,
+          7.2945
+        ]
+      },
+      "properties": {
+        "_id": 48,
+        "mag": 3.7,
+        "mag_alt": null,
+        "lat": 7.2945,
+        "lon": -80.6691,
+        "depth": 10.0,
+        "t_iso": "2026-10-19T07:40:45Z",
+        "utc_ms": 1792395645000,
+        "place": "PANAMA",
+        "local": "02:40 AM",
+        "date": "2026-10-19",
+        "utc": "07:40",
+        "tsunami": 0,
+        "catalogs": [
+          "EMSC"
+        ],
+        "duplicate_note": null,
+        "band": "M3-4",
+        "color": "#4dd2ff",
+        "radius": 13.0,
+        "url": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -86.727,
+          10.897
+        ]
+      },
+      "properties": {
+        "_id": 49,
+        "mag": 3.2,
+        "mag_alt": null,
+        "lat": 10.897,
+        "lon": -86.727,
+        "depth": 22.0,
+        "t_iso": "2026-10-19T07:35:34Z",
+        "utc_ms": 1792395334000,
+        "place": "OFF COAST OF COSTA RICA",
+        "local": "02:35 AM",
+        "date": "2026-10-19",
+        "utc": "07:35",
+        "tsunami": 0,
+        "catalogs": [
+          "EMSC"
+        ],
+        "duplicate_note": null,
+        "band": "M3-4",
+        "color": "#4dd2ff",
+        "radius": 11.2,
+        "url": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -67.45,
+          -24.02
+        ]
+      },
+      "properties": {
+        "_id": 50,
+        "mag": 3.9,
+        "mag_alt": null,
+        "lat": -24.02,
+        "lon": -67.45,
+        "depth": 220.4,
+        "t_iso": "2026-10-19T07:33:35Z",
+        "utc_ms": 1792395215000,
+        "place": "ANTOFAGASTA, CHILE",
+        "local": "02:33 AM",
+        "date": "2026-10-19",
+        "utc": "07:33",
+        "tsunami": 0,
+        "catalogs": [
+          "EMSC"
+        ],
+        "duplicate_note": null,
+        "band": "M3-4",
+        "color": "#4dd2ff",
+        "radius": 13.6,
+        "url": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          48.9647,
+          41.6658
+        ]
+      },
+      "properties": {
+        "_id": 51,
+        "mag": 4.2,
+        "mag_alt": null,
+        "lat": 41.6658,
+        "lon": 48.9647,
+        "depth": 10.0,
+        "t_iso": "2026-10-19T07:27:15Z",
+        "utc_ms": 1792394835000,
+        "place": "CASPIAN SEA, OFFSHORE AZERBAIJAN",
+        "local": "02:27 AM",
+        "date": "2026-10-19",
+        "utc": "07:27",
+        "tsunami": 0,
+        "catalogs": [
+          "EMSC"
+        ],
+        "duplicate_note": null,
+        "band": "M4-5",
+        "color": "#ffd60a",
+        "radius": 14.7,
+        "url": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          120.54,
+          -8.19
+        ]
+      },
+      "properties": {
+        "_id": 52,
+        "mag": 3.1,
+        "mag_alt": null,
+        "lat": -8.19,
+        "lon": 120.54,
+        "depth": 10.0,
+        "t_iso": "2026-10-19T07:24:19Z",
+        "utc_ms": 1792394659000,
+        "place": "FLORES REGION, INDONESIA",
+        "local": "02:24 AM",
+        "date": "2026-10-19",
+        "utc": "07:24",
+        "tsunami": 0,
+        "catalogs": [
+          "EMSC"
+        ],
+        "duplicate_note": null,
+        "band": "M3-4",
+        "color": "#4dd2ff",
+        "radius": 10.9,
+        "url": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.14,
+          -31.8
+        ]
+      },
+      "properties": {
+        "_id": 53,
+        "mag": 2.6,
+        "mag_alt": null,
+        "lat": -31.8,
+        "lon": -69.14,
+        "depth": 116.0,
+        "t_iso": "2026-10-19T07:21:29Z",
+        "utc_ms": 1792394489000,
+        "place": "SAN JUAN, ARGENTINA",
+        "local": "02:21 AM",
+        "date": "2026-10-19",
+        "utc": "07:21",
+        "tsunami": 0,
+        "catalogs": [
+          "EMSC"
+        ],
+        "duplicate_note": null,
+        "band": "M2-3",
+        "color": "#4dd2ff",
+        "radius": 9.1,
+        "url": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          165.4874,
+          -14.042
+        ]
+      },
+      "properties": {
+        "_id": 54,
+        "mag": 4.9,
+        "mag_alt": null,
+        "lat": -14.042,
+        "lon": 165.4874,
+        "depth": 10.0,
+        "t_iso": "2026-10-19T07:20:52Z",
+        "utc_ms": 1792394452028,
+        "place": "203 km WNW of Port-Olry, Vanuatu",
+        "local": "02:20 AM",
+        "date": "2026-10-19",
+        "utc": "07:20",
+        "tsunami": 0,
+        "catalogs": [
+          "USGS",
+          "EMSC"
+        ],
+        "duplicate_note": "Same physical event reported by USGS + EMSC",
+        "band": "M4-5",
+        "color": "#ffd60a",
+        "radius": 17.2,
+        "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u3b8"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          165.384,
+          -13.9517
+        ]
+      },
+      "properties": {
+        "_id": 55,
+        "mag": 4.9,
+        "mag_alt": null,
+        "lat": -13.9517,
+        "lon": 165.384,
+        "depth": 10.0,
+        "t_iso": "2026-10-19T07:00:02Z",
+        "utc_ms": 1792393202899,
+        "place": "218 km WNW of Port-Olry, Vanuatu",
+        "local": "02:00 AM",
+        "date": "2026-10-19",
+        "utc": "07:00",
+        "tsunami": 0,
+        "catalogs": [
+          "USGS",
+          "EMSC"
+        ],
+        "duplicate_note": "Same physical event reported by USGS + EMSC",
+        "band": "M4-5",
+        "color": "#ffd60a",
+        "radius": 17.2,
+        "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u3b4"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          131.5,
+          34.4
+        ]
+      },
+      "properties": {
+        "_id": 56,
+        "mag": 3.1,
+        "mag_alt": null,
+        "lat": 34.4,
+        "lon": 131.5,
+        "depth": 20.0,
+        "t_iso": "2026-10-19T06:54:30Z",
+        "utc_ms": 1792392870000,
+        "place": "WESTERN HONSHU, JAPAN",
+        "local": "01:54 AM",
+        "date": "2026-10-19",
+        "utc": "06:54",
+        "tsunami": 0,
+        "catalogs": [
+          "EMSC"
+        ],
+        "duplicate_note": null,
+        "band": "M3-4",
+        "color": "#4dd2ff",
+        "radius": 10.9,
+        "url": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -67.94,
+          -29.99
+        ]
+      },
+      "properties": {
+        "_id": 57,
+        "mag": 2.6,
+        "mag_alt": null,
+        "lat": -29.99,
+        "lon": -67.94,
+        "depth": 10.0,
+        "t_iso": "2026-10-19T06:52:14Z",
+        "utc_ms": 1792392734000,
+        "place": "LA RIOJA, ARGENTINA",
+        "local": "01:52 AM",
+        "date": "2026-10-19",
+        "utc": "06:52",
+        "tsunami": 0,
+        "catalogs": [
+          "EMSC"
+        ],
+        "duplicate_note": null,
+        "band": "M2-3",
+        "color": "#4dd2ff",
+        "radius": 9.1,
+        "url": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.7446,
+          7.4802
+        ]
+      },
+      "properties": {
+        "_id": 58,
+        "mag": 3.5,
+        "mag_alt": null,
+        "lat": 7.4802,
+        "lon": -80.7446,
+        "depth": 5.0,
+        "t_iso": "2026-10-19T06:51:44Z",
+        "utc_ms": 1792392704000,
+        "place": "PANAMA",
+        "local": "01:51 AM",
+        "date": "2026-10-19",
+        "utc": "06:51",
+        "tsunami": 0,
+        "catalogs": [
+          "EMSC"
+        ],
+        "duplicate_note": null,
+        "band": "M3-4",
+        "color": "#4dd2ff",
+        "radius": 12.2,
+        "url": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -68.59,
+          -21.54
+        ]
+      },
+      "properties": {
+        "_id": 59,
+        "mag": 2.6,
+        "mag_alt": null,
+        "lat": -21.54,
+        "lon": -68.59,
+        "depth": 133.7,
+        "t_iso": "2026-10-19T06:40:59Z",
+        "utc_ms": 1792392059000,
+        "place": "ANTOFAGASTA, CHILE",
+        "local": "01:40 AM",
+        "date": "2026-10-19",
+        "utc": "06:40",
+        "tsunami": 0,
+        "catalogs": [
+          "EMSC"
+        ],
+        "duplicate_note": null,
+        "band": "M2-3",
+        "color": "#4dd2ff",
+        "radius": 9.1,
+        "url": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -117.255,
+          34.049
+        ]
+      },
+      "properties": {
+        "_id": 60,
+        "mag": 2.5,
+        "mag_alt": null,
+        "lat": 34.049,
+        "lon": -117.255,
+        "depth": 15.45,
+        "t_iso": "2026-10-19T06:36:40Z",
+        "utc_ms": 1792391800550,
+        "place": "1 km E of Loma Linda, CA",
+        "local": "01:36 AM",
+        "date": "2026-10-19",
+        "utc": "06:36",
+        "tsunami": 0,
+        "catalogs": [
+          "USGS",
+          "EMSC"
+        ],
+        "duplicate_note": "Same physical event reported by USGS + EMSC",
+        "band": "M2-3",
+        "color": "#4dd2ff",
+        "radius": 8.8,
+        "url": "https://earthquake.usgs.gov/earthquakes/eventpage/ci41349255"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          93.462,
+          23.564
+        ]
+      },
+      "properties": {
+        "_id": 61,
+        "mag": 4.0,
+        "mag_alt": null,
+        "lat": 23.564,
+        "lon": 93.462,
+        "depth": 37.0,
+        "t_iso": "2026-10-19T06:29:45Z",
+        "utc_ms": 1792391385000,
+        "place": "MYANMAR-INDIA BORDER REGION",
+        "local": "01:29 AM",
+        "date": "2026-10-19",
+        "utc": "06:29",
+        "tsunami": 0,
+        "catalogs": [
+          "EMSC"
+        ],
+        "duplicate_note": null,
+        "band": "M4-5",
+        "color": "#ffd60a",
+        "radius": 14.0,
+        "url": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          37.1453,
+          37.4768
+        ]
+      },
+      "properties": {
+        "_id": 62,
+        "mag": 2.7,
+        "mag_alt": null,
+        "lat": 37.4768,
+        "lon": 37.1453,
+        "depth": 14.1,
+        "t_iso": "2026-10-19T06:25:52Z",
+        "utc_ms": 1792391152000,
+        "place": "CENTRAL TURKEY",
+        "local": "01:25 AM",
+        "date": "2026-10-19",
+        "utc": "06:25",
+        "tsunami": 0,
+        "catalogs": [
+          "EMSC"
+        ],
+        "duplicate_note": null,
+        "band": "M2-3",
+        "color": "#4dd2ff",
+        "radius": 9.5,
+        "url": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          87.192,
+          28.194
+        ]
+      },
+      "properties": {
+        "_id": 63,
+        "mag": 3.3,
+        "mag_alt": null,
+        "lat": 28.194,
+        "lon": 87.192,
+        "depth": 30.0,
+        "t_iso": "2026-10-19T06:21:52Z",
+        "utc_ms": 1792390912000,
+        "place": "WESTERN XIZANG",
+        "local": "01:21 AM",
+        "date": "2026-10-19",
+        "utc": "06:21",
+        "tsunami": 0,
+        "catalogs": [
+          "EMSC"
+        ],
+        "duplicate_note": null,
+        "band": "M3-4",
+        "color": "#4dd2ff",
+        "radius": 11.5,
+        "url": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -90.415,
+          13.451
+        ]
+      },
+      "properties": {
+        "_id": 64,
+        "mag": 3.2,
+        "mag_alt": null,
+        "lat": 13.451,
+        "lon": -90.415,
+        "depth": 25.0,
+        "t_iso": "2026-10-19T06:21:44Z",
+        "utc_ms": 1792390904000,
+        "place": "OFFSHORE GUATEMALA",
+        "local": "01:21 AM",
+        "date": "2026-10-19",
+        "utc": "06:21",
+        "tsunami": 0,
+        "catalogs": [
+          "EMSC"
+        ],
+        "duplicate_note": null,
+        "band": "M3-4",
+        "color": "#4dd2ff",
+        "radius": 11.2,
+        "url": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -83.2198,
+          8.0267
+        ]
+      },
+      "properties": {
+        "_id": 65,
+        "mag": 2.7,
+        "mag_alt": null,
+        "lat": 8.0267,
+        "lon": -83.2198,
+        "depth": 34.0,
+        "t_iso": "2026-10-19T06:18:09Z",
+        "utc_ms": 1792390689000,
+        "place": "COSTA RICA",
+        "local": "01:18 AM",
+        "date": "2026-10-19",
+        "utc": "06:18",
+        "tsunami": 0,
+        "catalogs": [
+          "EMSC"
+        ],
+        "duplicate_note": null,
+        "band": "M2-3",
+        "color": "#4dd2ff",
+        "radius": 9.5,
+        "url": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          129.9289,
+          -6.3365
+        ]
+      },
+      "properties": {
+        "_id": 66,
+        "mag": 4.5,
+        "mag_alt": null,
+        "lat": -6.3365,
+        "lon": 129.9289,
+        "depth": 157.774,
+        "t_iso": "2026-10-19T06:15:13Z",
+        "utc_ms": 1792390513394,
+        "place": "Banda Sea",
+        "local": "01:15 AM",
+        "date": "2026-10-19",
+        "utc": "06:15",
+        "tsunami": 0,
+        "catalogs": [
+          "USGS",
+          "EMSC"
+        ],
+        "duplicate_note": "Same physical event reported by USGS + EMSC",
+        "band": "M4-5",
+        "color": "#ffd60a",
+        "radius": 15.8,
+        "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u3ar"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -68.98,
+          -22.74
+        ]
+      },
+      "properties": {
+        "_id": 67,
+        "mag": 2.7,
+        "mag_alt": null,
+        "lat": -22.74,
+        "lon": -68.98,
+        "depth": 97.4,
+        "t_iso": "2026-10-19T05:56:37Z",
+        "utc_ms": 1792389397000,
+        "place": "ANTOFAGASTA, CHILE",
+        "local": "12:56 AM",
+        "date": "2026-10-19",
+        "utc": "05:56",
+        "tsunami": 0,
+        "catalogs": [
+          "EMSC"
+        ],
+        "duplicate_note": null,
+        "band": "M2-3",
+        "color": "#4dd2ff",
+        "radius": 9.5,
+        "url": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -81.4562,
+          7.7012
+        ]
+      },
+      "properties": {
+        "_id": 68,
+        "mag": 3.5,
+        "mag_alt": null,
+        "lat": 7.7012,
+        "lon": -81.4562,
+        "depth": 6.0,
+        "t_iso": "2026-10-19T05:53:16Z",
+        "utc_ms": 1792389196000,
+        "place": "PANAMA",
+        "local": "12:53 AM",
+        "date": "2026-10-19",
+        "utc": "05:53",
+        "tsunami": 0,
+        "catalogs": [
+          "EMSC"
+        ],
+        "duplicate_note": null,
+        "band": "M3-4",
+        "color": "#4dd2ff",
+        "radius": 12.2,
+        "url": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -68.54,
+          -20.93
+        ]
+      },
+      "properties": {
+        "_id": 69,
+        "mag": 3.2,
+        "mag_alt": null,
+        "lat": -20.93,
+        "lon": -68.54,
+        "depth": 96.4,
+        "t_iso": "2026-10-19T05:47:28Z",
+        "utc_ms": 1792388848000,
+        "place": "ANTOFAGASTA, CHILE",
+        "local": "12:47 AM",
+        "date": "2026-10-19",
+        "utc": "05:47",
+        "tsunami": 0,
+        "catalogs": [
+          "EMSC"
+        ],
+        "duplicate_note": null,
+        "band": "M3-4",
+        "color": "#4dd2ff",
+        "radius": 11.2,
+        "url": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.49,
+          -23.22
+        ]
+      },
+      "properties": {
+        "_id": 70,
+        "mag": 2.7,
+        "mag_alt": null,
+        "lat": -23.22,
+        "lon": -69.49,
+        "depth": 70.0,
+        "t_iso": "2026-10-19T05:39:30Z",
+        "utc_ms": 1792388370000,
+        "place": "ANTOFAGASTA, CHILE",
+        "local": "12:39 AM",
+        "date": "2026-10-19",
+        "utc": "05:39",
+        "tsunami": 0,
+        "catalogs": [
+          "EMSC"
+        ],
+        "duplicate_note": null,
+        "band": "M2-3",
+        "color": "#4dd2ff",
+        "radius": 9.5,
+        "url": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -86.4815,
+          11.1229
+        ]
+      },
+      "properties": {
+        "_id": 71,
+        "mag": 4.9,
+        "mag_alt": null,
+        "lat": 11.1229,
+        "lon": -86.4815,
+        "depth": 44.017,
+        "t_iso": "2026-10-19T05:18:36Z",
+        "utc_ms": 1792387116003,
+        "place": "68 km WSW of San Juan del Sur, Nicaragua",
+        "local": "12:18 AM",
+        "date": "2026-10-19",
+        "utc": "05:18",
+        "tsunami": 0,
+        "catalogs": [
+          "USGS",
+          "EMSC"
+        ],
+        "duplicate_note": "Same physical event reported by USGS + EMSC",
+        "band": "M4-5",
+        "color": "#ffd60a",
+        "radius": 17.2,
+        "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u3a8"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -160.218,
+          55.817
+        ]
+      },
+      "properties": {
+        "_id": 72,
+        "mag": 3.3,
+        "mag_alt": null,
+        "lat": 55.817,
+        "lon": -160.218,
+        "depth": 176.2,
+        "t_iso": "2026-10-19T05:10:10Z",
+        "utc_ms": 1792386610649,
+        "place": "46 km WSW of Ivanof Bay, Alaska",
+        "local": "12:10 AM",
+        "date": "2026-10-19",
+        "utc": "05:10",
+        "tsunami": 0,
+        "catalogs": [
+          "USGS",
+          "EMSC"
+        ],
+        "duplicate_note": "Same physical event reported by USGS + EMSC",
+        "band": "M3-4",
+        "color": "#4dd2ff",
+        "radius": 11.5,
+        "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026urwswy"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -168.422,
+          51.5152
+        ]
+      },
+      "properties": {
+        "_id": 73,
+        "mag": 4.0,
+        "mag_alt": null,
+        "lat": 51.5152,
+        "lon": -168.422,
+        "depth": 10.0,
+        "t_iso": "2026-10-19T05:08:40Z",
+        "utc_ms": 1792386520403,
+        "place": "161 km S of Nikolski, Alaska",
+        "local": "12:08 AM",
+        "date": "2026-10-19",
+        "utc": "05:08",
+        "tsunami": 0,
+        "catalogs": [
+          "USGS",
+          "EMSC"
+        ],
+        "duplicate_note": "Same physical event reported by USGS + EMSC",
+        "band": "M4-5",
+        "color": "#ffd60a",
+        "radius": 14.0,
+        "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u3a4"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -67.17,
+          -23.82
+        ]
+      },
+      "properties": {
+        "_id": 74,
+        "mag": 3.0,
+        "mag_alt": null,
+        "lat": -23.82,
+        "lon": -67.17,
+        "depth": 237.9,
+        "t_iso": "2026-10-19T05:04:57Z",
+        "utc_ms": 1792386297000,
+        "place": "SALTA, ARGENTINA",
+        "local": "12:04 AM",
+        "date": "2026-10-19",
+        "utc": "05:04",
+        "tsunami": 0,
+        "catalogs": [
+          "EMSC"
+        ],
+        "duplicate_note": null,
+        "band": "M3-4",
+        "color": "#4dd2ff",
+        "radius": 10.5,
+        "url": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          96.092,
+          26.756
+        ]
+      },
+      "properties": {
+        "_id": 75,
+        "mag": 3.6,
+        "mag_alt": null,
+        "lat": 26.756,
+        "lon": 96.092,
+        "depth": 124.0,
+        "t_iso": "2026-10-19T05:04:32Z",
+        "utc_ms": 1792386272000,
+        "place": "MYANMAR",
+        "local": "12:04 AM",
+        "date": "2026-10-19",
+        "utc": "05:04",
+        "tsunami": 0,
+        "catalogs": [
+          "EMSC"
+        ],
+        "duplicate_note": null,
+        "band": "M3-4",
+        "color": "#4dd2ff",
+        "radius": 12.6,
+        "url": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -67.4107,
+          18.1555
+        ]
+      },
+      "properties": {
+        "_id": 76,
+        "mag": 2.91,
+        "mag_alt": null,
+        "lat": 18.1555,
+        "lon": -67.4106666666667,
+        "depth": 5.93,
+        "t_iso": "2026-10-19T04:57:59Z",
+        "utc_ms": 1792385879150,
+        "place": "25 km WNW of Puerto Real, Puerto Rico",
+        "local": "11:57 PM",
+        "date": "2026-10-18",
+        "utc": "04:57",
+        "tsunami": 0,
+        "catalogs": [
+          "USGS",
+          "EMSC"
+        ],
+        "duplicate_note": "Same physical event reported by USGS + EMSC",
+        "band": "M2-3",
+        "color": "#4dd2ff",
+        "radius": 10.2,
+        "url": "https://earthquake.usgs.gov/earthquakes/eventpage/pr71537203"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -68.64,
+          -22.16
+        ]
+      },
+      "properties": {
+        "_id": 77,
+        "mag": 2.6,
+        "mag_alt": null,
+        "lat": -22.16,
+        "lon": -68.64,
+        "depth": 112.7,
+        "t_iso": "2026-10-19T04:55:36Z",
+        "utc_ms": 1792385736000,
+        "place": "ANTOFAGASTA, CHILE",
+        "local": "11:55 PM",
+        "date": "2026-10-18",
+        "utc": "04:55",
+        "tsunami": 0,
+        "catalogs": [
+          "EMSC"
+        ],
+        "duplicate_note": null,
+        "band": "M2-3",
+        "color": "#4dd2ff",
+        "radius": 9.1,
+        "url": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -156.187,
+          56.656
+        ]
+      },
+      "properties": {
+        "_id": 78,
+        "mag": 2.7,
+        "mag_alt": null,
+        "lat": 56.656,
+        "lon": -156.187,
+        "depth": 13.1,
+        "t_iso": "2026-10-19T04:51:34Z",
+        "utc_ms": 1792385494510,
+        "place": "120 km SE of Ugashik, Alaska",
+        "local": "11:51 PM",
+        "date": "2026-10-18",
+        "utc": "04:51",
+        "tsunami": 0,
+        "catalogs": [
+          "USGS"
+        ],
+        "duplicate_note": null,
+        "band": "M2-3",
+        "color": "#4dd2ff",
+        "radius": 9.5,
+        "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026urwcep"
+      }
+    },
     {
       "type": "Feature",
       "geometry": {
@@ -161,7 +2799,7 @@
         ]
       },
       "properties": {
-        "_id": 0,
+        "_id": 79,
         "mag": 2.6,
         "mag_alt": null,
         "lat": 13.599,
@@ -194,7 +2832,7 @@
         ]
       },
       "properties": {
-        "_id": 1,
+        "_id": 80,
         "mag": 3.5,
         "mag_alt": null,
         "lat": 7.5955,
@@ -227,7 +2865,7 @@
         ]
       },
       "properties": {
-        "_id": 2,
+        "_id": 81,
         "mag": 2.9,
         "mag_alt": null,
         "lat": 8.3968,
@@ -260,7 +2898,7 @@
         ]
       },
       "properties": {
-        "_id": 3,
+        "_id": 82,
         "mag": 3.5,
         "mag_alt": null,
         "lat": 7.6036,
@@ -293,7 +2931,7 @@
         ]
       },
       "properties": {
-        "_id": 4,
+        "_id": 83,
         "mag": 2.8,
         "mag_alt": null,
         "lat": -2.1,
@@ -326,7 +2964,7 @@
         ]
       },
       "properties": {
-        "_id": 5,
+        "_id": 84,
         "mag": 3.4,
         "mag_alt": null,
         "lat": 7.8212,
@@ -359,7 +2997,7 @@
         ]
       },
       "properties": {
-        "_id": 6,
+        "_id": 85,
         "mag": 3.4,
         "mag_alt": null,
         "lat": 37.1767,
@@ -387,17 +3025,17 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          20.5705,
-          38.7199
+          20.59,
+          38.7
         ]
       },
       "properties": {
-        "_id": 7,
-        "mag": 2.6,
+        "_id": 86,
+        "mag": 2.7,
         "mag_alt": null,
-        "lat": 38.7199,
-        "lon": 20.5705,
-        "depth": 10.9,
+        "lat": 38.7,
+        "lon": 20.59,
+        "depth": 6.0,
         "t_iso": "2026-10-19T03:14:50Z",
         "utc_ms": 1792379690000,
         "place": "GREECE",
@@ -411,7 +3049,7 @@
         "duplicate_note": null,
         "band": "M2-3",
         "color": "#4dd2ff",
-        "radius": 9.1,
+        "radius": 9.5,
         "url": ""
       }
     },
@@ -425,7 +3063,7 @@
         ]
       },
       "properties": {
-        "_id": 8,
+        "_id": 87,
         "mag": 3.6,
         "mag_alt": null,
         "lat": 7.1807,
@@ -458,7 +3096,7 @@
         ]
       },
       "properties": {
-        "_id": 9,
+        "_id": 88,
         "mag": 3.8,
         "mag_alt": null,
         "lat": 7.1642,
@@ -491,7 +3129,7 @@
         ]
       },
       "properties": {
-        "_id": 10,
+        "_id": 89,
         "mag": 3.3,
         "mag_alt": null,
         "lat": -8.33,
@@ -524,18 +3162,18 @@
         ]
       },
       "properties": {
-        "_id": 11,
+        "_id": 90,
         "mag": 3.5,
         "mag_alt": null,
         "lat": 38.0608,
         "lon": 24.0834,
         "depth": 11.0,
-        "t_iso": "2026-10-19T02:39:59Z",
-        "utc_ms": 1792377599000,
+        "t_iso": "2026-10-19T02:40:00Z",
+        "utc_ms": 1792377600000,
         "place": "AEGEAN SEA",
-        "local": "09:39 PM",
+        "local": "09:40 PM",
         "date": "2026-10-18",
-        "utc": "02:39",
+        "utc": "02:40",
         "tsunami": 0,
         "catalogs": [
           "EMSC"
@@ -557,7 +3195,7 @@
         ]
       },
       "properties": {
-        "_id": 12,
+        "_id": 91,
         "mag": 3.5,
         "mag_alt": null,
         "lat": -32.0,
@@ -590,7 +3228,7 @@
         ]
       },
       "properties": {
-        "_id": 13,
+        "_id": 92,
         "mag": 3.8,
         "mag_alt": null,
         "lat": 14.93,
@@ -623,7 +3261,7 @@
         ]
       },
       "properties": {
-        "_id": 14,
+        "_id": 93,
         "mag": 3.3,
         "mag_alt": null,
         "lat": -8.69,
@@ -656,8 +3294,8 @@
         ]
       },
       "properties": {
-        "_id": 15,
-        "mag": 2.6,
+        "_id": 94,
+        "mag": 2.5,
         "mag_alt": null,
         "lat": 36.6838,
         "lon": 25.7176,
@@ -675,7 +3313,7 @@
         "duplicate_note": null,
         "band": "M2-3",
         "color": "#4dd2ff",
-        "radius": 9.1,
+        "radius": 8.8,
         "url": ""
       }
     },
@@ -689,7 +3327,7 @@
         ]
       },
       "properties": {
-        "_id": 16,
+        "_id": 95,
         "mag": 2.5,
         "mag_alt": null,
         "lat": -8.26,
@@ -722,7 +3360,7 @@
         ]
       },
       "properties": {
-        "_id": 17,
+        "_id": 96,
         "mag": 3.7,
         "mag_alt": null,
         "lat": 7.5596,
@@ -755,7 +3393,7 @@
         ]
       },
       "properties": {
-        "_id": 18,
+        "_id": 97,
         "mag": 3.0,
         "mag_alt": null,
         "lat": -20.88,
@@ -788,7 +3426,7 @@
         ]
       },
       "properties": {
-        "_id": 19,
+        "_id": 98,
         "mag": 3.7,
         "mag_alt": null,
         "lat": 5.55,
@@ -821,7 +3459,7 @@
         ]
       },
       "properties": {
-        "_id": 20,
+        "_id": 99,
         "mag": 2.7,
         "mag_alt": null,
         "lat": -22.68,
@@ -849,12 +3487,46 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
+          -155.8175,
+          19.833
+        ]
+      },
+      "properties": {
+        "_id": 100,
+        "mag": 2.8,
+        "mag_alt": null,
+        "lat": 19.833,
+        "lon": -155.8175,
+        "depth": 32.539,
+        "t_iso": "2026-10-19T01:49:06Z",
+        "utc_ms": 1792374546081,
+        "place": "12 km SSW of Waikoloa, Hawaii",
+        "local": "08:49 PM",
+        "date": "2026-10-18",
+        "utc": "01:49",
+        "tsunami": 0,
+        "catalogs": [
+          "USGS",
+          "EMSC"
+        ],
+        "duplicate_note": "Same physical event reported by USGS + EMSC",
+        "band": "M2-3",
+        "color": "#4dd2ff",
+        "radius": 9.8,
+        "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u39d"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
           -67.29,
           -23.74
         ]
       },
       "properties": {
-        "_id": 21,
+        "_id": 101,
         "mag": 3.2,
         "mag_alt": null,
         "lat": -23.74,
@@ -887,7 +3559,7 @@
         ]
       },
       "properties": {
-        "_id": 22,
+        "_id": 102,
         "mag": 2.5,
         "mag_alt": null,
         "lat": 31.9605,
@@ -921,7 +3593,7 @@
         ]
       },
       "properties": {
-        "_id": 23,
+        "_id": 103,
         "mag": 2.5,
         "mag_alt": null,
         "lat": -21.55,
@@ -954,7 +3626,7 @@
         ]
       },
       "properties": {
-        "_id": 24,
+        "_id": 104,
         "mag": 4.2,
         "mag_alt": null,
         "lat": 10.434,
@@ -987,7 +3659,7 @@
         ]
       },
       "properties": {
-        "_id": 25,
+        "_id": 105,
         "mag": 3.7,
         "mag_alt": null,
         "lat": 7.445,
@@ -1020,7 +3692,7 @@
         ]
       },
       "properties": {
-        "_id": 26,
+        "_id": 106,
         "mag": 2.7,
         "mag_alt": null,
         "lat": 31.979,
@@ -1054,7 +3726,7 @@
         ]
       },
       "properties": {
-        "_id": 27,
+        "_id": 107,
         "mag": 4.0,
         "mag_alt": null,
         "lat": 13.895,
@@ -1087,7 +3759,7 @@
         ]
       },
       "properties": {
-        "_id": 28,
+        "_id": 108,
         "mag": 2.9,
         "mag_alt": null,
         "lat": -7.99,
@@ -1120,7 +3792,7 @@
         ]
       },
       "properties": {
-        "_id": 29,
+        "_id": 109,
         "mag": 3.3,
         "mag_alt": null,
         "lat": -22.61,
@@ -1153,7 +3825,7 @@
         ]
       },
       "properties": {
-        "_id": 30,
+        "_id": 110,
         "mag": 2.8,
         "mag_alt": null,
         "lat": -31.23,
@@ -1186,7 +3858,7 @@
         ]
       },
       "properties": {
-        "_id": 31,
+        "_id": 111,
         "mag": 3.6,
         "mag_alt": null,
         "lat": 7.391,
@@ -1219,7 +3891,7 @@
         ]
       },
       "properties": {
-        "_id": 32,
+        "_id": 112,
         "mag": 4.2,
         "mag_alt": null,
         "lat": 6.9735,
@@ -1252,7 +3924,7 @@
         ]
       },
       "properties": {
-        "_id": 33,
+        "_id": 113,
         "mag": 4.4,
         "mag_alt": null,
         "lat": 21.1202,
@@ -1286,7 +3958,7 @@
         ]
       },
       "properties": {
-        "_id": 34,
+        "_id": 114,
         "mag": 4.2,
         "mag_alt": null,
         "lat": 3.95,
@@ -1319,7 +3991,7 @@
         ]
       },
       "properties": {
-        "_id": 35,
+        "_id": 115,
         "mag": 3.8,
         "mag_alt": null,
         "lat": 7.4433,
@@ -1352,7 +4024,7 @@
         ]
       },
       "properties": {
-        "_id": 36,
+        "_id": 116,
         "mag": 4.4,
         "mag_alt": null,
         "lat": -28.3596,
@@ -1386,7 +4058,7 @@
         ]
       },
       "properties": {
-        "_id": 37,
+        "_id": 117,
         "mag": 3.3,
         "mag_alt": null,
         "lat": -9.61,
@@ -1419,7 +4091,7 @@
         ]
       },
       "properties": {
-        "_id": 38,
+        "_id": 118,
         "mag": 2.5,
         "mag_alt": null,
         "lat": -24.03,
@@ -1452,7 +4124,7 @@
         ]
       },
       "properties": {
-        "_id": 39,
+        "_id": 119,
         "mag": 2.8,
         "mag_alt": null,
         "lat": -8.39,
@@ -1485,7 +4157,7 @@
         ]
       },
       "properties": {
-        "_id": 40,
+        "_id": 120,
         "mag": 4.0,
         "mag_alt": null,
         "lat": -16.26,
@@ -1518,7 +4190,7 @@
         ]
       },
       "properties": {
-        "_id": 41,
+        "_id": 121,
         "mag": 3.1,
         "mag_alt": null,
         "lat": 16.936,
@@ -1551,7 +4223,7 @@
         ]
       },
       "properties": {
-        "_id": 42,
+        "_id": 122,
         "mag": 3.5,
         "mag_alt": null,
         "lat": 7.5705,
@@ -1584,7 +4256,7 @@
         ]
       },
       "properties": {
-        "_id": 43,
+        "_id": 123,
         "mag": 4.0,
         "mag_alt": null,
         "lat": -39.699,
@@ -1617,7 +4289,7 @@
         ]
       },
       "properties": {
-        "_id": 44,
+        "_id": 124,
         "mag": 2.7,
         "mag_alt": null,
         "lat": -23.93,
@@ -1650,7 +4322,7 @@
         ]
       },
       "properties": {
-        "_id": 45,
+        "_id": 125,
         "mag": 4.5,
         "mag_alt": null,
         "lat": -20.9271,
@@ -1684,7 +4356,7 @@
         ]
       },
       "properties": {
-        "_id": 46,
+        "_id": 126,
         "mag": 3.5,
         "mag_alt": null,
         "lat": 17.411,
@@ -1717,7 +4389,7 @@
         ]
       },
       "properties": {
-        "_id": 47,
+        "_id": 127,
         "mag": 2.9,
         "mag_alt": null,
         "lat": 26.466,
@@ -1750,7 +4422,7 @@
         ]
       },
       "properties": {
-        "_id": 48,
+        "_id": 128,
         "mag": 5.1,
         "mag_alt": null,
         "lat": -5.4567,
@@ -1784,7 +4456,7 @@
         ]
       },
       "properties": {
-        "_id": 49,
+        "_id": 129,
         "mag": 3.8,
         "mag_alt": null,
         "lat": 15.654,
@@ -1817,7 +4489,7 @@
         ]
       },
       "properties": {
-        "_id": 50,
+        "_id": 130,
         "mag": 3.4,
         "mag_alt": null,
         "lat": 22.435,
@@ -1850,7 +4522,7 @@
         ]
       },
       "properties": {
-        "_id": 51,
+        "_id": 131,
         "mag": 2.5,
         "mag_alt": null,
         "lat": 38.5112,
@@ -1884,7 +4556,7 @@
         ]
       },
       "properties": {
-        "_id": 52,
+        "_id": 132,
         "mag": 4.7,
         "mag_alt": null,
         "lat": -5.6049,
@@ -1918,7 +4590,7 @@
         ]
       },
       "properties": {
-        "_id": 53,
+        "_id": 133,
         "mag": 3.4,
         "mag_alt": null,
         "lat": -32.77,
@@ -1951,7 +4623,7 @@
         ]
       },
       "properties": {
-        "_id": 54,
+        "_id": 134,
         "mag": 3.5,
         "mag_alt": null,
         "lat": 7.5392,
@@ -1984,7 +4656,7 @@
         ]
       },
       "properties": {
-        "_id": 55,
+        "_id": 135,
         "mag": 3.0,
         "mag_alt": null,
         "lat": 25.389,
@@ -2017,7 +4689,7 @@
         ]
       },
       "properties": {
-        "_id": 56,
+        "_id": 136,
         "mag": 4.1,
         "mag_alt": null,
         "lat": 2.41,
@@ -2050,7 +4722,7 @@
         ]
       },
       "properties": {
-        "_id": 57,
+        "_id": 137,
         "mag": 3.9,
         "mag_alt": null,
         "lat": 10.913,
@@ -2083,7 +4755,7 @@
         ]
       },
       "properties": {
-        "_id": 58,
+        "_id": 138,
         "mag": 3.1,
         "mag_alt": null,
         "lat": 16.802,
@@ -2116,7 +4788,7 @@
         ]
       },
       "properties": {
-        "_id": 59,
+        "_id": 139,
         "mag": 2.8,
         "mag_alt": null,
         "lat": 8.2747,
@@ -2149,7 +4821,7 @@
         ]
       },
       "properties": {
-        "_id": 60,
+        "_id": 140,
         "mag": 3.4,
         "mag_alt": null,
         "lat": 25.521,
@@ -2182,7 +4854,7 @@
         ]
       },
       "properties": {
-        "_id": 61,
+        "_id": 141,
         "mag": 3.5,
         "mag_alt": null,
         "lat": 13.775,
@@ -2215,7 +4887,7 @@
         ]
       },
       "properties": {
-        "_id": 62,
+        "_id": 142,
         "mag": 2.9,
         "mag_alt": null,
         "lat": -0.85,
@@ -2248,7 +4920,7 @@
         ]
       },
       "properties": {
-        "_id": 63,
+        "_id": 143,
         "mag": 2.8,
         "mag_alt": null,
         "lat": -21.88,
@@ -2281,7 +4953,7 @@
         ]
       },
       "properties": {
-        "_id": 64,
+        "_id": 144,
         "mag": 3.5,
         "mag_alt": null,
         "lat": 7.4264,
@@ -2314,7 +4986,7 @@
         ]
       },
       "properties": {
-        "_id": 65,
+        "_id": 145,
         "mag": 2.7,
         "mag_alt": null,
         "lat": 19.5033,
@@ -2348,7 +5020,7 @@
         ]
       },
       "properties": {
-        "_id": 66,
+        "_id": 146,
         "mag": 4.0,
         "mag_alt": null,
         "lat": 8.4468,
@@ -2381,7 +5053,7 @@
         ]
       },
       "properties": {
-        "_id": 67,
+        "_id": 147,
         "mag": 2.8,
         "mag_alt": null,
         "lat": 37.2284,
@@ -2414,7 +5086,7 @@
         ]
       },
       "properties": {
-        "_id": 68,
+        "_id": 148,
         "mag": 3.7,
         "mag_alt": null,
         "lat": 16.724,
@@ -2447,7 +5119,7 @@
         ]
       },
       "properties": {
-        "_id": 69,
+        "_id": 149,
         "mag": 2.5,
         "mag_alt": null,
         "lat": -23.42,
@@ -2480,7 +5152,7 @@
         ]
       },
       "properties": {
-        "_id": 70,
+        "_id": 150,
         "mag": 2.5,
         "mag_alt": null,
         "lat": -19.31,
@@ -2513,7 +5185,7 @@
         ]
       },
       "properties": {
-        "_id": 71,
+        "_id": 151,
         "mag": 3.1,
         "mag_alt": null,
         "lat": 19.095,
@@ -2546,7 +5218,7 @@
         ]
       },
       "properties": {
-        "_id": 72,
+        "_id": 152,
         "mag": 2.8,
         "mag_alt": null,
         "lat": -26.55,
@@ -2579,7 +5251,7 @@
         ]
       },
       "properties": {
-        "_id": 73,
+        "_id": 153,
         "mag": 4.4,
         "mag_alt": null,
         "lat": -7.3545,
@@ -2613,7 +5285,7 @@
         ]
       },
       "properties": {
-        "_id": 74,
+        "_id": 154,
         "mag": 3.9,
         "mag_alt": null,
         "lat": 8.8323,
@@ -2646,7 +5318,7 @@
         ]
       },
       "properties": {
-        "_id": 75,
+        "_id": 155,
         "mag": 3.0,
         "mag_alt": null,
         "lat": 19.1788,
@@ -2680,7 +5352,7 @@
         ]
       },
       "properties": {
-        "_id": 76,
+        "_id": 156,
         "mag": 3.5,
         "mag_alt": null,
         "lat": 8.3175,
@@ -2713,7 +5385,7 @@
         ]
       },
       "properties": {
-        "_id": 77,
+        "_id": 157,
         "mag": 3.1,
         "mag_alt": null,
         "lat": -37.3271,
@@ -2746,7 +5418,7 @@
         ]
       },
       "properties": {
-        "_id": 78,
+        "_id": 158,
         "mag": 2.5,
         "mag_alt": null,
         "lat": 31.9755,
@@ -2780,7 +5452,7 @@
         ]
       },
       "properties": {
-        "_id": 79,
+        "_id": 159,
         "mag": 3.2,
         "mag_alt": null,
         "lat": 16.753,
@@ -2813,7 +5485,7 @@
         ]
       },
       "properties": {
-        "_id": 80,
+        "_id": 160,
         "mag": 3.8,
         "mag_alt": null,
         "lat": 7.5512,
@@ -2846,7 +5518,7 @@
         ]
       },
       "properties": {
-        "_id": 81,
+        "_id": 161,
         "mag": 3.2,
         "mag_alt": null,
         "lat": -38.2363,
@@ -2879,7 +5551,7 @@
         ]
       },
       "properties": {
-        "_id": 82,
+        "_id": 162,
         "mag": 3.3,
         "mag_alt": null,
         "lat": 17.095,
@@ -2912,7 +5584,7 @@
         ]
       },
       "properties": {
-        "_id": 83,
+        "_id": 163,
         "mag": 5.3,
         "mag_alt": null,
         "lat": -21.5159,
@@ -2946,7 +5618,7 @@
         ]
       },
       "properties": {
-        "_id": 84,
+        "_id": 164,
         "mag": 2.9,
         "mag_alt": null,
         "lat": 31.66,
@@ -2980,7 +5652,7 @@
         ]
       },
       "properties": {
-        "_id": 85,
+        "_id": 165,
         "mag": 3.2,
         "mag_alt": null,
         "lat": 16.78,
@@ -3013,7 +5685,7 @@
         ]
       },
       "properties": {
-        "_id": 86,
+        "_id": 166,
         "mag": 2.8,
         "mag_alt": null,
         "lat": 29.094,
@@ -3047,7 +5719,7 @@
         ]
       },
       "properties": {
-        "_id": 87,
+        "_id": 167,
         "mag": 3.6,
         "mag_alt": null,
         "lat": -8.35,
@@ -3080,7 +5752,7 @@
         ]
       },
       "properties": {
-        "_id": 88,
+        "_id": 168,
         "mag": 3.0,
         "mag_alt": null,
         "lat": 26.212,
@@ -3113,7 +5785,7 @@
         ]
       },
       "properties": {
-        "_id": 89,
+        "_id": 169,
         "mag": 4.0,
         "mag_alt": null,
         "lat": 15.834,
@@ -3146,7 +5818,7 @@
         ]
       },
       "properties": {
-        "_id": 90,
+        "_id": 170,
         "mag": 3.1,
         "mag_alt": null,
         "lat": 1.55,
@@ -3179,7 +5851,7 @@
         ]
       },
       "properties": {
-        "_id": 91,
+        "_id": 171,
         "mag": 3.7,
         "mag_alt": null,
         "lat": -35.5882,
@@ -3212,7 +5884,7 @@
         ]
       },
       "properties": {
-        "_id": 92,
+        "_id": 172,
         "mag": 3.3,
         "mag_alt": null,
         "lat": 12.64,
@@ -3245,7 +5917,7 @@
         ]
       },
       "properties": {
-        "_id": 93,
+        "_id": 173,
         "mag": 3.4,
         "mag_alt": null,
         "lat": 19.1703,
@@ -3279,7 +5951,7 @@
         ]
       },
       "properties": {
-        "_id": 94,
+        "_id": 174,
         "mag": 2.7,
         "mag_alt": null,
         "lat": 19.1778,
@@ -3313,7 +5985,7 @@
         ]
       },
       "properties": {
-        "_id": 95,
+        "_id": 175,
         "mag": 2.5,
         "mag_alt": null,
         "lat": 9.7782,
@@ -3346,7 +6018,7 @@
         ]
       },
       "properties": {
-        "_id": 96,
+        "_id": 176,
         "mag": 3.6,
         "mag_alt": null,
         "lat": -1.64,
@@ -3379,7 +6051,7 @@
         ]
       },
       "properties": {
-        "_id": 97,
+        "_id": 177,
         "mag": 2.7,
         "mag_alt": null,
         "lat": -8.31,
@@ -3412,7 +6084,7 @@
         ]
       },
       "properties": {
-        "_id": 98,
+        "_id": 178,
         "mag": 2.5,
         "mag_alt": null,
         "lat": -19.12,
@@ -3445,7 +6117,7 @@
         ]
       },
       "properties": {
-        "_id": 99,
+        "_id": 179,
         "mag": 2.7,
         "mag_alt": null,
         "lat": -35.37,
@@ -3478,7 +6150,7 @@
         ]
       },
       "properties": {
-        "_id": 100,
+        "_id": 180,
         "mag": 3.1,
         "mag_alt": null,
         "lat": -8.35,
@@ -3511,7 +6183,7 @@
         ]
       },
       "properties": {
-        "_id": 101,
+        "_id": 181,
         "mag": 2.7,
         "mag_alt": null,
         "lat": 35.5051,
@@ -3539,19 +6211,19 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          21.6261,
-          37.8419
+          21.62,
+          37.84
         ]
       },
       "properties": {
-        "_id": 102,
+        "_id": 182,
         "mag": 2.5,
         "mag_alt": null,
-        "lat": 37.8419,
-        "lon": 21.6261,
-        "depth": 19.5,
-        "t_iso": "2026-10-18T17:36:33Z",
-        "utc_ms": 1792344993000,
+        "lat": 37.84,
+        "lon": 21.62,
+        "depth": 21.0,
+        "t_iso": "2026-10-18T17:36:32Z",
+        "utc_ms": 1792344992000,
         "place": "SOUTHERN GREECE",
         "local": "12:36 PM",
         "date": "2026-10-18",
@@ -3577,7 +6249,7 @@
         ]
       },
       "properties": {
-        "_id": 103,
+        "_id": 183,
         "mag": 2.5,
         "mag_alt": null,
         "lat": 19.3417,
@@ -3610,7 +6282,7 @@
         ]
       },
       "properties": {
-        "_id": 104,
+        "_id": 184,
         "mag": 3.7,
         "mag_alt": null,
         "lat": -11.75,
@@ -3643,7 +6315,7 @@
         ]
       },
       "properties": {
-        "_id": 105,
+        "_id": 185,
         "mag": 3.4,
         "mag_alt": null,
         "lat": -36.4474,
@@ -3676,7 +6348,7 @@
         ]
       },
       "properties": {
-        "_id": 106,
+        "_id": 186,
         "mag": 3.6,
         "mag_alt": null,
         "lat": 7.4425,
@@ -3709,7 +6381,7 @@
         ]
       },
       "properties": {
-        "_id": 107,
+        "_id": 187,
         "mag": 2.5,
         "mag_alt": null,
         "lat": -22.97,
@@ -3742,7 +6414,7 @@
         ]
       },
       "properties": {
-        "_id": 108,
+        "_id": 188,
         "mag": 3.6,
         "mag_alt": null,
         "lat": 7.6066,
@@ -3775,7 +6447,7 @@
         ]
       },
       "properties": {
-        "_id": 109,
+        "_id": 189,
         "mag": 2.7,
         "mag_alt": null,
         "lat": -1.98,
@@ -3808,7 +6480,7 @@
         ]
       },
       "properties": {
-        "_id": 110,
+        "_id": 190,
         "mag": 3.1,
         "mag_alt": null,
         "lat": -8.31,
@@ -3841,7 +6513,7 @@
         ]
       },
       "properties": {
-        "_id": 111,
+        "_id": 191,
         "mag": 4.5,
         "mag_alt": null,
         "lat": 7.7244,
@@ -3875,7 +6547,7 @@
         ]
       },
       "properties": {
-        "_id": 112,
+        "_id": 192,
         "mag": 3.2,
         "mag_alt": null,
         "lat": -6.45,
@@ -3908,7 +6580,7 @@
         ]
       },
       "properties": {
-        "_id": 113,
+        "_id": 193,
         "mag": 2.7,
         "mag_alt": null,
         "lat": -9.72,
@@ -3941,7 +6613,7 @@
         ]
       },
       "properties": {
-        "_id": 114,
+        "_id": 194,
         "mag": 2.5,
         "mag_alt": null,
         "lat": -9.11,
@@ -3974,7 +6646,7 @@
         ]
       },
       "properties": {
-        "_id": 115,
+        "_id": 195,
         "mag": 2.9,
         "mag_alt": null,
         "lat": -34.5128,
@@ -4007,7 +6679,7 @@
         ]
       },
       "properties": {
-        "_id": 116,
+        "_id": 196,
         "mag": 3.5,
         "mag_alt": null,
         "lat": 7.5221,
@@ -4040,7 +6712,7 @@
         ]
       },
       "properties": {
-        "_id": 117,
+        "_id": 197,
         "mag": 3.3,
         "mag_alt": null,
         "lat": 11.12,
@@ -4073,7 +6745,7 @@
         ]
       },
       "properties": {
-        "_id": 118,
+        "_id": 198,
         "mag": 3.2,
         "mag_alt": null,
         "lat": -37.3894,
@@ -4106,7 +6778,7 @@
         ]
       },
       "properties": {
-        "_id": 119,
+        "_id": 199,
         "mag": 4.3,
         "mag_alt": null,
         "lat": -21.6837,
@@ -4140,7 +6812,7 @@
         ]
       },
       "properties": {
-        "_id": 120,
+        "_id": 200,
         "mag": 4.7,
         "mag_alt": null,
         "lat": 17.2531,
@@ -4174,7 +6846,7 @@
         ]
       },
       "properties": {
-        "_id": 121,
+        "_id": 201,
         "mag": 3.0,
         "mag_alt": null,
         "lat": 27.27,
@@ -4207,7 +6879,7 @@
         ]
       },
       "properties": {
-        "_id": 122,
+        "_id": 202,
         "mag": 3.5,
         "mag_alt": null,
         "lat": 7.481,
@@ -4240,7 +6912,7 @@
         ]
       },
       "properties": {
-        "_id": 123,
+        "_id": 203,
         "mag": 3.0,
         "mag_alt": null,
         "lat": -38.02,
@@ -4273,7 +6945,7 @@
         ]
       },
       "properties": {
-        "_id": 124,
+        "_id": 204,
         "mag": 2.6,
         "mag_alt": null,
         "lat": 3.12,
@@ -4306,7 +6978,7 @@
         ]
       },
       "properties": {
-        "_id": 125,
+        "_id": 205,
         "mag": 3.0,
         "mag_alt": null,
         "lat": -23.91,
@@ -4339,7 +7011,7 @@
         ]
       },
       "properties": {
-        "_id": 126,
+        "_id": 206,
         "mag": 3.4,
         "mag_alt": null,
         "lat": 0.3,
@@ -4372,7 +7044,7 @@
         ]
       },
       "properties": {
-        "_id": 127,
+        "_id": 207,
         "mag": 3.5,
         "mag_alt": null,
         "lat": 7.5041,
@@ -4405,7 +7077,7 @@
         ]
       },
       "properties": {
-        "_id": 128,
+        "_id": 208,
         "mag": 4.0,
         "mag_alt": null,
         "lat": 15.976,
@@ -4438,7 +7110,7 @@
         ]
       },
       "properties": {
-        "_id": 129,
+        "_id": 209,
         "mag": 4.6,
         "mag_alt": null,
         "lat": 1.452,
@@ -4472,7 +7144,7 @@
         ]
       },
       "properties": {
-        "_id": 130,
+        "_id": 210,
         "mag": 2.5,
         "mag_alt": null,
         "lat": 60.274,
@@ -4505,7 +7177,7 @@
         ]
       },
       "properties": {
-        "_id": 131,
+        "_id": 211,
         "mag": 3.5,
         "mag_alt": null,
         "lat": 7.1871,
@@ -4538,7 +7210,7 @@
         ]
       },
       "properties": {
-        "_id": 132,
+        "_id": 212,
         "mag": 3.3,
         "mag_alt": null,
         "lat": 12.435,
@@ -4560,2261 +7232,16 @@
         "radius": 11.5,
         "url": ""
       }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -93.429,
-          15.532
-        ]
-      },
-      "properties": {
-        "_id": 133,
-        "mag": 4.0,
-        "mag_alt": null,
-        "lat": 15.532,
-        "lon": -93.429,
-        "depth": 99.8,
-        "t_iso": "2026-10-18T13:28:06Z",
-        "utc_ms": 1792330086000,
-        "place": "OFFSHORE CHIAPAS, MEXICO",
-        "local": "08:28 AM",
-        "date": "2026-10-18",
-        "utc": "13:28",
-        "tsunami": 0,
-        "catalogs": [
-          "EMSC"
-        ],
-        "duplicate_note": null,
-        "band": "M4-5",
-        "color": "#ffd60a",
-        "radius": 14.0,
-        "url": ""
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -92.955,
-          13.981
-        ]
-      },
-      "properties": {
-        "_id": 134,
-        "mag": 4.2,
-        "mag_alt": null,
-        "lat": 13.981,
-        "lon": -92.955,
-        "depth": 1.0,
-        "t_iso": "2026-10-18T13:01:51Z",
-        "utc_ms": 1792328511000,
-        "place": "OFF COAST OF CHIAPAS, MEXICO",
-        "local": "08:01 AM",
-        "date": "2026-10-18",
-        "utc": "13:01",
-        "tsunami": 0,
-        "catalogs": [
-          "EMSC"
-        ],
-        "duplicate_note": null,
-        "band": "M4-5",
-        "color": "#ffd60a",
-        "radius": 14.7,
-        "url": ""
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -68.63,
-          -22.32
-        ]
-      },
-      "properties": {
-        "_id": 135,
-        "mag": 2.7,
-        "mag_alt": null,
-        "lat": -22.32,
-        "lon": -68.63,
-        "depth": 123.1,
-        "t_iso": "2026-10-18T13:00:39Z",
-        "utc_ms": 1792328439000,
-        "place": "ANTOFAGASTA, CHILE",
-        "local": "08:00 AM",
-        "date": "2026-10-18",
-        "utc": "13:00",
-        "tsunami": 0,
-        "catalogs": [
-          "EMSC"
-        ],
-        "duplicate_note": null,
-        "band": "M2-3",
-        "color": "#4dd2ff",
-        "radius": 9.5,
-        "url": ""
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          140.6,
-          37.2
-        ]
-      },
-      "properties": {
-        "_id": 136,
-        "mag": 3.3,
-        "mag_alt": null,
-        "lat": 37.2,
-        "lon": 140.6,
-        "depth": 80.0,
-        "t_iso": "2026-10-18T12:58:30Z",
-        "utc_ms": 1792328310000,
-        "place": "EASTERN HONSHU, JAPAN",
-        "local": "07:58 AM",
-        "date": "2026-10-18",
-        "utc": "12:58",
-        "tsunami": 0,
-        "catalogs": [
-          "EMSC"
-        ],
-        "duplicate_note": null,
-        "band": "M3-4",
-        "color": "#4dd2ff",
-        "radius": 11.5,
-        "url": ""
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -86.981,
-          10.831
-        ]
-      },
-      "properties": {
-        "_id": 137,
-        "mag": 3.0,
-        "mag_alt": null,
-        "lat": 10.831,
-        "lon": -86.981,
-        "depth": 9.0,
-        "t_iso": "2026-10-18T12:47:23Z",
-        "utc_ms": 1792327643000,
-        "place": "OFF COAST OF COSTA RICA",
-        "local": "07:47 AM",
-        "date": "2026-10-18",
-        "utc": "12:47",
-        "tsunami": 0,
-        "catalogs": [
-          "EMSC"
-        ],
-        "duplicate_note": null,
-        "band": "M3-4",
-        "color": "#4dd2ff",
-        "radius": 10.5,
-        "url": ""
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          94.384,
-          24.909
-        ]
-      },
-      "properties": {
-        "_id": 138,
-        "mag": 3.0,
-        "mag_alt": null,
-        "lat": 24.909,
-        "lon": 94.384,
-        "depth": 72.0,
-        "t_iso": "2026-10-18T12:43:08Z",
-        "utc_ms": 1792327388000,
-        "place": "MYANMAR-INDIA BORDER REGION",
-        "local": "07:43 AM",
-        "date": "2026-10-18",
-        "utc": "12:43",
-        "tsunami": 0,
-        "catalogs": [
-          "EMSC"
-        ],
-        "duplicate_note": null,
-        "band": "M3-4",
-        "color": "#4dd2ff",
-        "radius": 10.5,
-        "url": ""
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -177.3838,
-          -30.1265
-        ]
-      },
-      "properties": {
-        "_id": 139,
-        "mag": 4.5,
-        "mag_alt": null,
-        "lat": -30.1265,
-        "lon": -177.3838,
-        "depth": 10.0,
-        "t_iso": "2026-10-18T12:42:22Z",
-        "utc_ms": 1792327342533,
-        "place": "Kermadec Islands, New Zealand",
-        "local": "07:42 AM",
-        "date": "2026-10-18",
-        "utc": "12:42",
-        "tsunami": 0,
-        "catalogs": [
-          "USGS",
-          "EMSC"
-        ],
-        "duplicate_note": "Same physical event reported by USGS + EMSC",
-        "band": "M4-5",
-        "color": "#ffd60a",
-        "radius": 15.8,
-        "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u35l"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          3.6492,
-          45.5958
-        ]
-      },
-      "properties": {
-        "_id": 140,
-        "mag": 2.5,
-        "mag_alt": null,
-        "lat": 45.5958,
-        "lon": 3.6492,
-        "depth": 13.9,
-        "t_iso": "2026-10-18T12:40:23Z",
-        "utc_ms": 1792327223000,
-        "place": "FRANCE",
-        "local": "07:40 AM",
-        "date": "2026-10-18",
-        "utc": "12:40",
-        "tsunami": 0,
-        "catalogs": [
-          "EMSC"
-        ],
-        "duplicate_note": null,
-        "band": "M2-3",
-        "color": "#4dd2ff",
-        "radius": 8.8,
-        "url": ""
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -86.825,
-          11.749
-        ]
-      },
-      "properties": {
-        "_id": 141,
-        "mag": 3.4,
-        "mag_alt": null,
-        "lat": 11.749,
-        "lon": -86.825,
-        "depth": 37.0,
-        "t_iso": "2026-10-18T12:25:44Z",
-        "utc_ms": 1792326344000,
-        "place": "NEAR COAST OF NICARAGUA",
-        "local": "07:25 AM",
-        "date": "2026-10-18",
-        "utc": "12:25",
-        "tsunami": 0,
-        "catalogs": [
-          "EMSC"
-        ],
-        "duplicate_note": null,
-        "band": "M3-4",
-        "color": "#4dd2ff",
-        "radius": 11.9,
-        "url": ""
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -66.82,
-          -22.77
-        ]
-      },
-      "properties": {
-        "_id": 142,
-        "mag": 3.0,
-        "mag_alt": null,
-        "lat": -22.77,
-        "lon": -66.82,
-        "depth": 250.0,
-        "t_iso": "2026-10-18T12:24:44Z",
-        "utc_ms": 1792326284000,
-        "place": "JUJUY, ARGENTINA",
-        "local": "07:24 AM",
-        "date": "2026-10-18",
-        "utc": "12:24",
-        "tsunami": 0,
-        "catalogs": [
-          "EMSC"
-        ],
-        "duplicate_note": null,
-        "band": "M3-4",
-        "color": "#4dd2ff",
-        "radius": 10.5,
-        "url": ""
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          119.94,
-          -1.89
-        ]
-      },
-      "properties": {
-        "_id": 143,
-        "mag": 3.0,
-        "mag_alt": null,
-        "lat": -1.89,
-        "lon": 119.94,
-        "depth": 10.0,
-        "t_iso": "2026-10-18T12:20:27Z",
-        "utc_ms": 1792326027000,
-        "place": "SULAWESI, INDONESIA",
-        "local": "07:20 AM",
-        "date": "2026-10-18",
-        "utc": "12:20",
-        "tsunami": 0,
-        "catalogs": [
-          "EMSC"
-        ],
-        "duplicate_note": null,
-        "band": "M3-4",
-        "color": "#4dd2ff",
-        "radius": 10.5,
-        "url": ""
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -71.62,
-          -31.34
-        ]
-      },
-      "properties": {
-        "_id": 144,
-        "mag": 3.1,
-        "mag_alt": null,
-        "lat": -31.34,
-        "lon": -71.62,
-        "depth": 32.4,
-        "t_iso": "2026-10-18T12:09:29Z",
-        "utc_ms": 1792325369000,
-        "place": "OFFSHORE COQUIMBO, CHILE",
-        "local": "07:09 AM",
-        "date": "2026-10-18",
-        "utc": "12:09",
-        "tsunami": 0,
-        "catalogs": [
-          "EMSC"
-        ],
-        "duplicate_note": null,
-        "band": "M3-4",
-        "color": "#4dd2ff",
-        "radius": 10.9,
-        "url": ""
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          131.9,
-          32.3
-        ]
-      },
-      "properties": {
-        "_id": 145,
-        "mag": 3.1,
-        "mag_alt": null,
-        "lat": 32.3,
-        "lon": 131.9,
-        "depth": 30.0,
-        "t_iso": "2026-10-18T11:53:30Z",
-        "utc_ms": 1792324410000,
-        "place": "KYUSHU, JAPAN",
-        "local": "06:53 AM",
-        "date": "2026-10-18",
-        "utc": "11:53",
-        "tsunami": 0,
-        "catalogs": [
-          "EMSC"
-        ],
-        "duplicate_note": null,
-        "band": "M3-4",
-        "color": "#4dd2ff",
-        "radius": 10.9,
-        "url": ""
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -64.2173,
-          18.2622
-        ]
-      },
-      "properties": {
-        "_id": 146,
-        "mag": 2.9,
-        "mag_alt": null,
-        "lat": 18.2622,
-        "lon": -64.2173,
-        "depth": 18.5,
-        "t_iso": "2026-10-18T11:27:32Z",
-        "utc_ms": 1792322852000,
-        "place": "VIRGIN ISLANDS REGION",
-        "local": "06:27 AM",
-        "date": "2026-10-18",
-        "utc": "11:27",
-        "tsunami": 0,
-        "catalogs": [
-          "EMSC",
-          "USGS"
-        ],
-        "duplicate_note": "Same physical event reported by EMSC + USGS",
-        "band": "M2-3",
-        "color": "#4dd2ff",
-        "radius": 10.1,
-        "url": ""
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -71.44,
-          -28.71
-        ]
-      },
-      "properties": {
-        "_id": 147,
-        "mag": 3.0,
-        "mag_alt": null,
-        "lat": -28.71,
-        "lon": -71.44,
-        "depth": 27.9,
-        "t_iso": "2026-10-18T11:22:55Z",
-        "utc_ms": 1792322575000,
-        "place": "OFFSHORE ATACAMA, CHILE",
-        "local": "06:22 AM",
-        "date": "2026-10-18",
-        "utc": "11:22",
-        "tsunami": 0,
-        "catalogs": [
-          "EMSC"
-        ],
-        "duplicate_note": null,
-        "band": "M3-4",
-        "color": "#4dd2ff",
-        "radius": 10.5,
-        "url": ""
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -93.424,
-          14.87
-        ]
-      },
-      "properties": {
-        "_id": 148,
-        "mag": 3.6,
-        "mag_alt": null,
-        "lat": 14.87,
-        "lon": -93.424,
-        "depth": 5.0,
-        "t_iso": "2026-10-18T10:59:46Z",
-        "utc_ms": 1792321186000,
-        "place": "OFFSHORE CHIAPAS, MEXICO",
-        "local": "05:59 AM",
-        "date": "2026-10-18",
-        "utc": "10:59",
-        "tsunami": 0,
-        "catalogs": [
-          "EMSC"
-        ],
-        "duplicate_note": null,
-        "band": "M3-4",
-        "color": "#4dd2ff",
-        "radius": 12.6,
-        "url": ""
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -67.35,
-          -23.5
-        ]
-      },
-      "properties": {
-        "_id": 149,
-        "mag": 3.5,
-        "mag_alt": null,
-        "lat": -23.5,
-        "lon": -67.35,
-        "depth": 239.4,
-        "t_iso": "2026-10-18T10:57:42Z",
-        "utc_ms": 1792321062000,
-        "place": "ANTOFAGASTA, CHILE",
-        "local": "05:57 AM",
-        "date": "2026-10-18",
-        "utc": "10:57",
-        "tsunami": 0,
-        "catalogs": [
-          "EMSC"
-        ],
-        "duplicate_note": null,
-        "band": "M3-4",
-        "color": "#4dd2ff",
-        "radius": 12.2,
-        "url": ""
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -86.1237,
-          10.5541
-        ]
-      },
-      "properties": {
-        "_id": 150,
-        "mag": 2.5,
-        "mag_alt": null,
-        "lat": 10.5541,
-        "lon": -86.1237,
-        "depth": 20.0,
-        "t_iso": "2026-10-18T10:49:12Z",
-        "utc_ms": 1792320552000,
-        "place": "OFF COAST OF COSTA RICA",
-        "local": "05:49 AM",
-        "date": "2026-10-18",
-        "utc": "10:49",
-        "tsunami": 0,
-        "catalogs": [
-          "EMSC"
-        ],
-        "duplicate_note": null,
-        "band": "M2-3",
-        "color": "#4dd2ff",
-        "radius": 8.8,
-        "url": ""
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -99.567,
-          16.768
-        ]
-      },
-      "properties": {
-        "_id": 151,
-        "mag": 3.0,
-        "mag_alt": null,
-        "lat": 16.768,
-        "lon": -99.567,
-        "depth": 20.5,
-        "t_iso": "2026-10-18T10:48:15Z",
-        "utc_ms": 1792320495000,
-        "place": "GUERRERO, MEXICO",
-        "local": "05:48 AM",
-        "date": "2026-10-18",
-        "utc": "10:48",
-        "tsunami": 0,
-        "catalogs": [
-          "EMSC"
-        ],
-        "duplicate_note": null,
-        "band": "M3-4",
-        "color": "#4dd2ff",
-        "radius": 10.5,
-        "url": ""
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -71.66,
-          -32.78
-        ]
-      },
-      "properties": {
-        "_id": 152,
-        "mag": 2.5,
-        "mag_alt": null,
-        "lat": -32.78,
-        "lon": -71.66,
-        "depth": 29.6,
-        "t_iso": "2026-10-18T10:41:55Z",
-        "utc_ms": 1792320115000,
-        "place": "OFFSHORE VALPARAISO, CHILE",
-        "local": "05:41 AM",
-        "date": "2026-10-18",
-        "utc": "10:41",
-        "tsunami": 0,
-        "catalogs": [
-          "EMSC"
-        ],
-        "duplicate_note": null,
-        "band": "M2-3",
-        "color": "#4dd2ff",
-        "radius": 8.8,
-        "url": ""
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -93.963,
-          15.916
-        ]
-      },
-      "properties": {
-        "_id": 153,
-        "mag": 3.4,
-        "mag_alt": null,
-        "lat": 15.916,
-        "lon": -93.963,
-        "depth": 98.6,
-        "t_iso": "2026-10-18T10:39:46Z",
-        "utc_ms": 1792319986000,
-        "place": "OFFSHORE CHIAPAS, MEXICO",
-        "local": "05:39 AM",
-        "date": "2026-10-18",
-        "utc": "10:39",
-        "tsunami": 0,
-        "catalogs": [
-          "EMSC"
-        ],
-        "duplicate_note": null,
-        "band": "M3-4",
-        "color": "#4dd2ff",
-        "radius": 11.9,
-        "url": ""
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -68.94,
-          -29.24
-        ]
-      },
-      "properties": {
-        "_id": 154,
-        "mag": 3.0,
-        "mag_alt": null,
-        "lat": -29.24,
-        "lon": -68.94,
-        "depth": 10.0,
-        "t_iso": "2026-10-18T10:34:43Z",
-        "utc_ms": 1792319683000,
-        "place": "LA RIOJA, ARGENTINA",
-        "local": "05:34 AM",
-        "date": "2026-10-18",
-        "utc": "10:34",
-        "tsunami": 0,
-        "catalogs": [
-          "EMSC"
-        ],
-        "duplicate_note": null,
-        "band": "M3-4",
-        "color": "#4dd2ff",
-        "radius": 10.5,
-        "url": ""
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          19.692,
-          40.304
-        ]
-      },
-      "properties": {
-        "_id": 155,
-        "mag": 2.7,
-        "mag_alt": null,
-        "lat": 40.304,
-        "lon": 19.692,
-        "depth": 15.0,
-        "t_iso": "2026-10-18T10:29:48Z",
-        "utc_ms": 1792319388000,
-        "place": "ALBANIA",
-        "local": "05:29 AM",
-        "date": "2026-10-18",
-        "utc": "10:29",
-        "tsunami": 0,
-        "catalogs": [
-          "EMSC"
-        ],
-        "duplicate_note": null,
-        "band": "M2-3",
-        "color": "#4dd2ff",
-        "radius": 9.5,
-        "url": ""
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -80.7421,
-          7.3742
-        ]
-      },
-      "properties": {
-        "_id": 156,
-        "mag": 3.6,
-        "mag_alt": null,
-        "lat": 7.3742,
-        "lon": -80.7421,
-        "depth": 19.0,
-        "t_iso": "2026-10-18T10:26:05Z",
-        "utc_ms": 1792319165000,
-        "place": "PANAMA",
-        "local": "05:26 AM",
-        "date": "2026-10-18",
-        "utc": "10:26",
-        "tsunami": 0,
-        "catalogs": [
-          "EMSC"
-        ],
-        "duplicate_note": null,
-        "band": "M3-4",
-        "color": "#4dd2ff",
-        "radius": 12.6,
-        "url": ""
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -86.816,
-          10.858
-        ]
-      },
-      "properties": {
-        "_id": 157,
-        "mag": 3.6,
-        "mag_alt": null,
-        "lat": 10.858,
-        "lon": -86.816,
-        "depth": 11.0,
-        "t_iso": "2026-10-18T10:22:35Z",
-        "utc_ms": 1792318955000,
-        "place": "OFF COAST OF COSTA RICA",
-        "local": "05:22 AM",
-        "date": "2026-10-18",
-        "utc": "10:22",
-        "tsunami": 0,
-        "catalogs": [
-          "EMSC"
-        ],
-        "duplicate_note": null,
-        "band": "M3-4",
-        "color": "#4dd2ff",
-        "radius": 12.6,
-        "url": ""
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -92.762,
-          13.898
-        ]
-      },
-      "properties": {
-        "_id": 158,
-        "mag": 3.7,
-        "mag_alt": null,
-        "lat": 13.898,
-        "lon": -92.762,
-        "depth": 12.8,
-        "t_iso": "2026-10-18T10:21:59Z",
-        "utc_ms": 1792318919000,
-        "place": "OFFSHORE CHIAPAS, MEXICO",
-        "local": "05:21 AM",
-        "date": "2026-10-18",
-        "utc": "10:21",
-        "tsunami": 0,
-        "catalogs": [
-          "EMSC"
-        ],
-        "duplicate_note": null,
-        "band": "M3-4",
-        "color": "#4dd2ff",
-        "radius": 13.0,
-        "url": ""
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -69.05,
-          -20.93
-        ]
-      },
-      "properties": {
-        "_id": 159,
-        "mag": 2.8,
-        "mag_alt": null,
-        "lat": -20.93,
-        "lon": -69.05,
-        "depth": 103.2,
-        "t_iso": "2026-10-18T10:18:25Z",
-        "utc_ms": 1792318705000,
-        "place": "TARAPACA, CHILE",
-        "local": "05:18 AM",
-        "date": "2026-10-18",
-        "utc": "10:18",
-        "tsunami": 0,
-        "catalogs": [
-          "EMSC"
-        ],
-        "duplicate_note": null,
-        "band": "M2-3",
-        "color": "#4dd2ff",
-        "radius": 9.8,
-        "url": ""
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -91.749,
-          13.577
-        ]
-      },
-      "properties": {
-        "_id": 160,
-        "mag": 3.7,
-        "mag_alt": null,
-        "lat": 13.577,
-        "lon": -91.749,
-        "depth": 5.0,
-        "t_iso": "2026-10-18T10:09:38Z",
-        "utc_ms": 1792318178000,
-        "place": "OFFSHORE GUATEMALA",
-        "local": "05:09 AM",
-        "date": "2026-10-18",
-        "utc": "10:09",
-        "tsunami": 0,
-        "catalogs": [
-          "EMSC"
-        ],
-        "duplicate_note": null,
-        "band": "M3-4",
-        "color": "#4dd2ff",
-        "radius": 13.0,
-        "url": ""
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -94.049,
-          15.507
-        ]
-      },
-      "properties": {
-        "_id": 161,
-        "mag": 3.4,
-        "mag_alt": null,
-        "lat": 15.507,
-        "lon": -94.049,
-        "depth": 74.4,
-        "t_iso": "2026-10-18T10:07:40Z",
-        "utc_ms": 1792318060000,
-        "place": "OFFSHORE CHIAPAS, MEXICO",
-        "local": "05:07 AM",
-        "date": "2026-10-18",
-        "utc": "10:07",
-        "tsunami": 0,
-        "catalogs": [
-          "EMSC"
-        ],
-        "duplicate_note": null,
-        "band": "M3-4",
-        "color": "#4dd2ff",
-        "radius": 11.9,
-        "url": ""
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          83.6143,
-          27.5365
-        ]
-      },
-      "properties": {
-        "_id": 162,
-        "mag": 3.8,
-        "mag_alt": null,
-        "lat": 27.5365,
-        "lon": 83.6143,
-        "depth": 99.9,
-        "t_iso": "2026-10-18T10:02:28Z",
-        "utc_ms": 1792317748000,
-        "place": "NEPAL-INDIA BORDER REGION",
-        "local": "05:02 AM",
-        "date": "2026-10-18",
-        "utc": "10:02",
-        "tsunami": 0,
-        "catalogs": [
-          "EMSC"
-        ],
-        "duplicate_note": null,
-        "band": "M3-4",
-        "color": "#4dd2ff",
-        "radius": 13.3,
-        "url": ""
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -92.796,
-          14.629
-        ]
-      },
-      "properties": {
-        "_id": 163,
-        "mag": 3.5,
-        "mag_alt": null,
-        "lat": 14.629,
-        "lon": -92.796,
-        "depth": 9.6,
-        "t_iso": "2026-10-18T09:56:41Z",
-        "utc_ms": 1792317401000,
-        "place": "OFFSHORE CHIAPAS, MEXICO",
-        "local": "04:56 AM",
-        "date": "2026-10-18",
-        "utc": "09:56",
-        "tsunami": 0,
-        "catalogs": [
-          "EMSC"
-        ],
-        "duplicate_note": null,
-        "band": "M3-4",
-        "color": "#4dd2ff",
-        "radius": 12.2,
-        "url": ""
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -80.7396,
-          7.6109
-        ]
-      },
-      "properties": {
-        "_id": 164,
-        "mag": 3.5,
-        "mag_alt": null,
-        "lat": 7.6109,
-        "lon": -80.7396,
-        "depth": 17.0,
-        "t_iso": "2026-10-18T09:55:11Z",
-        "utc_ms": 1792317311000,
-        "place": "PANAMA",
-        "local": "04:55 AM",
-        "date": "2026-10-18",
-        "utc": "09:55",
-        "tsunami": 0,
-        "catalogs": [
-          "EMSC"
-        ],
-        "duplicate_note": null,
-        "band": "M3-4",
-        "color": "#4dd2ff",
-        "radius": 12.2,
-        "url": ""
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -98.51,
-          16.625
-        ]
-      },
-      "properties": {
-        "_id": 165,
-        "mag": 3.2,
-        "mag_alt": null,
-        "lat": 16.625,
-        "lon": -98.51,
-        "depth": 28.1,
-        "t_iso": "2026-10-18T09:48:34Z",
-        "utc_ms": 1792316914000,
-        "place": "GUERRERO, MEXICO",
-        "local": "04:48 AM",
-        "date": "2026-10-18",
-        "utc": "09:48",
-        "tsunami": 0,
-        "catalogs": [
-          "EMSC"
-        ],
-        "duplicate_note": null,
-        "band": "M3-4",
-        "color": "#4dd2ff",
-        "radius": 11.2,
-        "url": ""
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -94.664,
-          15.605
-        ]
-      },
-      "properties": {
-        "_id": 166,
-        "mag": 3.6,
-        "mag_alt": null,
-        "lat": 15.605,
-        "lon": -94.664,
-        "depth": 16.4,
-        "t_iso": "2026-10-18T09:39:07Z",
-        "utc_ms": 1792316347000,
-        "place": "OFFSHORE OAXACA, MEXICO",
-        "local": "04:39 AM",
-        "date": "2026-10-18",
-        "utc": "09:39",
-        "tsunami": 0,
-        "catalogs": [
-          "EMSC"
-        ],
-        "duplicate_note": null,
-        "band": "M3-4",
-        "color": "#4dd2ff",
-        "radius": 12.6,
-        "url": ""
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -109.714,
-          23.034
-        ]
-      },
-      "properties": {
-        "_id": 167,
-        "mag": 3.4,
-        "mag_alt": null,
-        "lat": 23.034,
-        "lon": -109.714,
-        "depth": 17.0,
-        "t_iso": "2026-10-18T09:34:56Z",
-        "utc_ms": 1792316096000,
-        "place": "BAJA CALIFORNIA SUR, MEXICO",
-        "local": "04:34 AM",
-        "date": "2026-10-18",
-        "utc": "09:34",
-        "tsunami": 0,
-        "catalogs": [
-          "EMSC"
-        ],
-        "duplicate_note": null,
-        "band": "M3-4",
-        "color": "#4dd2ff",
-        "radius": 11.9,
-        "url": ""
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -83.1744,
-          8.5062
-        ]
-      },
-      "properties": {
-        "_id": 168,
-        "mag": 2.8,
-        "mag_alt": null,
-        "lat": 8.5062,
-        "lon": -83.1744,
-        "depth": 10.0,
-        "t_iso": "2026-10-18T09:21:22Z",
-        "utc_ms": 1792315282000,
-        "place": "COSTA RICA",
-        "local": "04:21 AM",
-        "date": "2026-10-18",
-        "utc": "09:21",
-        "tsunami": 0,
-        "catalogs": [
-          "EMSC"
-        ],
-        "duplicate_note": null,
-        "band": "M2-3",
-        "color": "#4dd2ff",
-        "radius": 9.8,
-        "url": ""
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          120.26,
-          -8.1
-        ]
-      },
-      "properties": {
-        "_id": 169,
-        "mag": 2.8,
-        "mag_alt": null,
-        "lat": -8.1,
-        "lon": 120.26,
-        "depth": 10.0,
-        "t_iso": "2026-10-18T09:20:31Z",
-        "utc_ms": 1792315231000,
-        "place": "FLORES REGION, INDONESIA",
-        "local": "04:20 AM",
-        "date": "2026-10-18",
-        "utc": "09:20",
-        "tsunami": 0,
-        "catalogs": [
-          "EMSC"
-        ],
-        "duplicate_note": null,
-        "band": "M2-3",
-        "color": "#4dd2ff",
-        "radius": 9.8,
-        "url": ""
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -94.678,
-          17.113
-        ]
-      },
-      "properties": {
-        "_id": 170,
-        "mag": 4.1,
-        "mag_alt": null,
-        "lat": 17.113,
-        "lon": -94.678,
-        "depth": 130.5,
-        "t_iso": "2026-10-18T09:17:41Z",
-        "utc_ms": 1792315061000,
-        "place": "OAXACA, MEXICO",
-        "local": "04:17 AM",
-        "date": "2026-10-18",
-        "utc": "09:17",
-        "tsunami": 0,
-        "catalogs": [
-          "EMSC"
-        ],
-        "duplicate_note": null,
-        "band": "M4-5",
-        "color": "#ffd60a",
-        "radius": 14.3,
-        "url": ""
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          120.39,
-          -7.77
-        ]
-      },
-      "properties": {
-        "_id": 171,
-        "mag": 3.0,
-        "mag_alt": null,
-        "lat": -7.77,
-        "lon": 120.39,
-        "depth": 13.0,
-        "t_iso": "2026-10-18T09:05:16Z",
-        "utc_ms": 1792314316000,
-        "place": "FLORES SEA",
-        "local": "04:05 AM",
-        "date": "2026-10-18",
-        "utc": "09:05",
-        "tsunami": 0,
-        "catalogs": [
-          "EMSC"
-        ],
-        "duplicate_note": null,
-        "band": "M3-4",
-        "color": "#4dd2ff",
-        "radius": 10.5,
-        "url": ""
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -81.4434,
-          7.6676
-        ]
-      },
-      "properties": {
-        "_id": 172,
-        "mag": 3.2,
-        "mag_alt": null,
-        "lat": 7.6676,
-        "lon": -81.4434,
-        "depth": 10.0,
-        "t_iso": "2026-10-18T09:01:45Z",
-        "utc_ms": 1792314105000,
-        "place": "PANAMA",
-        "local": "04:01 AM",
-        "date": "2026-10-18",
-        "utc": "09:01",
-        "tsunami": 0,
-        "catalogs": [
-          "EMSC"
-        ],
-        "duplicate_note": null,
-        "band": "M3-4",
-        "color": "#4dd2ff",
-        "radius": 11.2,
-        "url": ""
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          28.8192,
-          37.957
-        ]
-      },
-      "properties": {
-        "_id": 173,
-        "mag": 2.6,
-        "mag_alt": null,
-        "lat": 37.957,
-        "lon": 28.8192,
-        "depth": 3.6,
-        "t_iso": "2026-10-18T08:56:14Z",
-        "utc_ms": 1792313774000,
-        "place": "WESTERN TURKEY",
-        "local": "03:56 AM",
-        "date": "2026-10-18",
-        "utc": "08:56",
-        "tsunami": 0,
-        "catalogs": [
-          "EMSC"
-        ],
-        "duplicate_note": null,
-        "band": "M2-3",
-        "color": "#4dd2ff",
-        "radius": 9.1,
-        "url": ""
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -69.02,
-          -25.59
-        ]
-      },
-      "properties": {
-        "_id": 174,
-        "mag": 2.9,
-        "mag_alt": null,
-        "lat": -25.59,
-        "lon": -69.02,
-        "depth": 100.4,
-        "t_iso": "2026-10-18T08:39:33Z",
-        "utc_ms": 1792312773000,
-        "place": "ATACAMA, CHILE",
-        "local": "03:39 AM",
-        "date": "2026-10-18",
-        "utc": "08:39",
-        "tsunami": 0,
-        "catalogs": [
-          "EMSC"
-        ],
-        "duplicate_note": null,
-        "band": "M2-3",
-        "color": "#4dd2ff",
-        "radius": 10.1,
-        "url": ""
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -92.602,
-          14.387
-        ]
-      },
-      "properties": {
-        "_id": 175,
-        "mag": 3.3,
-        "mag_alt": null,
-        "lat": 14.387,
-        "lon": -92.602,
-        "depth": 117.0,
-        "t_iso": "2026-10-18T08:33:54Z",
-        "utc_ms": 1792312434000,
-        "place": "OFFSHORE CHIAPAS, MEXICO",
-        "local": "03:33 AM",
-        "date": "2026-10-18",
-        "utc": "08:33",
-        "tsunami": 0,
-        "catalogs": [
-          "EMSC"
-        ],
-        "duplicate_note": null,
-        "band": "M3-4",
-        "color": "#4dd2ff",
-        "radius": 11.5,
-        "url": ""
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          93.31,
-          5.44
-        ]
-      },
-      "properties": {
-        "_id": 176,
-        "mag": 3.9,
-        "mag_alt": null,
-        "lat": 5.44,
-        "lon": 93.31,
-        "depth": 63.0,
-        "t_iso": "2026-10-18T08:26:29Z",
-        "utc_ms": 1792311989000,
-        "place": "OFF W COAST OF NORTHERN SUMATRA",
-        "local": "03:26 AM",
-        "date": "2026-10-18",
-        "utc": "08:26",
-        "tsunami": 0,
-        "catalogs": [
-          "EMSC"
-        ],
-        "duplicate_note": null,
-        "band": "M3-4",
-        "color": "#4dd2ff",
-        "radius": 13.6,
-        "url": ""
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          165.9586,
-          -43.1416
-        ]
-      },
-      "properties": {
-        "_id": 177,
-        "mag": 3.6,
-        "mag_alt": null,
-        "lat": -43.1416,
-        "lon": 165.9586,
-        "depth": 501.4,
-        "t_iso": "2026-10-18T08:08:33Z",
-        "utc_ms": 1792310913000,
-        "place": "OFF W. COAST OF S. ISLAND, N.Z.",
-        "local": "03:08 AM",
-        "date": "2026-10-18",
-        "utc": "08:08",
-        "tsunami": 0,
-        "catalogs": [
-          "EMSC"
-        ],
-        "duplicate_note": null,
-        "band": "M3-4",
-        "color": "#4dd2ff",
-        "radius": 12.6,
-        "url": ""
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -82.4724,
-          9.0334
-        ]
-      },
-      "properties": {
-        "_id": 178,
-        "mag": 3.0,
-        "mag_alt": null,
-        "lat": 9.0334,
-        "lon": -82.4724,
-        "depth": 6.0,
-        "t_iso": "2026-10-18T08:04:47Z",
-        "utc_ms": 1792310687000,
-        "place": "PANAMA-COSTA RICA BORDER REGION",
-        "local": "03:04 AM",
-        "date": "2026-10-18",
-        "utc": "08:04",
-        "tsunami": 0,
-        "catalogs": [
-          "EMSC"
-        ],
-        "duplicate_note": null,
-        "band": "M3-4",
-        "color": "#4dd2ff",
-        "radius": 10.5,
-        "url": ""
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -166.952,
-          53.102
-        ]
-      },
-      "properties": {
-        "_id": 179,
-        "mag": 3.9,
-        "mag_alt": null,
-        "lat": 53.102,
-        "lon": -166.952,
-        "depth": 24.5,
-        "t_iso": "2026-10-18T08:02:42Z",
-        "utc_ms": 1792310562000,
-        "place": "FOX ISLANDS, ALEUTIAN ISLANDS",
-        "local": "03:02 AM",
-        "date": "2026-10-18",
-        "utc": "08:02",
-        "tsunami": 0,
-        "catalogs": [
-          "EMSC",
-          "USGS"
-        ],
-        "duplicate_note": "Same physical event reported by EMSC + USGS",
-        "band": "M3-4",
-        "color": "#4dd2ff",
-        "radius": 13.6,
-        "url": ""
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          120.2734,
-          -8.1449
-        ]
-      },
-      "properties": {
-        "_id": 180,
-        "mag": 5.2,
-        "mag_alt": null,
-        "lat": -8.1449,
-        "lon": 120.2734,
-        "depth": 10.0,
-        "t_iso": "2026-10-18T08:00:06Z",
-        "utc_ms": 1792310406054,
-        "place": "55 km NNW of Ruteng, Indonesia",
-        "local": "03:00 AM",
-        "date": "2026-10-18",
-        "utc": "08:00",
-        "tsunami": 0,
-        "catalogs": [
-          "USGS",
-          "EMSC"
-        ],
-        "duplicate_note": "Same physical event reported by USGS + EMSC",
-        "band": "M5+",
-        "color": "#ff9500",
-        "radius": 18.2,
-        "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u34e"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -70.44,
-          -21.31
-        ]
-      },
-      "properties": {
-        "_id": 181,
-        "mag": 2.9,
-        "mag_alt": null,
-        "lat": -21.31,
-        "lon": -70.44,
-        "depth": 20.0,
-        "t_iso": "2026-10-18T07:56:13Z",
-        "utc_ms": 1792310173000,
-        "place": "OFFSHORE ANTOFAGASTA, CHILE",
-        "local": "02:56 AM",
-        "date": "2026-10-18",
-        "utc": "07:56",
-        "tsunami": 0,
-        "catalogs": [
-          "EMSC"
-        ],
-        "duplicate_note": null,
-        "band": "M2-3",
-        "color": "#4dd2ff",
-        "radius": 10.1,
-        "url": ""
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -165.0438,
-          53.6493
-        ]
-      },
-      "properties": {
-        "_id": 182,
-        "mag": 3.0,
-        "mag_alt": null,
-        "lat": 53.6493,
-        "lon": -165.0438,
-        "depth": 35.0,
-        "t_iso": "2026-10-18T07:43:41Z",
-        "utc_ms": 1792309421254,
-        "place": "72 km SE of Akutan, Alaska",
-        "local": "02:43 AM",
-        "date": "2026-10-18",
-        "utc": "07:43",
-        "tsunami": 0,
-        "catalogs": [
-          "USGS",
-          "EMSC"
-        ],
-        "duplicate_note": "Same physical event reported by USGS + EMSC",
-        "band": "M3-4",
-        "color": "#4dd2ff",
-        "radius": 10.5,
-        "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u34c"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          130.6,
-          32.6
-        ]
-      },
-      "properties": {
-        "_id": 183,
-        "mag": 3.0,
-        "mag_alt": null,
-        "lat": 32.6,
-        "lon": 130.6,
-        "depth": 10.0,
-        "t_iso": "2026-10-18T07:37:30Z",
-        "utc_ms": 1792309050000,
-        "place": "KYUSHU, JAPAN",
-        "local": "02:37 AM",
-        "date": "2026-10-18",
-        "utc": "07:37",
-        "tsunami": 0,
-        "catalogs": [
-          "EMSC"
-        ],
-        "duplicate_note": null,
-        "band": "M3-4",
-        "color": "#4dd2ff",
-        "radius": 10.5,
-        "url": ""
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -73.12,
-          -36.24
-        ]
-      },
-      "properties": {
-        "_id": 184,
-        "mag": 3.4,
-        "mag_alt": null,
-        "lat": -36.24,
-        "lon": -73.12,
-        "depth": 22.8,
-        "t_iso": "2026-10-18T07:36:20Z",
-        "utc_ms": 1792308980000,
-        "place": "OFFSHORE BIO-BIO, CHILE",
-        "local": "02:36 AM",
-        "date": "2026-10-18",
-        "utc": "07:36",
-        "tsunami": 0,
-        "catalogs": [
-          "EMSC"
-        ],
-        "duplicate_note": null,
-        "band": "M3-4",
-        "color": "#4dd2ff",
-        "radius": 11.9,
-        "url": ""
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -80.906,
-          7.5697
-        ]
-      },
-      "properties": {
-        "_id": 185,
-        "mag": 3.8,
-        "mag_alt": null,
-        "lat": 7.5697,
-        "lon": -80.906,
-        "depth": 11.0,
-        "t_iso": "2026-10-18T07:35:30Z",
-        "utc_ms": 1792308930000,
-        "place": "PANAMA",
-        "local": "02:35 AM",
-        "date": "2026-10-18",
-        "utc": "07:35",
-        "tsunami": 0,
-        "catalogs": [
-          "EMSC"
-        ],
-        "duplicate_note": null,
-        "band": "M3-4",
-        "color": "#4dd2ff",
-        "radius": 13.3,
-        "url": ""
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          121.95,
-          -0.1
-        ]
-      },
-      "properties": {
-        "_id": 186,
-        "mag": 3.4,
-        "mag_alt": null,
-        "lat": -0.1,
-        "lon": 121.95,
-        "depth": 257.0,
-        "t_iso": "2026-10-18T07:30:14Z",
-        "utc_ms": 1792308614000,
-        "place": "SULAWESI, INDONESIA",
-        "local": "02:30 AM",
-        "date": "2026-10-18",
-        "utc": "07:30",
-        "tsunami": 0,
-        "catalogs": [
-          "EMSC"
-        ],
-        "duplicate_note": null,
-        "band": "M3-4",
-        "color": "#4dd2ff",
-        "radius": 11.9,
-        "url": ""
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          159.7392,
-          53.0045
-        ]
-      },
-      "properties": {
-        "_id": 187,
-        "mag": 4.5,
-        "mag_alt": null,
-        "lat": 53.0045,
-        "lon": 159.7392,
-        "depth": 76.0,
-        "t_iso": "2026-10-18T07:20:25Z",
-        "utc_ms": 1792308025000,
-        "place": "NEAR EAST COAST OF KAMCHATKA",
-        "local": "02:20 AM",
-        "date": "2026-10-18",
-        "utc": "07:20",
-        "tsunami": 0,
-        "catalogs": [
-          "EMSC",
-          "USGS"
-        ],
-        "duplicate_note": "Same physical event reported by EMSC + USGS",
-        "band": "M4-5",
-        "color": "#ffd60a",
-        "radius": 15.8,
-        "url": ""
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -152.731,
-          59.386
-        ]
-      },
-      "properties": {
-        "_id": 188,
-        "mag": 2.7,
-        "mag_alt": null,
-        "lat": 59.386,
-        "lon": -152.731,
-        "depth": 79.8,
-        "t_iso": "2026-10-18T06:51:57Z",
-        "utc_ms": 1792306317669,
-        "place": "46 km W of Nanwalek, Alaska",
-        "local": "01:51 AM",
-        "date": "2026-10-18",
-        "utc": "06:51",
-        "tsunami": 0,
-        "catalogs": [
-          "USGS",
-          "EMSC"
-        ],
-        "duplicate_note": "Same physical event reported by USGS + EMSC",
-        "band": "M2-3",
-        "color": "#4dd2ff",
-        "radius": 9.5,
-        "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026uqebwi"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          75.953,
-          21.483
-        ]
-      },
-      "properties": {
-        "_id": 189,
-        "mag": 3.0,
-        "mag_alt": null,
-        "lat": 21.483,
-        "lon": 75.953,
-        "depth": 5.0,
-        "t_iso": "2026-10-18T06:45:23Z",
-        "utc_ms": 1792305923000,
-        "place": "MADH. PRADESH-MAHARASHTRA, INDIA",
-        "local": "01:45 AM",
-        "date": "2026-10-18",
-        "utc": "06:45",
-        "tsunami": 0,
-        "catalogs": [
-          "EMSC"
-        ],
-        "duplicate_note": null,
-        "band": "M3-4",
-        "color": "#4dd2ff",
-        "radius": 10.5,
-        "url": ""
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -3.5817,
-          37.132
-        ]
-      },
-      "properties": {
-        "_id": 190,
-        "mag": 2.8,
-        "mag_alt": null,
-        "lat": 37.132,
-        "lon": -3.5817,
-        "depth": 0.3,
-        "t_iso": "2026-10-18T06:41:28Z",
-        "utc_ms": 1792305688000,
-        "place": "SPAIN",
-        "local": "01:41 AM",
-        "date": "2026-10-18",
-        "utc": "06:41",
-        "tsunami": 0,
-        "catalogs": [
-          "EMSC"
-        ],
-        "duplicate_note": null,
-        "band": "M2-3",
-        "color": "#4dd2ff",
-        "radius": 9.8,
-        "url": ""
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -81.1202,
-          7.7298
-        ]
-      },
-      "properties": {
-        "_id": 191,
-        "mag": 4.1,
-        "mag_alt": null,
-        "lat": 7.7298,
-        "lon": -81.1202,
-        "depth": 10.0,
-        "t_iso": "2026-10-18T06:15:47Z",
-        "utc_ms": 1792304147214,
-        "place": "2 km S of Leones Arriba, Panama",
-        "local": "01:15 AM",
-        "date": "2026-10-18",
-        "utc": "06:15",
-        "tsunami": 0,
-        "catalogs": [
-          "USGS",
-          "EMSC"
-        ],
-        "duplicate_note": "Same physical event reported by USGS + EMSC",
-        "band": "M4-5",
-        "color": "#ffd60a",
-        "radius": 14.3,
-        "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u33l"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -80.972,
-          7.5556
-        ]
-      },
-      "properties": {
-        "_id": 192,
-        "mag": 3.7,
-        "mag_alt": null,
-        "lat": 7.5556,
-        "lon": -80.972,
-        "depth": 10.0,
-        "t_iso": "2026-10-18T05:46:55Z",
-        "utc_ms": 1792302415000,
-        "place": "PANAMA",
-        "local": "12:46 AM",
-        "date": "2026-10-18",
-        "utc": "05:46",
-        "tsunami": 0,
-        "catalogs": [
-          "EMSC"
-        ],
-        "duplicate_note": null,
-        "band": "M3-4",
-        "color": "#4dd2ff",
-        "radius": 13.0,
-        "url": ""
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -91.324,
-          13.535
-        ]
-      },
-      "properties": {
-        "_id": 193,
-        "mag": 3.1,
-        "mag_alt": null,
-        "lat": 13.535,
-        "lon": -91.324,
-        "depth": 10.0,
-        "t_iso": "2026-10-18T05:34:00Z",
-        "utc_ms": 1792301640000,
-        "place": "OFFSHORE GUATEMALA",
-        "local": "12:34 AM",
-        "date": "2026-10-18",
-        "utc": "05:34",
-        "tsunami": 0,
-        "catalogs": [
-          "EMSC"
-        ],
-        "duplicate_note": null,
-        "band": "M3-4",
-        "color": "#4dd2ff",
-        "radius": 10.9,
-        "url": ""
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          87.39,
-          27.332
-        ]
-      },
-      "properties": {
-        "_id": 194,
-        "mag": 2.8,
-        "mag_alt": null,
-        "lat": 27.332,
-        "lon": 87.39,
-        "depth": 5.0,
-        "t_iso": "2026-10-18T05:32:32Z",
-        "utc_ms": 1792301552000,
-        "place": "NEPAL",
-        "local": "12:32 AM",
-        "date": "2026-10-18",
-        "utc": "05:32",
-        "tsunami": 0,
-        "catalogs": [
-          "EMSC"
-        ],
-        "duplicate_note": null,
-        "band": "M2-3",
-        "color": "#4dd2ff",
-        "radius": 9.8,
-        "url": ""
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          172.2323,
-          -41.6928
-        ]
-      },
-      "properties": {
-        "_id": 195,
-        "mag": 3.0,
-        "mag_alt": null,
-        "lat": -41.6928,
-        "lon": 172.2323,
-        "depth": 98.9,
-        "t_iso": "2026-10-18T05:31:30Z",
-        "utc_ms": 1792301490000,
-        "place": "SOUTH ISLAND OF NEW ZEALAND",
-        "local": "12:31 AM",
-        "date": "2026-10-18",
-        "utc": "05:31",
-        "tsunami": 0,
-        "catalogs": [
-          "EMSC"
-        ],
-        "duplicate_note": null,
-        "band": "M3-4",
-        "color": "#4dd2ff",
-        "radius": 10.5,
-        "url": ""
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -67.99,
-          -22.4
-        ]
-      },
-      "properties": {
-        "_id": 196,
-        "mag": 2.7,
-        "mag_alt": null,
-        "lat": -22.4,
-        "lon": -67.99,
-        "depth": 213.5,
-        "t_iso": "2026-10-18T05:29:45Z",
-        "utc_ms": 1792301385000,
-        "place": "ANTOFAGASTA, CHILE",
-        "local": "12:29 AM",
-        "date": "2026-10-18",
-        "utc": "05:29",
-        "tsunami": 0,
-        "catalogs": [
-          "EMSC"
-        ],
-        "duplicate_note": null,
-        "band": "M2-3",
-        "color": "#4dd2ff",
-        "radius": 9.5,
-        "url": ""
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -70.98,
-          -30.76
-        ]
-      },
-      "properties": {
-        "_id": 197,
-        "mag": 2.5,
-        "mag_alt": null,
-        "lat": -30.76,
-        "lon": -70.98,
-        "depth": 68.9,
-        "t_iso": "2026-10-18T05:05:17Z",
-        "utc_ms": 1792299917000,
-        "place": "COQUIMBO, CHILE",
-        "local": "12:05 AM",
-        "date": "2026-10-18",
-        "utc": "05:05",
-        "tsunami": 0,
-        "catalogs": [
-          "EMSC"
-        ],
-        "duplicate_note": null,
-        "band": "M2-3",
-        "color": "#4dd2ff",
-        "radius": 8.8,
-        "url": ""
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          119.74,
-          -8.17
-        ]
-      },
-      "properties": {
-        "_id": 198,
-        "mag": 2.9,
-        "mag_alt": null,
-        "lat": -8.17,
-        "lon": 119.74,
-        "depth": 10.0,
-        "t_iso": "2026-10-18T05:05:06Z",
-        "utc_ms": 1792299906000,
-        "place": "FLORES REGION, INDONESIA",
-        "local": "12:05 AM",
-        "date": "2026-10-18",
-        "utc": "05:05",
-        "tsunami": 0,
-        "catalogs": [
-          "EMSC"
-        ],
-        "duplicate_note": null,
-        "band": "M2-3",
-        "color": "#4dd2ff",
-        "radius": 10.1,
-        "url": ""
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -80.0533,
-          7.5317
-        ]
-      },
-      "properties": {
-        "_id": 199,
-        "mag": 4.3,
-        "mag_alt": null,
-        "lat": 7.5317,
-        "lon": -80.0533,
-        "depth": 10.0,
-        "t_iso": "2026-10-18T05:00:13Z",
-        "utc_ms": 1792299613331,
-        "place": "2 km W of Pedasí, Panama",
-        "local": "12:00 AM",
-        "date": "2026-10-18",
-        "utc": "05:00",
-        "tsunami": 0,
-        "catalogs": [
-          "USGS",
-          "EMSC"
-        ],
-        "duplicate_note": "Same physical event reported by USGS + EMSC",
-        "band": "M4-5",
-        "color": "#ffd60a",
-        "radius": 15.0,
-        "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000u33d"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -166.095,
-          65.8
-        ]
-      },
-      "properties": {
-        "_id": 200,
-        "mag": 3.4,
-        "mag_alt": null,
-        "lat": 65.8,
-        "lon": -166.095,
-        "depth": 10.0,
-        "t_iso": "2026-10-18T04:54:43Z",
-        "utc_ms": 1792299283348,
-        "place": "50 km S of Shishmaref, Alaska",
-        "local": "11:54 PM",
-        "date": "2026-10-17",
-        "utc": "04:54",
-        "tsunami": 0,
-        "catalogs": [
-          "USGS",
-          "EMSC"
-        ],
-        "duplicate_note": "Same physical event reported by USGS + EMSC",
-        "band": "M3-4",
-        "color": "#4dd2ff",
-        "radius": 11.9,
-        "url": "https://earthquake.usgs.gov/earthquakes/eventpage/aka2026uqacer"
-      }
     }
   ],
-  "storms": []
+  "storms": [
+    {
+      "name": "Trudy",
+      "cls": "TS",
+      "lat": 19.7,
+      "lon": -108.0,
+      "wind": null,
+      "mov": "280@6kt"
+    }
+  ]
 }
