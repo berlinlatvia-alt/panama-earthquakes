@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <kml xmlns="http://www.opengis.net/kml/2.2">
 <Document>
-  <name>Panama Earthquakes - Last 24h (2026-10-18 07:35-06:18 UTC)</name>
-  <description>41 deduped events | M6+:0 M5+:0 M4+:3 M3+:35 M2+:41 | sources: IGC, UNA, USGS/NEIC</description>
+  <name>Panama Earthquakes - Last 24h (2026-10-18 07:35-06:51 UTC)</name>
+  <description>42 deduped events | M6+:0 M5+:0 M4+:3 M3+:36 M2+:42 | sources: IGC, UNA, USGS/NEIC</description>
   <Style id="m4">
     <IconStyle><color>ff0000ff</color><scale>1.1</scale>
       <Icon><href>http://maps.google.com/mapfiles/kml/paddle/red-circle.png</href></Icon></IconStyle>
@@ -19,6 +19,12 @@
     <LabelStyle><scale>0.9</scale></LabelStyle>
   </Style>
 
+  <Placemark>
+    <name>M3.5 01:51 AM - La Pavosa</name>
+    <description><![CDATA[<b>M3.5 - PANAMA</b><br/><b>Nearest place:</b> La Pavosa<br/><b>Place source:</b> gazetteer<br/><b>Local (UTC-5):</b> 01:51 AM | <b>UTC:</b> 2026-10-19 06:51<br/><b>Coordinates:</b> 7.4802, -80.7446<br/><b>Depth:</b> 5 km<br/><b>Setting:</b> ONSHORE<br/><b>Distance:</b> Playa Blanca: 118 km | Altos del Maria: 153 km<br/><b>Source:</b> IGC<br/><b>Cause:</b> Azuero M7.7 sequence aftershock<br/><b>Tsunami flag:</b> 0]]></description>
+    <styleUrl>#m3</styleUrl>
+    <Point><coordinates>-80.74460,7.48020,0</coordinates></Point>
+  </Placemark>
   <Placemark>
     <name>M2.7 01:18 AM - Puntarenas</name>
     <description><![CDATA[<b>M2.7 - COSTA RICA</b><br/><b>Nearest place:</b> Puntarenas<br/><b>Place source:</b> nominatim<br/><b>Local (UTC-5):</b> 01:18 AM | <b>UTC:</b> 2026-10-19 06:18<br/><b>Coordinates:</b> 8.0267, -83.2198<br/><b>Depth:</b> 34 km<br/><b>Setting:</b> ONSHORE<br/><b>Distance:</b> Playa Blanca: 341 km | Altos del Maria: 360 km<br/><b>Source:</b> UNA<br/><b>Cause:</b> regional/other<br/><b>Tsunami flag:</b> 0]]></description>
