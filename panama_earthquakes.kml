@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <kml xmlns="http://www.opengis.net/kml/2.2">
 <Document>
-  <name>Panama Earthquakes - Last 24h (2026-10-18 02:14-02:05 UTC)</name>
+  <name>Panama Earthquakes - Last 24h (2026-10-18 03:05-02:53 UTC)</name>
   <description>41 deduped events | M6+:0 M5+:0 M4+:5 M3+:36 M2+:41 | sources: IGC, UNA, USGS/NEIC</description>
   <Style id="m4">
     <IconStyle><color>ff0000ff</color><scale>1.1</scale>
@@ -19,6 +19,18 @@
     <LabelStyle><scale>0.9</scale></LabelStyle>
   </Style>
 
+  <Placemark>
+    <name>M3.7 09:53 PM - El Uvito</name>
+    <description><![CDATA[<b>M3.7 - PANAMA</b><br/><b>Nearest place:</b> El Uvito<br/><b>Place source:</b> gazetteer<br/><b>Local (UTC-5):</b> 09:53 PM | <b>UTC:</b> 2026-10-19 02:53<br/><b>Coordinates:</b> 7.4702, -80.1324<br/><b>Depth:</b> 5 km<br/><b>Setting:</b> OFFSHORE<br/><b>Distance:</b> Playa Blanca: 98 km | Altos del Maria: 132 km<br/><b>Source:</b> IGC<br/><b>Cause:</b> Azuero M7.7 sequence aftershock<br/><b>Tsunami flag:</b> 0]]></description>
+    <styleUrl>#m3</styleUrl>
+    <Point><coordinates>-80.13240,7.47020,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+    <name>M3.8 09:50 PM - Lajas</name>
+    <description><![CDATA[<b>M3.8 - PANAMA</b><br/><b>Nearest place:</b> Lajas<br/><b>Place source:</b> gazetteer<br/><b>Local (UTC-5):</b> 09:50 PM | <b>UTC:</b> 2026-10-19 02:50<br/><b>Coordinates:</b> 7.1642, -80.6955<br/><b>Depth:</b> 10 km<br/><b>Setting:</b> OFFSHORE<br/><b>Distance:</b> Playa Blanca: 146 km | Altos del Maria: 181 km<br/><b>Source:</b> IGC<br/><b>Cause:</b> Azuero M7.7 sequence aftershock<br/><b>Tsunami flag:</b> 0]]></description>
+    <styleUrl>#m3</styleUrl>
+    <Point><coordinates>-80.69550,7.16420,0</coordinates></Point>
+  </Placemark>
   <Placemark>
     <name>M3.7 09:05 PM - La Poza Verde</name>
     <description><![CDATA[<b>M3.7 - PANAMA</b><br/><b>Nearest place:</b> La Poza Verde<br/><b>Place source:</b> gazetteer<br/><b>Local (UTC-5):</b> 09:05 PM | <b>UTC:</b> 2026-10-19 02:05<br/><b>Coordinates:</b> 7.5596, -80.6799<br/><b>Depth:</b> 5 km<br/><b>Setting:</b> ONSHORE<br/><b>Distance:</b> Playa Blanca: 107 km | Altos del Maria: 142 km<br/><b>Source:</b> IGC<br/><b>Cause:</b> Azuero M7.7 sequence aftershock<br/><b>Tsunami flag:</b> 0]]></description>
@@ -252,18 +264,6 @@
     <description><![CDATA[<b>M3.5 - PANAMA</b><br/><b>Nearest place:</b> Bella Vista<br/><b>Place source:</b> gazetteer<br/><b>Local (UTC-5):</b> 10:05 PM | <b>UTC:</b> 2026-10-18 03:05<br/><b>Coordinates:</b> 7.5761, -80.7394<br/><b>Depth:</b> 10 km<br/><b>Setting:</b> ONSHORE<br/><b>Distance:</b> Playa Blanca: 109 km | Altos del Maria: 144 km<br/><b>Source:</b> IGC<br/><b>Cause:</b> Azuero M7.7 sequence aftershock<br/><b>Tsunami flag:</b> 0]]></description>
     <styleUrl>#m3</styleUrl>
     <Point><coordinates>-80.73940,7.57610,0</coordinates></Point>
-  </Placemark>
-  <Placemark>
-    <name>M3.5 09:41 PM - Divisa</name>
-    <description><![CDATA[<b>M3.5 - PANAMA</b><br/><b>Nearest place:</b> Divisa<br/><b>Place source:</b> gazetteer<br/><b>Local (UTC-5):</b> 09:41 PM | <b>UTC:</b> 2026-10-18 02:41<br/><b>Coordinates:</b> 7.6702, -80.7508<br/><b>Depth:</b> 5 km<br/><b>Setting:</b> ONSHORE<br/><b>Distance:</b> Playa Blanca: 102 km | Altos del Maria: 136 km<br/><b>Source:</b> IGC<br/><b>Cause:</b> Azuero M7.7 sequence aftershock<br/><b>Tsunami flag:</b> 0]]></description>
-    <styleUrl>#m3</styleUrl>
-    <Point><coordinates>-80.75080,7.67020,0</coordinates></Point>
-  </Placemark>
-  <Placemark>
-    <name>M3.1 09:14 PM - Puntarenas</name>
-    <description><![CDATA[<b>M3.1 - COSTA RICA</b><br/><b>Nearest place:</b> Puntarenas<br/><b>Place source:</b> nominatim<br/><b>Local (UTC-5):</b> 09:14 PM | <b>UTC:</b> 2026-10-18 02:14<br/><b>Coordinates:</b> 9.0584, -84.0578<br/><b>Depth:</b> 18 km<br/><b>Setting:</b> ONSHORE<br/><b>Distance:</b> Playa Blanca: 438 km | Altos del Maria: 447 km<br/><b>Source:</b> UNA<br/><b>Cause:</b> regional/other<br/><b>Tsunami flag:</b> 0]]></description>
-    <styleUrl>#m3</styleUrl>
-    <Point><coordinates>-84.05780,9.05840,0</coordinates></Point>
   </Placemark>
 </Document>
 </kml>
