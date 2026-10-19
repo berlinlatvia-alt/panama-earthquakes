@@ -2,7 +2,7 @@
 <kml xmlns="http://www.opengis.net/kml/2.2">
 <Document>
   <name>Panama Earthquakes - Last 24h (2026-10-18 14:09-13:32 UTC)</name>
-  <description>42 deduped events | M6+:0 M5+:0 M4+:3 M3+:35 M2+:42 | sources: IGC, UNA, USGS/NEIC</description>
+  <description>43 deduped events | M6+:0 M5+:0 M4+:3 M3+:36 M2+:43 | sources: IGC, UNA, USGS/NEIC</description>
   <Style id="m4">
     <IconStyle><color>ff0000ff</color><scale>1.1</scale>
       <Icon><href>http://maps.google.com/mapfiles/kml/paddle/red-circle.png</href></Icon></IconStyle>
@@ -20,10 +20,16 @@
   </Style>
 
   <Placemark>
-    <name>M3.1 08:32 AM - Boca de Culubre</name>
-    <description><![CDATA[<b>M3.1 - PANAMA-COSTA RICA BORDER REGION</b><br/><b>Nearest place:</b> Boca de Culubre<br/><b>Place source:</b> gazetteer<br/><b>Local (UTC-5):</b> 08:32 AM | <b>UTC:</b> 2026-10-19 13:32<br/><b>Coordinates:</b> 9.1252, -82.5237<br/><b>Depth:</b> 7 km<br/><b>Setting:</b> ONSHORE<br/><b>Distance:</b> Playa Blanca: 276 km | Altos del Maria: 281 km<br/><b>Source:</b> UNA<br/><b>Cause:</b> regional/other<br/><b>Tsunami flag:</b> 0]]></description>
+    <name>M3.4 08:32 AM - Punta Laurel</name>
+    <description><![CDATA[<b>M3.4 - PANAMA-COSTA RICA BORDER REGION</b><br/><b>Nearest place:</b> Punta Laurel<br/><b>Place source:</b> gazetteer<br/><b>Local (UTC-5):</b> 08:32 AM | <b>UTC:</b> 2026-10-19 13:32<br/><b>Coordinates:</b> 9.0693, -82.1321<br/><b>Depth:</b> 10 km<br/><b>Setting:</b> ONSHORE<br/><b>Distance:</b> Playa Blanca: 234 km | Altos del Maria: 238 km<br/><b>Source:</b> IGC<br/><b>Cause:</b> regional/other<br/><b>Tsunami flag:</b> 0]]></description>
     <styleUrl>#m3</styleUrl>
-    <Point><coordinates>-82.52370,9.12520,0</coordinates></Point>
+    <Point><coordinates>-82.13210,9.06930,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+    <name>M3.7 08:29 AM - Capilla San Juan Bosco</name>
+    <description><![CDATA[<b>M3.7 - PANAMA</b><br/><b>Nearest place:</b> Capilla San Juan Bosco<br/><b>Place source:</b> gazetteer<br/><b>Local (UTC-5):</b> 08:29 AM | <b>UTC:</b> 2026-10-19 13:29<br/><b>Coordinates:</b> 7.5283, -80.6616<br/><b>Depth:</b> 15 km<br/><b>Setting:</b> ONSHORE<br/><b>Distance:</b> Playa Blanca: 108 km | Altos del Maria: 144 km<br/><b>Source:</b> IGC<br/><b>Cause:</b> Azuero M7.7 sequence aftershock<br/><b>Tsunami flag:</b> 0]]></description>
+    <styleUrl>#m3</styleUrl>
+    <Point><coordinates>-80.66160,7.52830,0</coordinates></Point>
   </Placemark>
   <Placemark>
     <name>M3.5 07:16 AM - Los Caracuchos</name>
