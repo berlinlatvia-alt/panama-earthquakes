@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <kml xmlns="http://www.opengis.net/kml/2.2">
 <Document>
-  <name>Panama Earthquakes - Last 24h (2026-10-19 12:16-09:55 UTC)</name>
-  <description>30 deduped events | M6+:0 M5+:0 M4+:2 M3+:25 M2+:30 | sources: IGC, UNA</description>
+  <name>Panama Earthquakes - Last 24h (2026-10-19 13:29-11:44 UTC)</name>
+  <description>30 deduped events | M6+:0 M5+:0 M4+:2 M3+:24 M2+:30 | sources: IGC, UNA</description>
   <Style id="m4">
     <IconStyle><color>ff0000ff</color><scale>1.1</scale>
       <Icon><href>http://maps.google.com/mapfiles/kml/paddle/red-circle.png</href></Icon></IconStyle>
@@ -19,6 +19,12 @@
     <LabelStyle><scale>0.9</scale></LabelStyle>
   </Style>
 
+  <Placemark>
+    <name>M2.6 06:44 AM - Saladito</name>
+    <description><![CDATA[<b>M2.6 - PANAMA</b><br/><b>Nearest place:</b> Saladito<br/><b>Place source:</b> gazetteer<br/><b>Local (UTC-5):</b> 06:44 AM | <b>UTC:</b> 2026-10-20 11:44<br/><b>Coordinates:</b> 7.6659, -80.2187<br/><b>Depth:</b> 9 km<br/><b>Setting:</b> ONSHORE<br/><b>Distance:</b> Playa Blanca: 77 km | Altos del Maria: 112 km<br/><b>Source:</b> IGC<br/><b>Cause:</b> Azuero M7.7 sequence aftershock<br/><b>Tsunami flag:</b> 0]]></description>
+    <styleUrl>#m2</styleUrl>
+    <Point><coordinates>-80.21870,7.66590,0</coordinates></Point>
+  </Placemark>
   <Placemark>
     <name>M2.6 04:55 AM - El Carao</name>
     <description><![CDATA[<b>M2.6 - COSTA RICA</b><br/><b>Nearest place:</b> El Carao<br/><b>Place source:</b> gazetteer<br/><b>Local (UTC-5):</b> 04:55 AM | <b>UTC:</b> 2026-10-20 09:55<br/><b>Coordinates:</b> 10.3584, -85.3137<br/><b>Depth:</b> 50 km<br/><b>Setting:</b> ONSHORE<br/><b>Distance:</b> Playa Blanca: 610 km | Altos del Maria: 612 km<br/><b>Source:</b> UNA<br/><b>Cause:</b> regional/other<br/><b>Tsunami flag:</b> 0]]></description>
@@ -192,12 +198,6 @@
     <description><![CDATA[<b>M3.7 - PANAMA</b><br/><b>Nearest place:</b> Capilla San Juan Bosco<br/><b>Place source:</b> gazetteer<br/><b>Local (UTC-5):</b> 08:29 AM | <b>UTC:</b> 2026-10-19 13:29<br/><b>Coordinates:</b> 7.5283, -80.6616<br/><b>Depth:</b> 15 km<br/><b>Setting:</b> ONSHORE<br/><b>Distance:</b> Playa Blanca: 108 km | Altos del Maria: 144 km<br/><b>Source:</b> IGC<br/><b>Cause:</b> Azuero M7.7 sequence aftershock<br/><b>Tsunami flag:</b> 0]]></description>
     <styleUrl>#m3</styleUrl>
     <Point><coordinates>-80.66160,7.52830,0</coordinates></Point>
-  </Placemark>
-  <Placemark>
-    <name>M3.5 07:16 AM - Los Caracuchos</name>
-    <description><![CDATA[<b>M3.5 - PANAMA</b><br/><b>Nearest place:</b> Los Caracuchos<br/><b>Place source:</b> gazetteer<br/><b>Local (UTC-5):</b> 07:16 AM | <b>UTC:</b> 2026-10-19 12:16<br/><b>Coordinates:</b> 7.5193, -80.6147<br/><b>Depth:</b> 20 km<br/><b>Setting:</b> ONSHORE<br/><b>Distance:</b> Playa Blanca: 107 km | Altos del Maria: 142 km<br/><b>Source:</b> IGC<br/><b>Cause:</b> Azuero M7.7 sequence aftershock<br/><b>Tsunami flag:</b> 0]]></description>
-    <styleUrl>#m3</styleUrl>
-    <Point><coordinates>-80.61470,7.51930,0</coordinates></Point>
   </Placemark>
 </Document>
 </kml>
