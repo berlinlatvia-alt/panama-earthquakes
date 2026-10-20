@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <kml xmlns="http://www.opengis.net/kml/2.2">
 <Document>
-  <name>Panama Earthquakes - Last 24h (2026-10-19 05:53-05:13 UTC)</name>
+  <name>Panama Earthquakes - Last 24h (2026-10-19 06:18-06:12 UTC)</name>
   <description>37 deduped events | M6+:0 M5+:0 M4+:2 M3+:32 M2+:37 | sources: IGC, UNA</description>
   <Style id="m4">
     <IconStyle><color>ff0000ff</color><scale>1.1</scale>
@@ -19,6 +19,12 @@
     <LabelStyle><scale>0.9</scale></LabelStyle>
   </Style>
 
+  <Placemark>
+    <name>M3.6 01:12 AM - El Melchor</name>
+    <description><![CDATA[<b>M3.6 - PANAMA</b><br/><b>Nearest place:</b> El Melchor<br/><b>Place source:</b> gazetteer<br/><b>Local (UTC-5):</b> 01:12 AM | <b>UTC:</b> 2026-10-20 06:12<br/><b>Coordinates:</b> 7.5866, -80.6052<br/><b>Depth:</b> 10 km<br/><b>Setting:</b> ONSHORE<br/><b>Distance:</b> Playa Blanca: 100 km | Altos del Maria: 135 km<br/><b>Source:</b> IGC<br/><b>Cause:</b> Azuero M7.7 sequence aftershock<br/><b>Tsunami flag:</b> 0]]></description>
+    <styleUrl>#m3</styleUrl>
+    <Point><coordinates>-80.60520,7.58660,0</coordinates></Point>
+  </Placemark>
   <Placemark>
     <name>M3.6 12:13 AM - Playa Azul</name>
     <description><![CDATA[<b>M3.6 - PANAMA</b><br/><b>Nearest place:</b> Playa Azul<br/><b>Place source:</b> gazetteer<br/><b>Local (UTC-5):</b> 12:13 AM | <b>UTC:</b> 2026-10-20 05:13<br/><b>Coordinates:</b> 7.6505, -81.3962<br/><b>Depth:</b> 15 km<br/><b>Setting:</b> ONSHORE<br/><b>Distance:</b> Playa Blanca: 159 km | Altos del Maria: 189 km<br/><b>Source:</b> IGC<br/><b>Cause:</b> Azuero M7.7 sequence aftershock<br/><b>Tsunami flag:</b> 0]]></description>
@@ -234,12 +240,6 @@
     <description><![CDATA[<b>M2.7 - COSTA RICA</b><br/><b>Nearest place:</b> Puntarenas<br/><b>Place source:</b> nominatim<br/><b>Local (UTC-5):</b> 01:18 AM | <b>UTC:</b> 2026-10-19 06:18<br/><b>Coordinates:</b> 8.0267, -83.2198<br/><b>Depth:</b> 34 km<br/><b>Setting:</b> ONSHORE<br/><b>Distance:</b> Playa Blanca: 341 km | Altos del Maria: 360 km<br/><b>Source:</b> UNA<br/><b>Cause:</b> regional/other<br/><b>Tsunami flag:</b> 0]]></description>
     <styleUrl>#m2</styleUrl>
     <Point><coordinates>-83.21980,8.02670,0</coordinates></Point>
-  </Placemark>
-  <Placemark>
-    <name>M3.3 12:53 AM - Cativón</name>
-    <description><![CDATA[<b>M3.3 - PANAMA</b><br/><b>Nearest place:</b> Cativón<br/><b>Place source:</b> gazetteer<br/><b>Local (UTC-5):</b> 12:53 AM | <b>UTC:</b> 2026-10-19 05:53<br/><b>Coordinates:</b> 7.7000, -81.4313<br/><b>Depth:</b> 7 km<br/><b>Setting:</b> ONSHORE<br/><b>Distance:</b> Playa Blanca: 160 km | Altos del Maria: 189 km<br/><b>Source:</b> IGC<br/><b>Cause:</b> Azuero M7.7 sequence aftershock<br/><b>Tsunami flag:</b> 0]]></description>
-    <styleUrl>#m3</styleUrl>
-    <Point><coordinates>-81.43130,7.70000,0</coordinates></Point>
   </Placemark>
 </Document>
 </kml>
