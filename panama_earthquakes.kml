@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <kml xmlns="http://www.opengis.net/kml/2.2">
 <Document>
-  <name>Panama Earthquakes - Last 24h (2026-10-20 04:03-21:13 UTC)</name>
-  <description>30 deduped events | M6+:0 M5+:1 M4+:5 M3+:22 M2+:30 | sources: IGC, INET, UNA, USGS/NEIC</description>
+  <name>Panama Earthquakes - Last 24h (2026-10-20 04:03-22:46 UTC)</name>
+  <description>31 deduped events | M6+:0 M5+:1 M4+:5 M3+:22 M2+:31 | sources: IGC, INET, UNA, USGS/NEIC</description>
   <Style id="m4">
     <IconStyle><color>ff0000ff</color><scale>1.1</scale>
       <Icon><href>http://maps.google.com/mapfiles/kml/paddle/red-circle.png</href></Icon></IconStyle>
@@ -19,6 +19,12 @@
     <LabelStyle><scale>0.9</scale></LabelStyle>
   </Style>
 
+  <Placemark>
+    <name>M2.6 05:46 PM - Majagua Civil Número Dos</name>
+    <description><![CDATA[<b>M2.6 - PANAMA-COSTA RICA BORDER REGION</b><br/><b>Nearest place:</b> Majagua Civil Número Dos<br/><b>Place source:</b> gazetteer<br/><b>Local (UTC-5):</b> 05:46 PM | <b>UTC:</b> 2026-10-20 22:46<br/><b>Coordinates:</b> 8.3390, -82.9422<br/><b>Depth:</b> 14 km<br/><b>Setting:</b> ONSHORE<br/><b>Distance:</b> Playa Blanca: 309 km | Altos del Maria: 324 km<br/><b>Source:</b> UNA<br/><b>Cause:</b> regional/other<br/><b>Tsunami flag:</b> 0]]></description>
+    <styleUrl>#m2</styleUrl>
+    <Point><coordinates>-82.94220,8.33900,0</coordinates></Point>
+  </Placemark>
   <Placemark>
     <name>M3.5 04:13 PM - Naranjito</name>
     <description><![CDATA[<b>M3.5 - PANAMA</b><br/><b>Nearest place:</b> Naranjito<br/><b>Place source:</b> gazetteer<br/><b>Local (UTC-5):</b> 04:13 PM | <b>UTC:</b> 2026-10-20 21:13<br/><b>Coordinates:</b> 7.4978, -81.3167<br/><b>Depth:</b> 35 km<br/><b>Setting:</b> ONSHORE<br/><b>Distance:</b> Playa Blanca: 161 km | Altos del Maria: 192 km<br/><b>Source:</b> IGC<br/><b>Cause:</b> Azuero M7.7 sequence aftershock<br/><b>Tsunami flag:</b> 0]]></description>
