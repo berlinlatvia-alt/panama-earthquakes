@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <kml xmlns="http://www.opengis.net/kml/2.2">
 <Document>
-  <name>Panama Earthquakes - Last 24h (2026-10-20 04:03-22:46 UTC)</name>
-  <description>31 deduped events | M6+:0 M5+:1 M4+:5 M3+:22 M2+:31 | sources: IGC, INET, UNA, USGS/NEIC</description>
+  <name>Panama Earthquakes - Last 24h (2026-10-20 04:03-22:56 UTC)</name>
+  <description>32 deduped events | M6+:0 M5+:1 M4+:5 M3+:23 M2+:32 | sources: IGC, INET, UNA, USGS/NEIC</description>
   <Style id="m4">
     <IconStyle><color>ff0000ff</color><scale>1.1</scale>
       <Icon><href>http://maps.google.com/mapfiles/kml/paddle/red-circle.png</href></Icon></IconStyle>
@@ -19,6 +19,12 @@
     <LabelStyle><scale>0.9</scale></LabelStyle>
   </Style>
 
+  <Placemark>
+    <name>M3.0 05:56 PM - OFF COAST OF CENTRAL AMERICA</name>
+    <description><![CDATA[<b>M3.0 - OFF COAST OF CENTRAL AMERICA</b><br/><b>Nearest place:</b> OFF COAST OF CENTRAL AMERICA<br/><b>Place source:</b> catalog_fallback<br/><b>Local (UTC-5):</b> 05:56 PM | <b>UTC:</b> 2026-10-20 22:56<br/><b>Coordinates:</b> 6.6994, -83.1120<br/><b>Depth:</b> 300 km<br/><b>Setting:</b> OFFSHORE<br/><b>Distance:</b> Playa Blanca: 376 km | Altos del Maria: 405 km<br/><b>Source:</b> UNA<br/><b>Cause:</b> regional/other<br/><b>Tsunami flag:</b> 0]]></description>
+    <styleUrl>#m3</styleUrl>
+    <Point><coordinates>-83.11200,6.69940,0</coordinates></Point>
+  </Placemark>
   <Placemark>
     <name>M2.6 05:46 PM - Majagua Civil Número Dos</name>
     <description><![CDATA[<b>M2.6 - PANAMA-COSTA RICA BORDER REGION</b><br/><b>Nearest place:</b> Majagua Civil Número Dos<br/><b>Place source:</b> gazetteer<br/><b>Local (UTC-5):</b> 05:46 PM | <b>UTC:</b> 2026-10-20 22:46<br/><b>Coordinates:</b> 8.3390, -82.9422<br/><b>Depth:</b> 14 km<br/><b>Setting:</b> ONSHORE<br/><b>Distance:</b> Playa Blanca: 309 km | Altos del Maria: 324 km<br/><b>Source:</b> UNA<br/><b>Cause:</b> regional/other<br/><b>Tsunami flag:</b> 0]]></description>
