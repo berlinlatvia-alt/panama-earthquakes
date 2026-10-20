@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <kml xmlns="http://www.opengis.net/kml/2.2">
 <Document>
-  <name>Panama Earthquakes - Last 24h (2026-10-19 05:24-05:09 UTC)</name>
+  <name>Panama Earthquakes - Last 24h (2026-10-19 05:53-05:13 UTC)</name>
   <description>37 deduped events | M6+:0 M5+:0 M4+:2 M3+:32 M2+:37 | sources: IGC, UNA</description>
   <Style id="m4">
     <IconStyle><color>ff0000ff</color><scale>1.1</scale>
@@ -19,6 +19,12 @@
     <LabelStyle><scale>0.9</scale></LabelStyle>
   </Style>
 
+  <Placemark>
+    <name>M3.6 12:13 AM - Playa Azul</name>
+    <description><![CDATA[<b>M3.6 - PANAMA</b><br/><b>Nearest place:</b> Playa Azul<br/><b>Place source:</b> gazetteer<br/><b>Local (UTC-5):</b> 12:13 AM | <b>UTC:</b> 2026-10-20 05:13<br/><b>Coordinates:</b> 7.6505, -81.3962<br/><b>Depth:</b> 15 km<br/><b>Setting:</b> ONSHORE<br/><b>Distance:</b> Playa Blanca: 159 km | Altos del Maria: 189 km<br/><b>Source:</b> IGC<br/><b>Cause:</b> Azuero M7.7 sequence aftershock<br/><b>Tsunami flag:</b> 0]]></description>
+    <styleUrl>#m3</styleUrl>
+    <Point><coordinates>-81.39620,7.65050,0</coordinates></Point>
+  </Placemark>
   <Placemark>
     <name>M3.6 12:09 AM - La Iguana</name>
     <description><![CDATA[<b>M3.6 - PANAMA</b><br/><b>Nearest place:</b> La Iguana<br/><b>Place source:</b> gazetteer<br/><b>Local (UTC-5):</b> 12:09 AM | <b>UTC:</b> 2026-10-20 05:09<br/><b>Coordinates:</b> 7.2590, -81.8907<br/><b>Depth:</b> 10 km<br/><b>Setting:</b> OFFSHORE<br/><b>Distance:</b> Playa Blanca: 228 km | Altos del Maria: 258 km<br/><b>Source:</b> IGC<br/><b>Cause:</b> Azuero M7.7 sequence aftershock<br/><b>Tsunami flag:</b> 0]]></description>
@@ -234,12 +240,6 @@
     <description><![CDATA[<b>M3.3 - PANAMA</b><br/><b>Nearest place:</b> Cativón<br/><b>Place source:</b> gazetteer<br/><b>Local (UTC-5):</b> 12:53 AM | <b>UTC:</b> 2026-10-19 05:53<br/><b>Coordinates:</b> 7.7000, -81.4313<br/><b>Depth:</b> 7 km<br/><b>Setting:</b> ONSHORE<br/><b>Distance:</b> Playa Blanca: 160 km | Altos del Maria: 189 km<br/><b>Source:</b> IGC<br/><b>Cause:</b> Azuero M7.7 sequence aftershock<br/><b>Tsunami flag:</b> 0]]></description>
     <styleUrl>#m3</styleUrl>
     <Point><coordinates>-81.43130,7.70000,0</coordinates></Point>
-  </Placemark>
-  <Placemark>
-    <name>M3.5 12:24 AM - Calabacito</name>
-    <description><![CDATA[<b>M3.5 - PANAMA</b><br/><b>Nearest place:</b> Calabacito<br/><b>Place source:</b> gazetteer<br/><b>Local (UTC-5):</b> 12:24 AM | <b>UTC:</b> 2026-10-19 05:24<br/><b>Coordinates:</b> 7.4256, -80.1606<br/><b>Depth:</b> 7 km<br/><b>Setting:</b> OFFSHORE<br/><b>Distance:</b> Playa Blanca: 103 km | Altos del Maria: 137 km<br/><b>Source:</b> IGC<br/><b>Cause:</b> Azuero M7.7 sequence aftershock<br/><b>Tsunami flag:</b> 0]]></description>
-    <styleUrl>#m3</styleUrl>
-    <Point><coordinates>-80.16060,7.42560,0</coordinates></Point>
   </Placemark>
 </Document>
 </kml>
