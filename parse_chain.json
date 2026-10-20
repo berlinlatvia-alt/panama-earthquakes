@@ -1,0 +1,55 @@
+{
+  "wire": { "version": 2, "transport": "JSON_UTF8" },
+  "id": "PARSE_CHAIN_CONFIG_20261020",
+  "project": "panama-earthquakes",
+  "purpose": "Request-Now time-parse chain: hallucination-free + lightning fast + aftershock-storm resilient",
+  "user_directive_utc": "2026-10-20",
+  "tier0_deterministic": {
+    "actor": "browser_rules_engine",
+    "handles": ["now", "today", "yesterday", "last/past N minutes|hours|days", "explicit year", "explicit month", "since <moment>"],
+    "latency_ms": 1,
+    "cost_usd": 0,
+    "hallucination_surface": 0,
+    "role": "primary for all exact phrases; never-fails floor"
+  },
+  "tier1_llm_fallback": {
+    "trigger": "tier0 cannot parse (ambiguous free-text)",
+    "primary": "minimax/minimax-m3.1-flash:free",
+    "primary_reason": "USER_DIRECTIVE_2026-10-20: free model - zero token depletion during extreme aftershock situations; benchmark 8/8 correct, 1.54s median",
+    "overflow_on_429_or_error": "z-ai/glm-5.3-flash",
+    "overflow_reason": "free-tier rate limit (~20 req/min) absorbed; ~$0.0001/parse; 8/8 correct, 0.93s median",
+    "settings": {
+      "response_format": "json_schema strict {start_utc, end_utc}",
+      "provider_sort": "latency",
+      "temperature": 0.0,
+      "max_tokens": 800
+    },
+    "semantics_pinned": {
+      "now": "[t-24h, t]",
+      "last_past_N_units": "[t-N, t]",
+      "today": "[00:00 UTC today, t]",
+      "yesterday": "[00:00 UTC yesterday, 00:00 UTC today]",
+      "explicit_year": "[Jan 1 00:00, Dec 31 23:59:59]",
+      "explicit_month": "full calendar month",
+      "since_moment": "[moment, t]"
+    },
+    "validation_gate": "invalid JSON / out-of-bounds window -> silent fallback to default 24h window; garbage never reaches the map"
+  },
+  "referee_async": {
+    "model": "deepseek/deepseek-v4.1-flash",
+    "role": "post-fetch verification of merged now-data (dedup, magnitude sanity, staleness); NEVER gates first paint",
+    "config_source": "tools/REFEREE_CONFIG.json"
+  },
+  "runtime_fetch": {
+    "llm_on_path": false,
+    "chain": "EMSC standing_order WebSocket (warm, reconnect+backoff) + parallel REST fan-out: USGS all_day/all_hour GeoJSON, USGS FDSN, EMSC FDSN, GFZ GEOFON; per-source 4s timeout; progressive render",
+    "dedup": "|dt|<=60s AND <=100km AND |dmag|<=1.0; priority USGS > EMSC > GFZ > IRIS; union ids[]",
+    "sort": "origin_time_ms DESC, tie-break mag DESC then id ASC",
+    "clock_skew_guard": "re-anchor to server time if skew > 120s"
+  },
+  "evidence": {
+    "benchmark_receipt": "reports/parse_model_lightning_benchmark_20261020.json",
+    "glm_consult_receipt": "reports/glm_now_chain_consultation.json",
+    "cost_scan_receipt": "reports/openrouter_parse_model_cost_scan.json"
+  }
+}
