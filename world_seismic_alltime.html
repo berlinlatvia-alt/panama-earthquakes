@@ -4,20 +4,27 @@
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>All-Time World Seismic Map 1900-2026</title>
+<link rel="icon" href="data:,"/>
 <link rel="stylesheet" href="leaflet.css"/>
 <style>
-  :root{--bg:#1a1d23;--panel:#252a33;--panel2:#2e3440;--txt:#cbd5e1;--txt2:#94a3b8;--accent:#7aa2f7;}
+  :root{--bg:#1a1d23;--panel:#252a33;--panel2:#2e3440;--txt:#cbd5e1;--txt2:#94a3b8;--accent:#7aa2f7;--live:#22d3ee;}
   *{box-sizing:border-box;margin:0;padding:0;}
   body{background:var(--bg);color:var(--txt);font-family:'Segoe UI',system-ui,sans-serif;}
   #map{position:absolute;top:0;left:0;right:0;bottom:0;background:#14161a;}
   .panel{position:absolute;background:rgba(37,42,51,0.95);border:1px solid #3b4252;border-radius:10px;
          padding:12px 14px;z-index:1000;backdrop-filter:blur(6px);box-shadow:0 4px 18px rgba(0,0,0,0.5);}
-  #controls{top:12px;left:12px;width:290px;max-height:calc(100vh - 24px);overflow-y:auto;}
-  #stats{top:12px;right:12px;width:230px;font-size:12px;line-height:1.5;}
+  #controls{top:12px;left:12px;width:300px;max-height:calc(100vh - 24px);overflow-y:auto;}
+  #stats{top:12px;right:12px;width:240px;font-size:12px;line-height:1.5;}
   h1{font-size:15px;font-weight:600;color:#e2e8f0;margin-bottom:8px;}
   h2{font-size:12px;font-weight:600;color:var(--txt2);text-transform:uppercase;letter-spacing:.5px;margin:10px 0 6px;}
   .row{display:flex;align-items:center;gap:6px;margin:3px 0;font-size:12px;}
-  input[type=range]{width:100%;accent-color:var(--accent);}
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:5px;}
+  .grid3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:5px;}
+  select{background:var(--panel2);color:var(--txt);border:1px solid #3b4252;border-radius:6px;
+         padding:4px 6px;font-size:11.5px;width:100%;outline:none;}
+  select:hover{border-color:var(--accent);}
+  select:disabled{opacity:.45;}
+  label.sel{font-size:10px;color:var(--txt2);display:block;margin-bottom:2px;}
   .decades{display:grid;grid-template-columns:repeat(3,1fr);gap:4px;}
   .decades label{background:var(--panel2);border:1px solid #3b4252;border-radius:6px;padding:4px 6px;
                  font-size:11px;cursor:pointer;text-align:center;user-select:none;}
@@ -29,11 +36,16 @@
          padding:5px 10px;font-size:11px;cursor:pointer;}
   button:hover{border-color:var(--accent);}
   button.primary{background:#3d5a80;border-color:#7aa2f7;color:#fff;}
+  button.livebtn{background:#155e75;border-color:#22d3ee;color:#e0f7ff;font-weight:600;
+                 padding:7px 12px;font-size:12px;width:100%;}
+  button.livebtn:hover{background:#0e7490;border-color:#67e8f9;}
+  button.livebtn:disabled{opacity:.6;cursor:wait;}
+  #liveStatus{font-size:10.5px;color:var(--txt2);margin-top:6px;line-height:1.5;white-space:pre-line;}
   .stat-line{display:flex;justify-content:space-between;}
   .stat-val{color:#e2e8f0;font-weight:600;}
-  #yearLabel{color:#e2e8f0;font-weight:600;}
   .hint{font-size:10px;color:#64748b;margin-top:6px;line-height:1.4;}
-  .neverbox{position:absolute;width:14px;height:14px;background:repeating-linear-gradient(45deg,#334155,#334155 3px,#1e293b 3px,#1e293b 6px);border:1px solid #475569;border-radius:2px;}
+  .badge-live{display:inline-block;background:#155e75;color:#a5f3fc;border-radius:4px;
+              padding:0 5px;font-size:10px;margin-left:4px;}
 </style>
 </head>
 <body>
@@ -41,14 +53,27 @@
 
 <div class="panel" id="controls">
   <h1>All-Time World Seismic Map</h1>
-  <div style="font-size:11px;color:var(--txt2);">USGS FDSN catalog 1900-2026 &middot; <span id="totalCount"></span> events</div>
+  <div style="font-size:11px;color:var(--txt2);">Seismic catalog 1900-2026 &middot; USGS + EMSC &middot; <span id="totalCount">...</span> events</div>
 
-  <h2>Year <span id="yearLabel">all</span></h2>
-  <input type="range" id="yearSlider" min="1900" max="2026" value="2026" step="1"/>
-  <div class="row" style="justify-content:space-between;">
-    <button id="btnAllYears">All years</button>
-    <span style="font-size:10px;color:var(--txt2);" id="yearCount"></span>
+  <h2>Time window (UTC)</h2>
+  <div class="grid2">
+    <div><label class="sel" for="selYear">Year</label><select id="selYear"><option value="all">All</option></select></div>
+    <div><label class="sel" for="selMonth">Month</label><select id="selMonth"></select></div>
+    <div><label class="sel" for="selDay">Day</label><select id="selDay"></select></div>
+    <div><label class="sel" for="selHour">Hour</label><select id="selHour"></select></div>
+    <div><label class="sel" for="selMinute">Minute</label><select id="selMinute"></select></div>
+    <div style="display:flex;align-items:flex-end;"><button id="btnResetTime" title="Reset time filters">Reset time</button></div>
   </div>
+  <div class="row" style="justify-content:space-between;">
+    <span style="font-size:10px;color:var(--txt2);" id="yearCount"></span>
+    <span style="font-size:10px;color:var(--txt2);" id="windowLabel"></span>
+  </div>
+
+  <h2>Live now</h2>
+  <button id="btnNow" class="livebtn">Request Now (live fetch)</button>
+  <div class="row" style="margin-top:6px;"><input type="checkbox" id="showLive" checked/>
+    <label for="showLive">Show live layer <span class="badge-live" id="liveCount">0</span></label></div>
+  <div id="liveStatus">Parallel sources: USGS feed + USGS FDSN + EMSC. Warm EMSC push channel when available.</div>
 
   <h2>Decade layers</h2>
   <div class="decades" id="decadeBoxes"></div>
@@ -73,23 +98,23 @@
   <h2>Legend (magnitude)</h2>
   <div class="legend" id="legend"></div>
 
-  <div class="hint">Catalog tiering: 1900-1960 shows M6+, 1960-1990 M5.5+, 1990-2000 M5+, 2000+ M4.5+.
-  "Never affected" = no events above the tier threshold in any era. Remote ocean detection improves after ~1990.</div>
+  <div class="hint">Catalog tiering: 1900-1960 M6+, 1960-1990 M5.5+, 1990-2000 M5+, 2000+ M4.5+.
+  Time dropdowns filter UTC components; combine freely (e.g. Year 2026 + Day 15 = every 15th).
+  "Request Now" fans out to USGS + EMSC in parallel, dedupes (60s / 100km / 1.0 mag) and flags the last hour.
+  Click the map near an event for details. Remote ocean detection improves after ~1990.</div>
 </div>
 
 <div class="panel" id="stats">
   <h2 style="margin-top:0;">Current view</h2>
   <div class="stat-line"><span>Events shown</span><span class="stat-val" id="shownCount">0</span></div>
   <div class="stat-line"><span>Max magnitude</span><span class="stat-val" id="maxMag">&mdash;</span></div>
-  <div class="stat-line"><span>Largest event</span><span class="stat-val" id="maxPlace" style="font-size:10px;text-align:right;"></span></div>
+  <div class="stat-line"><span>Largest (coords)</span><span class="stat-val" id="maxPlace" style="font-size:10px;text-align:right;"></span></div>
   <div class="stat-line"><span>Deepest</span><span class="stat-val" id="maxDepth">&mdash;</span></div>
-  <div class="hint" style="margin-top:8px;">Sources: USGS FDSN &middot; verified 2026-10-19 &middot; 10/10 famous-event spot checks passed</div>
+  <div class="hint" style="margin-top:8px;">Sources: USGS FDSN 220,154 + EMSC 2 &middot; live: USGS+EMSC &middot; verified 2026-10-20</div>
 </div>
 
 <script src="leaflet.js"></script>
 <script>
-const META = {"decades":{"1900":{"count":350,"file":"decade_1900.json","max_mag":8.8},"1910":{"count":684,"file":"decade_1910.json","max_mag":8.3},"1920":{"count":966,"file":"decade_1920.json","max_mag":8.5},"1930":{"count":1073,"file":"decade_1930.json","max_mag":8.5},"1940":{"count":964,"file":"decade_1940.json","max_mag":8.6},"1950":{"count":1298,"file":"decade_1950.json","max_mag":9.0},"1960":{"count":3844,"file":"decade_1960.json","max_mag":9.5},"1970":{"count":4273,"file":"decade_1970.json","max_mag":8.3},"1980":{"count":4261,"file":"decade_1980.json","max_mag":8.0},"1990":{"count":14627,"file":"decade_1990.json","max_mag":8.3},"2000":{"count":60558,"file":"decade_2000.json","max_mag":9.1},"2010":{"count":75210,"file":"decade_2010.json","max_mag":9.1},"2020":{"count":52017,"file":"decade_2020.json","max_mag":8.8}},"years":{"1900":{"count":13,"max":7.9},"1901":{"count":17,"max":7.9},"1902":{"count":12,"max":7.8},"1903":{"count":14,"max":8.0},"1904":{"count":21,"max":7.7},"1905":{"count":56,"max":8.3},"1906":{"count":78,"max":8.8},"1907":{"count":65,"max":8.2},"1908":{"count":30,"max":7.5},"1909":{"count":44,"max":7.7},"1910":{"count":57,"max":8.1},"1911":{"count":42,"max":8.0},"1912":{"count":59,"max":7.9},"1913":{"count":73,"max":7.9},"1914":{"count":54,"max":8.2},"1915":{"count":71,"max":7.8},"1916":{"count":57,"max":8.0},"1917":{"count":87,"max":8.2},"1918":{"count":94,"max":8.3},"1919":{"count":90,"max":8.2},"1920":{"count":69,"max":8.2},"1921":{"count":61,"max":7.8},"1922":{"count":81,"max":8.5},"1923":{"count":93,"max":8.4},"1924":{"count":79,"max":8.1},"1925":{"count":106,"max":7.3},"1926":{"count":122,"max":7.6},"1927":{"count":111,"max":7.7},"1928":{"count":119,"max":8.0},"1929":{"count":125,"max":8.1},"1930":{"count":97,"max":7.5},"1931":{"count":124,"max":7.9},"1932":{"count":91,"max":8.1},"1933":{"count":101,"max":8.4},"1934":{"count":117,"max":8.0},"1935":{"count":111,"max":7.8},"1936":{"count":105,"max":7.8},"1937":{"count":98,"max":7.8},"1938":{"count":149,"max":8.5},"1939":{"count":80,"max":8.1},"1940":{"count":105,"max":8.2},"1941":{"count":102,"max":8.0},"1942":{"count":99,"max":8.1},"1943":{"count":113,"max":8.1},"1944":{"count":83,"max":8.1},"1945":{"count":88,"max":8.1},"1946":{"count":94,"max":8.6},"1947":{"count":83,"max":7.7},"1948":{"count":114,"max":7.8},"1949":{"count":83,"max":8.0},"1950":{"count":123,"max":8.6},"1951":{"count":135,"max":7.8},"1952":{"count":166,"max":9.0},"1953":{"count":128,"max":7.9},"1954":{"count":109,"max":7.8},"1955":{"count":128,"max":7.5},"1956":{"count":109,"max":7.7},"1957":{"count":175,"max":8.6},"1958":{"count":119,"max":8.3},"1959":{"count":106,"max":7.9},"1960":{"count":278,"max":9.5},"1961":{"count":247,"max":7.6},"1962":{"count":215,"max":7.5},"1963":{"count":309,"max":8.5},"1964":{"count":467,"max":9.2},"1965":{"count":522,"max":8.7},"1966":{"count":391,"max":8.1},"1967":{"count":411,"max":7.3},"1968":{"count":525,"max":8.2},"1969":{"count":479,"max":8.2},"1970":{"count":475,"max":8.0},"1971":{"count":501,"max":8.1},"1972":{"count":533,"max":8.0},"1973":{"count":398,"max":7.7},"1974":{"count":358,"max":7.6},"1975":{"count":403,"max":7.9},"1976":{"count":450,"max":8.0},"1977":{"count":420,"max":8.3},"1978":{"count":394,"max":7.7},"1979":{"count":341,"max":7.9},"1980":{"count":333,"max":7.9},"1981":{"count":312,"max":7.7},"1982":{"count":341,"max":7.3},"1983":{"count":440,"max":7.6},"1984":{"count":461,"max":7.6},"1985":{"count":469,"max":8.0},"1986":{"count":480,"max":8.0},"1987":{"count":483,"max":7.9},"1988":{"count":475,"max":7.8},"1989":{"count":467,"max":8.0},"1990":{"count":1757,"max":7.8},"1991":{"count":1578,"max":7.6},"1992":{"count":1669,"max":7.8},"1993":{"count":1565,"max":7.8},"1994":{"count":1689,"max":8.3},"1995":{"count":1495,"max":8.0},"1996":{"count":1370,"max":8.1},"1997":{"count":1235,"max":7.8},"1998":{"count":1077,"max":8.1},"1999":{"count":1192,"max":7.7},"2000":{"count":5010,"max":8.0},"2001":{"count":4680,"max":8.4},"2002":{"count":4963,"max":7.9},"2003":{"count":5135,"max":8.2},"2004":{"count":6183,"max":9.1},"2005":{"count":7878,"max":8.6},"2006":{"count":7075,"max":8.3},"2007":{"count":7274,"max":8.4},"2008":{"count":6307,"max":7.9},"2009":{"count":6053,"max":8.1},"2010":{"count":7214,"max":8.8},"2011":{"count":9584,"max":9.1},"2012":{"count":7188,"max":8.6},"2013":{"count":7209,"max":8.3},"2014":{"count":8333,"max":8.2},"2015":{"count":7153,"max":8.3},"2016":{"count":7438,"max":7.9},"2017":{"count":6371,"max":8.2},"2018":{"count":7509,"max":8.2},"2019":{"count":7211,"max":8.0},"2020":{"count":6510,"max":7.8},"2021":{"count":8959,"max":8.2},"2022":{"count":7765,"max":7.6},"2023":{"count":7643,"max":7.8},"2024":{"count":6397,"max":7.5},"2025":{"count":8556,"max":8.8},"2026":{"count":6187,"max":7.8}},"total":220125,"generated_utc":"2026-10-19","grid_never_affected_cells":1318,"grid_total_cells":2592};
-const DECADES = Object.keys(META.decades).map(Number).sort((a,b)=>a-b);
 const COLORS = [[8.0,'#7209b7'],[7.5,'#b5179e'],[7.0,'#e63946'],[6.5,'#ff6b35'],[6.0,'#ffa500'],[5.5,'#d9d94a'],[5.0,'#7ac74f'],[4.0,'#2d7d46']];
 function magColor(m){for(const[c,col]of COLORS){if(m>=c)return col;}return '#2d7d46';}
 
@@ -97,163 +122,438 @@ const map = L.map('map',{worldCopyJump:true,preferCanvas:true,minZoom:2}).setVie
 L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Dark_Gray_Base/MapServer/tile/{z}/{y}/{x}',{maxZoom:9,attribution:'Esri Dark Gray'}).addTo(map);
 const canvasRenderer = L.canvas({padding:0.3});
 
-// state
-const loaded = {};      // decade -> array of [lat,lon,mag,year]
-const layerGroups = {}; // decade -> L.layerGroup
-let allPoints = [];
-const state = {yearMin:1900,yearMax:2026,magMin:4.5,activeDecades:new Set(DECADES),neverOn:false,render:true};
+// state: point = [lat, lon, mag, epochSec, depthKm]
+let META = null;
+const loaded = {};      // decade -> array of points
+const DECADES = [];
+const state = {year:'all', month:0, day:0, hour:-1, minute:-1, magMin:4.5,
+               activeDecades:new Set(), neverOn:false, render:true, showLive:true};
 const BANDS = [[7.0,8.0,'M7','#e63946',5],[8.0,9.0,'M8','#b5179e',7],[9.0,99,'M9+','#ffd700',10]];
 const bandLayer = L.layerGroup().addTo(map);
 state.bands = new Set();
+const liveLayer = L.layerGroup().addTo(map);
 
-// controls build
-const dbox = document.getElementById('decadeBoxes');
-DECADES.forEach(d=>{
-  const lbl=document.createElement('label');lbl.className='on';lbl.textContent=d+'s';
-  const cb=document.createElement('input');cb.type='checkbox';cb.checked=true;
-  cb.onchange=()=>{cb.checked?state.activeDecades.add(d):state.activeDecades.delete(d);lbl.classList.toggle('on',cb.checked);refresh();};
-  lbl.appendChild(cb);dbox.appendChild(lbl);
-});
-document.getElementById('totalCount').textContent = META.total.toLocaleString();
-document.getElementById('neverCount').textContent = META.grid_never_affected_cells;
+const YEAR_START = y => Date.UTC(y,0,1)/1000;
+const YEAR_END = y => Date.UTC(y+1,0,1)/1000;
 
-const magBox=document.getElementById('magFilters');
-[[4.5,'4.5+'],[5.0,'5.0+'],[5.5,'5.5+'],[6.0,'6.0+'],[6.5,'6.5+'],[7.0,'7.0+'],[8.0,'8.0+']].forEach(([m,l],i)=>{
-  const r=document.createElement('label');r.className='row';r.style.cursor='pointer';
-  const cb=document.createElement('input');cb.type='radio';cb.name='magf';cb.checked=(i===0);
-  cb.onchange=()=>{state.magMin=m;refresh();};
-  const dot=document.createElement('span');dot.className='dot';dot.style.background=magColor(m);
-  r.appendChild(cb);r.appendChild(dot);r.appendChild(document.createTextNode('M'+l));
-  magBox.appendChild(r);
-});
+let visiblePoints = [];
+let refreshTimer = null;
 
-const leg=document.getElementById('legend');
-[[8.0,'M8.0+'],[7.5,'M7.5-7.9'],[7.0,'M7.0-7.4'],[6.5,'M6.5-6.9'],[6.0,'M6.0-6.4'],[5.5,'M5.5-5.9'],[5.0,'M5.0-5.4'],[4.5,'M4.5-4.9']].forEach(([m,l])=>{
-  const d=document.createElement('div');const dot=document.createElement('span');dot.className='dot';dot.style.background=magColor(m);
-  d.appendChild(dot);d.appendChild(document.createTextNode(l));leg.appendChild(d);
-});
-
-const slider=document.getElementById('yearSlider');
-slider.oninput=()=>{
-  const y=+slider.value;
-  state.yearMin=state.yearMax=y;
-  document.getElementById('yearLabel').textContent=y;
-  document.getElementById('yearCount').textContent=(META.years[y]?META.years[y].count.toLocaleString()+' events':'no data');
-  refresh();
-};
-document.getElementById('btnAllYears').onclick=()=>{state.yearMin=1900;state.yearMax=2026;document.getElementById('yearLabel').textContent='all';document.getElementById('yearCount').textContent='';refresh();};
-document.getElementById('neverGrid').onchange=(e)=>{state.neverOn=e.target.checked;drawNever();};
-document.getElementById('pauseRender').onchange=(e)=>{state.render=e.target.checked;drawPoints();};
-
-// lazy loading
-async function ensureDecade(d){
-  if(loaded[d])return loaded[d];
-  const f=META.decades[d].file;
-  const r=await fetch('seismic_data/'+f);
-  loaded[d]=await r.json();
-  return loaded[d];
-}
-async function ensureAll(){
-  await Promise.all(DECADES.map(d=>ensureDecade(d)));
+function windowLabelText(){
+  const parts=[];
+  if(state.year!=='all')parts.push(state.year);
+  if(state.month)parts.push(String(state.month).padStart(2,'0'));
+  if(state.day)parts.push(String(state.day).padStart(2,'0'));
+  if(state.hour>=0)parts.push(String(state.hour).padStart(2,'0')+'h');
+  if(state.minute>=0)parts.push(String(state.minute).padStart(2,'0')+'m');
+  return parts.length? 'window: '+parts.join('-'):'window: all time';
 }
 
-// point layer: single canvas layer redrawn on change (fast for <=220k)
-const pointLayer = L.layerGroup().addTo(map);
+function pointPasses(p, yStart, yEnd, needComponents){
+  if(p[3] < yStart || p[3] >= yEnd) return false;
+  if(p[2] < state.magMin) return false;
+  if(needComponents){
+    const t = new Date(p[3]*1000);
+    if(state.month && t.getUTCMonth()+1 !== state.month) return false;
+    if(state.day && t.getUTCDate() !== state.day) return false;
+    if(state.hour>=0 && t.getUTCHours() !== state.hour) return false;
+    if(state.minute>=0 && t.getUTCMinutes() !== state.minute) return false;
+  }
+  return true;
+}
+
 function drawPoints(){
   pointLayer.clearLayers();
-  if(!state.render)return;
-  let shown=0,maxM=0,maxPlace='',maxDepthV=0;
-  const latlngs=[];
+  visiblePoints = [];
+  if(!state.render) return;
+  const yStart = state.year==='all' ? -Infinity : YEAR_START(state.year);
+  const yEnd   = state.year==='all' ?  Infinity : YEAR_END(state.year);
+  const needComponents = !!(state.month || state.day || state.hour>=0 || state.minute>=0);
+  let shown=0, maxM=0, maxCoord='', maxDepthV=0;
   for(const d of state.activeDecades){
-    const arr=loaded[d];if(!arr)continue;
+    const arr = loaded[d]; if(!arr) continue;
     for(const p of arr){
-      if(p[3]<state.yearMin||p[3]>state.yearMax)continue;
-      if(p[2]<state.magMin)continue;
+      if(!pointPasses(p, yStart, yEnd, needComponents)) continue;
       shown++;
-      if(p[2]>maxM){maxM=p[2];maxPlace=d+'s';}
+      visiblePoints.push(p);
+      if(p[2] > maxM){ maxM = p[2]; maxCoord = p[0].toFixed(1)+', '+p[1].toFixed(1); }
+      if(p[4] > maxDepthV) maxDepthV = p[4];
       L.circleMarker([p[0],p[1]],{renderer:canvasRenderer,radius:p[2]>=7?4:(p[2]>=6?3:2),
         color:magColor(p[2]),weight:0,fillColor:magColor(p[2]),fillOpacity:p[2]>=6?0.9:0.65}).addTo(pointLayer);
     }
   }
-  document.getElementById('shownCount').textContent=shown.toLocaleString();
-  document.getElementById('maxMag').textContent=maxM?('M'+maxM.toFixed(1)):'—';
-  document.getElementById('maxPlace').textContent=maxM?maxPlace:'';
+  document.getElementById('shownCount').textContent = shown.toLocaleString();
+  document.getElementById('maxMag').textContent = maxM ? ('M'+maxM.toFixed(1)) : '\u2014';
+  document.getElementById('maxPlace').textContent = maxM ? maxCoord : '';
+  document.getElementById('maxDepth').textContent = maxDepthV ? (maxDepthV+' km') : '\u2014';
 }
 
-// big-event band layers (independent of threshold filter)
+// click near a drawn point -> popup details (historical + live unified)
+map.on('click', (e)=>{
+  if(!visiblePoints.length && !(state.showLive && liveEvents.length)) return;
+  const la = e.latlng.lat, lo = e.latlng.lng;
+  let best=null, bd=1e9;
+  for(const p of visiblePoints){
+    let dl = Math.abs(p[1]-lo); if(dl>180) dl = 360-dl;
+    const dd = Math.hypot(p[0]-la, dl);
+    if(dd<bd){ bd=dd; best={la:p[0],lo:p[1],mag:p[2],ep:p[3],dep:p[4],live:false}; }
+  }
+  if(state.showLive){
+    for(const ev of liveEvents){
+      let dl = Math.abs(ev.lon-lo); if(dl>180) dl = 360-dl;
+      const dd = Math.hypot(ev.lat-la, dl);
+      if(dd<bd){ bd=dd; best={la:ev.lat,lo:ev.lon,mag:ev.mag,ep:ev.ep,dep:ev.depth,live:true,srcs:ev.sources}; }
+    }
+  }
+  if(!best || bd>0.6) return;
+  const t = new Date(best.ep*1000);
+  L.popup().setLatLng([best.la,best.lo]).setContent(
+    '<b>M'+best.mag.toFixed(1)+'</b>'+(best.live?' <span style="color:#22d3ee">(live)</span>':'')+
+    '<br/>UTC: '+t.toISOString().replace('T',' ').slice(0,16)+
+    '<br/>Depth: '+best.dep+' km'+(best.live&&best.srcs?'<br/>Sources: '+best.srcs.join(' + '):'')+
+    '<br/>Lat/Lon: '+best.la.toFixed(2)+', '+best.lo.toFixed(2)
+  ).openOn(map);
+});
+
 function drawBands(){
   bandLayer.clearLayers();
-  if(state.bands.size===0)return;
-  for(const[lo,hi,label,col,r]of BANDS){        // bands outer: M7 first, M9+ last => M9 on top
-    if(!state.bands.has(label))continue;
+  if(state.bands.size===0) return;
+  const yStart = state.year==='all' ? -Infinity : YEAR_START(state.year);
+  const yEnd   = state.year==='all' ?  Infinity : YEAR_END(state.year);
+  const needComponents = !!(state.month || state.day || state.hour>=0 || state.minute>=0);
+  for(const [lo,hi,label,col,r] of BANDS){
+    if(!state.bands.has(label)) continue;
     for(const d of state.activeDecades){
-      const arr=loaded[d];if(!arr)continue;
+      const arr = loaded[d]; if(!arr) continue;
       for(const p of arr){
-        if(p[3]<state.yearMin||p[3]>state.yearMax)continue;
-        if(p[2]>=lo&&p[2]<hi){
-          L.circleMarker([p[0],p[1]],{renderer:canvasRenderer,radius:r,color:'#0b0d10',weight:label==='M9+'?3:1.5,fillColor:col,fillOpacity:0.95}).addTo(bandLayer);
+        if(p[3]<yStart||p[3]>=yEnd) continue;
+        if(needComponents){
+          const t=new Date(p[3]*1000);
+          if(state.month && t.getUTCMonth()+1!==state.month) continue;
+          if(state.day && t.getUTCDate()!==state.day) continue;
+          if(state.hour>=0 && t.getUTCHours()!==state.hour) continue;
+          if(state.minute>=0 && t.getUTCMinutes()!==state.minute) continue;
+        }
+        if(p[2]>=lo && p[2]<hi){
+          L.circleMarker([p[0],p[1]],{renderer:canvasRenderer,radius:r,color:'#0b0d10',
+            weight:label==='M9+'?3:1.5,fillColor:col,fillOpacity:0.95}).addTo(bandLayer);
         }
       }
     }
   }
 }
-document.getElementById('bandM7').onchange=e=>{e.target.checked?state.bands.add('M7'):state.bands.delete('M7');drawBands();};
-document.getElementById('bandM8').onchange=e=>{e.target.checked?state.bands.add('M8'):state.bands.delete('M8');drawBands();};
-document.getElementById('bandM9').onchange=e=>{e.target.checked?state.bands.add('M9+'):state.bands.delete('M9+');drawBands();};
-function setBands(all){
-  ['M7','M8','M9+'].forEach((b,i)=>{
-    const cb=document.getElementById(['bandM7','bandM8','bandM9'][i]);
-    cb.checked=all;all?state.bands.add(b):state.bands.delete(b);
-  });
-  drawBands();
-}
-document.getElementById('bandsAll').onclick=()=>setBands(true);
-document.getElementById('bandsNone').onclick=()=>setBands(false);
 
-// never-affected grid overlay
-let neverLayer=L.layerGroup();
-function drawNever(){
-  map.removeLayer(neverLayer);neverLayer=L.layerGroup();
-  if(!state.neverOn)return;
-  fetch('seismic_data/grid_5deg.json').then(r=>r.json()).then(g=>{
-    for(const c of g.cells){
-      if(c[2]!==0)continue;
-      L.rectangle([[c[0],c[1]],[c[0]+5,c[1]+5]],{color:'#facc15',weight:0.7,fillColor:'#facc15',fillOpacity:0.22,dashArray:'4 3'}).addTo(neverLayer);
-    }
-    neverLayer.addTo(map);
-  });
-}
-
-let refreshTimer=null;
-function refresh(){
-  clearTimeout(refreshTimer);
-  refreshTimer=setTimeout(async()=>{
-    const need=DECADES.filter(d=>state.activeDecades.has(d));
-    await Promise.all(need.map(d=>ensureDecade(d)));
-    drawPoints();
-    drawBands();
-    updateBandCounts();
-  },120);
-}
-
-// initial: load 2000s+2010s+2020s (the richest) so first paint is fast
 function updateBandCounts(){
   let c7=0,c8=0,c9=0;
+  const yStart = state.year==='all' ? -Infinity : YEAR_START(state.year);
+  const yEnd   = state.year==='all' ?  Infinity : YEAR_END(state.year);
   for(const d of DECADES){
-    const arr=loaded[d];if(!arr)continue;
+    const arr = loaded[d]; if(!arr) continue;
     for(const p of arr){
-      if(p[3]<state.yearMin||p[3]>state.yearMax)continue;
-      if(p[2]>=7&&p[2]<8)c7++;else if(p[2]>=8&&p[2]<9)c8++;else if(p[2]>=9)c9++;
+      if(p[3]<yStart||p[3]>=yEnd) continue;
+      if(p[2]>=7&&p[2]<8)c7++; else if(p[2]>=8&&p[2]<9)c8++; else if(p[2]>=9)c9++;
     }
   }
   document.getElementById('cntM7').textContent=c7.toLocaleString();
   document.getElementById('cntM8').textContent=c8.toLocaleString();
   document.getElementById('cntM9').textContent=c9.toLocaleString();
 }
-(async()=>{
+
+let neverLayer = L.layerGroup();
+function drawNever(){
+  map.removeLayer(neverLayer); neverLayer = L.layerGroup();
+  if(!state.neverOn) return;
+  fetch('seismic_data/grid_5deg.json').then(r=>r.json()).then(g=>{
+    for(const c of g.cells){
+      if(c[2]!==0) continue;
+      L.rectangle([[c[0],c[1]],[c[0]+5,c[1]+5]],{color:'#facc15',weight:0.7,fillColor:'#facc15',fillOpacity:0.22,dashArray:'4 3'}).addTo(neverLayer);
+    }
+    neverLayer.addTo(map);
+  });
+}
+
+async function ensureDecade(d){
+  if(loaded[d]) return loaded[d];
+  const f = META.decades[d].file;
+  const r = await fetch('seismic_data/'+f);
+  loaded[d] = await r.json();
+  return loaded[d];
+}
+
+const pointLayer = L.layerGroup().addTo(map);
+function refresh(){
+  clearTimeout(refreshTimer);
+  refreshTimer = setTimeout(async ()=>{
+    const need = DECADES.filter(d=>state.activeDecades.has(d));
+    await Promise.all(need.map(d=>ensureDecade(d)));
+    drawPoints();
+    drawBands();
+    updateBandCounts();
+    document.getElementById('windowLabel').textContent = windowLabelText();
+  },120);
+}
+
+// ============ Request Now (live chain, confirmed via GLM elder consult) ============
+const SRC_PRIORITY = {'USGS':0,'EMSC':1,'GFZ':2,'IRIS':3};
+let liveEvents = [];   // deduped live events
+let wsBuffer = [];     // warm EMSC push buffer
+
+function havKm(la1,lo1,la2,lo2){
+  const R=6371, p1=la1*Math.PI/180, p2=la2*Math.PI/180;
+  const dp=(la2-la1)*Math.PI/180, dl=(lo2-lo1)*Math.PI/180;
+  const a=Math.sin(dp/2)**2+Math.cos(p1)*Math.cos(p2)*Math.sin(dl/2)**2;
+  return 2*R*Math.asin(Math.sqrt(a));
+}
+
+function fetchJSON(url, timeoutMs){
+  const c = new AbortController();
+  const t = setTimeout(()=>c.abort(), timeoutMs);
+  return fetch(url,{signal:c.signal}).then(r=>{
+    if(!r.ok) throw new Error('HTTP '+r.status);
+    return r.json();
+  }).finally(()=>clearTimeout(t));
+}
+
+function normUSGS(f){
+  const p=f.properties||{}, c=f.geometry&&f.geometry.coordinates||[];
+  if(p.mag==null||p.time==null||c.length<2) return null;
+  return {lat:c[1],lon:c[0],mag:p.mag,ep:Math.round(p.time/1000),
+          depth:c[2]==null?10:Math.round(c[2]),src:'USGS',id:f.id||''};
+}
+function normEMSC(f){
+  const p=f.properties||{}, c=f.geometry&&f.geometry.coordinates||[];
+  if(p.mag==null||!p.time||c.length<2) return null;
+  const ep=Math.round(new Date(p.time).getTime()/1000);
+  if(!isFinite(ep)) return null;
+  return {lat:c[1],lon:c[0],mag:Number(p.mag),ep,depth:c[2]==null?10:Math.round(c[2]),src:'EMSC',id:f.unid||f.id||''};
+}
+
+function dedupeLive(events){
+  const sorted = events.slice().sort((a,b)=> b.mag-a.mag);
+  const kept = [];
+  for(const e of sorted){
+    let hit=null;
+    for(const k of kept){
+      if(Math.abs(k.ep-e.ep)<=60 && Math.abs(k.mag-e.mag)<=1.0 && havKm(k.lat,k.lon,e.lat,e.lon)<=100){ hit=k; break; }
+    }
+    if(hit){
+      if(!hit.sources.includes(e.src)) hit.sources.push(e.src);
+      hit.ids.push(e.id);
+      if((SRC_PRIORITY[e.src]??9) < (SRC_PRIORITY[hit.src]??9)){ // preferred origin
+        hit.lat=e.lat; hit.lon=e.lon; hit.depth=e.depth; hit.src=e.src; hit.ep=e.ep; hit.mag=Math.max(hit.mag,e.mag);
+      }
+    } else {
+      kept.push({...e, sources:[e.src], ids:[e.id]});
+    }
+  }
+  kept.sort((a,b)=> b.ep-a.ep);
+  return kept;
+}
+
+function renderLive(){
+  liveLayer.clearLayers();
+  if(!state.showLive) return;
+  const nowSec = Date.now()/1000;
+  let live1h = 0;
+  for(const e of liveEvents){
+    const fresh = (nowSec - e.ep) <= 3600;
+    if(fresh) live1h++;
+    const r = e.mag>=6?7:(e.mag>=5?6:(e.mag>=4?5:4));
+    const mk = L.circleMarker([e.lat,e.lon],{renderer:canvasRenderer,radius:r,
+      color:fresh?'#e0feff':'#67e8f9',weight:fresh?2.5:1.5,
+      fillColor:fresh?'#22d3ee':'#0e7490',fillOpacity:fresh?0.95:0.75}).addTo(liveLayer);
+    mk._liveRef = e;
+  }
+  document.getElementById('liveCount').textContent = liveEvents.length.toLocaleString();
+  return live1h;
+}
+
+async function requestNow(){
+  const btn = document.getElementById('btnNow');
+  const st = document.getElementById('liveStatus');
+  btn.disabled = true; btn.textContent = 'Fetching live data...';
+  st.textContent = 'Fan-out: USGS feed | USGS FDSN | EMSC ...';
+  const start24 = new Date(Date.now()-24*3600*1000).toISOString().slice(0,19);
+  const sources = [
+    ['USGS feed',  'https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_day.geojson', normUSGS],
+    ['USGS FDSN',  'https://earthquake.usgs.gov/fdsnws/event/1/query?format=geojson&starttime='+start24+'&minmagnitude=2.5&orderby=time&limit=1000', normUSGS],
+    ['EMSC FDSN',  'https://www.seismicportal.eu/fdsnws/event/1/query?format=json&start='+start24+'&minmagnitude=2.5&orderby=time&limit=1000', normEMSC],
+  ];
+  const results = await Promise.allSettled(sources.map(([name,url,norm])=>
+    fetchJSON(url,4000).then(d=>({name, norm, count:(d.features||[]).length, features:d.features||[]}))
+  ));
+  const lines = [];
+  const all = wsBuffer.slice();  // include warm push buffer
+  if(wsBuffer.length) lines.push('EMSC push buffer: '+wsBuffer.length+' (warm channel)');
+  results.forEach((r,i)=>{
+    const name = sources[i][0];
+    if(r.status==='fulfilled'){
+      const {norm, features} = r.value;
+      let n=0;
+      for(const f of features){ const e=norm(f); if(e && e.mag>=2.5){ all.push(e); n++; } }
+      lines.push(name+': ok ('+n+')');
+    } else {
+      lines.push(name+': failed ('+(r.reason&&r.reason.message||'error')+')');
+    }
+  });
+  liveEvents = dedupeLive(all);
+  const live1h = renderLive() || 0;
+  lines.push('Merged: '+liveEvents.length+' events, '+live1h+' in last hour \u2014 '+new Date().toISOString().slice(11,19)+' UTC');
+  st.textContent = lines.join('\n');
+  btn.disabled = false; btn.textContent = 'Request Now (live fetch)';
+}
+
+// warm EMSC push channel (best effort; silent on failure)
+(function warmWS(){
+  let fails = 0;
+  (function connect(){
+    if(fails>=3) return;
+    try{
+      const ws = new WebSocket('wss://www.seismicportal.eu/standing_order/websocket');
+      const guard = setTimeout(()=>{ try{ws.close();}catch(e){} }, 6000);
+      ws.onopen = ()=>{ clearTimeout(guard); fails=0; };
+      ws.onmessage = (ev)=>{
+        try{
+          const d = JSON.parse(ev.data);
+          const p = d.data && d.data.properties || d.properties;
+          const g = d.data && d.data.geometry || d.geometry;
+          if(p && g && p.mag!=null && p.time){
+            const ep = Math.round(new Date(p.time).getTime()/1000);
+            if(isFinite(ep)){
+              wsBuffer.push({lat:g.coordinates[1],lon:g.coordinates[0],mag:Number(p.mag),ep,
+                             depth:Math.round(g.coordinates[2]||10),src:'EMSC',id:p.unid||''});
+              if(wsBuffer.length>500) wsBuffer.shift();
+            }
+          }
+        }catch(e){}
+      };
+      ws.onclose = ()=>{ fails++; setTimeout(connect, Math.min(30000, 5000*fails)); };
+      ws.onerror = ()=>{ try{ws.close();}catch(e){} };
+    }catch(e){}
+  })();
+})();
+
+// ============ controls ============
+function buildSelect(id, values, allLabel, pad){
+  const sel = document.getElementById(id);
+  sel.innerHTML = '';
+  const o0=document.createElement('option'); o0.value='all'; o0.textContent=allLabel; sel.appendChild(o0);
+  for(const v of values){
+    const o=document.createElement('option'); o.value=String(v);
+    o.textContent = pad? String(v).padStart(2,'0') : v;
+    sel.appendChild(o);
+  }
+  return sel;
+}
+
+function initControls(){
+  const years = Object.keys(META.years).map(Number).sort((a,b)=>a-b);
+  const selYear = document.getElementById('selYear');
+  selYear.innerHTML='';
+  const oAll=document.createElement('option'); oAll.value='all'; oAll.textContent='All years'; selYear.appendChild(oAll);
+  for(const y of years){
+    const o=document.createElement('option'); o.value=String(y);
+    o.textContent = y+' ('+(META.years[String(y)].count).toLocaleString()+')';
+    selYear.appendChild(o);
+  }
+  selYear.value='all';
+  buildSelect('selMonth', [1,2,3,4,5,6,7,8,9,10,11,12], 'All', true);
+  buildSelect('selDay', Array.from({length:31},(_,i)=>i+1), 'All', true);
+  buildSelect('selHour', Array.from({length:24},(_,i)=>i), 'All', true);
+  buildSelect('selMinute', Array.from({length:60},(_,i)=>i), 'All', true);
+  updateMonthAvailability();
+
+  selYear.onchange = ()=>{
+    state.year = selYear.value==='all' ? 'all' : Number(selYear.value);
+    const ym = state.year==='all'? null : META.years[String(state.year)];
+    document.getElementById('yearCount').textContent = ym ? (ym.count.toLocaleString()+' events, max M'+ (ym.max!=null?ym.max:'?')) : '';
+    updateMonthAvailability();
+    refresh();
+  };
+  document.getElementById('selMonth').onchange = e=>{ state.month = e.target.value==='all'?0:Number(e.target.value); refresh(); };
+  document.getElementById('selDay').onchange = e=>{ state.day = e.target.value==='all'?0:Number(e.target.value); refresh(); };
+  document.getElementById('selHour').onchange = e=>{ state.hour = e.target.value==='all'?-1:Number(e.target.value); refresh(); };
+  document.getElementById('selMinute').onchange = e=>{ state.minute = e.target.value==='all'?-1:Number(e.target.value); refresh(); };
+  document.getElementById('btnResetTime').onclick = ()=>{
+    selYear.value='all'; state.year='all';
+    ['selMonth','selDay','selHour','selMinute'].forEach(id=>document.getElementById(id).value='all');
+    state.month=0;state.day=0;state.hour=-1;state.minute=-1;
+    document.getElementById('yearCount').textContent='';
+    updateMonthAvailability();
+    refresh();
+  };
+  document.getElementById('btnNow').onclick = requestNow;
+  document.getElementById('showLive').onchange = e=>{ state.showLive=e.target.checked; renderLive(); };
+}
+
+function updateMonthAvailability(){
+  const selM = document.getElementById('selMonth');
+  const ym = state.year==='all'? null : META.years[String(state.year)];
+  for(const o of selM.options){
+    if(o.value==='all'){ o.disabled=false; continue; }
+    o.disabled = ym ? !ym.months.includes(Number(o.value)) : false;
+  }
+  if(ym && state.month && !ym.months.includes(state.month)){ selM.value='all'; state.month=0; }
+}
+
+function initStatic(){
+  document.getElementById('totalCount').textContent = META.total.toLocaleString();
+  document.getElementById('neverCount').textContent = META.grid_never_affected_cells;
+  const dbox = document.getElementById('decadeBoxes');
+  DECADES.forEach(d=>{
+    const lbl=document.createElement('label'); lbl.className='on'; lbl.textContent=d+'s';
+    const cb=document.createElement('input'); cb.type='checkbox'; cb.checked=true;
+    cb.onchange=()=>{ cb.checked?state.activeDecades.add(d):state.activeDecades.delete(d); lbl.classList.toggle('on',cb.checked); refresh(); };
+    lbl.appendChild(cb); dbox.appendChild(lbl);
+  });
+  const magBox=document.getElementById('magFilters');
+  [[4.5,'4.5+'],[5.0,'5.0+'],[5.5,'5.5+'],[6.0,'6.0+'],[6.5,'6.5+'],[7.0,'7.0+'],[8.0,'8.0+']].forEach(([m,l],i)=>{
+    const r=document.createElement('label'); r.className='row'; r.style.cursor='pointer';
+    const cb=document.createElement('input'); cb.type='radio'; cb.name='magf'; cb.checked=(i===0);
+    cb.onchange=()=>{ state.magMin=m; refresh(); };
+    const dot=document.createElement('span'); dot.className='dot'; dot.style.background=magColor(m);
+    r.appendChild(cb); r.appendChild(dot); r.appendChild(document.createTextNode('M'+l));
+    magBox.appendChild(r);
+  });
+  const leg=document.getElementById('legend');
+  [[8.0,'M8.0+'],[7.5,'M7.5-7.9'],[7.0,'M7.0-7.4'],[6.5,'M6.5-6.9'],[6.0,'M6.0-6.4'],[5.5,'M5.5-5.9'],[5.0,'M5.0-5.4'],[4.5,'M4.5-4.9']].forEach(([m,l])=>{
+    const d=document.createElement('div'); const dot=document.createElement('span'); dot.className='dot'; dot.style.background=magColor(m);
+    d.appendChild(dot); d.appendChild(document.createTextNode(l)); leg.appendChild(d);
+  });
+  document.getElementById('neverGrid').onchange=(e)=>{ state.neverOn=e.target.checked; drawNever(); };
+  document.getElementById('pauseRender').onchange=(e)=>{ state.render=e.target.checked; drawPoints(); };
+  document.getElementById('bandM7').onchange=e=>{ e.target.checked?state.bands.add('M7'):state.bands.delete('M7'); drawBands(); };
+  document.getElementById('bandM8').onchange=e=>{ e.target.checked?state.bands.add('M8'):state.bands.delete('M8'); drawBands(); };
+  document.getElementById('bandM9').onchange=e=>{ e.target.checked?state.bands.add('M9+'):state.bands.delete('M9+'); drawBands(); };
+  document.getElementById('bandsAll').onclick=()=>setBands(true);
+  document.getElementById('bandsNone').onclick=()=>setBands(false);
+}
+function setBands(all){
+  ['M7','M8','M9+'].forEach((b,i)=>{
+    const cb=document.getElementById( ['bandM7','bandM8','bandM9'][i] );
+    cb.checked=all; all?state.bands.add(b):state.bands.delete(b);
+  });
+  drawBands();
+}
+
+(async ()=>{
+  META = await (await fetch('seismic_data/meta.json')).json();
+  DECADES.push(...Object.keys(META.decades).map(Number).sort((a,b)=>a-b));
+  state.activeDecades = new Set(DECADES);
+  initControls();
+  initStatic();
   await Promise.all([ensureDecade(2000),ensureDecade(2010),ensureDecade(2020)]);
   drawPoints();
   updateBandCounts();
+  document.getElementById('windowLabel').textContent = windowLabelText();
+  // background: progressively load remaining decades so "All years" becomes complete
+  (async ()=>{
+    for(const d of DECADES){
+      if(loaded[d]) continue;
+      try{ await ensureDecade(d); }catch(e){}
+    }
+    drawPoints(); drawBands(); updateBandCounts();
+  })();
 })();
 </script>
 </body>
