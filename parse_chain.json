@@ -22,7 +22,8 @@
       "response_format": "json_schema strict {start_utc, end_utc}",
       "provider_sort": "latency",
       "temperature": 0.0,
-      "max_tokens": 800
+      "max_tokens": { "free_models": "OMIT", "paid_overflow": 8192 },
+      "bias_046_compliance": "Free models are never max_tokens-capped (parameter omitted); wallclock guard = 4s fetch timeout on data path, 25s LLM guard"
     },
     "semantics_pinned": {
       "now": "[t-24h, t]",
