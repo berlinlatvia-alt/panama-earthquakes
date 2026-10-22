@@ -3,114 +3,275 @@
 <head>
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>All-Time World Seismic Map 1900-2026</title>
+<title>All-Time World &amp; Regional Seismic Map (Playa Blanca First)</title>
 <link rel="icon" href="data:,"/>
 <link rel="stylesheet" href="leaflet.css"/>
 <style>
-  :root{--bg:#1a1d23;--panel:#252a33;--panel2:#2e3440;--txt:#cbd5e1;--txt2:#94a3b8;--accent:#7aa2f7;--live:#22d3ee;}
-  *{box-sizing:border-box;margin:0;padding:0;}
-  body{background:var(--bg);color:var(--txt);font-family:'Segoe UI',system-ui,sans-serif;}
-  #map{position:absolute;top:0;left:0;right:0;bottom:0;background:#14161a;}
-  .panel{position:absolute;background:rgba(37,42,51,0.95);border:1px solid #3b4252;border-radius:10px;
-         padding:12px 14px;z-index:1000;backdrop-filter:blur(6px);box-shadow:0 4px 18px rgba(0,0,0,0.5);}
-  #controls{top:12px;left:12px;width:300px;max-height:calc(100vh - 24px);overflow-y:auto;}
-  #stats{top:12px;right:12px;width:240px;font-size:12px;line-height:1.5;}
-  h1{font-size:15px;font-weight:600;color:#e2e8f0;margin-bottom:8px;}
-  h2{font-size:12px;font-weight:600;color:var(--txt2);text-transform:uppercase;letter-spacing:.5px;margin:10px 0 6px;}
-  .row{display:flex;align-items:center;gap:6px;margin:3px 0;font-size:12px;}
-  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:5px;}
-  .grid3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:5px;}
-  select{background:var(--panel2);color:var(--txt);border:1px solid #3b4252;border-radius:6px;
-         padding:4px 6px;font-size:11.5px;width:100%;outline:none;}
-  select:hover{border-color:var(--accent);}
-  select:disabled{opacity:.45;}
-  label.sel{font-size:10px;color:var(--txt2);display:block;margin-bottom:2px;}
-  .decades{display:grid;grid-template-columns:repeat(3,1fr);gap:4px;}
-  .decades label{background:var(--panel2);border:1px solid #3b4252;border-radius:6px;padding:4px 6px;
-                 font-size:11px;cursor:pointer;text-align:center;user-select:none;}
-  .decades label.on{background:#3d5a80;border-color:#7aa2f7;color:#fff;}
-  .decades input{display:none;}
-  .legend div{display:flex;align-items:center;gap:6px;font-size:11px;margin:2px 0;}
-  .dot{width:11px;height:11px;border-radius:50%;flex:0 0 auto;}
-  button{background:var(--panel2);color:var(--txt);border:1px solid #3b4252;border-radius:6px;
-         padding:5px 10px;font-size:11px;cursor:pointer;}
-  button:hover{border-color:var(--accent);}
-  button.primary{background:#3d5a80;border-color:#7aa2f7;color:#fff;}
-  button.livebtn{background:#155e75;border-color:#22d3ee;color:#e0f7ff;font-weight:600;
-                 padding:7px 12px;font-size:12px;width:100%;}
-  button.livebtn:hover{background:#0e7490;border-color:#67e8f9;}
-  button.livebtn:disabled{opacity:.6;cursor:wait;}
-  #liveStatus{font-size:10.5px;color:var(--txt2);margin-top:6px;line-height:1.5;white-space:pre-line;}
-  .stat-line{display:flex;justify-content:space-between;}
-  .stat-val{color:#e2e8f0;font-weight:600;}
-  .hint{font-size:10px;color:#64748b;margin-top:6px;line-height:1.4;}
-  .badge-live{display:inline-block;background:#155e75;color:#a5f3fc;border-radius:4px;
-              padding:0 5px;font-size:10px;margin-left:4px;}
+  :root {
+    --bg: #1a1d23;
+    --panel: rgba(37, 42, 51, 0.96);
+    --panel2: #252a33;
+    --panel3: #20242c;
+    --border: #3b4252;
+    --txt: #cbd5e1;
+    --txt2: #94a3b8;
+    --accent: #7dd3fc;
+    --accent-glow: rgba(125, 211, 252, 0.25);
+    --live: #22d3ee;
+    --badge-bg: #1e293b;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: var(--bg); color: var(--txt); font-family: 'Segoe UI', system-ui, sans-serif; }
+  #map { position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: #14161a; }
+  
+  .panel {
+    position: absolute; background: var(--panel); border: 1px solid var(--border); border-radius: 10px;
+    padding: 12px 14px; z-index: 1000; backdrop-filter: blur(8px); box-shadow: 0 4px 20px rgba(0,0,0,0.6);
+  }
+  #controls { top: 12px; left: 12px; width: 340px; max-height: calc(100vh - 24px); overflow-y: auto; }
+  #stats { top: 12px; right: 12px; width: 250px; font-size: 12px; line-height: 1.5; }
+  
+  h1 { font-size: 14.5px; font-weight: 700; color: #f1f5f9; margin-bottom: 6px; letter-spacing: 0.2px; }
+  h2 { font-size: 11px; font-weight: 700; color: var(--txt2); text-transform: uppercase; letter-spacing: 0.6px; margin: 8px 0 5px; }
+  
+  .row { display: flex; align-items: center; gap: 6px; margin: 3px 0; font-size: 11.5px; }
+  .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 5px; }
+  .grid3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 5px; }
+  
+  /* Spatial Navigation Jump Bar */
+  #spatial-jump {
+    display: flex; gap: 4px; background: var(--panel3); padding: 5px; border-radius: 8px;
+    border: 1px solid var(--border); margin: 8px 0 12px;
+  }
+  .jump-btn {
+    flex: 1; background: transparent; color: var(--txt); border: 1px solid transparent; border-radius: 6px;
+    padding: 6px 4px; font-size: 10.5px; font-weight: 600; cursor: pointer; text-align: center;
+    transition: all 0.2s ease; user-select: none;
+  }
+  .jump-btn:hover { background: rgba(125, 211, 252, 0.12); border-color: var(--accent); }
+  .jump-btn.active { background: #3d5a80; border-color: var(--accent); color: #ffffff; box-shadow: 0 0 10px var(--accent-glow); }
+
+  /* Tier Cards / Accordion */
+  .tier-card {
+    background: var(--panel3); border: 1px solid var(--border); border-radius: 8px; margin-bottom: 9px;
+    overflow: hidden; transition: border-color 0.2s ease;
+  }
+  .tier-card.active-card { border-color: var(--accent); }
+  .tier-card-head {
+    display: flex; justify-content: space-between; align-items: center; padding: 7px 10px;
+    background: #252b36; cursor: pointer; user-select: none; font-size: 11.5px; font-weight: 600; color: #e2e8f0;
+  }
+  .tier-card-head:hover { color: var(--accent); background: #2b3340; }
+  .tier-toggle-icon { font-size: 10px; color: var(--txt2); transition: transform 0.2s ease; }
+  .tier-card.collapsed .tier-toggle-icon { transform: rotate(-90deg); }
+  .tier-card-body { padding: 8px 10px; }
+  .tier-card.collapsed .tier-card-body { display: none; }
+
+  /* Risk Badges */
+  .risk-badges { display: flex; flex-wrap: wrap; gap: 4px; margin-bottom: 8px; }
+  .badge {
+    font-size: 9.5px; font-weight: 600; padding: 2px 6px; border-radius: 4px; border: 1px solid transparent; letter-spacing: 0.2px;
+  }
+  .badge.red { background: rgba(239, 68, 68, 0.18); color: #fca5a5; border-color: rgba(239, 68, 68, 0.4); }
+  .badge.amber { background: rgba(245, 158, 11, 0.18); color: #fcd34d; border-color: rgba(245, 158, 11, 0.4); }
+  .badge.blue { background: rgba(56, 189, 248, 0.18); color: #7dd3fc; border-color: rgba(56, 189, 248, 0.4); }
+  .badge.purple { background: rgba(168, 85, 247, 0.18); color: #d8b4fe; border-color: rgba(168, 85, 247, 0.4); }
+
+  /* Hazard Telemetry Card */
+  .hazard-card {
+    background: rgba(15, 17, 21, 0.7); border: 1px solid var(--border); border-radius: 6px;
+    padding: 7px 9px; margin-top: 8px; font-size: 11px;
+  }
+  .card-title { font-size: 10px; font-weight: 700; color: var(--accent); margin-bottom: 4px; text-transform: uppercase; letter-spacing: 0.5px; }
+  .card-row { display: flex; justify-content: space-between; margin: 2px 0; color: var(--txt2); font-size: 10.5px; }
+  .card-row b { color: #f1f5f9; }
+
+  select {
+    background: var(--panel2); color: var(--txt); border: 1px solid var(--border); border-radius: 6px;
+    padding: 4px 6px; font-size: 11px; width: 100%; outline: none;
+  }
+  select:hover { border-color: var(--accent); }
+  select:disabled { opacity: .45; }
+  label.sel { font-size: 9.5px; color: var(--txt2); display: block; margin-bottom: 2px; }
+  
+  .decades { display: grid; grid-template-columns: repeat(3, 1fr); gap: 4px; }
+  .decades label {
+    background: var(--panel2); border: 1px solid var(--border); border-radius: 6px; padding: 4px 6px;
+    font-size: 10.5px; cursor: pointer; text-align: center; user-select: none;
+  }
+  .decades label.on { background: #3d5a80; border-color: var(--accent); color: #fff; }
+  .decades input { display: none; }
+  
+  .legend div { display: flex; align-items: center; gap: 6px; font-size: 10.5px; margin: 2px 0; }
+  .dot { width: 10px; height: 10px; border-radius: 50%; flex: 0 0 auto; }
+  
+  button {
+    background: var(--panel2); color: var(--txt); border: 1px solid var(--border); border-radius: 6px;
+    padding: 4px 8px; font-size: 11px; cursor: pointer;
+  }
+  button:hover { border-color: var(--accent); }
+  button.livebtn {
+    background: #155e75; border-color: #22d3ee; color: #e0f7ff; font-weight: 600;
+    padding: 6px 10px; font-size: 11.5px; width: 100%;
+  }
+  button.livebtn:hover { background: #0e7490; border-color: #67e8f9; }
+  button.livebtn:disabled { opacity: .6; cursor: wait; }
+  
+  #liveStatus { font-size: 10px; color: var(--txt2); margin-top: 5px; line-height: 1.4; white-space: pre-line; }
+  .stat-line { display: flex; justify-content: space-between; margin: 2px 0; }
+  .stat-val { color: #f1f5f9; font-weight: 600; }
+  .hint { font-size: 9.5px; color: #64748b; margin-top: 6px; line-height: 1.35; }
+  .badge-live { display: inline-block; background: #155e75; color: #a5f3fc; border-radius: 4px; padding: 0 5px; font-size: 9.5px; margin-left: 4px; }
 </style>
 </head>
 <body>
 <div id="map"></div>
 
 <div class="panel" id="controls">
-  <h1>All-Time World Seismic Map</h1>
-  <div style="font-size:11px;color:var(--txt2);">Seismic catalog 1900-2026 &middot; USGS + EMSC &middot; <span id="totalCount">...</span> events</div>
-
-  <h2>Time window (UTC)</h2>
-  <div class="grid2">
-    <div><label class="sel" for="selYear">Year</label><select id="selYear"><option value="all">All</option></select></div>
-    <div><label class="sel" for="selMonth">Month</label><select id="selMonth"></select></div>
-    <div><label class="sel" for="selDay">Day</label><select id="selDay"></select></div>
-    <div><label class="sel" for="selHour">Hour</label><select id="selHour"></select></div>
-    <div><label class="sel" for="selMinute">Minute</label><select id="selMinute"></select></div>
-    <div style="display:flex;align-items:flex-end;"><button id="btnResetTime" title="Reset time filters">Reset time</button></div>
-  </div>
-  <div class="row" style="justify-content:space-between;">
-    <span style="font-size:10px;color:var(--txt2);" id="yearCount"></span>
-    <span style="font-size:10px;color:var(--txt2);" id="windowLabel"></span>
+  <h1>All-Time World &amp; Regional Seismic Map</h1>
+  <div style="font-size:10.5px;color:var(--txt2);margin-bottom:6px;">
+    Spatial Hierarchy: Playa Blanca &rarr; Panama &rarr; World &middot; USGS + EMSC &middot; <span id="totalCount">...</span> events
   </div>
 
-  <h2>Live now</h2>
-  <button id="btnNow" class="livebtn">Request Now (live fetch)</button>
-  <div class="row" style="margin-top:6px;"><input type="checkbox" id="showLive" checked/>
-    <label for="showLive">Show live layer <span class="badge-live" id="liveCount">0</span></label></div>
-  <div id="liveStatus">Parallel sources: USGS feed + USGS FDSN + EMSC. Warm EMSC push channel when available.</div>
+  <!-- Spatial Jump Bar -->
+  <nav id="spatial-jump" aria-label="Spatial jump navigation">
+    <button type="button" class="jump-btn active" id="btnJumpPb" onclick="setSpatialTier(1)">📍 1. Playa Blanca</button>
+    <button type="button" class="jump-btn" id="btnJumpPanama" onclick="setSpatialTier(2)">🇵🇦 2. Panama</button>
+    <button type="button" class="jump-btn" id="btnJumpWorld" onclick="setSpatialTier(3)">🌍 3. World</button>
+  </nav>
 
-  <h2>Decade layers</h2>
-  <div class="decades" id="decadeBoxes"></div>
+  <!-- TIER 1: PLAYA BLANCA -->
+  <div class="tier-card active-card" id="card-playa-blanca">
+    <div class="tier-card-head" onclick="toggleTierCard('card-playa-blanca')">
+      <span>📍 1. Playa Blanca Compound Risk</span>
+      <span class="tier-toggle-icon">▾</span>
+    </div>
+    <div class="tier-card-body">
+      <div class="risk-badges">
+        <span class="badge red">110km to M7.7 Azuero</span>
+        <span class="badge amber">King Tide 5.5-5.8m</span>
+        <span class="badge amber">Liquefaction PGA &ge;0.10g</span>
+        <span class="badge blue">48-72h Mold Blackout</span>
+        <span class="badge red">+4.2m Berm Runup</span>
+      </div>
 
-  <h2>Magnitude filter</h2>
-  <div id="magFilters"></div>
+      <h2>Playa Blanca Hazard Layers</h2>
+      <div class="row"><input type="checkbox" id="chkPbSite" checked onchange="togglePbLayer('site', this.checked)"/> <label for="chkPbSite">Playa Blanca Resort Epicenter Pin</label></div>
+      <div class="row"><input type="checkbox" id="chkAzueroRing" checked onchange="togglePbLayer('ring', this.checked)"/> <label for="chkAzueroRing">110km Azuero M7.7 Distance Ring</label></div>
+      <div class="row"><input type="checkbox" id="chkKingTideRunup" checked onchange="togglePbLayer('runup', this.checked)"/> <label for="chkKingTideRunup">+4.2m MSL Berm Inundation Zone</label></div>
+      <div class="row"><input type="checkbox" id="chkLiquefaction" checked onchange="togglePbLayer('lique', this.checked)"/> <label for="chkLiquefaction">Estuary / Lagoon Liquefaction Zone</label></div>
+      <div class="row"><input type="checkbox" id="chkPbLocalRadius" checked onchange="togglePbLayer('radius', this.checked)"/> <label for="chkPbLocalRadius">100km Local Seismic Perimeter</label></div>
 
-  <h2>Big-event layers (separate)</h2>
-  <div class="row"><input type="checkbox" id="bandM7"/> <label for="bandM7"><span class="dot" style="background:#e63946"></span> M7.0-7.9 (<span id="cntM7">-</span>)</label></div>
-  <div class="row"><input type="checkbox" id="bandM8"/> <label for="bandM8"><span class="dot" style="background:#b5179e"></span> M8.0-8.9 (<span id="cntM8">-</span>)</label></div>
-  <div class="row"><input type="checkbox" id="bandM9"/> <label for="bandM9"><span class="dot" style="background:#ffd700"></span> M9.0+ (<span id="cntM9">-</span>)</label></div>
-  <div class="row" style="justify-content:space-between;">
-    <button id="bandsAll">All bands</button>
-    <button id="bandsNone">None</button>
-    <span style="font-size:10px;color:var(--txt2);">sizes grow M7&lt;M8&lt;M9</span>
+      <div class="hazard-card">
+        <div class="card-title">Physical Forensic Telemetry</div>
+        <div class="card-row"><span>TWL Runup Breach:</span> <b>+4.2 m MSL (Sep-Nov)</b></div>
+        <div class="card-row"><span>Spring Tide Range:</span> <b>5.5 - 5.8 m</b></div>
+        <div class="card-row"><span>Berm Retreat Rate:</span> <b>0.5 - 2.5 m / event</b></div>
+        <div class="card-row"><span>Naturgy Outage Risk:</span> <b>10 - 40h &rarr; Mold @ 48h</b></div>
+        <div class="card-row"><span>Liquefaction Trigger:</span> <b>PGA &ge; 0.10g (Fines &gt;35%)</b></div>
+      </div>
+    </div>
   </div>
 
-  <h2>Overlays</h2>
-  <div class="row"><input type="checkbox" id="neverGrid"/> <label for="neverGrid">Never-affected zones (5&deg; grid, <span id="neverCount"></span> cells)</label></div>
-  <div class="row"><input type="checkbox" id="pauseRender" checked/> <label for="pauseRender">Render points</label></div>
+  <!-- TIER 2: OTHER PANAMA & REGIONAL -->
+  <div class="tier-card collapsed" id="card-panama-regional">
+    <div class="tier-card-head" onclick="toggleTierCard('card-panama-regional')">
+      <span>🇵🇦 2. Panama &amp; Central America Dynamic Network</span>
+      <span class="tier-toggle-icon">▾</span>
+    </div>
+    <div class="tier-card-body">
+      <div class="risk-badges">
+        <span class="badge red">Oct 9 Mw 7.7 Azuero</span>
+        <span class="badge purple">70 Quakes Rinc&oacute;n</span>
+        <span class="badge blue">Panama Cold Slab Tear</span>
+      </div>
 
-  <h2>Legend (magnitude)</h2>
-  <div class="legend" id="legend"></div>
+      <h2>Regional Fault &amp; Volcano Layers</h2>
+      <div class="row"><input type="checkbox" id="chkVolcanoNetwork" checked onchange="togglePanamaLayer('volc', this.checked)"/> <label for="chkVolcanoNetwork">Volcanic Dynamic Triggering Pins</label></div>
+      <div class="row"><input type="checkbox" id="chkAzueroEpicenter" checked onchange="togglePanamaLayer('azuero', this.checked)"/> <label for="chkAzueroEpicenter">Azuero Mw 7.7 Epicenter Marker</label></div>
 
-  <div class="hint">Catalog tiering: 1900-1960 M6+, 1960-1990 M5.5+, 1990-2000 M5+, 2000+ M4.5+.
-  Time dropdowns filter UTC components; combine freely (e.g. Year 2026 + Day 15 = every 15th).
-  "Request Now" fans out to USGS + EMSC in parallel, dedupes (60s / 100km / 1.0 mag) and flags the last hour.
-  Click the map near an event for details. Remote ocean detection improves after ~1990.</div>
+      <div class="hazard-card">
+        <div class="card-title">Dynamic Triggering vs Slab Window</div>
+        <div class="card-row"><span>Rinc&oacute;n de la Vieja:</span> <b>70 quakes (618 km dynamic trigger)</b></div>
+        <div class="card-row"><span>Costa Rica Volcs:</span> <b>Tenorio, Miravalles, Iraz&uacute; active</b></div>
+        <div class="card-row"><span>Panama Volcs (Bar&uacute;):</span> <b>0 quakes (Cold slab window)</b></div>
+        <div class="card-row"><span>El Valle Caldera:</span> <b>Dormant (&sim;28 km north of PB)</b></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TIER 3: WORLD ALL-TIME SEISMIC CATALOG -->
+  <div class="tier-card collapsed" id="card-world-catalog">
+    <div class="tier-card-head" onclick="toggleTierCard('card-world-catalog')">
+      <span>🌍 3. World All-Time Seismic Catalog</span>
+      <span class="tier-toggle-icon">▾</span>
+    </div>
+    <div class="tier-card-body">
+      <div class="risk-badges">
+        <span class="badge blue">USGS FDSN 220k+</span>
+        <span class="badge purple">EMSC Live Channel</span>
+        <span class="badge amber">CAMS Smoke AOD</span>
+      </div>
+
+      <h2>Time window (UTC)</h2>
+      <div class="grid2">
+        <div><label class="sel" for="selYear">Year</label><select id="selYear"><option value="all">All</option></select></div>
+        <div><label class="sel" for="selMonth">Month</label><select id="selMonth"></select></div>
+        <div><label class="sel" for="selDay">Day</label><select id="selDay"></select></div>
+        <div><label class="sel" for="selHour">Hour</label><select id="selHour"></select></div>
+        <div><label class="sel" for="selMinute">Minute</label><select id="selMinute"></select></div>
+        <div style="display:flex;align-items:flex-end;"><button id="btnResetTime" title="Reset time filters">Reset time</button></div>
+      </div>
+      <div class="row" style="justify-content:space-between;">
+        <span style="font-size:10px;color:var(--txt2);" id="yearCount"></span>
+        <span style="font-size:10px;color:var(--txt2);" id="windowLabel"></span>
+      </div>
+
+      <h2>Live now</h2>
+      <button id="btnNow" class="livebtn">Request Now (live fetch)</button>
+      <div class="row" style="margin-top:6px;"><input type="checkbox" id="showLive" checked/>
+        <label for="showLive">Show live layer <span class="badge-live" id="liveCount">0</span></label></div>
+      <div id="liveStatus">Parallel sources: USGS feed + USGS FDSN + EMSC. Warm EMSC push channel when available.</div>
+
+      <h2>Decade layers</h2>
+      <div class="decades" id="decadeBoxes"></div>
+
+      <h2>Magnitude filter</h2>
+      <div id="magFilters"></div>
+
+      <h2>Big-event layers (separate)</h2>
+      <div class="row"><input type="checkbox" id="bandM7"/> <label for="bandM7"><span class="dot" style="background:#e63946"></span> M7.0-7.9 (<span id="cntM7">-</span>)</label></div>
+      <div class="row"><input type="checkbox" id="bandM8"/> <label for="bandM8"><span class="dot" style="background:#b5179e"></span> M8.0-8.9 (<span id="cntM8">-</span>)</label></div>
+      <div class="row"><input type="checkbox" id="bandM9"/> <label for="bandM9"><span class="dot" style="background:#ffd700"></span> M9.0+ (<span id="cntM9">-</span>)</label></div>
+      <div class="row" style="justify-content:space-between;">
+        <button id="bandsAll">All bands</button>
+        <button id="bandsNone">None</button>
+        <span style="font-size:10px;color:var(--txt2);">sizes grow M7&lt;M8&lt;M9</span>
+      </div>
+
+      <h2>Overlays</h2>
+      <div class="row"><input type="checkbox" id="neverGrid"/> <label for="neverGrid">Never-affected zones (5&deg; grid, <span id="neverCount"></span> cells)</label></div>
+      <div class="row"><input type="checkbox" id="pauseRender" checked/> <label for="pauseRender">Render points</label></div>
+      <div class="row"><input type="checkbox" id="chkSmokeAOD" onchange="toggleSmokeLayer(this.checked)"/> <label for="chkSmokeAOD">CAMS Smoke AOD (Indonesian Peatlands)</label></div>
+
+      <h2>Legend (magnitude)</h2>
+      <div class="legend" id="legend"></div>
+
+      <div class="hint">Catalog tiering: 1900-1960 M6+, 1960-1990 M5.5+, 1990-2000 M5+, 2000+ M4.5+.
+      Time dropdowns filter UTC components; combine freely. "Request Now" fans out to USGS + EMSC in parallel.</div>
+    </div>
+  </div>
 </div>
 
 <div class="panel" id="stats">
-  <h2 style="margin-top:0;">Current view</h2>
+  <h2 style="margin-top:0;">Focus &amp; Telemetry</h2>
+  <div class="stat-line"><span>Active Tier</span><span class="stat-val" id="activeTierName" style="color:var(--accent);">1. Playa Blanca</span></div>
   <div class="stat-line"><span>Events shown</span><span class="stat-val" id="shownCount">0</span></div>
   <div class="stat-line"><span>Max magnitude</span><span class="stat-val" id="maxMag">&mdash;</span></div>
   <div class="stat-line"><span>Largest (coords)</span><span class="stat-val" id="maxPlace" style="font-size:10px;text-align:right;"></span></div>
   <div class="stat-line"><span>Deepest</span><span class="stat-val" id="maxDepth">&mdash;</span></div>
-  <div class="hint" style="margin-top:8px;">Sources: USGS FDSN 220,154 + EMSC 2 &middot; live: USGS+EMSC &middot; verified 2026-10-20</div>
+  <div class="stat-line"><span>Focused Hazard</span><span class="stat-val" id="focusedHazardVal" style="font-size:10px;color:#7dd3fc;text-align:right;">+4.2m TWL Berm Breach</span></div>
+  <div class="hint" style="margin-top:8px;">Sources: USGS FDSN 220,154 + EMSC 2 &middot; live: USGS+EMSC &middot; verified 2026-10-22</div>
 </div>
 
 <script src="leaflet.js"></script>
@@ -118,11 +279,202 @@
 const COLORS = [[8.0,'#7209b7'],[7.5,'#b5179e'],[7.0,'#e63946'],[6.5,'#ff6b35'],[6.0,'#ffa500'],[5.5,'#d9d94a'],[5.0,'#7ac74f'],[4.0,'#2d7d46']];
 function magColor(m){for(const[c,col]of COLORS){if(m>=c)return col;}return '#2d7d46';}
 
-const map = L.map('map',{worldCopyJump:true,preferCanvas:true,minZoom:2}).setView([15,0],2);
+// Map boots centered strictly on Tier 1: Playa Blanca (Farallón)
+const map = L.map('map',{worldCopyJump:true,preferCanvas:true,minZoom:2}).setView([8.378, -80.132], 12);
 L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Dark_Gray_Base/MapServer/tile/{z}/{y}/{x}',{maxZoom:9,attribution:'Esri Dark Gray'}).addTo(map);
 const canvasRenderer = L.canvas({padding:0.3});
 
-// state: point = [lat, lon, mag, epochSec, depthKm]
+// ============ TIER 1: PLAYA BLANCA HAZARD LAYERS ============
+const pbLayers = {
+  site: L.layerGroup().addTo(map),
+  ring: L.layerGroup().addTo(map),
+  runup: L.layerGroup().addTo(map),
+  lique: L.layerGroup().addTo(map),
+  radius: L.layerGroup().addTo(map)
+};
+
+function initPlayaBlancaLayers(){
+  // 1. Playa Blanca Epicenter Pin
+  const pbPin = L.circleMarker([8.378, -80.132], {
+    radius: 7, color: '#38bdf8', fillColor: '#0284c7', fillOpacity: 0.95, weight: 2
+  }).addTo(pbLayers.site);
+  pbPin.bindPopup(
+    '<b>Playa Blanca (Farall&oacute;n) Multi-Hazard Focus</b><br/>' +
+    'Distance to Oct 9 M7.7 Azuero: <b>110 km</b><br/>' +
+    'Spring Tide Range: <b>5.5 - 5.8 m</b><br/>' +
+    'TWL Inundation Runup Breach: <b>+4.2 m MSL</b><br/>' +
+    'Liquefaction Trigger: <b>PGA &ge; 0.10g</b> (Fines &gt; 35%)<br/>' +
+    'Naturgy Outage Risk: <b>10 - 40h &rarr; Mold @ 48h</b>'
+  );
+
+  // 2. Azuero 110km Distance Ring & Radial Connection
+  const azueroCoords = [7.5868, -80.7690];
+  L.circle(azueroCoords, {
+    radius: 110000, color: '#ef4444', weight: 1.5, dashArray: '6,6', fill: false
+  }).addTo(pbLayers.ring).bindPopup('<b>110km Seismic Distance Ring</b><br/>Buffer radius from Oct 9 Mw 7.7 Azuero epicenter to Playa Blanca.');
+  
+  L.polyline([azueroCoords, [8.378, -80.132]], {
+    color: '#f87171', weight: 1.5, dashArray: '4,4'
+  }).addTo(pbLayers.ring).bindPopup('Direct seismic wave transit path: 110 km from Azuero Mw 7.7 to Playa Blanca.');
+
+  // 3. +4.2m MSL Berm Inundation Polygon
+  const runupPoly = [
+    [8.368, -80.145], [8.374, -80.140], [8.384, -80.126], [8.389, -80.116],
+    [8.383, -80.112], [8.372, -80.128], [8.365, -80.138]
+  ];
+  L.polygon(runupPoly, {
+    color: '#38bdf8', fillColor: '#0284c7', fillOpacity: 0.35, weight: 1.5
+  }).addTo(pbLayers.runup).bindPopup(
+    '<b>+4.2m MSL King Tide &amp; Mar de Fondo Runup Zone</b><br/>' +
+    'Combined macro-tidal peak (5.8m spring tide) + southern swell runup.<br/>' +
+    'Berm retreat rate: <b>0.5 - 2.5 m / event</b>. Critical seawall erosion zone.'
+  );
+
+  // 4. Estuary / Lagoon Liquefaction Zone
+  const liquePoly = [
+    [8.373, -80.137], [8.381, -80.133], [8.380, -80.127], [8.372, -80.130]
+  ];
+  L.polygon(liquePoly, {
+    color: '#f59e0b', fillColor: '#d97706', fillOpacity: 0.40, weight: 1.5
+  }).addTo(pbLayers.lique).bindPopup(
+    '<b>Estuary &amp; Artificial Lagoon Liquefaction Zone</b><br/>' +
+    'Unconsolidated fine sands &amp; resort lagoon fills with fines &gt; 35%.<br/>' +
+    'Trigger threshold: <b>PGA &ge; 0.10 - 0.12g</b>.'
+  );
+
+  // 5. 100km Local Seismic Perimeter
+  L.circle([8.378, -80.132], {
+    radius: 100000, color: '#64748b', weight: 1, dashArray: '3,3', fill: false
+  }).addTo(pbLayers.radius).bindPopup('100 km local seismicity perimeter centered on Playa Blanca.');
+}
+initPlayaBlancaLayers();
+
+function togglePbLayer(name, show){
+  if(!pbLayers[name]) return;
+  show ? map.addLayer(pbLayers[name]) : map.removeLayer(pbLayers[name]);
+}
+
+// ============ TIER 2: PANAMA & VOLCANIC DYNAMIC NETWORK ============
+const panamaLayers = {
+  volc: L.layerGroup().addTo(map),
+  azuero: L.layerGroup().addTo(map)
+};
+
+function initPanamaRegionalLayers(){
+  // Azuero Epicenter Marker
+  const azueroMarker = L.circleMarker([7.5868, -80.7690], {
+    radius: 8, color: '#fecaca', fillColor: '#dc2626', fillOpacity: 0.95, weight: 2
+  }).addTo(panamaLayers.azuero);
+  azueroMarker.bindPopup(
+    '<b>Oct 9, 2026 Mw 7.7 Azuero Earthquake Epicenter</b><br/>' +
+    'Coordinates: 7.5868&deg;N, 80.7690&deg;W &middot; Depth: 10 km<br/>' +
+    'Dynamic trigger source across Central America volcanic arc.'
+  );
+
+  // Volcanic Dynamic Triggering Network
+  const volcs = [
+    {name: 'Rinc&oacute;n de la Vieja (Costa Rica)', lat: 10.830, lon: -85.324, trig: true,
+     desc: '<b>70 earthquakes triggered</b> (19 near crater, 51 flank) by Oct 9 M7.7 waves at 618 km distance.<br/>Phenomenon: Dynamic Stress Transfer.'},
+    {name: 'Tenorio (Costa Rica)', lat: 10.673, lon: -85.015, trig: true,
+     desc: 'Ovsicori-UNA identified temporary seismic response in volcanic structure.'},
+    {name: 'Miravalles (Costa Rica)', lat: 10.748, lon: -85.153, trig: true,
+     desc: 'Ovsicori-UNA confirmed micro-fracture movements following seismic waves.'},
+    {name: 'Iraz&uacute; (Costa Rica)', lat: 9.979, lon: -83.853, trig: true,
+     desc: 'Temporary seismic response recorded post-earthquake.'},
+    {name: 'Volc&aacute;n Bar&uacute; (Panama)', lat: 8.808, lon: -82.543, trig: false,
+     desc: '<b>0 triggered quakes</b>. Dormant stratovolcano.<br/>Cause: Cocos-Nazca slab tear / slab window prevents active magma resonance.'},
+    {name: 'El Valle de Ant&oacute;n (Panama)', lat: 8.614, lon: -80.147, trig: false,
+     desc: 'Dormant caldera complex &sim;28 km north of Playa Blanca. Last active ~13,000 BP. Zero triggered microseismicity.'},
+    {name: 'La Yeguada (Panama)', lat: 8.467, lon: -80.817, trig: false,
+     desc: 'Quaternary stratovolcano complex. Dormant.'}
+  ];
+
+  for(const v of volcs){
+    const col = v.trig ? '#db2777' : (v.name.includes('Bar') ? '#0284c7' : '#475569');
+    const borderCol = v.trig ? '#f472b6' : (v.name.includes('Bar') ? '#38bdf8' : '#94a3b8');
+    const mk = L.circleMarker([v.lat, v.lon], {
+      radius: v.trig ? 7 : 5, color: borderCol, fillColor: col, fillOpacity: 0.9, weight: 1.5
+    }).addTo(panamaLayers.volc);
+    mk.bindPopup('<b>' + v.name + '</b><br/>' + v.desc);
+  }
+}
+initPanamaRegionalLayers();
+
+function togglePanamaLayer(name, show){
+  if(!panamaLayers[name]) return;
+  show ? map.addLayer(panamaLayers[name]) : map.removeLayer(panamaLayers[name]);
+}
+
+// ============ TIER 3: WORLD OVERLAYS (SMOKE AOD) ============
+const smokeLayer = L.layerGroup();
+(function initSmokeAOD(){
+  L.rectangle([[-11.0, 95.0], [6.0, 141.0]], {
+    color: '#f97316', weight: 1, fillColor: '#ea580c', fillOpacity: 0.22, dashArray: '5,5'
+  }).addTo(smokeLayer).bindPopup(
+    '<b>CAMS Smoke Aerosol Optical Depth (AOD)</b><br/>' +
+    'Indonesian Peatland smoldering fires (Sumatra &amp; Kalimantan).<br/>' +
+    'Global atmospheric compound disaster risk.'
+  );
+})();
+
+function toggleSmokeLayer(show){
+  show ? map.addLayer(smokeLayer) : map.removeLayer(smokeLayer);
+}
+
+// ============ SPATIAL NAVIGATION HIERARCHY ============
+function setSpatialTier(tier){
+  const btnPb = document.getElementById('btnJumpPb');
+  const btnPanama = document.getElementById('btnJumpPanama');
+  const btnWorld = document.getElementById('btnJumpWorld');
+  const cardPb = document.getElementById('card-playa-blanca');
+  const cardPanama = document.getElementById('card-panama-regional');
+  const cardWorld = document.getElementById('card-world-catalog');
+  const tierStat = document.getElementById('activeTierName');
+  const hazardStat = document.getElementById('focusedHazardVal');
+
+  btnPb.classList.remove('active');
+  btnPanama.classList.remove('active');
+  btnWorld.classList.remove('active');
+  cardPb.classList.remove('active-card');
+  cardPanama.classList.remove('active-card');
+  cardWorld.classList.remove('active-card');
+
+  if(tier === 1){
+    btnPb.classList.add('active');
+    cardPb.classList.add('active-card');
+    cardPb.classList.remove('collapsed');
+    cardPanama.classList.add('collapsed');
+    cardWorld.classList.add('collapsed');
+    tierStat.textContent = '1. Playa Blanca';
+    hazardStat.textContent = '+4.2m TWL Berm Breach';
+    map.flyTo([8.378, -80.132], 12, {duration: 1.2});
+  } else if(tier === 2){
+    btnPanama.classList.add('active');
+    cardPanama.classList.add('active-card');
+    cardPanama.classList.remove('collapsed');
+    cardPb.classList.add('collapsed');
+    cardWorld.classList.add('collapsed');
+    tierStat.textContent = '2. Panama Regional';
+    hazardStat.textContent = '70 Quakes Rincón / Slab Tear';
+    map.flyTo([8.4, -80.1], 7, {duration: 1.2});
+  } else if(tier === 3){
+    btnWorld.classList.add('active');
+    cardWorld.classList.add('active-card');
+    cardWorld.classList.remove('collapsed');
+    cardPb.classList.add('collapsed');
+    cardPanama.classList.add('collapsed');
+    tierStat.textContent = '3. World All-Time';
+    hazardStat.textContent = 'Global Catalog 220k+';
+    map.flyTo([15, 0], 2, {duration: 1.2});
+  }
+}
+
+function toggleTierCard(cardId){
+  const el = document.getElementById(cardId);
+  if(el) el.classList.toggle('collapsed');
+}
+
+// ============ WORLD SEISMIC CATALOG CORE ENGINE ============
 let META = null;
 const loaded = {};      // decade -> array of points
 const DECADES = [];
@@ -183,12 +535,12 @@ function drawPoints(){
     }
   }
   document.getElementById('shownCount').textContent = shown.toLocaleString();
-  document.getElementById('maxMag').textContent = maxM ? ('M'+maxM.toFixed(1)) : '\u2014';
+  document.getElementById('maxMag').textContent = maxM ? ('M'+maxM.toFixed(1)) : '—';
   document.getElementById('maxPlace').textContent = maxM ? maxCoord : '';
-  document.getElementById('maxDepth').textContent = maxDepthV ? (maxDepthV+' km') : '\u2014';
+  document.getElementById('maxDepth').textContent = maxDepthV ? (maxDepthV+' km') : '—';
 }
 
-// click near a drawn point -> popup details (historical + live unified)
+// click near a drawn point -> popup details
 map.on('click', (e)=>{
   if(!visiblePoints.length && !(state.showLive && liveEvents.length)) return;
   const la = e.latlng.lat, lo = e.latlng.lng;
@@ -293,10 +645,10 @@ function refresh(){
   },120);
 }
 
-// ============ Request Now (live chain, confirmed via GLM elder consult) ============
+// ============ Request Now (live chain) ============
 const SRC_PRIORITY = {'USGS':0,'EMSC':1,'GFZ':2,'IRIS':3};
-let liveEvents = [];   // deduped live events
-let wsBuffer = [];     // warm EMSC push buffer
+let liveEvents = [];
+let wsBuffer = [];
 
 function havKm(la1,lo1,la2,lo2){
   const R=6371, p1=la1*Math.PI/180, p2=la2*Math.PI/180;
@@ -339,7 +691,7 @@ function dedupeLive(events){
     if(hit){
       if(!hit.sources.includes(e.src)) hit.sources.push(e.src);
       hit.ids.push(e.id);
-      if((SRC_PRIORITY[e.src]??9) < (SRC_PRIORITY[hit.src]??9)){ // preferred origin
+      if((SRC_PRIORITY[e.src]??9) < (SRC_PRIORITY[hit.src]??9)){
         hit.lat=e.lat; hit.lon=e.lon; hit.depth=e.depth; hit.src=e.src; hit.ep=e.ep; hit.mag=Math.max(hit.mag,e.mag);
       }
     } else {
@@ -383,7 +735,7 @@ async function requestNow(){
     fetchJSON(url,4000).then(d=>({name, norm, count:(d.features||[]).length, features:d.features||[]}))
   ));
   const lines = [];
-  const all = wsBuffer.slice();  // include warm push buffer
+  const all = wsBuffer.slice();
   if(wsBuffer.length) lines.push('EMSC push buffer: '+wsBuffer.length+' (warm channel)');
   results.forEach((r,i)=>{
     const name = sources[i][0];
@@ -398,12 +750,12 @@ async function requestNow(){
   });
   liveEvents = dedupeLive(all);
   const live1h = renderLive() || 0;
-  lines.push('Merged: '+liveEvents.length+' events, '+live1h+' in last hour \u2014 '+new Date().toISOString().slice(11,19)+' UTC');
+  lines.push('Merged: '+liveEvents.length+' events, '+live1h+' in last hour — '+new Date().toISOString().slice(11,19)+' UTC');
   st.textContent = lines.join('\n');
   btn.disabled = false; btn.textContent = 'Request Now (live fetch)';
 }
 
-// warm EMSC push channel (best effort; silent on failure)
+// warm EMSC push channel
 (function warmWS(){
   let fails = 0;
   (function connect(){
@@ -433,7 +785,7 @@ async function requestNow(){
   })();
 })();
 
-// ============ controls ============
+// ============ CONTROLS INITIALIZATION ============
 function buildSelect(id, values, allLabel, pad){
   const sel = document.getElementById(id);
   sel.innerHTML = '';
@@ -546,7 +898,6 @@ function setBands(all){
   drawPoints();
   updateBandCounts();
   document.getElementById('windowLabel').textContent = windowLabelText();
-  // background: progressively load remaining decades so "All years" becomes complete
   (async ()=>{
     for(const d of DECADES){
       if(loaded[d]) continue;
