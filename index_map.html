@@ -364,8 +364,8 @@ function timeFilterActive() {
       if (maxMs === null || ms > maxMs) maxMs = ms;
     }
   });
-  // BUGFIX: nothing selected (All off + every window off) => show NOTHING (-1), not everything.
-  return maxMs !== null ? maxMs : -1;
+  // Zero-state is a reset: no window selected means no time filter (never a blank map).
+  return maxMs;
 }
 
 // Exclusive click interaction: clicking a specific time unchecks 'All', clicking 'All' unchecks others
@@ -379,12 +379,19 @@ TIME_IDS.forEach(id => {
   });
 });
 document.getElementById('cbTAll').addEventListener('click', () => {
-  if (document.getElementById('cbTAll').checked) {
-    TIME_IDS.forEach(id => {
-      const el = document.getElementById(id);
-      if (el) { el.checked = false; try { sessionStorage.setItem('quake_cfg_' + id, '0'); } catch(e){} }
-    });
-  }
+  // 'All' is a reset, never an off-state: keep it checked and clear every window.
+  const all = document.getElementById('cbTAll');
+  all.checked = true;
+  try { sessionStorage.setItem('quake_cfg_cbTAll', '1'); } catch(e){}
+  TIME_IDS.forEach(id => {
+    const el = document.getElementById(id);
+    if (el) { el.checked = false; try { sessionStorage.setItem('quake_cfg_' + id, '0'); } catch(e){} }
+  });
+  applyTimeFilter(); syncLabels(); updateHalos();
+});
+document.getElementById('cbTAll').addEventListener('change', () => {
+  const all = document.getElementById('cbTAll');
+  if (!all.checked) { all.checked = true; try { sessionStorage.setItem('quake_cfg_cbTAll','1'); } catch(e){} applyTimeFilter(); syncLabels(); updateHalos(); }
 });
 function applyTimeFilter() {
   const windowMs = timeFilterActive();
