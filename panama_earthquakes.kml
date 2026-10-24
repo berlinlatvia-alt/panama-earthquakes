@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <kml xmlns="http://www.opengis.net/kml/2.2">
 <Document>
-  <name>Panama Earthquakes - Last 24h (2026-10-23 11:44-11:36 UTC)</name>
-  <description>38 deduped events | M6+:0 M5+:0 M4+:5 M3+:30 M2+:38 | sources: IGC, UNA</description>
+  <name>Panama Earthquakes - Last 24h (2026-10-23 13:07-12:28 UTC)</name>
+  <description>37 deduped events | M6+:0 M5+:0 M4+:4 M3+:29 M2+:37 | sources: IGC, UNA</description>
   <Style id="m4">
     <IconStyle><color>ff0000ff</color><scale>1.1</scale>
       <Icon><href>http://maps.google.com/mapfiles/kml/paddle/red-circle.png</href></Icon></IconStyle>
@@ -19,6 +19,12 @@
     <LabelStyle><scale>0.9</scale></LabelStyle>
   </Style>
 
+  <Placemark>
+    <name>M3.1 07:28 AM - Cabecera de El Anegado</name>
+    <description><![CDATA[<b>M3.1 - PANAMA</b><br/><b>Nearest place:</b> Cabecera de El Anegado<br/><b>Place source:</b> gazetteer<br/><b>Local (UTC-5):</b> 07:28 AM | <b>UTC:</b> 2026-10-24 12:28<br/><b>Coordinates:</b> 7.6671, -81.3562<br/><b>Depth:</b> 10 km<br/><b>Setting:</b> ONSHORE<br/><b>Distance:</b> Playa Blanca: 155 km | Altos del Maria: 184 km<br/><b>Source:</b> IGC<br/><b>Cause:</b> Azuero M7.7 sequence aftershock<br/><b>Tsunami flag:</b> 0]]></description>
+    <styleUrl>#m3</styleUrl>
+    <Point><coordinates>-81.35620,7.66710,0</coordinates></Point>
+  </Placemark>
   <Placemark>
     <name>M3.5 06:36 AM - Tumaco Arriba</name>
     <description><![CDATA[<b>M3.5 - PANAMA</b><br/><b>Nearest place:</b> Tumaco Arriba<br/><b>Place source:</b> gazetteer<br/><b>Local (UTC-5):</b> 06:36 AM | <b>UTC:</b> 2026-10-24 11:36<br/><b>Coordinates:</b> 7.6078, -80.6592<br/><b>Depth:</b> 10 km<br/><b>Setting:</b> ONSHORE<br/><b>Distance:</b> Playa Blanca: 101 km | Altos del Maria: 136 km<br/><b>Source:</b> IGC<br/><b>Cause:</b> Azuero M7.7 sequence aftershock<br/><b>Tsunami flag:</b> 0]]></description>
@@ -234,18 +240,6 @@
     <description><![CDATA[<b>M2.9 - OFF COAST OF COSTA RICA</b><br/><b>Nearest place:</b> OFF COAST OF COSTA RICA<br/><b>Place source:</b> catalog_fallback<br/><b>Local (UTC-5):</b> 08:07 AM | <b>UTC:</b> 2026-10-23 13:07<br/><b>Coordinates:</b> 8.5038, -84.6005<br/><b>Depth:</b> 8 km<br/><b>Setting:</b> ONSHORE<br/><b>Distance:</b> Playa Blanca: 492 km | Altos del Maria: 505 km<br/><b>Source:</b> UNA<br/><b>Cause:</b> regional/other<br/><b>Tsunami flag:</b> 0]]></description>
     <styleUrl>#m2</styleUrl>
     <Point><coordinates>-84.60050,8.50380,0</coordinates></Point>
-  </Placemark>
-  <Placemark>
-    <name>M4.3 07:39 AM - Polanco</name>
-    <description><![CDATA[<b>M4.3 - PANAMA</b><br/><b>Nearest place:</b> Polanco<br/><b>Place source:</b> gazetteer<br/><b>Local (UTC-5):</b> 07:39 AM | <b>UTC:</b> 2026-10-23 12:39<br/><b>Coordinates:</b> 7.3402, -80.1045<br/><b>Depth:</b> 3 km<br/><b>Setting:</b> OFFSHORE<br/><b>Distance:</b> Playa Blanca: 112 km | Altos del Maria: 146 km<br/><b>Source:</b> IGC<br/><b>Cause:</b> Azuero M7.7 sequence aftershock<br/><b>Tsunami flag:</b> 0]]></description>
-    <styleUrl>#m4</styleUrl>
-    <Point><coordinates>-80.10450,7.34020,0</coordinates></Point>
-  </Placemark>
-  <Placemark>
-    <name>M3.0 06:44 AM - La Gigi</name>
-    <description><![CDATA[<b>M3.0 - PANAMA</b><br/><b>Nearest place:</b> La Gigi<br/><b>Place source:</b> gazetteer<br/><b>Local (UTC-5):</b> 06:44 AM | <b>UTC:</b> 2026-10-23 11:44<br/><b>Coordinates:</b> 7.6084, -80.8748<br/><b>Depth:</b> 8 km<br/><b>Setting:</b> ONSHORE<br/><b>Distance:</b> Playa Blanca: 116 km | Altos del Maria: 150 km<br/><b>Source:</b> IGC<br/><b>Cause:</b> Azuero M7.7 sequence aftershock<br/><b>Tsunami flag:</b> 0]]></description>
-    <styleUrl>#m3</styleUrl>
-    <Point><coordinates>-80.87480,7.60840,0</coordinates></Point>
   </Placemark>
 </Document>
 </kml>
