@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <kml xmlns="http://www.opengis.net/kml/2.2">
 <Document>
-  <name>Panama Earthquakes - Last 24h (2026-10-24 00:04-23:03 UTC)</name>
-  <description>36 deduped events | M6+:0 M5+:0 M4+:1 M3+:27 M2+:36 | sources: IGC, UNA</description>
+  <name>Panama Earthquakes - Last 24h (2026-10-24 00:04-23:55 UTC)</name>
+  <description>37 deduped events | M6+:0 M5+:0 M4+:1 M3+:28 M2+:37 | sources: IGC, UNA</description>
   <Style id="m4">
     <IconStyle><color>ff0000ff</color><scale>1.1</scale>
       <Icon><href>http://maps.google.com/mapfiles/kml/paddle/red-circle.png</href></Icon></IconStyle>
@@ -19,6 +19,12 @@
     <LabelStyle><scale>0.9</scale></LabelStyle>
   </Style>
 
+  <Placemark>
+    <name>M3.5 06:55 PM - Canales de Tierra</name>
+    <description><![CDATA[<b>M3.5 - PANAMA</b><br/><b>Nearest place:</b> Canales de Tierra<br/><b>Place source:</b> gazetteer<br/><b>Local (UTC-5):</b> 06:55 PM | <b>UTC:</b> 2026-10-24 23:55<br/><b>Coordinates:</b> 7.7037, -81.5938<br/><b>Depth:</b> 14 km<br/><b>Setting:</b> ONSHORE<br/><b>Distance:</b> Playa Blanca: 176 km | Altos del Maria: 203 km<br/><b>Source:</b> IGC<br/><b>Cause:</b> Azuero M7.7 sequence aftershock<br/><b>Tsunami flag:</b> 0]]></description>
+    <styleUrl>#m3</styleUrl>
+    <Point><coordinates>-81.59380,7.70370,0</coordinates></Point>
+  </Placemark>
   <Placemark>
     <name>M3.9 06:03 PM - Cerro Peludo</name>
     <description><![CDATA[<b>M3.9 - PANAMA</b><br/><b>Nearest place:</b> Cerro Peludo<br/><b>Place source:</b> gazetteer<br/><b>Local (UTC-5):</b> 06:03 PM | <b>UTC:</b> 2026-10-24 23:03<br/><b>Coordinates:</b> 7.6076, -80.6638<br/><b>Depth:</b> 5 km<br/><b>Setting:</b> ONSHORE<br/><b>Distance:</b> Playa Blanca: 101 km | Altos del Maria: 136 km<br/><b>Source:</b> IGC<br/><b>Cause:</b> Azuero M7.7 sequence aftershock<br/><b>Tsunami flag:</b> 0]]></description>
