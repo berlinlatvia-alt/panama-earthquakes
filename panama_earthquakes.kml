@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <kml xmlns="http://www.opengis.net/kml/2.2">
 <Document>
-  <name>Panama Earthquakes - Last 24h (2026-10-23 04:19-03:44 UTC)</name>
-  <description>40 deduped events | M6+:0 M5+:0 M4+:6 M3+:30 M2+:40 | sources: IGC, UCR, UNA</description>
+  <name>Panama Earthquakes - Last 24h (2026-10-23 11:44-11:28 UTC)</name>
+  <description>37 deduped events | M6+:0 M5+:0 M4+:5 M3+:29 M2+:37 | sources: IGC, UNA</description>
   <Style id="m4">
     <IconStyle><color>ff0000ff</color><scale>1.1</scale>
       <Icon><href>http://maps.google.com/mapfiles/kml/paddle/red-circle.png</href></Icon></IconStyle>
@@ -19,6 +19,60 @@
     <LabelStyle><scale>0.9</scale></LabelStyle>
   </Style>
 
+  <Placemark>
+    <name>M3.5 06:28 AM - Playa Azul</name>
+    <description><![CDATA[<b>M3.5 - PANAMA</b><br/><b>Nearest place:</b> Playa Azul<br/><b>Place source:</b> gazetteer<br/><b>Local (UTC-5):</b> 06:28 AM | <b>UTC:</b> 2026-10-24 11:28<br/><b>Coordinates:</b> 7.6174, -81.4031<br/><b>Depth:</b> 10 km<br/><b>Setting:</b> ONSHORE<br/><b>Distance:</b> Playa Blanca: 162 km | Altos del Maria: 191 km<br/><b>Source:</b> IGC<br/><b>Cause:</b> Azuero M7.7 sequence aftershock<br/><b>Tsunami flag:</b> 0]]></description>
+    <styleUrl>#m3</styleUrl>
+    <Point><coordinates>-81.40310,7.61740,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+    <name>M4.0 04:50 AM - La Galera</name>
+    <description><![CDATA[<b>M4.0 - PANAMA</b><br/><b>Nearest place:</b> La Galera<br/><b>Place source:</b> gazetteer<br/><b>Local (UTC-5):</b> 04:50 AM | <b>UTC:</b> 2026-10-24 09:50<br/><b>Coordinates:</b> 7.6059, -81.9389<br/><b>Depth:</b> 10 km<br/><b>Setting:</b> ONSHORE<br/><b>Distance:</b> Playa Blanca: 215 km | Altos del Maria: 242 km<br/><b>Source:</b> IGC<br/><b>Cause:</b> Azuero M7.7 sequence aftershock<br/><b>Tsunami flag:</b> 0]]></description>
+    <styleUrl>#m4</styleUrl>
+    <Point><coordinates>-81.93890,7.60590,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+    <name>M3.1 03:48 AM - OFF COAST OF COSTA RICA</name>
+    <description><![CDATA[<b>M3.1 - OFF COAST OF COSTA RICA</b><br/><b>Nearest place:</b> OFF COAST OF COSTA RICA<br/><b>Place source:</b> catalog_fallback<br/><b>Local (UTC-5):</b> 03:48 AM | <b>UTC:</b> 2026-10-24 08:48<br/><b>Coordinates:</b> 8.6502, -84.6088<br/><b>Depth:</b> 10 km<br/><b>Setting:</b> ONSHORE<br/><b>Distance:</b> Playa Blanca: 493 km | Altos del Maria: 506 km<br/><b>Source:</b> UNA<br/><b>Cause:</b> regional/other<br/><b>Tsunami flag:</b> 0]]></description>
+    <styleUrl>#m3</styleUrl>
+    <Point><coordinates>-84.60880,8.65020,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+    <name>M3.5 03:46 AM - Bajos de Güera</name>
+    <description><![CDATA[<b>M3.5 - PANAMA</b><br/><b>Nearest place:</b> Bajos de Güera<br/><b>Place source:</b> gazetteer<br/><b>Local (UTC-5):</b> 03:46 AM | <b>UTC:</b> 2026-10-24 08:46<br/><b>Coordinates:</b> 7.5395, -80.6262<br/><b>Depth:</b> 10 km<br/><b>Setting:</b> ONSHORE<br/><b>Distance:</b> Playa Blanca: 105 km | Altos del Maria: 141 km<br/><b>Source:</b> IGC<br/><b>Cause:</b> Azuero M7.7 sequence aftershock<br/><b>Tsunami flag:</b> 0]]></description>
+    <styleUrl>#m3</styleUrl>
+    <Point><coordinates>-80.62620,7.53950,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+    <name>M3.9 03:28 AM - Río Negro Número Uno</name>
+    <description><![CDATA[<b>M3.9 - PANAMA</b><br/><b>Nearest place:</b> Río Negro Número Uno<br/><b>Place source:</b> gazetteer<br/><b>Local (UTC-5):</b> 03:28 AM | <b>UTC:</b> 2026-10-24 08:28<br/><b>Coordinates:</b> 7.6420, -80.9677<br/><b>Depth:</b> 5 km<br/><b>Setting:</b> ONSHORE<br/><b>Distance:</b> Playa Blanca: 121 km | Altos del Maria: 154 km<br/><b>Source:</b> IGC<br/><b>Cause:</b> Azuero M7.7 sequence aftershock<br/><b>Tsunami flag:</b> 0]]></description>
+    <styleUrl>#m3</styleUrl>
+    <Point><coordinates>-80.96770,7.64200,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+    <name>M3.6 02:09 AM - Guaniquito Arriba</name>
+    <description><![CDATA[<b>M3.6 - PANAMA</b><br/><b>Nearest place:</b> Guaniquito Arriba<br/><b>Place source:</b> gazetteer<br/><b>Local (UTC-5):</b> 02:09 AM | <b>UTC:</b> 2026-10-24 07:09<br/><b>Coordinates:</b> 7.4863, -80.5832<br/><b>Depth:</b> 10 km<br/><b>Setting:</b> ONSHORE<br/><b>Distance:</b> Playa Blanca: 108 km | Altos del Maria: 144 km<br/><b>Source:</b> IGC<br/><b>Cause:</b> Azuero M7.7 sequence aftershock<br/><b>Tsunami flag:</b> 0]]></description>
+    <styleUrl>#m3</styleUrl>
+    <Point><coordinates>-80.58320,7.48630,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+    <name>M3.7 01:46 AM - Santa Clara</name>
+    <description><![CDATA[<b>M3.7 - PANAMA</b><br/><b>Nearest place:</b> Santa Clara<br/><b>Place source:</b> gazetteer<br/><b>Local (UTC-5):</b> 01:46 AM | <b>UTC:</b> 2026-10-24 06:46<br/><b>Coordinates:</b> 7.5845, -80.7710<br/><b>Depth:</b> 5 km<br/><b>Setting:</b> ONSHORE<br/><b>Distance:</b> Playa Blanca: 110 km | Altos del Maria: 145 km<br/><b>Source:</b> IGC<br/><b>Cause:</b> Azuero M7.7 sequence aftershock<br/><b>Tsunami flag:</b> 0]]></description>
+    <styleUrl>#m3</styleUrl>
+    <Point><coordinates>-80.77100,7.58450,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+    <name>M3.6 01:17 AM - Río Caimito</name>
+    <description><![CDATA[<b>M3.6 - PANAMA</b><br/><b>Nearest place:</b> Río Caimito<br/><b>Place source:</b> gazetteer<br/><b>Local (UTC-5):</b> 01:17 AM | <b>UTC:</b> 2026-10-24 06:17<br/><b>Coordinates:</b> 9.0132, -80.7141<br/><b>Depth:</b> 10 km<br/><b>Setting:</b> ONSHORE<br/><b>Distance:</b> Playa Blanca: 97 km | Altos del Maria: 87 km<br/><b>Source:</b> IGC<br/><b>Cause:</b> regional/other<br/><b>Tsunami flag:</b> 0]]></description>
+    <styleUrl>#m3</styleUrl>
+    <Point><coordinates>-80.71410,9.01320,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+    <name>M3.2 12:48 AM - Alto Romero</name>
+    <description><![CDATA[<b>M3.2 - PANAMA-COSTA RICA BORDER REGION</b><br/><b>Nearest place:</b> Alto Romero<br/><b>Place source:</b> gazetteer<br/><b>Local (UTC-5):</b> 12:48 AM | <b>UTC:</b> 2026-10-24 05:48<br/><b>Coordinates:</b> 8.9569, -82.3798<br/><b>Depth:</b> 10 km<br/><b>Setting:</b> ONSHORE<br/><b>Distance:</b> Playa Blanca: 256 km | Altos del Maria: 263 km<br/><b>Source:</b> UNA<br/><b>Cause:</b> regional/other<br/><b>Tsunami flag:</b> 0]]></description>
+    <styleUrl>#m3</styleUrl>
+    <Point><coordinates>-82.37980,8.95690,0</coordinates></Point>
+  </Placemark>
   <Placemark>
     <name>M2.7 10:44 PM - Puntarenas</name>
     <description><![CDATA[<b>M2.7 - OFF COAST OF COSTA RICA</b><br/><b>Nearest place:</b> Puntarenas<br/><b>Place source:</b> nominatim<br/><b>Local (UTC-5):</b> 10:44 PM | <b>UTC:</b> 2026-10-24 03:44<br/><b>Coordinates:</b> 8.9017, -84.3442<br/><b>Depth:</b> 16 km<br/><b>Setting:</b> ONSHORE<br/><b>Distance:</b> Playa Blanca: 467 km | Altos del Maria: 477 km<br/><b>Source:</b> UNA<br/><b>Cause:</b> regional/other<br/><b>Tsunami flag:</b> 0]]></description>
@@ -186,78 +240,6 @@
     <description><![CDATA[<b>M3.0 - PANAMA</b><br/><b>Nearest place:</b> La Gigi<br/><b>Place source:</b> gazetteer<br/><b>Local (UTC-5):</b> 06:44 AM | <b>UTC:</b> 2026-10-23 11:44<br/><b>Coordinates:</b> 7.6084, -80.8748<br/><b>Depth:</b> 8 km<br/><b>Setting:</b> ONSHORE<br/><b>Distance:</b> Playa Blanca: 116 km | Altos del Maria: 150 km<br/><b>Source:</b> IGC<br/><b>Cause:</b> Azuero M7.7 sequence aftershock<br/><b>Tsunami flag:</b> 0]]></description>
     <styleUrl>#m3</styleUrl>
     <Point><coordinates>-80.87480,7.60840,0</coordinates></Point>
-  </Placemark>
-  <Placemark>
-    <name>M3.1 05:45 AM - El Viejo</name>
-    <description><![CDATA[<b>M3.1 - PANAMA</b><br/><b>Nearest place:</b> El Viejo<br/><b>Place source:</b> gazetteer<br/><b>Local (UTC-5):</b> 05:45 AM | <b>UTC:</b> 2026-10-23 10:45<br/><b>Coordinates:</b> 7.6008, -80.7276<br/><b>Depth:</b> 7 km<br/><b>Setting:</b> ONSHORE<br/><b>Distance:</b> Playa Blanca: 106 km | Altos del Maria: 141 km<br/><b>Source:</b> IGC<br/><b>Cause:</b> Azuero M7.7 sequence aftershock<br/><b>Tsunami flag:</b> 0]]></description>
-    <styleUrl>#m3</styleUrl>
-    <Point><coordinates>-80.72760,7.60080,0</coordinates></Point>
-  </Placemark>
-  <Placemark>
-    <name>M2.6 04:05 AM - OFF COAST OF COSTA RICA</name>
-    <description><![CDATA[<b>M2.6 - OFF COAST OF COSTA RICA</b><br/><b>Nearest place:</b> OFF COAST OF COSTA RICA<br/><b>Place source:</b> catalog_fallback<br/><b>Local (UTC-5):</b> 04:05 AM | <b>UTC:</b> 2026-10-23 09:05<br/><b>Coordinates:</b> 8.6970, -84.4528<br/><b>Depth:</b> 7 km<br/><b>Setting:</b> ONSHORE<br/><b>Distance:</b> Playa Blanca: 476 km | Altos del Maria: 488 km<br/><b>Source:</b> UNA<br/><b>Cause:</b> regional/other<br/><b>Tsunami flag:</b> 0]]></description>
-    <styleUrl>#m2</styleUrl>
-    <Point><coordinates>-84.45280,8.69700,0</coordinates></Point>
-  </Placemark>
-  <Placemark>
-    <name>M4.0 02:59 AM - Polanco</name>
-    <description><![CDATA[<b>M4.0 - PANAMA</b><br/><b>Nearest place:</b> Polanco<br/><b>Place source:</b> gazetteer<br/><b>Local (UTC-5):</b> 02:59 AM | <b>UTC:</b> 2026-10-23 07:59<br/><b>Coordinates:</b> 7.3513, -80.1395<br/><b>Depth:</b> 8 km<br/><b>Setting:</b> OFFSHORE<br/><b>Distance:</b> Playa Blanca: 111 km | Altos del Maria: 145 km<br/><b>Source:</b> IGC<br/><b>Cause:</b> Azuero M7.7 sequence aftershock<br/><b>Tsunami flag:</b> 0]]></description>
-    <styleUrl>#m4</styleUrl>
-    <Point><coordinates>-80.13950,7.35130,0</coordinates></Point>
-  </Placemark>
-  <Placemark>
-    <name>M3.6 02:53 AM - El Chumico</name>
-    <description><![CDATA[<b>M3.6 - PANAMA</b><br/><b>Nearest place:</b> El Chumico<br/><b>Place source:</b> gazetteer<br/><b>Local (UTC-5):</b> 02:53 AM | <b>UTC:</b> 2026-10-23 07:53<br/><b>Coordinates:</b> 7.3075, -80.0785<br/><b>Depth:</b> 10 km<br/><b>Setting:</b> OFFSHORE<br/><b>Distance:</b> Playa Blanca: 116 km | Altos del Maria: 149 km<br/><b>Source:</b> IGC<br/><b>Cause:</b> Azuero M7.7 sequence aftershock<br/><b>Tsunami flag:</b> 0]]></description>
-    <styleUrl>#m3</styleUrl>
-    <Point><coordinates>-80.07850,7.30750,0</coordinates></Point>
-  </Placemark>
-  <Placemark>
-    <name>M3.3 02:44 AM - La Totumita</name>
-    <description><![CDATA[<b>M3.3 - PANAMA</b><br/><b>Nearest place:</b> La Totumita<br/><b>Place source:</b> gazetteer<br/><b>Local (UTC-5):</b> 02:44 AM | <b>UTC:</b> 2026-10-23 07:44<br/><b>Coordinates:</b> 7.5408, -80.4950<br/><b>Depth:</b> 8 km<br/><b>Setting:</b> ONSHORE<br/><b>Distance:</b> Playa Blanca: 98 km | Altos del Maria: 134 km<br/><b>Source:</b> IGC<br/><b>Cause:</b> Azuero M7.7 sequence aftershock<br/><b>Tsunami flag:</b> 0]]></description>
-    <styleUrl>#m3</styleUrl>
-    <Point><coordinates>-80.49500,7.54080,0</coordinates></Point>
-  </Placemark>
-  <Placemark>
-    <name>M3.6 02:30 AM - Punta Mala</name>
-    <description><![CDATA[<b>M3.6 - SOUTH OF PANAMA</b><br/><b>Nearest place:</b> Punta Mala<br/><b>Place source:</b> gazetteer<br/><b>Local (UTC-5):</b> 02:30 AM | <b>UTC:</b> 2026-10-23 07:30<br/><b>Coordinates:</b> 7.2681, -79.9279<br/><b>Depth:</b> 10 km<br/><b>Setting:</b> OFFSHORE<br/><b>Distance:</b> Playa Blanca: 123 km | Altos del Maria: 154 km<br/><b>Source:</b> IGC<br/><b>Cause:</b> Azuero M7.7 sequence aftershock<br/><b>Tsunami flag:</b> 0]]></description>
-    <styleUrl>#m3</styleUrl>
-    <Point><coordinates>-79.92790,7.26810,0</coordinates></Point>
-  </Placemark>
-  <Placemark>
-    <name>M2.7 02:20 AM - Aguas Claras, Upala</name>
-    <description><![CDATA[<b>M2.7 - COSTA RICA</b><br/><b>Nearest place:</b> Aguas Claras, Upala<br/><b>Place source:</b> photon<br/><b>Local (UTC-5):</b> 02:20 AM | <b>UTC:</b> 2026-10-23 07:20<br/><b>Coordinates:</b> 10.7611, -85.2010<br/><b>Depth:</b> 148 km<br/><b>Setting:</b> ONSHORE<br/><b>Distance:</b> Playa Blanca: 617 km | Altos del Maria: 616 km<br/><b>Source:</b> UNA<br/><b>Cause:</b> regional/other<br/><b>Tsunami flag:</b> 0]]></description>
-    <styleUrl>#m2</styleUrl>
-    <Point><coordinates>-85.20100,10.76110,0</coordinates></Point>
-  </Placemark>
-  <Placemark>
-    <name>M3.0 01:52 AM - Boca de Culubre</name>
-    <description><![CDATA[<b>M3.0 - PANAMA-COSTA RICA BORDER REGION</b><br/><b>Nearest place:</b> Boca de Culubre<br/><b>Place source:</b> gazetteer<br/><b>Local (UTC-5):</b> 01:52 AM | <b>UTC:</b> 2026-10-23 06:52<br/><b>Coordinates:</b> 9.1317, -82.4602<br/><b>Depth:</b> 13 km<br/><b>Setting:</b> ONSHORE<br/><b>Distance:</b> Playa Blanca: 270 km | Altos del Maria: 274 km<br/><b>Source:</b> UNA<br/><b>Cause:</b> regional/other<br/><b>Tsunami flag:</b> 0]]></description>
-    <styleUrl>#m3</styleUrl>
-    <Point><coordinates>-82.46020,9.13170,0</coordinates></Point>
-  </Placemark>
-  <Placemark>
-    <name>M3.5 12:36 AM - Aguas Claras</name>
-    <description><![CDATA[<b>M3.5 - PANAMA</b><br/><b>Nearest place:</b> Aguas Claras<br/><b>Place source:</b> gazetteer<br/><b>Local (UTC-5):</b> 12:36 AM | <b>UTC:</b> 2026-10-23 05:36<br/><b>Coordinates:</b> 7.5141, -80.5013<br/><b>Depth:</b> 10 km<br/><b>Setting:</b> ONSHORE<br/><b>Distance:</b> Playa Blanca: 101 km | Altos del Maria: 137 km<br/><b>Source:</b> IGC<br/><b>Cause:</b> Azuero M7.7 sequence aftershock<br/><b>Tsunami flag:</b> 0]]></description>
-    <styleUrl>#m3</styleUrl>
-    <Point><coordinates>-80.50130,7.51410,0</coordinates></Point>
-  </Placemark>
-  <Placemark>
-    <name>M4.0 11:58 PM - Juan Díaz</name>
-    <description><![CDATA[<b>M4.0 - PANAMA</b><br/><b>Nearest place:</b> Juan Díaz<br/><b>Place source:</b> gazetteer<br/><b>Local (UTC-5):</b> 11:58 PM | <b>UTC:</b> 2026-10-23 04:58<br/><b>Coordinates:</b> 7.4556, -80.1000<br/><b>Depth:</b> 5 km<br/><b>Setting:</b> OFFSHORE<br/><b>Distance:</b> Playa Blanca: 100 km | Altos del Maria: 133 km<br/><b>Source:</b> IGC<br/><b>Cause:</b> Azuero M7.7 sequence aftershock<br/><b>Tsunami flag:</b> 0]]></description>
-    <styleUrl>#m4</styleUrl>
-    <Point><coordinates>-80.10000,7.45560,0</coordinates></Point>
-  </Placemark>
-  <Placemark>
-    <name>M3.3 11:57 PM - Los Plancitos</name>
-    <description><![CDATA[<b>M3.3 - COSTA RICA</b><br/><b>Nearest place:</b> Los Plancitos<br/><b>Place source:</b> gazetteer<br/><b>Local (UTC-5):</b> 11:57 PM | <b>UTC:</b> 2026-10-23 04:57<br/><b>Coordinates:</b> 8.4660, -83.1350<br/><b>Depth:</b> 11 km<br/><b>Setting:</b> ONSHORE<br/><b>Distance:</b> Playa Blanca: 330 km | Altos del Maria: 344 km<br/><b>Source:</b> UCR<br/><b>Cause:</b> regional/other<br/><b>Tsunami flag:</b> 0]]></description>
-    <styleUrl>#m3</styleUrl>
-    <Point><coordinates>-83.13500,8.46600,0</coordinates></Point>
-  </Placemark>
-  <Placemark>
-    <name>M3.6 11:19 PM - Barro Prieto</name>
-    <description><![CDATA[<b>M3.6 - PANAMA</b><br/><b>Nearest place:</b> Barro Prieto<br/><b>Place source:</b> gazetteer<br/><b>Local (UTC-5):</b> 11:19 PM | <b>UTC:</b> 2026-10-23 04:19<br/><b>Coordinates:</b> 7.6327, -80.6101<br/><b>Depth:</b> 5 km<br/><b>Setting:</b> ONSHORE<br/><b>Distance:</b> Playa Blanca: 96 km | Altos del Maria: 131 km<br/><b>Source:</b> IGC<br/><b>Cause:</b> Azuero M7.7 sequence aftershock<br/><b>Tsunami flag:</b> 0]]></description>
-    <styleUrl>#m3</styleUrl>
-    <Point><coordinates>-80.61010,7.63270,0</coordinates></Point>
   </Placemark>
 </Document>
 </kml>
