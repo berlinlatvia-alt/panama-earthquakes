@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <kml xmlns="http://www.opengis.net/kml/2.2">
 <Document>
-  <name>Panama Earthquakes - Last 24h (2026-10-23 14:55-14:43 UTC)</name>
+  <name>Panama Earthquakes - Last 24h (2026-10-23 15:13-15:03 UTC)</name>
   <description>40 deduped events | M6+:0 M5+:0 M4+:2 M3+:30 M2+:40 | sources: IGC, UNA</description>
   <Style id="m4">
     <IconStyle><color>ff0000ff</color><scale>1.1</scale>
@@ -19,6 +19,12 @@
     <LabelStyle><scale>0.9</scale></LabelStyle>
   </Style>
 
+  <Placemark>
+    <name>M3.9 10:03 AM - El Cacao</name>
+    <description><![CDATA[<b>M3.9 - PANAMA</b><br/><b>Nearest place:</b> El Cacao<br/><b>Place source:</b> gazetteer<br/><b>Local (UTC-5):</b> 10:03 AM | <b>UTC:</b> 2026-10-24 15:03<br/><b>Coordinates:</b> 7.5416, -80.7040<br/><b>Depth:</b> 10 km<br/><b>Setting:</b> ONSHORE<br/><b>Distance:</b> Playa Blanca: 110 km | Altos del Maria: 145 km<br/><b>Source:</b> IGC<br/><b>Cause:</b> Azuero M7.7 sequence aftershock<br/><b>Tsunami flag:</b> 0]]></description>
+    <styleUrl>#m3</styleUrl>
+    <Point><coordinates>-80.70400,7.54160,0</coordinates></Point>
+  </Placemark>
   <Placemark>
     <name>M3.5 09:43 AM - Jaencito</name>
     <description><![CDATA[<b>M3.5 - PANAMA</b><br/><b>Nearest place:</b> Jaencito<br/><b>Place source:</b> gazetteer<br/><b>Local (UTC-5):</b> 09:43 AM | <b>UTC:</b> 2026-10-24 14:43<br/><b>Coordinates:</b> 7.7350, -81.3740<br/><b>Depth:</b> 13 km<br/><b>Setting:</b> ONSHORE<br/><b>Distance:</b> Playa Blanca: 153 km | Altos del Maria: 181 km<br/><b>Source:</b> IGC<br/><b>Cause:</b> Azuero M7.7 sequence aftershock<br/><b>Tsunami flag:</b> 0]]></description>
@@ -252,12 +258,6 @@
     <description><![CDATA[<b>M3.7 - PANAMA</b><br/><b>Nearest place:</b> La Encajonada<br/><b>Place source:</b> gazetteer<br/><b>Local (UTC-5):</b> 10:13 AM | <b>UTC:</b> 2026-10-23 15:13<br/><b>Coordinates:</b> 7.5038, -80.2338<br/><b>Depth:</b> 2 km<br/><b>Setting:</b> ONSHORE<br/><b>Distance:</b> Playa Blanca: 95 km | Altos del Maria: 130 km<br/><b>Source:</b> IGC<br/><b>Cause:</b> Azuero M7.7 sequence aftershock<br/><b>Tsunami flag:</b> 0]]></description>
     <styleUrl>#m3</styleUrl>
     <Point><coordinates>-80.23380,7.50380,0</coordinates></Point>
-  </Placemark>
-  <Placemark>
-    <name>M3.9 09:55 AM - Los Ciguas</name>
-    <description><![CDATA[<b>M3.9 - PANAMA</b><br/><b>Nearest place:</b> Los Ciguas<br/><b>Place source:</b> gazetteer<br/><b>Local (UTC-5):</b> 09:55 AM | <b>UTC:</b> 2026-10-23 14:55<br/><b>Coordinates:</b> 7.4663, -80.3182<br/><b>Depth:</b> 3 km<br/><b>Setting:</b> ONSHORE<br/><b>Distance:</b> Playa Blanca: 100 km | Altos del Maria: 136 km<br/><b>Source:</b> IGC<br/><b>Cause:</b> Azuero M7.7 sequence aftershock<br/><b>Tsunami flag:</b> 0]]></description>
-    <styleUrl>#m3</styleUrl>
-    <Point><coordinates>-80.31820,7.46630,0</coordinates></Point>
   </Placemark>
 </Document>
 </kml>
