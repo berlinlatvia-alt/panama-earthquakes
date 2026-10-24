@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <kml xmlns="http://www.opengis.net/kml/2.2">
 <Document>
-  <name>Panama Earthquakes - Last 24h (2026-10-23 04:19-03:40 UTC)</name>
-  <description>39 deduped events | M6+:0 M5+:0 M4+:6 M3+:30 M2+:39 | sources: IGC, UCR, UNA</description>
+  <name>Panama Earthquakes - Last 24h (2026-10-23 04:19-03:44 UTC)</name>
+  <description>40 deduped events | M6+:0 M5+:0 M4+:6 M3+:30 M2+:40 | sources: IGC, UCR, UNA</description>
   <Style id="m4">
     <IconStyle><color>ff0000ff</color><scale>1.1</scale>
       <Icon><href>http://maps.google.com/mapfiles/kml/paddle/red-circle.png</href></Icon></IconStyle>
@@ -19,6 +19,12 @@
     <LabelStyle><scale>0.9</scale></LabelStyle>
   </Style>
 
+  <Placemark>
+    <name>M2.7 10:44 PM - Puntarenas</name>
+    <description><![CDATA[<b>M2.7 - OFF COAST OF COSTA RICA</b><br/><b>Nearest place:</b> Puntarenas<br/><b>Place source:</b> nominatim<br/><b>Local (UTC-5):</b> 10:44 PM | <b>UTC:</b> 2026-10-24 03:44<br/><b>Coordinates:</b> 8.9017, -84.3442<br/><b>Depth:</b> 16 km<br/><b>Setting:</b> ONSHORE<br/><b>Distance:</b> Playa Blanca: 467 km | Altos del Maria: 477 km<br/><b>Source:</b> UNA<br/><b>Cause:</b> regional/other<br/><b>Tsunami flag:</b> 0]]></description>
+    <styleUrl>#m2</styleUrl>
+    <Point><coordinates>-84.34420,8.90170,0</coordinates></Point>
+  </Placemark>
   <Placemark>
     <name>M2.6 10:40 PM - OFF COAST OF COSTA RICA</name>
     <description><![CDATA[<b>M2.6 - OFF COAST OF COSTA RICA</b><br/><b>Nearest place:</b> OFF COAST OF COSTA RICA<br/><b>Place source:</b> catalog_fallback<br/><b>Local (UTC-5):</b> 10:40 PM | <b>UTC:</b> 2026-10-24 03:40<br/><b>Coordinates:</b> 8.7450, -84.4105<br/><b>Depth:</b> 14 km<br/><b>Setting:</b> ONSHORE<br/><b>Distance:</b> Playa Blanca: 472 km | Altos del Maria: 484 km<br/><b>Source:</b> UNA<br/><b>Cause:</b> regional/other<br/><b>Tsunami flag:</b> 0]]></description>
