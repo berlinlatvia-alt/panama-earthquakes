@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
@@ -151,58 +151,77 @@
   .hint { font-size: 9.5px; color: #64748b; margin-top: 6px; line-height: 1.35; }
   .badge-live { display: inline-block; background: #155e75; color: #a5f3fc; border-radius: 4px; padding: 0 5px; font-size: 9.5px; margin-left: 4px; }
 </style>
+<style>
+.ux-summary{border:1px solid rgba(245,189,106,.45);border-radius:10px;padding:8px 10px;margin:0 0 8px;font-size:11.5px;line-height:1.45;background:rgba(245,189,106,.08);color:#EAF1FF}
+.ux-summary b{color:#F5BD6A}.ux-summary span{display:block;font-size:10px;color:#9FB0CC;margin-top:4px}
+.ux-howto{border:1px solid rgba(158,188,236,.2);border-radius:10px;padding:6px 10px;margin:0 0 8px;font-size:11px;line-height:1.5;color:#C7D4E8;background:rgba(12,19,34,.6)}
+.ux-howto summary{cursor:pointer;color:#7FB3FF;font-weight:600;font-size:11.5px}
+.ux-howto div{margin-top:5px}.ux-note{color:#8FA0BC;font-size:10px}
+.panel,.tier-card-body,.legend,.hazard-card{font-size:12px}
+</style>
 </head>
 <body>
 <div id="map"></div>
 
 <div class="panel" id="controls">
   <div class="panel-header-row">
-    <h1>Панама и Сейсмическая карта</h1>
-    <button type="button" class="btn-toggle-panel" id="btnToggleControls" onclick="toggleControlsMinimize()">Свернуть ▾</button>
+    <h1>Panama & Seismic Map</h1>
+    <button type="button" class="btn-toggle-panel" id="btnToggleControls" onclick="toggleControlsMinimize()">Minimize ▾</button>
   </div>
 
-  <div class="panel-content">
+  <div class="panel-content"><div class="ux-summary">
+ <b>RISK 55 · PREPARE</b> — M7.7 aftershock sequence, decaying · 99 quakes / 72h · 16 M4+ · no M5+
+ <span>Moon 93.6% · +11.7° above horizon · tide range 3.4 m · rain 33 mm / 72h. Modeled from live USGS/IGC, Open-Meteo and ephem; not a prediction.</span>
+</div>
+<details class="ux-howto" open><summary>How to read this map</summary>
+ <div>1. Every circle is an earthquake; bigger and warmer = stronger. Click a circle for details.</div>
+ <div>2. Red dotted ring = 110 km radius from the M7.7 Azuero epicenter (9 Oct 2026).</div>
+ <div>3. Blue dotted ring = 100 km seismic perimeter around Playa Blanca.</div>
+ <div>4. Solid red dot = mainshock epicenter; small dots around it are aftershocks.</div>
+ <div>5. Right panel = focus and live telemetry for the selected tab.</div>
+ <div class="ux-note">Tide values on this page use NOAA Balboa chart datum; the Open-Meteo MSL high is 2.37 m. Deep Russian guide is under tab 2.</div>
+</details>
     <div style="font-size:10px;color:var(--txt2);margin-bottom:6px;">
-      Навигация: Плайя-Бланка &rarr; Приливы (RU) &rarr; Панама &rarr; Мир &middot; <span id="totalCount">...</span> событий
+      Navigation: Playa Blanca → Tides & Moon → Panama → World · <span id="totalCount">...</span> events
     </div>
 
     <!-- Spatial Jump Bar with 4 Buttons -->
     <nav id="spatial-jump" aria-label="Spatial navigation">
-      <button type="button" class="jump-btn active" id="btnJumpPb" onclick="setSpatialTier(1)">📍 1. Плайя-Бланка</button>
-      <button type="button" class="jump-btn" id="btnJumpTides" onclick="setSpatialTier(2)">🌊 2. Приливы и Луна (RU)</button>
-      <button type="button" class="jump-btn" id="btnJumpPanama" onclick="setSpatialTier(3)">🇵🇦 3. Регион Панамы</button>
-      <button type="button" class="jump-btn" id="btnJumpWorld" onclick="setSpatialTier(4)">🌍 4. Каталог Земли</button>
+      <button type="button" class="jump-btn active" id="btnJumpPb" onclick="setSpatialTier(1)">📍 1. Playa Blanca</button>
+      <button type="button" class="jump-btn" id="btnJumpTides" onclick="setSpatialTier(2)">🌊 2. Tides & Moon</button>
+      <button type="button" class="jump-btn" id="btnJumpPanama" onclick="setSpatialTier(3)">🇵🇦 3. Panama Region</button>
+      <button type="button" class="jump-btn" id="btnJumpWorld" onclick="setSpatialTier(4)">🌍 4. World Catalog</button>
     </nav>
 
     <!-- TIER 1: PLAYA BLANCA HAZARDS -->
     <div class="tier-card active-card" id="card-playa-blanca">
       <div class="tier-card-head" onclick="toggleTierCard('card-playa-blanca')">
-        <span>📍 1. Плайя-Бланка: Комплексные риски</span>
+        <span>📍 1. Playa Blanca: Комплексные риски</span>
         <span class="tier-toggle-icon">▾</span>
       </div>
       <div class="tier-card-body">
         <div class="risk-badges">
-          <span class="badge red">110км до M7.7 Асуэро</span>
-          <span class="badge amber">Прилив 5.5-5.8м</span>
-          <span class="badge amber">Разжижение грунта</span>
-          <span class="badge blue">Плесень 48-72ч</span>
-          <span class="badge red">+4.2м Берма</span>
+          <span class="badge red">110km to M7.7 Azuero</span>
+          <span class="badge amber">Tide range 5.5-5.8 m</span>
+          <span class="badge amber">Soil liquefaction</span>
+          <span class="badge blue">Mold risk 48-72h</span>
+          <span class="badge red">+4.2m berm</span>
         </div>
 
-        <h2>Слои карты: Плайя-Бланка</h2>
-        <div class="row"><input type="checkbox" id="chkPbSite" checked onchange="togglePbLayer('site', this.checked)"/> <label for="chkPbSite">Эпицентр Плайя-Бланка / Канал</label></div>
-        <div class="row"><input type="checkbox" id="chkAzueroRing" checked onchange="togglePbLayer('ring', this.checked)"/> <label for="chkAzueroRing">Кольцо 110 км от разлома Асуэро</label></div>
-        <div class="row"><input type="checkbox" id="chkKingTideRunup" checked onchange="togglePbLayer('runup', this.checked)"/> <label for="chkKingTideRunup">Зона перелива бермы (+4.2м MSL)</label></div>
-        <div class="row"><input type="checkbox" id="chkLiquefaction" checked onchange="togglePbLayer('lique', this.checked)"/> <label for="chkLiquefaction">Зона разжижения насыпных песков лагуны</label></div>
-        <div class="row"><input type="checkbox" id="chkPbLocalRadius" checked onchange="togglePbLayer('radius', this.checked)"/> <label for="chkPbLocalRadius">Периметр локальной сейсмики 100 км</label></div>
+        <h2>Слои карты: Playa Blanca</h2>
+        <div class="row"><input type="checkbox" id="chkPbSite" checked onchange="togglePbLayer('site', this.checked)"/> <label for="chkPbSite">Epicenter Playa Blanca / Канал</label></div>
+        <div class="row"><input type="checkbox" id="chkAzueroRing" checked onchange="togglePbLayer('ring', this.checked)"/> <label for="chkAzueroRing">110 km ring from Azuero rupture</label></div>
+        <div class="row"><input type="checkbox" id="chkKingTideRunup" checked onchange="togglePbLayer('runup', this.checked)"/> <label for="chkKingTideRunup">Berm overwash zone (+4.2 m MSL)</label></div>
+        <div class="row"><input type="checkbox" id="chkLiquefaction" checked onchange="togglePbLayer('lique', this.checked)"/> <label for="chkLiquefaction">Lagoon fill-sand liquefaction zone</label></div>
+        <div class="row"><input type="checkbox" id="chkPbLocalRadius" checked onchange="togglePbLayer('radius', this.checked)"/> <label for="chkPbLocalRadius">100 km local seismic perimeter</label></div>
 
         <div class="hazard-card">
-          <div class="card-title">Физические параметры Плайя-Бланка</div>
-          <div class="card-row"><span>Порог перелива бермы:</span> <b>+4.2 м над средним морем</b></div>
-          <div class="card-row"><span>Диапазон Кинг Тайда:</span> <b>5.5 - 5.8 м (размах)</b></div>
-          <div class="card-row"><span>Скорость размыва дюн:</span> <b>0.5 - 2.5 м / шторм</b></div>
-          <div class="card-row"><span>Отключение Naturgy:</span> <b>10 - 40ч &rarr; Плесень @ 48ч</b></div>
-          <div class="card-row"><span>Порог разжижения:</span> <b>PGA &ge; 0.10g (песок с илом)</b></div>
+          <div class="card-title">Физические параметры Playa Blanca</div>
+          <div class="card-row"><span>Berm overwash threshold:</span> <b>+4.2 m above mean sea level</b></div>
+          <div class="card-row"><span>King tide range:</span> <b>5.5 - 5.8 m (spread)</b></div>
+          <div class="card-row"><span>Dune erosion rate:</span> <b>0.5 - 2.5 m / storm</b></div>
+          <div class="card-row"><span>Naturgy outage:</span> <b>10 - 40h → mold @ 48ч</b></div>
+          <div class="card-row"><span>Liquefaction threshold:</span> <b>PGA &ge; 0.10g (sand with silt)</b></div>
         </div>
       </div>
     </div>
@@ -210,65 +229,65 @@
     <!-- TIER 2: TIDES & LUNAR CALENDAR (RUSSIAN GUIDE) -->
     <div class="tier-card collapsed" id="card-tides-lunar">
       <div class="tier-card-head" onclick="toggleTierCard('card-tides-lunar')">
-        <span>🌊 2. Приливы, Луна и Природа (Русский гид)</span>
+        <span>🌊 2. Tides, Moon & Nature guide</span>
         <span class="tier-toggle-icon">▾</span>
       </div>
       <div class="tier-card-body">
         <div class="risk-badges">
-          <span class="badge blue">Растущая Луна 12.4 дн</span>
-          <span class="badge green">Сегодня: 4.22м (Норма)</span>
-          <span class="badge amber">Полнолуние: 26-28 окт</span>
-          <span class="badge purple">База 115 лет (с 1908г)</span>
+          <span class="badge blue">Waxing moon, 12.4 days</span>
+          <span class="badge green">Today: 4.22 m (normal)</span>
+          <span class="badge amber">Full moon: 26–28 Oct</span>
+          <span class="badge purple">115-year record (since 1908)</span>
         </div>
 
-        <h2>Расписание приливов на сегодня (23 октября 2026)</h2>
+        <h2>Today's tide schedule (23 Oct 2026)</h2>
         <div class="hazard-card">
-          <div class="card-row"><span>01:17 (Ночь):</span> <b>+4.28 м (Высокая вода)</b></div>
-          <div class="card-row"><span>07:35 (Утро):</span> <b>+1.03 м (Отлив)</b></div>
-          <div class="card-row"><span>13:40 (День):</span> <b>+4.22 м (Высокая вода - Пик)</b></div>
-          <div class="card-row"><span>19:54 (Вечер):</span> <b>+0.93 м (Отлив)</b></div>
-          <div class="card-desc">Снимок в 12:35 сделан за 65 минут до дневного пика. Вода подошла к отметке ~4.0 м. Это штатный умеренный прилив.</div>
+          <div class="card-row"><span>01:17 (Night:</span> <b>+4.28 m (high water)</b></div>
+          <div class="card-row"><span>07:35 (Morning:</span> <b>+1.03 m (low water)</b></div>
+          <div class="card-row"><span>13:40 (Day:</span> <b>+4.22 m (high water — peak)</b></div>
+          <div class="card-row"><span>19:54 (Evening:</span> <b>+0.93 m (low water)</b></div>
+          <div class="card-desc">Snapshot at 12:35 was 65 min before the daily peak. Water reached ~4.0 m. This is a normal moderate tide.</div>
         </div>
 
-        <h2>Что значат эти термины (Простым языком)</h2>
+        <h2>Plain-language glossary</h2>
         <div class="edu-drawer">
-          <strong>Что такое Гектопаскали (гПа)?</strong><br/>
-          Это вес воздуха, давящий на воду. Нормальное давление — <strong>1013 гПа</strong>. 
-          Если приходит шторм или циклон, давление падает ниже 1005 гПа. Вода «вспучивается» вверх на 1 см на каждый 1 гПа падения. Сегодня <strong>1012 гПа</strong> — шторма нет, нагона нет.
+          <strong>What are hectopascals (hPa)?</strong><br/>
+          Air weight pressing on water. Normal pressure is — <strong>1013 hPa</strong>. 
+          Если приходит шторм или циклон, давление падает ниже 1005 hPa. Вода «вспучивается» вверх на 1 см на каждый 1 hPa падения. Сегодня <strong>1012 hPa</strong> — no storm, no surge.
         </div>
         <div class="edu-drawer">
-          <strong>Ноль карты против Среднего уровня моря:</strong><br/>
-          Высота 4.22 м в таблице измеряется от самого дна отлива. От <em>среднего уровня моря</em> это всего лишь <strong>+1.77 метра</strong>! До верхнего края пляжного вала (+4.2 м) оставалось еще <strong>более 2.2 метров (7 футов!)</strong> безопасной высоты.
+          <strong>Chart datum vs mean sea level:</strong><br/>
+          The 4.22 m value is measured from chart datum. Relative to <em>mean sea level</em> it is only <strong>+1.77 meters</strong>! To the berm crest (+4.2 m) there remained <strong>more than 2.2 m (7 ft!)</strong> of safe height.
         </div>
 
-        <h2>Исторические рекорды за 115 лет (Станция Бальбоа, с 1908 года)</h2>
+        <h2>115-year records (Balboa station, since 1908)</h2>
         <div class="hazard-card">
-          <div class="card-row"><span>Средний уровень моря (MSL):</span> <b>0.00 м (или 2.45м от дна)</b></div>
-          <div class="card-row"><span>Обычный высокий прилив:</span> <b>+3.80 ... +4.30 м</b></div>
-          <div class="card-row"><span>Королевский прилив (King Tide):</span> <b>+5.50 ... +5.80 м</b></div>
-          <div class="card-row"><span>Абсолютный рекорд за 115 лет:</span> <b>+6.10 м (Эль-Ниньо 1983г)</b></div>
+          <div class="card-row"><span>Mean sea level (MSL):</span> <b>0.00 m (or 2.45 m above chart datum)</b></div>
+          <div class="card-row"><span>Normal high tide:</span> <b>+3.80 ... +4.30 м</b></div>
+          <div class="card-row"><span>King tide:</span> <b>+5.50 ... +5.80 м</b></div>
+          <div class="card-row"><span>All-time 115-year record:</span> <b>+6.10 m (El Niño 1983)</b></div>
         </div>
 
-        <h2>Чек-лист: Как проверить прилив без телефона</h2>
+        <h2>Checklist: read the tide without a phone</h2>
         <div class="edu-drawer">
-          <strong>1. Трава на камнях (Ипомея пескапре / Морской вьюнок):</strong><br/>
-          Плотные зеленые листья-копытца на волнорезе. Эта трава гибнет в соленой воде и растет строго выше обычного прилива. Если вода заливает ее корни — прилив аномальный. На вашем фото трава сухая и на 1.5м выше воды.
+          <strong>1. Beach morning-glory on the rocks:</strong><br/>
+          Dense clover-shaped leaves on the breakwater. This plant dies in salt water and growsstrictly above the normal tide. If water covers its roots — the tide is abnormal. In your photo the grass is dry and 1.5 m above water.
         </div>
         <div class="edu-drawer">
-          <strong>2. Песчаная коса посреди канала:</strong><br/>
-          При штатном приливе коса видна и возвышается более чем на 1 метр. При опасном Кинг Тайде она полностью скрывается под водой.
+          <strong>2. Sand spit mid-channel:</strong><br/>
+          At a normal tide the spit is visible and more than 1 m high. At a dangerous kingtide it disappears completely.
         </div>
         <div class="edu-drawer">
-          <strong>3. Волна перехлестывает через камни:</strong><br/>
-          Обычные брызги при ударе полуметровых волн в пик прилива — норма. Опасная волна (<em>Mar de Fondo</em>) — это тяжелые 2–3 метровые валы с паузой 16–20 секунд, которые сплошной рекой сносят камни волнолома.
+          <strong>3. Wave overtopping the rocks:</strong><br/>
+          Normal spray from 0.5 m waves at tidal peak — is normal. A dangerous wave (<em>Mar de Fondo</em>) — means heavy 2–3 m swells every 16–20 seconds sweeping breakwater stones away.
         </div>
 
-        <h2>Прогноз погоды и ветра на 1, 2, 3 месяца</h2>
+        <h2>Weather & wind outlook: 1, 2, 3 months</h2>
         <div class="hazard-card">
-          <div class="card-row"><span>Ноябрь (1 месяц):</span> <b>Пик дождей, шквалы при грозах</b></div>
-          <div class="card-row"><span>Декабрь (2 месяца):</span> <b>Перелом: старт сухих ветров Alisios</b></div>
-          <div class="card-row"><span>Январь (3 месяца):</span> <b>Лето (Verano): сгонный северный ветер</b></div>
-          <div class="card-desc">В январе северный ветер дует с берега в море со скоростью 30-45 км/ч. Океан у пляжа становится гладким, как зеркало, а дожди и плесень полностью исчезают.</div>
+          <div class="card-row"><span>November (1 month):</span> <b>Peak rain, thunderstorm squalls</b></div>
+          <div class="card-row"><span>December (2 months):</span> <b>Transition: dry Alisios winds begin</b></div>
+          <div class="card-row"><span>January (3 months):</span> <b>Summer (Verano): offshore north wind</b></div>
+          <div class="card-desc">In January the north wind blows offshore at 30–45 km/h. The ocean at the beachbecomes mirror-smooth and rain and mold disappear completely.</div>
         </div>
       </div>
     </div>
@@ -276,25 +295,25 @@
     <!-- TIER 3: OTHER PANAMA & REGIONAL DYNAMIC NETWORK -->
     <div class="tier-card collapsed" id="card-panama-regional">
       <div class="tier-card-head" onclick="toggleTierCard('card-panama-regional')">
-        <span>🇵🇦 3. Регион Панамы и вулканическая сеть</span>
+        <span>🇵🇦 3. Panama Region и вулканическая сеть</span>
         <span class="tier-toggle-icon">▾</span>
       </div>
       <div class="tier-card-body">
         <div class="risk-badges">
-          <span class="badge red">Эпицентр M7.7 Асуэро</span>
-          <span class="badge purple">70 толчков Ринкон</span>
-          <span class="badge blue">Холодное окно Бару</span>
+          <span class="badge red">M7.7 Azuero epicenter</span>
+          <span class="badge purple">70 Rincón tremors</span>
+          <span class="badge blue">Barú cold window</span>
         </div>
 
-        <h2>Слои разломов и вулканов</h2>
-        <div class="row"><input type="checkbox" id="chkVolcanoNetwork" checked onchange="togglePanamaLayer('volc', this.checked)"/> <label for="chkVolcanoNetwork">Вулканическая сеть (Ринкон, Бару, Эль-Валле)</label></div>
-        <div class="row"><input type="checkbox" id="chkAzueroEpicenter" checked onchange="togglePanamaLayer('azuero', this.checked)"/> <label for="chkAzueroEpicenter">Маркер эпицентра M7.7 Асуэро</label></div>
+        <h2>Fault & volcano layers</h2>
+        <div class="row"><input type="checkbox" id="chkVolcanoNetwork" checked onchange="togglePanamaLayer('volc', this.checked)"/> <label for="chkVolcanoNetwork">Volcanic network (Rincón, Barú, El Valle)</label></div>
+        <div class="row"><input type="checkbox" id="chkAzueroEpicenter" checked onchange="togglePanamaLayer('azuero', this.checked)"/> <label for="chkAzueroEpicenter">M7.7 Azuero epicenter marker</label></div>
 
         <div class="hazard-card">
-          <div class="card-title">Динамический триггер vs Окно плиты</div>
-          <div class="card-row"><span>Ринкон-де-ла-Вьеха:</span> <b>70 толчков за 618 км (Коста-Рика)</b></div>
-          <div class="card-row"><span>Вулкан Бару (Панама):</span> <b>0 толчков (Разрыв плиты Кокос-Наска)</b></div>
-          <div class="card-row"><span>Кальдера Эль-Валле:</span> <b>Спит (&sim;28 км от Плайя-Бланка)</b></div>
+          <div class="card-title">Dynamic trigger vs slab window</div>
+          <div class="card-row"><span>Rincón de la Vieja:</span> <b>70 tremors at 618 km (Costa Rica)</b></div>
+          <div class="card-row"><span>Barú volcano (Panama):</span> <b>0 tremors (Cocos-Nazca slab tear)</b></div>
+          <div class="card-row"><span>El Valle caldera:</span> <b>Dormant (&sim;28 км от Playa Blanca)</b></div>
         </div>
       </div>
     </div>
@@ -302,58 +321,58 @@
     <!-- TIER 4: WORLD ALL-TIME CATALOG -->
     <div class="tier-card collapsed" id="card-world-catalog">
       <div class="tier-card-head" onclick="toggleTierCard('card-world-catalog')">
-        <span>🌍 4. Всемирный сейсмический каталог (1900-2026)</span>
+        <span>🌍 4. World seismic catalog (1900–2026)</span>
         <span class="tier-toggle-icon">▾</span>
       </div>
       <div class="tier-card-body">
         <div class="risk-badges">
           <span class="badge blue">USGS FDSN 220k+</span>
           <span class="badge purple">EMSC Live</span>
-          <span class="badge amber">Дым CAMS AOD</span>
+          <span class="badge amber">CAMS smoke AOD</span>
         </div>
 
-        <h2>Временное окно (UTC)</h2>
+        <h2>Time window (UTC)</h2>
         <div class="grid2">
-          <div><label class="sel" for="selYear">Год</label><select id="selYear"><option value="all">Все</option></select></div>
-          <div><label class="sel" for="selMonth">Месяц</label><select id="selMonth"></select></div>
-          <div><label class="sel" for="selDay">День</label><select id="selDay"></select></div>
-          <div><label class="sel" for="selHour">Час</label><select id="selHour"></select></div>
-          <div><label class="sel" for="selMinute">Минута</label><select id="selMinute"></select></div>
-          <div style="display:flex;align-items:flex-end;"><button id="btnResetTime" title="Сброс фильтров">Сброс</button></div>
+          <div><label class="sel" for="selYear">Year</label><select id="selYear"><option value="all">All</option></select></div>
+          <div><label class="sel" for="selMonth">Month</label><select id="selMonth"></select></div>
+          <div><label class="sel" for="selDay">Day</label><select id="selDay"></select></div>
+          <div><label class="sel" for="selHour">Hour</label><select id="selHour"></select></div>
+          <div><label class="sel" for="selMinute">Minute</label><select id="selMinute"></select></div>
+          <div style="display:flex;align-items:flex-end;"><button id="btnResetTime" title="Reset filters">Reset</button></div>
         </div>
         <div class="row" style="justify-content:space-between;">
           <span style="font-size:10px;color:var(--txt2);" id="yearCount"></span>
           <span style="font-size:10px;color:var(--txt2);" id="windowLabel"></span>
         </div>
 
-        <h2>Прямой эфир (Live)</h2>
-        <button id="btnNow" class="livebtn">Запросить сейчас (Live fetch)</button>
+        <h2>Live</h2>
+        <button id="btnNow" class="livebtn">Fetch live now</button>
         <div class="row" style="margin-top:6px;"><input type="checkbox" id="showLive" checked/>
-          <label for="showLive">Показать live-слой <span class="badge-live" id="liveCount">0</span></label></div>
-        <div id="liveStatus">Параллельные источники: USGS feed + USGS FDSN + EMSC.</div>
+          <label for="showLive">Show live layer <span class="badge-live" id="liveCount">0</span></label></div>
+        <div id="liveStatus">Parallel sources: USGS feed + USGS FDSN + EMSC.</div>
 
-        <h2>Слои по десятилетиям</h2>
+        <h2>Decade layers</h2>
         <div class="decades" id="decadeBoxes"></div>
 
-        <h2>Фильтр магнитуд</h2>
+        <h2>Magnitude filter</h2>
         <div id="magFilters"></div>
 
-        <h2>Крупные землетрясения</h2>
+        <h2>Big events</h2>
         <div class="row"><input type="checkbox" id="bandM7"/> <label for="bandM7"><span class="dot" style="background:#e63946"></span> M7.0-7.9 (<span id="cntM7">-</span>)</label></div>
         <div class="row"><input type="checkbox" id="bandM8"/> <label for="bandM8"><span class="dot" style="background:#b5179e"></span> M8.0-8.9 (<span id="cntM8">-</span>)</label></div>
         <div class="row"><input type="checkbox" id="bandM9"/> <label for="bandM9"><span class="dot" style="background:#ffd700"></span> M9.0+ (<span id="cntM9">-</span>)</label></div>
         <div class="row" style="justify-content:space-between;">
-          <button id="bandsAll">Все</button>
-          <button id="bandsNone">Снять</button>
-          <span style="font-size:10px;color:var(--txt2);">размер M7&lt;M8&lt;M9</span>
+          <button id="bandsAll">All</button>
+          <button id="bandsNone">Clear</button>
+          <span style="font-size:10px;color:var(--txt2);">size M7<M8<M9</span>
         </div>
 
-        <h2>Оверлеи</h2>
-        <div class="row"><input type="checkbox" id="neverGrid"/> <label for="neverGrid">Зоны без землетрясений (сетка 5&deg;)</label></div>
-        <div class="row"><input type="checkbox" id="pauseRender" checked/> <label for="pauseRender">Отображать точки</label></div>
-        <div class="row"><input type="checkbox" id="chkSmokeAOD" onchange="toggleSmokeLayer(this.checked)"/> <label for="chkSmokeAOD">Дым CAMS AOD (Торфяники Индонезии)</label></div>
+        <h2>Overlays</h2>
+        <div class="row"><input type="checkbox" id="neverGrid"/> <label for="neverGrid">Never-affected zones (5° grid)</label></div>
+        <div class="row"><input type="checkbox" id="pauseRender" checked/> <label for="pauseRender">Render points</label></div>
+        <div class="row"><input type="checkbox" id="chkSmokeAOD" onchange="toggleSmokeLayer(this.checked)"/> <label for="chkSmokeAOD">CAMS smoke AOD (Торфяники Индонезии)</label></div>
 
-        <h2>Легенда (магнитуда)</h2>
+        <h2>Legend (magnitude)</h2>
         <div class="legend" id="legend"></div>
       </div>
     </div>
@@ -362,16 +381,16 @@
 
 <div class="panel" id="stats">
   <div class="panel-header-row">
-    <h2 style="margin:0;">Фокус и телеметрия</h2>
+    <h2 style="margin:0;">Focus & telemetry</h2>
     <span style="font-size:10px;color:var(--accent);" id="activeTierIndicator">1/4</span>
   </div>
-  <div class="stat-line"><span>Активный раздел</span><span class="stat-val" id="activeTierName" style="color:var(--accent);">1. Плайя-Бланка</span></div>
-  <div class="stat-line"><span>Событий на карте</span><span class="stat-val" id="shownCount">0</span></div>
-  <div class="stat-line"><span>Макс. магнитуда</span><span class="stat-val" id="maxMag">&mdash;</span></div>
-  <div class="stat-line"><span>Эпицентр</span><span class="stat-val" id="maxPlace" style="font-size:9.5px;text-align:right;"></span></div>
-  <div class="stat-line"><span>Глубина</span><span class="stat-val" id="maxDepth">&mdash;</span></div>
-  <div class="stat-line"><span>Текущий прилив</span><span class="stat-val" id="focusedHazardVal" style="font-size:10px;color:#86efac;text-align:right;">+4.22м (13:40 пик)</span></div>
-  <div class="hint" style="margin-top:6px;">Источники: USGS + EMSC + NOAA Бальбоа (115 лет) &middot; проверено 2026-10-23</div>
+  <div class="stat-line"><span>Active section</span><span class="stat-val" id="activeTierName" style="color:var(--accent);">1. Playa Blanca</span></div>
+  <div class="stat-line"><span>Events in current filter</span><span class="stat-val" id="shownCount">0</span></div>
+  <div class="stat-line"><span>Max magnitude</span><span class="stat-val" id="maxMag">&mdash;</span></div>
+  <div class="stat-line"><span>Epicenter</span><span class="stat-val" id="maxPlace" style="font-size:9.5px;text-align:right;"></span></div>
+  <div class="stat-line"><span>Depth</span><span class="stat-val" id="maxDepth">&mdash;</span></div>
+  <div class="stat-line"><span>Current tide</span><span class="stat-val" id="focusedHazardVal" style="font-size:10px;color:#86efac;text-align:right;">+4.22m (13:40 peak)</span></div>
+  <div class="hint" style="margin-top:6px;">Sources: USGS + EMSC + NOAA Balboa (115 y) · checked 2026-10-23</div>
 </div>
 
 <script src="leaflet.js"></script>
@@ -399,23 +418,23 @@ function initPlayaBlancaLayers(){
     radius: 7, color: '#38bdf8', fillColor: '#0284c7', fillOpacity: 0.95, weight: 2
   }).addTo(pbLayers.site);
   pbPin.bindPopup(
-    '<b>Плайя-Бланка (Фаральон) — Комплексный фокус</b><br/>' +
-    'Расстояние до эпицентра M7.7 Асуэро: <b>110 км</b><br/>' +
-    'Размах прилива Кинг Тайд: <b>5.5 - 5.8 м</b><br/>' +
-    'Порог перелива бермы: <b>+4.2 м над средним морем</b><br/>' +
-    'Порог разжижения: <b>PGA &ge; 0.10g</b> (песок лагуны)<br/>' +
-    'Отключение Naturgy: <b>10 - 40ч &rarr; Плесень @ 48ч</b>'
+    '<b>Playa Blanca (Фаральон) — Compound focus</b><br/>' +
+    'Distance to M7.7 Azuero epicenter: <b>110 км</b><br/>' +
+    'King tide range: <b>5.5 - 5.8 м</b><br/>' +
+    'Berm overwash threshold: <b>+4.2 m above mean sea level</b><br/>' +
+    'Liquefaction threshold: <b>PGA &ge; 0.10g</b> (песок лагуны)<br/>' +
+    'Naturgy outage: <b>10 - 40h → mold @ 48ч</b>'
   );
 
   // 2. Azuero 110km Distance Ring & Radial Connection
   const azueroCoords = [7.5868, -80.7690];
   L.circle(azueroCoords, {
     radius: 110000, color: '#ef4444', weight: 1.5, dashArray: '6,6', fill: false
-  }).addTo(pbLayers.ring).bindPopup('<b>Кольцо 110 км от разлома Асуэро</b><br/>Прямой радиус от эпицентра землетрясения 9 октября до Плайя-Бланка.');
+  }).addTo(pbLayers.ring).bindPopup('<b>110 km ring from Azuero rupture</b><br/>Прямой радиус от эпицентра землетрясения 9 октября до Playa Blanca.');
   
   L.polyline([azueroCoords, [8.378, -80.132]], {
     color: '#f87171', weight: 1.5, dashArray: '4,4'
-  }).addTo(pbLayers.ring).bindPopup('Траектория сейсмических волн: 110 км от Асуэро до Плайя-Бланка.');
+  }).addTo(pbLayers.ring).bindPopup('Траектория сейсмических волн: 110 км от Асуэро до Playa Blanca.');
 
   // 3. +4.2m MSL Berm Inundation Polygon
   const runupPoly = [
@@ -425,9 +444,9 @@ function initPlayaBlancaLayers(){
   L.polygon(runupPoly, {
     color: '#38bdf8', fillColor: '#0284c7', fillOpacity: 0.35, weight: 1.5
   }).addTo(pbLayers.runup).bindPopup(
-    '<b>Зона перелива бермы (+4.2 м над средним морем)</b><br/>' +
-    'Линия естественного пляжного песчаного вала.<br/>' +
-    'Сегодня вода была на 2.2 метра ниже этой кромки (в полной безопасности).'
+    '<b>Зона перелива бермы (+4.2 m above mean sea level)</b><br/>' +
+    'Natural beach sand ridge line.<br/>' +
+    'Сегодня вода была на 2.2 meters ниже этой кромки (в полной безопасности).'
   );
 
   // 4. Estuary / Lagoon Liquefaction Zone
@@ -437,15 +456,15 @@ function initPlayaBlancaLayers(){
   L.polygon(liquePoly, {
     color: '#f59e0b', fillColor: '#d97706', fillOpacity: 0.40, weight: 1.5
   }).addTo(pbLayers.lique).bindPopup(
-    '<b>Зона разжижения насыпных грунтов лагуны</b><br/>' +
-    'Водонасыщенные мелкие пески с илом &gt; 35%.<br/>' +
-    'Порог активации разжижения: <b>PGA &ge; 0.10 - 0.12g</b>.'
+    '<b>Lagoon fill-ground liquefaction zone</b><br/>' +
+    'Water-saturated fine sands with >35% silt.<br/>' +
+    'Liquefaction activation threshold: <b>PGA &ge; 0.10 - 0.12g</b>.'
   );
 
   // 5. 100km Local Seismic Perimeter
   L.circle([8.378, -80.132], {
     radius: 100000, color: '#64748b', weight: 1, dashArray: '3,3', fill: false
-  }).addTo(pbLayers.radius).bindPopup('Периметр 100 км вокруг Плайя-Бланка (утренние толчки M3.7 были на отметке 98 км).');
+  }).addTo(pbLayers.radius).bindPopup('Периметр 100 км вокруг Playa Blanca (утренние толчки M3.7 были на отметке 98 км).');
 }
 initPlayaBlancaLayers();
 
@@ -466,32 +485,32 @@ function initPanamaRegionalLayers(){
     radius: 8, color: '#fecaca', fillColor: '#dc2626', fillOpacity: 0.95, weight: 2
   }).addTo(panamaLayers.azuero);
   azueroMarker.bindPopup(
-    '<b>Эпицентр землетрясения M7.7 (9 октября 2026)</b><br/>' +
-    'Координаты: 7.5868&deg;N, 80.7690&deg;W &middot; Глубина: 10 км<br/>' +
-    'Источник динамического триггера по Центральной Америке.'
+    '<b>Epicenter землетрясения M7.7 (9 октября 2026)</b><br/>' +
+    'Coordinates: 7.5868&deg;N, 80.7690&deg;W &middot; Depth: 10 км<br/>' +
+    'Source of dynamic triggering across Central America.'
   );
 
   // Volcanic Dynamic Triggering Network
   const volcs = [
-    {name: 'Ринкон-де-ла-Вьеха (Коста-Рика)', lat: 10.830, lon: -85.324, trig: true,
-     desc: '<b>70 толчков зафиксировано</b> (19 у кратера, 51 на склоне) после волн M7.7 на дистанции 618 км.<br/>Феномен: Динамическая передача напряжений (Ovsicori-UNA).'},
-    {name: 'Тенорио (Коста-Рика)', lat: 10.673, lon: -85.015, trig: true,
-     desc: 'Подтверждена временная микросейсмическая реакция в гидротермальных трещинах.'},
-    {name: 'Миравальес (Коста-Рика)', lat: 10.748, lon: -85.153, trig: true,
-     desc: 'Подтверждена подвижка в существующих разломах.'},
-    {name: 'Ирасу (Коста-Рика)', lat: 9.979, lon: -83.853, trig: true,
-     desc: 'Зафиксирован микросейсмический отклик.'},
-    {name: 'Вулкан Бару (Панама) — Спит', lat: 8.808, lon: -82.543, trig: false,
-     desc: '<b>0 толчков</b>. Спящий стратовулкан.<br/>Причина: Разрыв плиты Кокос-Наска (окно плиты) предотвращает магматический резонанс.'},
-    {name: 'Кальдера Эль-Валле (Панама)', lat: 8.614, lon: -80.147, trig: false,
-     desc: 'Спящая кальдера в ~28 км к северу от Плайя-Бланка. Извержений не было ~13,000 лет.'},
-    {name: 'Ла-Егуада (Панама)', lat: 8.467, lon: -80.817, trig: false,
-     desc: 'Четвертичный вулканический комплекс. Спит.'}
+    {name: 'Rincón de la Vieja (Costa Rica)', lat: 10.830, lon: -85.324, trig: true,
+     desc: '<b>70 tremors recorded</b> (19 at the crater, 51 on the flank) after M7.7 waves at 618 km.<br/>Phenomenon: dynamic stress transfer (Ovsicori-UNA).'},
+    {name: 'Tenorio (Costa Rica)', lat: 10.673, lon: -85.015, trig: true,
+     desc: 'Transient microseismic response confirmed in hydrothermal fractures.'},
+    {name: 'Miravalles (Costa Rica)', lat: 10.748, lon: -85.153, trig: true,
+     desc: 'Movement confirmed on existing faults.'},
+    {name: 'Irazú (Costa Rica)', lat: 9.979, lon: -83.853, trig: true,
+     desc: 'Microseismic response recorded.'},
+    {name: 'Barú volcano (Panama) — Dormant', lat: 8.808, lon: -82.543, trig: false,
+     desc: '<b>0 tremors</b>. Dormant stratovolcano.<br/>Cause: Cocos-Nazca slab tear prevents magmatic resonance.'},
+    {name: 'El Valle caldera (Panama)', lat: 8.614, lon: -80.147, trig: false,
+     desc: 'Dormant caldera ~28 км к северу от Playa Blanca. Извержений не было ~13,000 years.'},
+    {name: 'La Yeguada (Panama)', lat: 8.467, lon: -80.817, trig: false,
+     desc: 'Четвертичный вулканический комплекс. Dormant.'}
   ];
 
   for(const v of volcs){
-    const col = v.trig ? '#db2777' : (v.name.includes('Бару') ? '#0284c7' : '#475569');
-    const borderCol = v.trig ? '#f472b6' : (v.name.includes('Бару') ? '#38bdf8' : '#94a3b8');
+    const col = v.trig ? '#db2777' : (v.name.includes('Barú') ? '#0284c7' : '#475569');
+    const borderCol = v.trig ? '#f472b6' : (v.name.includes('Barú') ? '#38bdf8' : '#94a3b8');
     const mk = L.circleMarker([v.lat, v.lon], {
       radius: v.trig ? 7 : 5, color: borderCol, fillColor: col, fillOpacity: 0.9, weight: 1.5
     }).addTo(panamaLayers.volc);
@@ -511,9 +530,9 @@ const smokeLayer = L.layerGroup();
   L.rectangle([[-11.0, 95.0], [6.0, 141.0]], {
     color: '#f97316', weight: 1, fillColor: '#ea580c', fillOpacity: 0.22, dashArray: '5,5'
   }).addTo(smokeLayer).bindPopup(
-    '<b>Дым CAMS AOD (Служба Коперник)</b><br/>' +
-    'Тлеющие торфяные пожары на Суматре и Калимантане (Индонезия).<br/>' +
-    'Концентрация PM2.5 > 300 мкг/м³. Регион исключен для аллергиков.'
+    '<b>CAMS smoke AOD (Служба Коперник)</b><br/>' +
+    'Smoldering peat fires in Sumatra and Kalimantan (Indonesia).<br/>' +
+    'PM2.5 concentration > 300 µg/m³. Region excluded for allergy sufferers.'
   );
 })();
 
@@ -545,8 +564,8 @@ function setSpatialTier(tier){
     btnPb.classList.add('active');
     cardPb.classList.add('active-card');
     cardPb.classList.remove('collapsed');
-    tierStat.textContent = '1. Плайя-Бланка';
-    hazardStat.textContent = 'Берма +4.2м MSL';
+    tierStat.textContent = '1. Playa Blanca';
+    hazardStat.textContent = 'Berm +4.2 m MSL';
     hazardStat.style.color = '#7dd3fc';
     ind.textContent = '1/4';
     map.flyTo([8.378, -80.132], 12, {duration: 1.2});
@@ -554,8 +573,8 @@ function setSpatialTier(tier){
     btnTides.classList.add('active');
     cardTides.classList.add('active-card');
     cardTides.classList.remove('collapsed');
-    tierStat.textContent = '2. Приливы и Луна';
-    hazardStat.textContent = '+4.22м (13:40 пик)';
+    tierStat.textContent = '2. Tides & Moon';
+    hazardStat.textContent = '+4.22m (13:40 peak)';
     hazardStat.style.color = '#86efac';
     ind.textContent = '2/4';
     map.flyTo([8.375, -80.135], 13, {duration: 1.2});
@@ -563,8 +582,8 @@ function setSpatialTier(tier){
     btnPanama.classList.add('active');
     cardPanama.classList.add('active-card');
     cardPanama.classList.remove('collapsed');
-    tierStat.textContent = '3. Регион Панамы';
-    hazardStat.textContent = '70 толчков Ринкон';
+    tierStat.textContent = '3. Panama Region';
+    hazardStat.textContent = '70 Rincón tremors';
     hazardStat.style.color = '#d8b4fe';
     ind.textContent = '3/4';
     map.flyTo([8.4, -80.1], 7, {duration: 1.2});
@@ -572,8 +591,8 @@ function setSpatialTier(tier){
     btnWorld.classList.add('active');
     cardWorld.classList.add('active-card');
     cardWorld.classList.remove('collapsed');
-    tierStat.textContent = '4. Каталог Земли';
-    hazardStat.textContent = '220k+ землетрясений';
+    tierStat.textContent = '4. World Catalog';
+    hazardStat.textContent = '220k+ earthquakes';
     hazardStat.style.color = '#cbd5e1';
     ind.textContent = '4/4';
     map.flyTo([15, 0], 2, {duration: 1.2});
@@ -590,9 +609,9 @@ function toggleControlsMinimize(){
   const btn = document.getElementById('btnToggleControls');
   ctrl.classList.toggle('minimized');
   if(ctrl.classList.contains('minimized')){
-    btn.textContent = 'Развернуть меню ▴';
+    btn.textContent = 'Expand menu ▴';
   } else {
-    btn.textContent = 'Свернуть ▾';
+    btn.textContent = 'Minimize ▾';
   }
 }
 
@@ -620,7 +639,7 @@ function windowLabelText(){
   if(state.day)parts.push(String(state.day).padStart(2,'0'));
   if(state.hour>=0)parts.push(String(state.hour).padStart(2,'0')+'h');
   if(state.minute>=0)parts.push(String(state.minute).padStart(2,'0')+'m');
-  return parts.length? 'окно: '+parts.join('-'):'окно: все время';
+  return parts.length? 'window: '+parts.join('-'):'window: все время';
 }
 
 function pointPasses(p, yStart, yEnd, needComponents){
@@ -684,8 +703,8 @@ map.on('click', (e)=>{
   L.popup().setLatLng([best.la,best.lo]).setContent(
     '<b>M'+best.mag.toFixed(1)+'</b>'+(best.live?' <span style="color:#22d3ee">(live)</span>':'')+
     '<br/>UTC: '+t.toISOString().replace('T',' ').slice(0,16)+
-    '<br/>Глубина: '+best.dep+' км'+(best.live&&best.srcs?'<br/>Источники: '+best.srcs.join(' + '):'')+
-    '<br/>Координаты: '+best.la.toFixed(2)+', '+best.lo.toFixed(2)
+    '<br/>Depth: '+best.dep+' км'+(best.live&&best.srcs?'<br/>Sources: '+best.srcs.join(' + '):'')+
+    '<br/>Coordinates: '+best.la.toFixed(2)+', '+best.lo.toFixed(2)
   ).openOn(map);
 });
 
@@ -845,8 +864,8 @@ function renderLive(){
 async function requestNow(){
   const btn = document.getElementById('btnNow');
   const st = document.getElementById('liveStatus');
-  btn.disabled = true; btn.textContent = 'Загрузка live-данных...';
-  st.textContent = 'Параллельный опрос: USGS feed | USGS FDSN | EMSC ...';
+  btn.disabled = true; btn.textContent = 'Loading live data...';
+  st.textContent = 'Parallel poll: USGS feed | USGS FDSN | EMSC ...';
   const start24 = new Date(Date.now()-24*3600*1000).toISOString().slice(0,19);
   const sources = [
     ['USGS feed',  'https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_day.geojson', normUSGS],
@@ -858,7 +877,7 @@ async function requestNow(){
   ));
   const lines = [];
   const all = wsBuffer.slice();
-  if(wsBuffer.length) lines.push('Буфер EMSC: '+wsBuffer.length);
+  if(wsBuffer.length) lines.push('EMSC buffer: '+wsBuffer.length);
   results.forEach((r,i)=>{
     const name = sources[i][0];
     if(r.status==='fulfilled'){
@@ -867,14 +886,14 @@ async function requestNow(){
       for(const f of features){ const e=norm(f); if(e && e.mag>=2.5){ all.push(e); n++; } }
       lines.push(name+': ok ('+n+')');
     } else {
-      lines.push(name+': ошибка ('+(r.reason&&r.reason.message||'error')+')');
+      lines.push(name+': error ('+(r.reason&&r.reason.message||'error')+')');
     }
   });
   liveEvents = dedupeLive(all);
   const live1h = renderLive() || 0;
-  lines.push('Объединено: '+liveEvents.length+' событий, '+live1h+' за последний час — '+new Date().toISOString().slice(11,19)+' UTC');
+  lines.push('Merged: '+liveEvents.length+' events, '+live1h+' in the last hour — '+new Date().toISOString().slice(11,19)+' UTC');
   st.textContent = lines.join('\n');
-  btn.disabled = false; btn.textContent = 'Запросить сейчас (Live fetch)';
+  btn.disabled = false; btn.textContent = 'Fetch live now';
 }
 
 // Warm EMSC push channel
@@ -924,23 +943,23 @@ function initControls(){
   const years = Object.keys(META.years).map(Number).sort((a,b)=>a-b);
   const selYear = document.getElementById('selYear');
   selYear.innerHTML='';
-  const oAll=document.createElement('option'); oAll.value='all'; oAll.textContent='Все годы'; selYear.appendChild(oAll);
+  const oAll=document.createElement('option'); oAll.value='all'; oAll.textContent='All годы'; selYear.appendChild(oAll);
   for(const y of years){
     const o=document.createElement('option'); o.value=String(y);
     o.textContent = y+' ('+(META.years[String(y)].count).toLocaleString()+')';
     selYear.appendChild(o);
   }
   selYear.value='all';
-  buildSelect('selMonth', [1,2,3,4,5,6,7,8,9,10,11,12], 'Все', true);
-  buildSelect('selDay', Array.from({length:31},(_,i)=>i+1), 'Все', true);
-  buildSelect('selHour', Array.from({length:24},(_,i)=>i), 'Все', true);
-  buildSelect('selMinute', Array.from({length:60},(_,i)=>i), 'Все', true);
+  buildSelect('selMonth', [1,2,3,4,5,6,7,8,9,10,11,12], 'All', true);
+  buildSelect('selDay', Array.from({length:31},(_,i)=>i+1), 'All', true);
+  buildSelect('selHour', Array.from({length:24},(_,i)=>i), 'All', true);
+  buildSelect('selMinute', Array.from({length:60},(_,i)=>i), 'All', true);
   updateMonthAvailability();
 
   selYear.onchange = ()=>{
     state.year = selYear.value==='all' ? 'all' : Number(selYear.value);
     const ym = state.year==='all'? null : META.years[String(state.year)];
-    document.getElementById('yearCount').textContent = ym ? (ym.count.toLocaleString()+' событий, макс M'+ (ym.max!=null?ym.max:'?')) : '';
+    document.getElementById('yearCount').textContent = ym ? (ym.count.toLocaleString()+' events, макс M'+ (ym.max!=null?ym.max:'?')) : '';
     updateMonthAvailability();
     refresh();
   };
