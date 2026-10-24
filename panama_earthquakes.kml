@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <kml xmlns="http://www.opengis.net/kml/2.2">
 <Document>
-  <name>Panama Earthquakes - Last 24h (2026-10-23 13:07-12:28 UTC)</name>
-  <description>37 deduped events | M6+:0 M5+:0 M4+:4 M3+:29 M2+:37 | sources: IGC, UNA</description>
+  <name>Panama Earthquakes - Last 24h (2026-10-23 13:07-12:43 UTC)</name>
+  <description>38 deduped events | M6+:0 M5+:0 M4+:4 M3+:30 M2+:38 | sources: IGC, UNA</description>
   <Style id="m4">
     <IconStyle><color>ff0000ff</color><scale>1.1</scale>
       <Icon><href>http://maps.google.com/mapfiles/kml/paddle/red-circle.png</href></Icon></IconStyle>
@@ -19,6 +19,12 @@
     <LabelStyle><scale>0.9</scale></LabelStyle>
   </Style>
 
+  <Placemark>
+    <name>M3.8 07:43 AM - Restingue</name>
+    <description><![CDATA[<b>M3.8 - PANAMA</b><br/><b>Nearest place:</b> Restingue<br/><b>Place source:</b> gazetteer<br/><b>Local (UTC-5):</b> 07:43 AM | <b>UTC:</b> 2026-10-24 12:43<br/><b>Coordinates:</b> 7.1557, -80.9897<br/><b>Depth:</b> 10 km<br/><b>Setting:</b> OFFSHORE<br/><b>Distance:</b> Playa Blanca: 163 km | Altos del Maria: 198 km<br/><b>Source:</b> UNA<br/><b>Cause:</b> Azuero M7.7 sequence aftershock<br/><b>Tsunami flag:</b> 0]]></description>
+    <styleUrl>#m3</styleUrl>
+    <Point><coordinates>-80.98970,7.15570,0</coordinates></Point>
+  </Placemark>
   <Placemark>
     <name>M3.1 07:28 AM - Cabecera de El Anegado</name>
     <description><![CDATA[<b>M3.1 - PANAMA</b><br/><b>Nearest place:</b> Cabecera de El Anegado<br/><b>Place source:</b> gazetteer<br/><b>Local (UTC-5):</b> 07:28 AM | <b>UTC:</b> 2026-10-24 12:28<br/><b>Coordinates:</b> 7.6671, -81.3562<br/><b>Depth:</b> 10 km<br/><b>Setting:</b> ONSHORE<br/><b>Distance:</b> Playa Blanca: 155 km | Altos del Maria: 184 km<br/><b>Source:</b> IGC<br/><b>Cause:</b> Azuero M7.7 sequence aftershock<br/><b>Tsunami flag:</b> 0]]></description>
