@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <kml xmlns="http://www.opengis.net/kml/2.2">
 <Document>
-  <name>Panama Earthquakes - Last 24h (2026-10-23 20:04-19:54 UTC)</name>
-  <description>36 deduped events | M6+:0 M5+:0 M4+:1 M3+:27 M2+:36 | sources: IGC, UNA</description>
+  <name>Panama Earthquakes - Last 24h (2026-10-23 21:34-21:00 UTC)</name>
+  <description>37 deduped events | M6+:0 M5+:0 M4+:1 M3+:28 M2+:37 | sources: IGC, UNA</description>
   <Style id="m4">
     <IconStyle><color>ff0000ff</color><scale>1.1</scale>
       <Icon><href>http://maps.google.com/mapfiles/kml/paddle/red-circle.png</href></Icon></IconStyle>
@@ -19,6 +19,18 @@
     <LabelStyle><scale>0.9</scale></LabelStyle>
   </Style>
 
+  <Placemark>
+    <name>M3.5 04:00 PM - Los Trabajaderos</name>
+    <description><![CDATA[<b>M3.5 - PANAMA</b><br/><b>Nearest place:</b> Los Trabajaderos<br/><b>Place source:</b> gazetteer<br/><b>Local (UTC-5):</b> 04:00 PM | <b>UTC:</b> 2026-10-24 21:00<br/><b>Coordinates:</b> 7.4282, -80.2853<br/><b>Depth:</b> 4 km<br/><b>Setting:</b> ONSHORE<br/><b>Distance:</b> Playa Blanca: 104 km | Altos del Maria: 139 km<br/><b>Source:</b> IGC<br/><b>Cause:</b> Azuero M7.7 sequence aftershock<br/><b>Tsunami flag:</b> 0]]></description>
+    <styleUrl>#m3</styleUrl>
+    <Point><coordinates>-80.28530,7.42820,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+    <name>M3.7 03:38 PM - Bajo Bonito</name>
+    <description><![CDATA[<b>M3.7 - PANAMA</b><br/><b>Nearest place:</b> Bajo Bonito<br/><b>Place source:</b> gazetteer<br/><b>Local (UTC-5):</b> 03:38 PM | <b>UTC:</b> 2026-10-24 20:38<br/><b>Coordinates:</b> 7.5058, -80.5778<br/><b>Depth:</b> 10 km<br/><b>Setting:</b> ONSHORE<br/><b>Distance:</b> Playa Blanca: 106 km | Altos del Maria: 142 km<br/><b>Source:</b> IGC<br/><b>Cause:</b> Azuero M7.7 sequence aftershock<br/><b>Tsunami flag:</b> 0]]></description>
+    <styleUrl>#m3</styleUrl>
+    <Point><coordinates>-80.57780,7.50580,0</coordinates></Point>
+  </Placemark>
   <Placemark>
     <name>M3.6 02:54 PM - El Cacao</name>
     <description><![CDATA[<b>M3.6 - PANAMA</b><br/><b>Nearest place:</b> El Cacao<br/><b>Place source:</b> gazetteer<br/><b>Local (UTC-5):</b> 02:54 PM | <b>UTC:</b> 2026-10-24 19:54<br/><b>Coordinates:</b> 7.5374, -80.6855<br/><b>Depth:</b> 10 km<br/><b>Setting:</b> ONSHORE<br/><b>Distance:</b> Playa Blanca: 109 km | Altos del Maria: 144 km<br/><b>Source:</b> IGC<br/><b>Cause:</b> Azuero M7.7 sequence aftershock<br/><b>Tsunami flag:</b> 0]]></description>
@@ -228,12 +240,6 @@
     <description><![CDATA[<b>M3.6 - PANAMA</b><br/><b>Nearest place:</b> Cativón<br/><b>Place source:</b> gazetteer<br/><b>Local (UTC-5):</b> 04:34 PM | <b>UTC:</b> 2026-10-23 21:34<br/><b>Coordinates:</b> 7.5715, -81.4551<br/><b>Depth:</b> 10 km<br/><b>Setting:</b> ONSHORE<br/><b>Distance:</b> Playa Blanca: 169 km | Altos del Maria: 199 km<br/><b>Source:</b> IGC<br/><b>Cause:</b> Azuero M7.7 sequence aftershock<br/><b>Tsunami flag:</b> 0]]></description>
     <styleUrl>#m3</styleUrl>
     <Point><coordinates>-81.45510,7.57150,0</coordinates></Point>
-  </Placemark>
-  <Placemark>
-    <name>M3.4 03:04 PM - La Llanita</name>
-    <description><![CDATA[<b>M3.4 - PANAMA</b><br/><b>Nearest place:</b> La Llanita<br/><b>Place source:</b> gazetteer<br/><b>Local (UTC-5):</b> 03:04 PM | <b>UTC:</b> 2026-10-23 20:04<br/><b>Coordinates:</b> 7.5853, -80.7062<br/><b>Depth:</b> 13 km<br/><b>Setting:</b> ONSHORE<br/><b>Distance:</b> Playa Blanca: 106 km | Altos del Maria: 141 km<br/><b>Source:</b> IGC<br/><b>Cause:</b> Azuero M7.7 sequence aftershock<br/><b>Tsunami flag:</b> 0]]></description>
-    <styleUrl>#m3</styleUrl>
-    <Point><coordinates>-80.70620,7.58530,0</coordinates></Point>
   </Placemark>
 </Document>
 </kml>
