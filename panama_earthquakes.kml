@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <kml xmlns="http://www.opengis.net/kml/2.2">
 <Document>
-  <name>Panama Earthquakes - Last 24h (2026-10-23 02:17-01:43 UTC)</name>
+  <name>Panama Earthquakes - Last 24h (2026-10-23 03:10-02:28 UTC)</name>
   <description>39 deduped events | M6+:0 M5+:0 M4+:6 M3+:31 M2+:39 | sources: IGC, UCR, UNA</description>
   <Style id="m4">
     <IconStyle><color>ff0000ff</color><scale>1.1</scale>
@@ -19,6 +19,12 @@
     <LabelStyle><scale>0.9</scale></LabelStyle>
   </Style>
 
+  <Placemark>
+    <name>M3.5 09:28 PM - La Zumbona</name>
+    <description><![CDATA[<b>M3.5 - PANAMA</b><br/><b>Nearest place:</b> La Zumbona<br/><b>Place source:</b> gazetteer<br/><b>Local (UTC-5):</b> 09:28 PM | <b>UTC:</b> 2026-10-24 02:28<br/><b>Coordinates:</b> 7.7362, -81.3175<br/><b>Depth:</b> 10 km<br/><b>Setting:</b> ONSHORE<br/><b>Distance:</b> Playa Blanca: 147 km | Altos del Maria: 176 km<br/><b>Source:</b> IGC<br/><b>Cause:</b> Azuero M7.7 sequence aftershock<br/><b>Tsunami flag:</b> 0]]></description>
+    <styleUrl>#m3</styleUrl>
+    <Point><coordinates>-81.31750,7.73620,0</coordinates></Point>
+  </Placemark>
   <Placemark>
     <name>M2.6 08:43 PM - Puntarenas</name>
     <description><![CDATA[<b>M2.6 - OFF COAST OF COSTA RICA</b><br/><b>Nearest place:</b> Puntarenas<br/><b>Place source:</b> nominatim<br/><b>Local (UTC-5):</b> 08:43 PM | <b>UTC:</b> 2026-10-24 01:43<br/><b>Coordinates:</b> 8.7546, -84.1430<br/><b>Depth:</b> 2 km<br/><b>Setting:</b> ONSHORE<br/><b>Distance:</b> Playa Blanca: 443 km | Altos del Maria: 454 km<br/><b>Source:</b> UNA<br/><b>Cause:</b> regional/other<br/><b>Tsunami flag:</b> 0]]></description>
@@ -246,12 +252,6 @@
     <description><![CDATA[<b>M3.5 - PANAMA</b><br/><b>Nearest place:</b> La Venta<br/><b>Place source:</b> gazetteer<br/><b>Local (UTC-5):</b> 10:10 PM | <b>UTC:</b> 2026-10-23 03:10<br/><b>Coordinates:</b> 7.6258, -80.5801<br/><b>Depth:</b> 10 km<br/><b>Setting:</b> ONSHORE<br/><b>Distance:</b> Playa Blanca: 94 km | Altos del Maria: 130 km<br/><b>Source:</b> IGC<br/><b>Cause:</b> Azuero M7.7 sequence aftershock<br/><b>Tsunami flag:</b> 0]]></description>
     <styleUrl>#m3</styleUrl>
     <Point><coordinates>-80.58010,7.62580,0</coordinates></Point>
-  </Placemark>
-  <Placemark>
-    <name>M3.6 09:17 PM - La Redonda</name>
-    <description><![CDATA[<b>M3.6 - PANAMA</b><br/><b>Nearest place:</b> La Redonda<br/><b>Place source:</b> gazetteer<br/><b>Local (UTC-5):</b> 09:17 PM | <b>UTC:</b> 2026-10-23 02:17<br/><b>Coordinates:</b> 7.5213, -80.7593<br/><b>Depth:</b> 1 km<br/><b>Setting:</b> ONSHORE<br/><b>Distance:</b> Playa Blanca: 115 km | Altos del Maria: 150 km<br/><b>Source:</b> IGC<br/><b>Cause:</b> Azuero M7.7 sequence aftershock<br/><b>Tsunami flag:</b> 0]]></description>
-    <styleUrl>#m3</styleUrl>
-    <Point><coordinates>-80.75930,7.52130,0</coordinates></Point>
   </Placemark>
 </Document>
 </kml>
