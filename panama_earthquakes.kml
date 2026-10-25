@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <kml xmlns="http://www.opengis.net/kml/2.2">
 <Document>
-  <name>Panama Earthquakes - Last 24h (2026-10-24 23:03-22:37 UTC)</name>
-  <description>32 deduped events | M6+:0 M5+:0 M4+:3 M3+:28 M2+:32 | sources: IGC, INET, UNA</description>
+  <name>Panama Earthquakes - Last 24h (2026-10-24 23:03-22:44 UTC)</name>
+  <description>33 deduped events | M6+:0 M5+:0 M4+:2 M3+:29 M2+:33 | sources: IGC, INET, UNA</description>
   <Style id="m4">
     <IconStyle><color>ff0000ff</color><scale>1.1</scale>
       <Icon><href>http://maps.google.com/mapfiles/kml/paddle/red-circle.png</href></Icon></IconStyle>
@@ -20,10 +20,16 @@
   </Style>
 
   <Placemark>
-    <name>M4.0 05:37 PM - Quebrada Camarón</name>
-    <description><![CDATA[<b>M4.0 - PANAMA-COSTA RICA BORDER REGION</b><br/><b>Nearest place:</b> Quebrada Camarón<br/><b>Place source:</b> gazetteer<br/><b>Local (UTC-5):</b> 05:37 PM | <b>UTC:</b> 2026-10-25 22:37<br/><b>Coordinates:</b> 8.5628, -82.0199<br/><b>Depth:</b> 5 km<br/><b>Setting:</b> ONSHORE<br/><b>Distance:</b> Playa Blanca: 209 km | Altos del Maria: 221 km<br/><b>Source:</b> IGC<br/><b>Cause:</b> regional/other<br/><b>Tsunami flag:</b> 0]]></description>
-    <styleUrl>#m4</styleUrl>
-    <Point><coordinates>-82.01990,8.56280,0</coordinates></Point>
+    <name>M3.5 05:44 PM - La Manglillosa</name>
+    <description><![CDATA[<b>M3.5 - PANAMA</b><br/><b>Nearest place:</b> La Manglillosa<br/><b>Place source:</b> gazetteer<br/><b>Local (UTC-5):</b> 05:44 PM | <b>UTC:</b> 2026-10-25 22:44<br/><b>Coordinates:</b> 7.6695, -80.8171<br/><b>Depth:</b> 5 km<br/><b>Setting:</b> ONSHORE<br/><b>Distance:</b> Playa Blanca: 107 km | Altos del Maria: 140 km<br/><b>Source:</b> IGC<br/><b>Cause:</b> Azuero M7.7 sequence aftershock<br/><b>Tsunami flag:</b> 0]]></description>
+    <styleUrl>#m3</styleUrl>
+    <Point><coordinates>-80.81710,7.66950,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+    <name>M3.9 05:37 PM - Quebrada Mono</name>
+    <description><![CDATA[<b>M3.9 - PANAMA-COSTA RICA BORDER REGION</b><br/><b>Nearest place:</b> Quebrada Mono<br/><b>Place source:</b> gazetteer<br/><b>Local (UTC-5):</b> 05:37 PM | <b>UTC:</b> 2026-10-25 22:37<br/><b>Coordinates:</b> 8.5894, -82.1273<br/><b>Depth:</b> 10 km<br/><b>Setting:</b> ONSHORE<br/><b>Distance:</b> Playa Blanca: 221 km | Altos del Maria: 233 km<br/><b>Source:</b> UNA<br/><b>Cause:</b> regional/other<br/><b>Tsunami flag:</b> 0]]></description>
+    <styleUrl>#m3</styleUrl>
+    <Point><coordinates>-82.12730,8.58940,0</coordinates></Point>
   </Placemark>
   <Placemark>
     <name>M4.3 05:34 PM - Río Ballena</name>
