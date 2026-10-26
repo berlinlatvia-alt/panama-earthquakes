@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <kml xmlns="http://www.opengis.net/kml/2.2">
 <Document>
-  <name>Panama Earthquakes - Last 24h (2026-10-25 02:59-02:19 UTC)</name>
-  <description>30 deduped events | M6+:0 M5+:0 M4+:2 M3+:27 M2+:30 | sources: IGC, UNA</description>
+  <name>Panama Earthquakes - Last 24h (2026-10-25 02:59-02:25 UTC)</name>
+  <description>31 deduped events | M6+:0 M5+:0 M4+:2 M3+:28 M2+:31 | sources: IGC, UNA</description>
   <Style id="m4">
     <IconStyle><color>ff0000ff</color><scale>1.1</scale>
       <Icon><href>http://maps.google.com/mapfiles/kml/paddle/red-circle.png</href></Icon></IconStyle>
@@ -20,10 +20,16 @@
   </Style>
 
   <Placemark>
-    <name>M4.1 09:19 PM - Puerto Escondido</name>
-    <description><![CDATA[<b>M4.1 - PANAMA</b><br/><b>Nearest place:</b> Puerto Escondido<br/><b>Place source:</b> gazetteer<br/><b>Local (UTC-5):</b> 09:19 PM | <b>UTC:</b> 2026-10-26 02:19<br/><b>Coordinates:</b> 7.6449, -81.4933<br/><b>Depth:</b> 10 km<br/><b>Setting:</b> ONSHORE<br/><b>Distance:</b> Playa Blanca: 169 km | Altos del Maria: 198 km<br/><b>Source:</b> IGC<br/><b>Cause:</b> Azuero M7.7 sequence aftershock<br/><b>Tsunami flag:</b> 0]]></description>
+    <name>M3.5 09:25 PM - Ronsuavo</name>
+    <description><![CDATA[<b>M3.5 - PANAMA</b><br/><b>Nearest place:</b> Ronsuavo<br/><b>Place source:</b> gazetteer<br/><b>Local (UTC-5):</b> 09:25 PM | <b>UTC:</b> 2026-10-26 02:25<br/><b>Coordinates:</b> 9.5229, -79.2960<br/><b>Depth:</b> 28 km<br/><b>Setting:</b> ONSHORE<br/><b>Distance:</b> Playa Blanca: 160 km | Altos del Maria: 125 km<br/><b>Source:</b> IGC<br/><b>Cause:</b> regional/other<br/><b>Tsunami flag:</b> 0]]></description>
+    <styleUrl>#m3</styleUrl>
+    <Point><coordinates>-79.29600,9.52290,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+    <name>M4.2 09:21 PM - Jeringuita</name>
+    <description><![CDATA[<b>M4.2 - PANAMA</b><br/><b>Nearest place:</b> Jeringuita<br/><b>Place source:</b> gazetteer<br/><b>Local (UTC-5):</b> 09:21 PM | <b>UTC:</b> 2026-10-26 02:21<br/><b>Coordinates:</b> 7.6804, -81.5272<br/><b>Depth:</b> 10 km<br/><b>Setting:</b> ONSHORE<br/><b>Distance:</b> Playa Blanca: 171 km | Altos del Maria: 199 km<br/><b>Source:</b> IGC<br/><b>Cause:</b> Azuero M7.7 sequence aftershock<br/><b>Tsunami flag:</b> 0]]></description>
     <styleUrl>#m4</styleUrl>
-    <Point><coordinates>-81.49330,7.64490,0</coordinates></Point>
+    <Point><coordinates>-81.52720,7.68040,0</coordinates></Point>
   </Placemark>
   <Placemark>
     <name>M3.8 08:43 PM - La Desbarrancada</name>
