@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <kml xmlns="http://www.opengis.net/kml/2.2">
 <Document>
-  <name>Panama Earthquakes - Last 24h (2026-10-24 23:03-22:44 UTC)</name>
-  <description>33 deduped events | M6+:0 M5+:0 M4+:2 M3+:29 M2+:33 | sources: IGC, INET, UNA</description>
+  <name>Panama Earthquakes - Last 24h (2026-10-25 02:22-01:43 UTC)</name>
+  <description>30 deduped events | M6+:0 M5+:0 M4+:1 M3+:27 M2+:30 | sources: IGC, UNA</description>
   <Style id="m4">
     <IconStyle><color>ff0000ff</color><scale>1.1</scale>
       <Icon><href>http://maps.google.com/mapfiles/kml/paddle/red-circle.png</href></Icon></IconStyle>
@@ -19,6 +19,18 @@
     <LabelStyle><scale>0.9</scale></LabelStyle>
   </Style>
 
+  <Placemark>
+    <name>M3.8 08:43 PM - La Desbarrancada</name>
+    <description><![CDATA[<b>M3.8 - PANAMA</b><br/><b>Nearest place:</b> La Desbarrancada<br/><b>Place source:</b> gazetteer<br/><b>Local (UTC-5):</b> 08:43 PM | <b>UTC:</b> 2026-10-26 01:43<br/><b>Coordinates:</b> 7.6314, -80.7890<br/><b>Depth:</b> 10 km<br/><b>Setting:</b> ONSHORE<br/><b>Distance:</b> Playa Blanca: 108 km | Altos del Maria: 142 km<br/><b>Source:</b> IGC<br/><b>Cause:</b> Azuero M7.7 sequence aftershock<br/><b>Tsunami flag:</b> 0]]></description>
+    <styleUrl>#m3</styleUrl>
+    <Point><coordinates>-80.78900,7.63140,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+    <name>M3.7 08:42 PM - Naranjito</name>
+    <description><![CDATA[<b>M3.7 - PANAMA</b><br/><b>Nearest place:</b> Naranjito<br/><b>Place source:</b> gazetteer<br/><b>Local (UTC-5):</b> 08:42 PM | <b>UTC:</b> 2026-10-26 01:42<br/><b>Coordinates:</b> 7.3374, -81.3582<br/><b>Depth:</b> 10 km<br/><b>Setting:</b> OFFSHORE<br/><b>Distance:</b> Playa Blanca: 176 km | Altos del Maria: 208 km<br/><b>Source:</b> IGC<br/><b>Cause:</b> Azuero M7.7 sequence aftershock<br/><b>Tsunami flag:</b> 0]]></description>
+    <styleUrl>#m3</styleUrl>
+    <Point><coordinates>-81.35820,7.33740,0</coordinates></Point>
+  </Placemark>
   <Placemark>
     <name>M3.5 05:44 PM - La Manglillosa</name>
     <description><![CDATA[<b>M3.5 - PANAMA</b><br/><b>Nearest place:</b> La Manglillosa<br/><b>Place source:</b> gazetteer<br/><b>Local (UTC-5):</b> 05:44 PM | <b>UTC:</b> 2026-10-25 22:44<br/><b>Coordinates:</b> 7.6695, -80.8171<br/><b>Depth:</b> 5 km<br/><b>Setting:</b> ONSHORE<br/><b>Distance:</b> Playa Blanca: 107 km | Altos del Maria: 140 km<br/><b>Source:</b> IGC<br/><b>Cause:</b> Azuero M7.7 sequence aftershock<br/><b>Tsunami flag:</b> 0]]></description>
@@ -186,36 +198,6 @@
     <description><![CDATA[<b>M3.5 - PANAMA</b><br/><b>Nearest place:</b> Los Sitios<br/><b>Place source:</b> gazetteer<br/><b>Local (UTC-5):</b> 09:22 PM | <b>UTC:</b> 2026-10-25 02:22<br/><b>Coordinates:</b> 7.8428, -81.2937<br/><b>Depth:</b> 12 km<br/><b>Setting:</b> ONSHORE<br/><b>Distance:</b> Playa Blanca: 140 km | Altos del Maria: 167 km<br/><b>Source:</b> IGC<br/><b>Cause:</b> Azuero M7.7 sequence aftershock<br/><b>Tsunami flag:</b> 0]]></description>
     <styleUrl>#m3</styleUrl>
     <Point><coordinates>-81.29370,7.84280,0</coordinates></Point>
-  </Placemark>
-  <Placemark>
-    <name>M4.1 07:20 PM - Playa Azul</name>
-    <description><![CDATA[<b>M4.1 - PANAMA</b><br/><b>Nearest place:</b> Playa Azul<br/><b>Place source:</b> gazetteer<br/><b>Local (UTC-5):</b> 07:20 PM | <b>UTC:</b> 2026-10-25 00:20<br/><b>Coordinates:</b> 7.6329, -81.3963<br/><b>Depth:</b> 5 km<br/><b>Setting:</b> ONSHORE<br/><b>Distance:</b> Playa Blanca: 160 km | Altos del Maria: 190 km<br/><b>Source:</b> IGC<br/><b>Cause:</b> Azuero M7.7 sequence aftershock<br/><b>Tsunami flag:</b> 0]]></description>
-    <styleUrl>#m4</styleUrl>
-    <Point><coordinates>-81.39630,7.63290,0</coordinates></Point>
-  </Placemark>
-  <Placemark>
-    <name>M2.7 07:18 PM - Tola, Rivas</name>
-    <description><![CDATA[<b>M2.7 - NICARAGUA</b><br/><b>Nearest place:</b> Tola, Rivas<br/><b>Place source:</b> nominatim<br/><b>Local (UTC-5):</b> 07:18 PM | <b>UTC:</b> 2026-10-25 00:18<br/><b>Coordinates:</b> 11.2960, -85.9610<br/><b>Depth:</b> 53 km<br/><b>Setting:</b> ONSHORE<br/><b>Distance:</b> Playa Blanca: 717 km | Altos del Maria: 715 km<br/><b>Source:</b> INET<br/><b>Cause:</b> regional/other<br/><b>Tsunami flag:</b> 0]]></description>
-    <styleUrl>#m2</styleUrl>
-    <Point><coordinates>-85.96100,11.29600,0</coordinates></Point>
-  </Placemark>
-  <Placemark>
-    <name>M3.6 06:59 PM - El Cañafístulo</name>
-    <description><![CDATA[<b>M3.6 - PANAMA</b><br/><b>Nearest place:</b> El Cañafístulo<br/><b>Place source:</b> gazetteer<br/><b>Local (UTC-5):</b> 06:59 PM | <b>UTC:</b> 2026-10-24 23:59<br/><b>Coordinates:</b> 7.6415, -80.6441<br/><b>Depth:</b> 10 km<br/><b>Setting:</b> ONSHORE<br/><b>Distance:</b> Playa Blanca: 97 km | Altos del Maria: 132 km<br/><b>Source:</b> IGC<br/><b>Cause:</b> Azuero M7.7 sequence aftershock<br/><b>Tsunami flag:</b> 0]]></description>
-    <styleUrl>#m3</styleUrl>
-    <Point><coordinates>-80.64410,7.64150,0</coordinates></Point>
-  </Placemark>
-  <Placemark>
-    <name>M3.5 06:55 PM - Canales de Tierra</name>
-    <description><![CDATA[<b>M3.5 - PANAMA</b><br/><b>Nearest place:</b> Canales de Tierra<br/><b>Place source:</b> gazetteer<br/><b>Local (UTC-5):</b> 06:55 PM | <b>UTC:</b> 2026-10-24 23:55<br/><b>Coordinates:</b> 7.7037, -81.5938<br/><b>Depth:</b> 14 km<br/><b>Setting:</b> ONSHORE<br/><b>Distance:</b> Playa Blanca: 176 km | Altos del Maria: 203 km<br/><b>Source:</b> IGC<br/><b>Cause:</b> Azuero M7.7 sequence aftershock<br/><b>Tsunami flag:</b> 0]]></description>
-    <styleUrl>#m3</styleUrl>
-    <Point><coordinates>-81.59380,7.70370,0</coordinates></Point>
-  </Placemark>
-  <Placemark>
-    <name>M3.9 06:03 PM - Cerro Peludo</name>
-    <description><![CDATA[<b>M3.9 - PANAMA</b><br/><b>Nearest place:</b> Cerro Peludo<br/><b>Place source:</b> gazetteer<br/><b>Local (UTC-5):</b> 06:03 PM | <b>UTC:</b> 2026-10-24 23:03<br/><b>Coordinates:</b> 7.6076, -80.6638<br/><b>Depth:</b> 5 km<br/><b>Setting:</b> ONSHORE<br/><b>Distance:</b> Playa Blanca: 101 km | Altos del Maria: 136 km<br/><b>Source:</b> IGC<br/><b>Cause:</b> Azuero M7.7 sequence aftershock<br/><b>Tsunami flag:</b> 0]]></description>
-    <styleUrl>#m3</styleUrl>
-    <Point><coordinates>-80.66380,7.60760,0</coordinates></Point>
   </Placemark>
 </Document>
 </kml>
